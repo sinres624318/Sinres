@@ -5,24 +5,19 @@
 </template>
 
 <script>
-
   export default {
     name: 'App',
-    components: {
-    },
+    components: {},
     data() {
-      return {
-
-      }
-    },
-    methods: {
-
+      return {}
     }
   }
+
+
 </script>
 
 <style>
   #app {
-    height: 50px;
+
   }
 </style>
