@@ -23,6 +23,7 @@
 
 <style>
   #app {
-    height: 50px;
+    height: 100%;
+    overflow: hidden;
   }
 </style>

@@ -4,9 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'lib-flexible/flexible'
+import { Lazyload } from 'vant';
 import axios from './../utils/request'
 axios.defaults.withCredentials=true
 Vue.prototype.axios = axios
+Vue.use(Lazyload);
+
 
 
 Vue.config.productionTip = false
