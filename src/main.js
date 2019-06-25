@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import 'lib-flexible/flexible'
 import axios from './../utils/request'
+import Observer from "./Observer";
+// import router from './router';
+Vue.prototype.Observer = Observer;
 axios.defaults.withCredentials=true
 Vue.prototype.axios = axios
 
