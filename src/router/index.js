@@ -9,7 +9,9 @@ import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
 import Index from '../pages/index'
 import Mine from './../pages/mine'
-
+import ShopAllProduct from './../pages/shop/shopAllProduct'
+import ShopPromotion from './../pages/shop/shopPromotion'
+import ShopClassify from './../pages/shop/shopClassify'
 Vue.use(Router)
 
 export default new Router({
@@ -56,10 +58,29 @@ export default new Router({
       component: Shop,
       children: [
         {
+          path: '/',
+          redirect:'ShopIndex'
+        },
+        {
           path: 'shopIndex',
           name: 'ShopIndex',
           component: ShopIndex
-        }
+        },
+        {
+          path:'shopAllProduct',
+          name:'ShopAllProduct',
+          component: ShopAllProduct
+        },
+        {
+          path:'shopPromotion',
+          name:'ShopPromotion',
+          component: ShopPromotion
+        },
+        {
+          path:'shopClassify',
+          name:'ShopClassify',
+          component: ShopClassify
+        },
       ]
     },
     {
