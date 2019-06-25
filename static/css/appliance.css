@@ -1,0 +1,425 @@
+@charset "utf-8";
+.appliance{
+  height: 100%;
+  overflow-y: auto;
+  background: #f4f4f4;
+}
+.appliance-header{
+  width: 100%;
+  height: 90px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  color: #333333;
+}
+.appliance-header-icon-left{
+  font-size: 32px;
+}
+.appliance-header>h3{
+}
+
+
+/*轮播图Swiper*/
+.appliance-swiper-box{
+  margin-top: 90px;
+  width: 100%;
+  height: 532px;
+  background: url("./../applianceImg/applianceBG.jpg");
+  background-size: 100%;
+}
+.appliance-swiper-box .swiper-container{
+
+}
+.appliance-swiper-box .swiper-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 532px;
+}
+
+.appliance-swiper-box .swiper-slide{
+  width: 630px;
+  height: 400px;
+  margin-top: 132px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+
+/*猜你喜欢*/
+appliance-hot{
+  width: 100%;
+  height: 298px;
+}
+.appliance-hot{
+  margin: 20px;
+  width: 710px;
+  height: 258px;
+  background: #ffffff;
+  border-radius: 16px;
+  position: relative;
+}
+.appliance-hot-logo{
+  width: 120px;
+  height: 222px;
+  background: url("./../applianceImg/applianceHot-01.png");
+  background-size: 100%;
+  position: absolute;
+  left: 21px;
+  top: 17px;
+  border-radius: 5px;
+}
+.appliance-hot-list{
+  width: 500px;
+  height: 222px;
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  display: flex;
+}
+.appliance-hot-item{
+  width: 166px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.appliance-hot-item-img{
+  width: 130px;
+  height: 130px;
+}
+.appliance-hot-item>span{
+  font-size: 32px;
+  color: #000;
+  margin-top: 30px;
+}
+
+
+/*家电大概分类*/
+
+.appliance-classify{
+  width: 100%;
+  height: 204px;
+  background: url("./../applianceImg/applianceClassifyBG.png");
+  background-size: 100%;
+}
+.appliance-classify-list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.appliance-classify-item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.appliance-brand-item-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.appliance-classify-item>span{
+  color: #1b1b1b;
+  font-size: 24px;
+}
+
+/*主推&福利社*/
+
+.appliance-recommended-welfare{
+  width: 100%;
+  height: 460px;
+  background: #f4f4f4;
+  padding: 0 19px;
+  display: flex;
+  margin-top: 24px;
+}
+.appliance-recommended{
+  width: 290px;
+  height: 458px;
+}
+.appliance-welfare{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.appliance-welfare-top{
+  width: 420px;
+  display: flex;
+  height: 228px;
+  background: url("./../applianceImg/applianceWelfareBG.png");
+  background-size: 100%;
+  padding-top: 80px;
+  padding-left: 50px;
+}
+.appliance-welfare-top-img{
+  width: 144px;
+  height: 132px;
+}
+.appliance-welfare-top>p{
+  font-size: 24px;
+  color: #f31010;
+  line-height: 132px;
+  margin-left: 40px;
+}
+.appliance-welfare-deep{
+  border-top: 1px solid #f4f4f4;
+  display: flex;
+}
+.appliance-welfare-deep-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 208px;
+  height: 228px;
+  background: url("./../applianceImg/applianceWelfareDeepBG.jpg");
+  background-size: 100%;
+}
+.appliance-welfare-deep-item:first-child{
+  margin-right: 4px;
+}
+.appliance-welfare-deep-item>h3{
+  font-size: 28px;
+  color: #000;
+  line-height: 28px;
+  margin: 14px auto 21px;
+}
+.appliance-welfare-deep-item>h4{
+  font-size: 24px;
+  color: #a503ca;
+  line-height: 24px;
+  margin: 0 auto 10px;
+}
+.appliance-welfare-deep-item-img{
+  width: 122px;
+  height: 110px;
+}
+/**大牌推荐**/
+.appliance-brand{
+  width: 100%;
+  height: 526px;
+  padding: 0 20px;
+  margin-top: 26px;
+}
+.appliance-ad{
+  width: 100%;
+  height: 250px;
+}
+.appliance-brand-list{
+  display: flex;
+  width: 100%;
+  height: 275px;
+  border-radius:0 0 30px 30px;
+  overflow: hidden;
+}
+.appliance-brand-item{
+ width: 234px;
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./../applianceImg/applianceBrandItemBG.png");
+  background-size: 100%;
+  margin-right: 4px;
+}
+.appliance-brand-item:nth-child(3){
+  margin-right:0;
+}
+.appliance-brand-item>h3{
+ font-size: 28px;
+  color: #020202;
+  text-align: center;
+  line-height: 28px;
+  margin-top: 12px;
+  margin-bottom: 23px;
+}
+.appliance-brand-item>h4{
+  font-size: 24px;
+  color: #424976;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.appliance-brand-item-img{
+  width: 170px;
+  height: 138px;
+}
+.appliance-brand-item:nth-child(2)>h4{
+  color: #ffc068;
+}
+.appliance-brand-item:nth-child(3)>h4{
+  color: #8962ff;
+}
+/**每周推荐**/
+
+.appliance-week{
+  padding: 0 20px;
+  margin-top: 23px;
+}
+.appliance-week-bar{
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+}
+.appliance-week-bar-list{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%
+}
+.appliance-week-bar-list>li{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #2e2e2e;
+}
+.appliance-week-list{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.appliance-week-item{
+  display: flex;
+  align-items: center;
+  height: 140px;
+  justify-content: space-around;
+}
+.appliance-week-item:nth-of-type(1) .appliance-week-rank,
+.appliance-week-item:nth-of-type(2) .appliance-week-rank,
+.appliance-week-item:nth-of-type(3) .appliance-week-rank{
+  background-size: 634px 559px;
+  background-position: -422px -499px;
+}
+.appliance-week-item .appliance-week-rank{
+  width: 54px;
+  height: 54px;
+  background-image: url("./../applianceImg/applianceWeekBG.png");
+  background-size: 634px 559px;
+  background-position: -366px -499px;
+  text-align: center;
+  line-height: 54px;
+  color: #fff;
+}
+.appliance-week-item-img{
+  width: 128px;
+  height: 118px;
+}
+.appliance-week-item-main{
+  display: flex;
+  flex-direction: column;
+
+}
+.appliance-week-item-main-describe{
+  width: 402px;
+  height: 60px;
+  font-size: 26px;
+  color: #0e0e0e;
+  line-height: 30px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}
+.appliance-week-item-main>span{
+  font-size: 20px;
+  color: #f02a14;
+}
+.appliance-week-item>i{
+  width: 50px;
+  height: 50px;
+  font-size: 38px;
+  line-height: 50px;
+  text-align: center;
+  color: #f24848;
+}
+
+/*家电详细分类*/
+
+.appliance-detail-classify{
+  margin-top: 23px;
+  padding: 0 20px;
+  height: 90px;
+  width: 100%;
+}
+.appliance-detail-classify-bar{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.appliance-detail-classify-bar-list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.appliance-detail-classify-bar-list>li{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #000;
+}
+.appliance-detail-classify-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.appliance-detail-classify-item{
+  height: 536px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.appliance-detail-classify-item-img{
+  width: 350px;
+  height: 350px;
+}
+.appliance-detail-classify-item-title{
+  font-size: 28px;
+  color: #000;
+  width: 310px;
+  height: 68px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}
+.appliance-detail-classify-item-price>i{
+  font-style: normal;
+  color: #f0250f;
+  font-size: 24px;
+}
+.appliance-detail-classify-item-price>span{
+  color: #9d9d9d;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+.appliance-detail-classify-item>i{
+  font-size: 38px;
+  color: #f02611;
+  text-align: right;
+}
