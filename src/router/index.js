@@ -5,6 +5,7 @@ import Order from './../pages/order'
 import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
+import Index from '../pages/index'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
           component: ShopIndex
         }
       ]
+    },
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
     }
   ]
 })
