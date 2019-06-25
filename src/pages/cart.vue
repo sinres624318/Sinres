@@ -1,68 +1,47 @@
 <template>
   <div class="cart">
-    <van-nav-bar
-      class="cartHeader"
-      title="购物车"
-      left-arrow
-      @click-left="onClickLeft"
-      @click-right="onClickRight">
-      <van-icon name="arrow-left" slot="left"/>
-      <van-icon name="ellipsis" slot="right"/>
-    </van-nav-bar>
+    <NavBar>
+      <template v-slot:left>
+        <div class="left iconfont" @click="onClickLeft">&#xe61c;</div>
+      </template>
+      <template v-slot:title>
+        <div class="title">购物车</div>
+      </template>
+      <template v-slot:right>
+        <div class="right iconfont">&#xe670;</div>
+      </template>
+    </NavBar>
+    <CartProductEdit></CartProductEdit>
+    <CartShop></CartShop>
+    <CartShop></CartShop>
+    <CartShop></CartShop>
+    <CartShop></CartShop>
+    <CartTotalPrice></CartTotalPrice>
   </div>
 </template>
 
 <script>
-
-  import {NavBar, Icon} from 'vant';
-
+  import NavBar from './../components/common/navBar'
+  import CartShop from './../components/cart/cartShop'
+  import CartTotalPrice from './../components/cart/cartTotalPrice'
+  import CartProductEdit from './../components/cart/cartProductEdit'
 
   export default {
     name: "cart",
     components: {
-      'van-icon': Icon,
-      'van-nav-bar': NavBar
+      NavBar,
+      CartShop,
+      CartTotalPrice,
+      CartProductEdit
     },
     methods: {
       onClickLeft() {
         this.$router.go(-1)
-      },
-      onClickRight() {
-        console.log('right')
       }
     }
   }
 </script>
-
+<style src="./../../static/css/cart/cart.css"></style>
 <style scoped>
-  .cartHeader {
-    height: 90px;
-  }
 
-  .van-nav-bar__left,
-  .van-nav-bar__right {
-    top: 50%;
-    height: 100%;
-    line-height: 90px;
-    width: 80px;
-    transform: translateY(-50%);
-  }
-
-  .van-nav-bar__title {
-    height: 100%;
-    line-height: 90px;
-    font-size: 40px;
-  }
-
-  .van-icon-arrow-left {
-    font-size: 45px;
-  }
-
-  .van-icon-ellipsis {
-    font-size: 60px;
-  }
-
-  .van-icon {
-    color: #666;
-  }
 </style>
