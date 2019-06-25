@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Cart from './../pages/cart'
-import Order from './../pages/order'
 import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
@@ -23,16 +22,15 @@ export default new Router({
       component: Mine
     },
     {
-      path: '/order',
-      name: 'Order',
-      component: Order
-    },
-    {
       path: 'appliance',
       name: 'Appliance',
       component: Appliance
     },
     {
+      path: '/appliance',
+      name: 'Appliance',
+      component: Appliance
+    }, {
       path: '/shop',
       name: 'Shop',
       component: Shop,

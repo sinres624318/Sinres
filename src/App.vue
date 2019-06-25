@@ -17,12 +17,7 @@
 
 <style>
   #app {
-<<<<<<< HEAD
     height: 100%;
-    overflow: hidden;
-=======
-height:100%;
     overflow:hidden;
->>>>>>> ZCG
   }
 </style>
