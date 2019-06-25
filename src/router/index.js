@@ -9,17 +9,17 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: 'cart',
+      path: '/cart',
       name: 'Cart',
       component: Cart
     },
     {
-      path: 'order',
+      path: '/order',
       name: 'Order',
       component: Order
     },
     {
-      path:'appliance',
+      path:'/appliance',
       name:'Appliance',
       component:Appliance
     }
