@@ -6,6 +6,7 @@ import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
 import Index from '../pages/index'
+import Mine from './../pages/mine'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/cart',
       name: 'Cart',
       component: Cart
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
     },
     {
       path: '/order',

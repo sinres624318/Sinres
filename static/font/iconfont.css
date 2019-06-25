@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {font-family: "iconfont";
   src: url('iconfont.eot?t=1558939090714'); /* IE9 */
   src: url('iconfont.eot?t=1558939090714#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -10,23 +11,49 @@
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
+=======
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1561454737300'); /* IE9 */
+  src: url('iconfont.eot?t=1561454737300#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1561454737300') format('woff'),
+  url('iconfont.ttf?t=1561454737300') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url('iconfont.svg?t=1561454737300#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont";
+>>>>>>> ac2ef97ecfb7d206298424126cffe72dab447467
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 .icon-menu:before {
   content: "\e60b";
 }
 
 .icon-weibiaoti1:before {
   content: "\e600";
+=======
+.icon-gengduo:before {
+  content: "\e670";
+}
+
+.icon-gouwuche1:before {
+  content: "\e63f";
+}
+
+.icon-huidaodingbu:before {
+  content: "\e74a";
+>>>>>>> ac2ef97ecfb7d206298424126cffe72dab447467
 }
 
 .icon-icon04:before {
   content: "\e601";
 }
 
+<<<<<<< HEAD
 .icon-gouwuche:before {
   content: "\e6ef";
 }
@@ -37,5 +64,57 @@
 
 .icon-wodepingou:before {
   content: "\e6fe";
+=======
+.icon-huidaodingbu1:before {
+  content: "\e631";
+}
+
+.icon-qian3:before {
+  content: "\e643";
+}
+
+.icon-sousuo:before {
+  content: "\e684";
+}
+
+.icon-jiaoya:before {
+  content: "\e635";
+}
+
+.icon-icon-test:before {
+  content: "\e621";
+}
+
+.icon-my_icon:before {
+  content: "\e65d";
+}
+
+.icon-shangyiji:before {
+  content: "\e61c";
+}
+
+.icon-xiayiji:before {
+  content: "\e624";
+}
+
+.icon-dizhi:before {
+  content: "\e606";
+}
+
+.icon-wodedangxuan:before {
+  content: "\e608";
+}
+
+.icon-shang:before {
+  content: "\e722";
+}
+
+.icon-shouye-xianxing:before {
+  content: "\e790";
+}
+
+.icon-gouwuche:before {
+  content: "\e664";
+>>>>>>> ac2ef97ecfb7d206298424126cffe72dab447467
 }
 
