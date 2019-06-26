@@ -3,7 +3,7 @@
     <div class="indexClassify">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <router-link tag="a" to="item.path" v-for="(item,index) in indexClassifyl" :key="index">
+          <router-link tag="a"  :to="item.path" v-for="(item,index) in indexClassifyl" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
@@ -31,44 +31,53 @@
               {
                 img:'../../../static/img/classify/1.png',
                 text:'京东超市',
-                path:'appliance'
+               path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               }
               ,
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path: '/appliance'
               }
             ],
             indexClassifyr:[

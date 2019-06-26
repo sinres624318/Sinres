@@ -11,7 +11,7 @@
       </router-link>
     </div>
     <div class="tools-bar-purchase">
-      <router-link  tag="div" to="">
+      <router-link  tag="div" to="/groupBuy">
       <img src="../../../static/img/bar/purchase.png" alt="">
       </router-link>
     </div>
@@ -21,7 +21,7 @@
         </router-link>
     </div>
     <div class="tools-bar-mine">
-      <router-link  tag="div" to="/mine">
+      <router-link  tag="div"  to="/mine">
         <img src="../../../static/img/bar/mine.png" alt="">
         </router-link>
     </div>

@@ -51,15 +51,6 @@ body{
   display: inline-block;
 }
 
-.searchSearch-logo::after {
-  content: "";
-  position: absolute;
-  border-right: 1px solid #ddd;
-  top: 0;
-  left: 48px;
-  height: 30px;
-}
-
 .searchSearch-zoom {
   display: inline-block;
   height: 30px;
