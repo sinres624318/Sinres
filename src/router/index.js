@@ -7,12 +7,14 @@ import Cart from './../pages/cart'
 import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
-import Index from '../pages/index'
+import Index from './../pages/index'
 import Mine from './../pages/mine'
 import Auction from './../pages/auction'
+import Search from './../pages/search/search'
 import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
+
 Vue.use(Router)
 
 export default new Router({
@@ -43,11 +45,11 @@ export default new Router({
       name: 'Mine',
       component: Mine
     },
-    {
-      path: 'appliance',
-      name: 'Appliance',
-      component: Appliance
-    },
+    // {
+    //   path: 'appliance',
+    //   name: 'Appliance',
+    //   component: Appliance
+    // },
     {
       path:'/auction',
       name:'Auction',
@@ -92,7 +94,12 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: Index,
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
     }
   ]
 })
