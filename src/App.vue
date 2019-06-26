@@ -3,7 +3,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
   export default {
     name: 'App',
@@ -19,6 +18,6 @@
 <style>
   #app {
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
   }
 </style>

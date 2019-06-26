@@ -4,13 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'lib-flexible/flexible'
-import { Lazyload } from 'vant';
+import {Lazyload} from 'vant';
 import axios from './../utils/request'
+import Observer from "./Observer";
+
+Vue.prototype.Observer = Observer;
 import './../static/font/iconfont.css'
-axios.defaults.withCredentials=true
+
+axios.defaults.withCredentials = true
 Vue.prototype.axios = axios
 Vue.use(Lazyload);
-
 
 
 Vue.config.productionTip = false
@@ -19,6 +22,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

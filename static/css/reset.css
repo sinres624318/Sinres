@@ -16,12 +16,9 @@ a { color:#666; text-decoration:none; }
 .clearFix::after{content: '';display: block;height: 0;overflow: hidden;visibility: hidden;clear: both;}
 *{box-sizing:border-box}
 body,html{
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 i {
-    font-style: normal;
+  font-style: normal;
 }
-
-
-

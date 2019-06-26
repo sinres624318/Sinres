@@ -14,6 +14,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  content: "\e60b";
+}
+
+.icon-weibiaoti1:before {
+  content: "\e600";
+}
+
 .icon-gengduo:before {
   content: "\e670";
 }
@@ -23,7 +31,6 @@
   content: "\e63f";
 }
 
-
 .icon-huidaodingbu:before {
   content: "\e74a";
 }
@@ -32,6 +39,17 @@
   content: "\e601";
 }
 
+.icon-gouwuche:before {
+  content: "\e6ef";
+}
+
+.icon-wode:before {
+  content: "\e609";
+}
+
+.icon-wodepingou:before {
+  content: "\e6fe";
+}
 
 .icon-huidaodingbu1:before {
   content: "\e631";
