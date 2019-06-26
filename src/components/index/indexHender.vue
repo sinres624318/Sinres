@@ -1,5 +1,5 @@
 <template>
-  <div class="indexsearch-wrap" id="boxFixed" :class="{'is_fixed' : isFixed}">
+  <div class="indexsearch-wrap" id="boxFixed" >
     <div class="indexsearch">
       <div class="indexmenu">
         <i class="iconfont">&#xe62c;</i>

@@ -22,7 +22,7 @@
       </div>
       <div class="seckill-content">
         <div class="seckill-list">
-          <router-link tag="div" to="" class="seckill-item"  v-for="item in seckillContext">
+          <router-link tag="div" to="" class="seckill-item"  v-for="(item,index) in seckillContext" :key="index">
             <div class="seckill-item-img">
               <a href="">
                 <img :src="item.img" alt="">

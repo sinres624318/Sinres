@@ -1,15 +1,15 @@
 <template>
-  <div class="promotion">
+  <div>
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
-      <img src="../../../static/img/shop_background.jpg" alt>
+      <img src="./../../../static/img/shop/shop_background.jpg" alt>
       <p></p>
     </div>
     <div class="shopHeader">
       <div class="shopHeaderLogo">
         <a href>
-          <img src="../../../static/img/shopLogo.png" alt>
+          <img src="./../../../static/img/shop/shopLogo.png" alt>
         </a>
       </div>
       <div class="shopHeaderName">
@@ -23,32 +23,21 @@
     </div>
     <!-- search------------ -->
     <div class="allSearch">
-      <van-search placeholder="请输入搜索关键词" v-model="value"/>
-    </div>
-    <div class="promotionList">
-        <p>以下商品参加限时秒杀，欢迎选购</p>
-      <productHorizontal></productHorizontal>
-      <productHorizontal></productHorizontal>
+      <van-search placeholder="搜索本店商品"/>
     </div>
   </div>
 </template>
 <script>
 import { Search } from "vant";
-import productHorizontal from "../../copmonents/productHorizontal";
 export default {
-  name: "promotion",
-  components: {
-    "van-search": Search,
-    productHorizontal
+  name: "shopHeader",
+  components:{
+    'van-search':Search
   }
 };
 </script>
-<style scoped>
-.shop {
-  overflow-y: auto;
-  height: 100%;
-  background-size: 100%;
-}
+
+<style>
 .bgimg {
   position: absolute;
   top: 0;
@@ -124,23 +113,25 @@ export default {
 }
 /* -----------search--------------- */
 .allSearch {
+  margin-bottom: 20px;
   padding: 0 20px;
 }
 .allSearch .van-search {
   border-radius: 30px;
   text-align: center;
 }
-/* promotionList-------------- */
-.promotionList {
-  background: #fff;
+.van-cell{
+  font-size: 28px;
+  text-align: center;
 }
-.promotionList>p{
-    margin-top: 30px;
-    height: 60px;
-    background: #f7f7f7;
-    text-align: center;
-    font-size: 24px;
-    color: #9a9a9a;
-    line-height: 60px;
+.van-icon-search{
+    font-size: 28px;
+  }
+.van-field__left-icon .van-icon,
+.van-field__right-icon .van-icon {
+  display: block;
+  min-width: 1em;
+  line-height: inherit;
+  font-size: 28px;
 }
 </style>
