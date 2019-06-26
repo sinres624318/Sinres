@@ -1,0 +1,121 @@
+.more-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.more-menu-list {
+  position: absolute;
+  right: 15px;
+  width: 250px;
+  background: #0e0e0e;
+  top: 110px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.more-menu-list::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: -7px;
+  background: #0e0e0e;
+}
+
+.menu-item {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 80px;
+  position: relative;
+  font-size: 30px;
+}
+
+.menu-item > i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.menu-item > span {
+  display: block;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+}
+
+.menu-item > span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: hsla(0, 0%, 100%, .9);
+  height: 2px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: scaleY(.5);
+}
+
+.menu-item:nth-of-type(1) > span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  height: 0;
+}
+
+.more-menu-mask {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.more-menu-index {
+  background-image: url("../img/moreMenu/hone.png");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.more-menu-classify {
+  background-image: url("../img/moreMenu/classify.png");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.more-menu-cart {
+  background-image: url("../img/moreMenu/cart.png");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.more-menu-mine {
+  background-image: url("../img/moreMenu/mine.png");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.more-menu-footprint {
+  background-image: url("../img/moreMenu/footprint.png");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
