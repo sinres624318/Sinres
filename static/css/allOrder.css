@@ -1,0 +1,76 @@
+/*all-order start*/
+.all-order {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 90px 0 0;
+  background: #f7f7f7;
+}
+
+/*NavBar start*/
+
+.nav-bar {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  width: 100%;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 38px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*NavBar end*/
+
+/*order-item start*/
+.order-item {
+  margin: 30px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.order-title {
+  height: 52px;
+}
+
+/*order-item end*/
+/*all-order end*/
