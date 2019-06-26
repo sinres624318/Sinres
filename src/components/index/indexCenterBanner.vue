@@ -3,16 +3,16 @@
     <div class="indexClassify">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <a href="" v-for="item in indexClassifyl">
+          <router-link tag="a" to="item.path" v-for="item in indexClassifyl">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
-          </a>
+          </router-link>
         </div>
         <div class="classify-r swiper-slide">
-          <a href="" v-for="item in indexClassifyr">
+          <router-link tag="a" to="" href="" v-for="item in indexClassifyr">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="classify-slide"></div>
@@ -30,7 +30,8 @@
             indexClassifyl:[
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市'
+                text:'京东超市',
+                path:'appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',

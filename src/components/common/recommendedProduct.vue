@@ -1,7 +1,7 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <a class="aaa" v-for="item in recommenditem">
+      <div class="aaa" v-for="item in recommenditem">
         <div class="similar-product">
           <div class="similar-posre">
             <img :src="item.Img" alt="">
@@ -16,7 +16,7 @@
           </div>
           <div class="similar-product-info"></div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>

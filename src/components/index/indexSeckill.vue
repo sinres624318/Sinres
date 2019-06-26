@@ -22,7 +22,7 @@
       </div>
       <div class="seckill-content">
         <div class="seckill-list">
-          <div class="seckill-item"  v-for="item in seckillContext">
+          <router-link tag="div" to="" class="seckill-item"  v-for="item in seckillContext">
             <div class="seckill-item-img">
               <a href="">
                 <img :src="item.img" alt="">
@@ -38,7 +38,7 @@
                                 <span>{{item.originalPrice}}</span>
                             </span>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>

@@ -30,7 +30,6 @@
   import MineActivity from '../components/mine/mineActivity'
   import MineRecommend from '../components/mine/mineRecommend'
   import MoreMenu from '../components/common/moreMenu'
-
   export default {
     name: "mine",
     components: {
@@ -41,7 +40,7 @@
       MineAssetsCell,
       MineActivity,
       MineRecommend,
-      MoreMenu
+      MoreMenu,
     },
     methods: {
       onClickLeft() {

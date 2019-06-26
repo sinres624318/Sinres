@@ -3,9 +3,9 @@
     <div class="indexTopBanner">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in banner">
-          <a href="">
+          <router-link tag="a" to="">
             <img :src="item" alt="">
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="swiper-pagination"></div>

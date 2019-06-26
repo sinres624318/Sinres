@@ -1,14 +1,14 @@
 <template>
-  <div class="indexsearch-wrap">
+  <div class="indexsearch-wrap" id="boxFixed" :class="{'is_fixed' : isFixed}">
     <div class="indexsearch">
       <div class="indexmenu">
-        <i class="iconfont">&#xe60b;</i>
+        <i class="iconfont">&#xe62c;</i>
       </div>
-      <div class="indexsearch-form">
+      <router-link class="indexsearch-form" tag="div" to="/search">
         <i class="search-logo"></i>
         <i class="search-zoom"></i>
-        <input type="text" placeholder="汽车香水">
-      </div>
+        <input type="text" placeholder="汽车香水" readonly="readonly" >
+      </router-link>
       <div class="indexlogin">
         <a href="">登录</a>
       </div>
@@ -18,7 +18,11 @@
 
 <script>
     export default {
-        name: "indexHender"
+        name: "indexHender",
+      mounted() {
+
+      }
+
     }
 </script>
 
