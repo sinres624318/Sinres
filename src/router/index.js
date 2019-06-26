@@ -1,20 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Register from '../pages/Register'
-import Login from '../pages/login'
-import Classify from '../pages/classify'
 import Cart from './../pages/cart'
-import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
-import ShopIndex from './../pages/shop/shopIndex'
-import Index from './../pages/index'
+import Index from '../pages/index'
+import Classify from '../pages/classify'
 import Mine from './../pages/mine'
-import Auction from './../pages/auction'
-import Search from './../pages/search/search'
+import Login from '../pages/login'
+import Register from '../pages/Register'
+import Appliance from './../pages/appliance'
+import Footprint from './../pages/footprint'
+import ShopIndex from './../pages/shop/shopIndex'
 import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
 import GroupBuy from './../pages/groupBuy/groupBuy'
+import Vouchers from './../pages/vouchers'
+import AllOrder from './../pages/allOrder'
+import Auction from './../pages/auction'
+import Search from './../pages/search/search'
 
 Vue.use(Router)
 
@@ -47,9 +50,14 @@ export default new Router({
       component: Mine
     },
     {
-      path:'/auction',
-      name:'Auction',
-      component:Auction
+      path: 'appliance',
+      name: 'Appliance',
+      component: Appliance
+    },
+    {
+      path: '/auction',
+      name: 'Auction',
+      component: Auction
     },
     {
       path: '/appliance',
@@ -58,12 +66,11 @@ export default new Router({
     },
     {
       path: '/shop',
-      name: 'Shop',
       component: Shop,
       children: [
         {
           path: '/',
-          redirect:'ShopIndex'
+          redirect: 'ShopIndex'
         },
         {
           path: 'shopIndex',
@@ -71,18 +78,18 @@ export default new Router({
           component: ShopIndex
         },
         {
-          path:'shopAllProduct',
-          name:'ShopAllProduct',
+          path: 'shopAllProduct',
+          name: 'ShopAllProduct',
           component: ShopAllProduct
         },
         {
-          path:'shopPromotion',
-          name:'ShopPromotion',
+          path: 'shopPromotion',
+          name: 'ShopPromotion',
           component: ShopPromotion
         },
         {
-          path:'shopClassify',
-          name:'ShopClassify',
+          path: 'shopClassify',
+          name: 'ShopClassify',
           component: ShopClassify
         },
       ]
@@ -90,7 +97,17 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index,
+      component: Index
+    },
+    {
+      path: '/allOrder',
+      name: 'AllOrder',
+      component: AllOrder
+    },
+    {
+      path: '/footprint',
+      name: 'Footprint',
+      component: Footprint
     },
     {
       path: '/search',
@@ -101,6 +118,10 @@ export default new Router({
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
+    },{
+      path:'/vouchers',
+      name:'Vouchers',
+      component:Vouchers
     }
   ]
 })

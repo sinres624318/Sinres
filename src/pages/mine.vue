@@ -2,13 +2,13 @@
   <div class="mine">
     <NavBar>
       <template v-slot:left>
-        <div class="left iconfont" @click="onClickLeft">&#xe61c;</div>
+        <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
       </template>
       <template v-slot:title>
         <div class="title">我的京东</div>
       </template>
       <template v-slot:right>
-        <div class="right iconfont">&#xe670;</div>
+        <div class="right iconfont" @click="moreMenuClickHandle">&#xe670;</div>
       </template>
     </NavBar>
     <MineUserInfo></MineUserInfo>
@@ -17,7 +17,7 @@
     <MineAssetsCell></MineAssetsCell>
     <MineActivity></MineActivity>
     <MineRecommend></MineRecommend>
-    <MoreMenu></MoreMenu>
+    <MoreMenu v-if="flag"></MoreMenu>
   </div>
 </template>
 
@@ -32,6 +32,11 @@
   import MoreMenu from '../components/common/moreMenu'
   export default {
     name: "mine",
+    data() {
+      return {
+        flag: false
+      }
+    },
     components: {
       NavBar,
       MineUserInfo,
@@ -43,8 +48,11 @@
       MoreMenu,
     },
     methods: {
-      onClickLeft() {
+      backClickHandle() {
         this.$router.go(-1);
+      },
+      moreMenuClickHandle() {
+        this.flag = !this.flag;
       }
     }
   }
