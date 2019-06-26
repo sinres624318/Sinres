@@ -6,6 +6,7 @@ import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
 import Mine from './../pages/mine'
+import Auction from './../pages/auction'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/order',
       name: 'Order',
       component: Order
+    },
+    {
+      path:'/auction',
+      name:'Auction',
+      component:Auction
     },
     {
       path: '/appliance',
