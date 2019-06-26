@@ -1,5 +1,5 @@
 <template>
-  <div class="indexsearch-wrap" id="boxFixed" >
+  <div class="indexsearch-wrap" >
     <div class="indexsearch">
       <div class="indexmenu">
         <i class="iconfont">&#xe62c;</i>

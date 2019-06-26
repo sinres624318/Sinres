@@ -13,6 +13,8 @@ import ShopIndex from './../pages/shop/shopIndex'
 import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
+import GroupBuy from './../pages/groupBuy/groupBuy'
+import Vouchers from './../pages/vouchers'
 import AllOrder from './../pages/allOrder'
 import Auction from './../pages/auction'
 import Search from './../pages/search/search'
@@ -20,7 +22,7 @@ import Search from './../pages/search/search'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
     {
       path: '/register',
@@ -46,6 +48,11 @@ export default new Router({
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: 'appliance',
+      name: 'Appliance',
+      component: Appliance
     },
     {
       path: '/auction',
@@ -106,6 +113,15 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/groupBuy',
+      name: 'GroupBuy',
+      component: GroupBuy
+    },{
+      path:'/vouchers',
+      name:'Vouchers',
+      component:Vouchers
     }
   ]
 })
