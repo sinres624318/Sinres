@@ -1,12 +1,12 @@
 <template>
   <div class="allProduct">
-    <shopHeader></shopHeader>
+    <ShopHeader></ShopHeader>
     <!-- nav-------------- -->
     <div class="allNav">
       <van-tabs nav-left='<van-icon name="close" />'>
         <van-tab title="默认">
           <div class="allProductList">
-            <productH></productH>
+            <ShopProductH></ShopProductH>
           </div>
         </van-tab>
         <van-tab title="销量">内容 2</van-tab>
@@ -18,16 +18,16 @@
   </div>
 </template>
 <script>
-import shopHeader from './../../components/shop/shopHeader'
-import productH from './../../components/shop/productH'
+import ShopHeader from './../../components/shop/shopHeader'
+import ShopProductH from './../../components/shop/shopProductH'
 import { Tab, Tabs } from "vant";
 export default {
   name: "shopAllProduct",
   components: {
     "van-tab": Tab,
     "van-tabs": Tabs,
-    shopHeader,
-    productH
+    ShopHeader,
+    ShopProductH
   }
 };
 </script>

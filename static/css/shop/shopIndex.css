@@ -166,7 +166,9 @@
   }
   
   /* shopList */
-
+.shopList{
+  padding: 0 10px;
+}
   .shopListItem {
     width: 50%;
     border-bottom: 8px solid rgb(243, 244, 247);

@@ -8,6 +8,8 @@ import Appliance from './../pages/appliance'
 import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
 import Index from '../pages/index'
+import Wool from '../pages/wool'
+import PatPat from '../pages/patPat'
 import Mine from './../pages/mine'
 import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
@@ -48,18 +50,12 @@ export default new Router({
       component: Appliance
     },
     {
-      path: '/appliance',
-      name: 'Appliance',
-      component: Appliance
-    },
-    {
       path: '/shop',
-      name: 'Shop',
       component: Shop,
       children: [
         {
           path: '/',
-          redirect:'ShopIndex'
+          redirect:'shopIndex'
         },
         {
           path: 'shopIndex',
@@ -83,10 +79,8 @@ export default new Router({
         },
       ]
     },
-    {
-      path: '/',
-      name: 'Index',
-      component: Index
-    }
+    {path: '/',name: 'Index',component: Index},
+    {path:'/wool', name:'Wool',component:Wool},
+    {path:'/patPat', name:'PatPat',component:PatPat},
   ]
 })
