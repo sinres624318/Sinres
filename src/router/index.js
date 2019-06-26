@@ -14,14 +14,8 @@ import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
 import AllOrder from './../pages/allOrder'
-import ShopIndex from './../pages/shop/shopIndex'
-import Index from './../pages/index'
-import Mine from './../pages/mine'
 import Auction from './../pages/auction'
 import Search from './../pages/search/search'
-import ShopAllProduct from './../pages/shop/shopAllProduct'
-import ShopPromotion from './../pages/shop/shopPromotion'
-import ShopClassify from './../pages/shop/shopClassify'
 
 Vue.use(Router)
 
@@ -65,7 +59,6 @@ export default new Router({
     },
     {
       path: '/shop',
-      name: 'Shop',
       component: Shop,
       children: [
         {
