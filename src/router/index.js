@@ -14,6 +14,7 @@ import Search from './../pages/search/search'
 import ShopAllProduct from './../pages/shop/shopAllProduct'
 import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
+import Vouchers from './../pages/vouchers'
 
 Vue.use(Router)
 
@@ -45,11 +46,11 @@ export default new Router({
       name: 'Mine',
       component: Mine
     },
-    // {
-    //   path: 'appliance',
-    //   name: 'Appliance',
-    //   component: Appliance
-    // },
+    {
+      path: 'appliance',
+      name: 'Appliance',
+      component: Appliance
+    },
     {
       path:'/auction',
       name:'Auction',
@@ -100,6 +101,10 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },{
+      path:'/vouchers',
+      name:'Vouchers',
+      component:Vouchers
     }
   ]
 })
