@@ -5,7 +5,7 @@
         <i class="iconfont">&#xe62c;</i>
       </div>
       <router-link class="indexsearch-form" tag="div" to="/search">
-        <i class="search-logo"></i>
+        <i class="search-logo"> <img src="./../../../static/img/search.png" alt=""></i>
         <i class="search-zoom"></i>
         <input type="text" placeholder="汽车香水" readonly="readonly" >
       </router-link>
@@ -27,6 +27,5 @@
 </script>
 
 <style scoped>
-
 
 </style>

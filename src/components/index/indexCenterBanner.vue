@@ -30,53 +30,53 @@
             indexClassifyl:[
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
+                img:'../../../static/img/classify/r8.png',
+                text:'拍拍二手',
+                path: '/patPat'
               },
               {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
+                img:'../../../static/img/classify/wool-logo.png',
+                text:'薅羊毛',
+                path: '/wool'
               }
               ,
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'信瑞超市',
                 path: '/appliance'
               }
             ],
