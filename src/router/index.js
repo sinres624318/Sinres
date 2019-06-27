@@ -76,11 +76,6 @@ export default new Router({
       component: Auction
     },
     {
-      path: '/appliance',
-      name: 'Appliance',
-      component: Appliance
-    },
-    {
       path: '/shop',
       component: Shop,
       children: [{
@@ -123,11 +118,6 @@ export default new Router({
       path: '/patPat',
       name: 'PatPat',
       component: PatPat
-    },
-    {
-      path: '/',
-      name: 'Index',
-      component: Index
     },
     {
       path: '/allOrder',

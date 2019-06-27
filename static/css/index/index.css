@@ -56,6 +56,9 @@ body {
   white-space: nowrap;
   line-height: 30px;
 }
+.iconfont{
+  /* font-size:24px; */
+}
 .indexsearch-form {
   width: 548px;
   height: 60px;
