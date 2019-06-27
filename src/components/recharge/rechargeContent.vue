@@ -3,9 +3,9 @@
       <div class="recharge-content-first" v-if="show==0">
         <div class="recharge-content-first-ul">
       <ul>
-        <li v-for="item in list">
+        <li v-for="(item,index) in list" :class="{heightColor:num==index}" @click="numHandel(index,item.text)">
           {{item.price}}
-          <i>{{item.text}}</i>
+          <i v-show="true"><span>售价:</span>{{item.text}}</i>
        </li>
       </ul>
         </div>
@@ -14,7 +14,7 @@
           <p>京豆</p>
         </div>
         <div class="recharge-content-first-buy">
-          <span>合计:￥0.00</span>
+         <span>合计: ￥<i ref="i">0.00</i></span>
           <a href="#">立即下单</a>
         </div>
       </div>
@@ -46,22 +46,39 @@
         name: "rechargeContent",
       data(){
           return{
-            list:[{price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"},
-              {price:"10元",text:"售价:9.96"}],
+            list:[{price:"10元",text:"9.96"},
+              {price:"10元",text:"9.96"},
+              {price:"20元",text:"19.96"},
+              {price:"30元",text:"29.96"},
+              {price:"50元",text:"49.96"},
+              {price:"100元",text:"99.96"},
+              {price:"300元",text:"299.96"},
+              {price:"500元",text:"499.96"},
+              {price:"1000元",text:"999.96"}
+            ],
             lists:["30M","50M","100M","200M","500M","1G"],
-            show:0
+            show:0,
+            find:false,
+            num:-1,
+            telephoneNum: ''
           }
+      },
+      methods:{
+        numHandel(index,item){
+          this.num=index;
+          this.$refs.i.innerHTML=item
+        },
+        changeHandel(){
+          var regs=/(13|14|15|16|17|18|19)\d{8}/;
+
+        }
+
       },
       created() {
           indexHender:{
             this.Observer.$on("handel",(val)=>{
-              this.show=val;
+              this.show=val[0];
+              this.telephoneNum=val[1];
             })
 
         }

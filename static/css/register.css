@@ -15,6 +15,7 @@
     font-size: 32px;
     font-weight: 800;
     border-bottom: 1px solid rgb(239,239,239);
+    background: white;
   }
 .register-header-left {
   content: "";
@@ -35,10 +36,22 @@
 .register-content{
   width: 100%;
   padding: 60px 40px 0 40px;
+  /*background: white;*/
+}
+.register-content-import-first{
+  display:flex;
+}
+.register-content-import-first span{
   background: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .register-content-import{
-  display: flex;
   padding-bottom: 40px;
 }
 .register-content-select{
@@ -53,14 +66,24 @@
 
 }
 .register-content-input{
-  width: 520px;
+   width: 420px;
+   border: 0;
+   outline: none;
+   height: 100px;
+
+   font-size: 30px;
+   background: white;
+ }
+.register-content-input-two{
+  width: 100%;
   border: 0;
   outline: none;
   height: 100px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   font-size: 30px;
   background: white;
+  margin-top: 40px;
+  padding-left: 20px;
 }
 .register-content-button{
   width: 100%;

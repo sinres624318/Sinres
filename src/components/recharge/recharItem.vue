@@ -6,7 +6,7 @@
           <li v-for="(item,index) in list" @click="styleHandel(index)" :class="{unique:num==index}">{{item}}</li>
         </ul>
       </div>
-      <input type="text" maxlength="11" class="reachar-item-input" placeholder="请输入充值号码"/>
+      <input type="text" maxlength="11" ref="input" class="reachar-item-input" placeholder="请输入充值号码"/>
     </div>
 
 </template>
@@ -23,7 +23,7 @@
       methods:{
           styleHandel(index){
              this.num=index;
-             this.Observer.$emit("handel",this.num)
+             this.Observer.$emit("handel",[this.num,this.$refs.input.value])
           }
       }
     }
