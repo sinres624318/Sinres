@@ -3,8 +3,12 @@ import Router from 'vue-router'
 import Cart from './../pages/cart'
 import Shop from './../pages/shop'
 import Index from '../pages/index'
+import Wool from '../pages/wool'
+import PatPat from '../pages/patPat'
 import Classify from '../pages/classify'
 import Mine from './../pages/mine'
+import MyAttention from './../pages/myAttention'
+import Recharge from './../pages/recharge'
 import Login from '../pages/login'
 import Register from '../pages/Register'
 import Appliance from './../pages/appliance'
@@ -20,16 +24,16 @@ import Auction from './../pages/auction'
 import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
 
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register
-    },
+  routes: [{
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
     {
       path: '/login',
       name: 'Login',
@@ -39,6 +43,16 @@ export default new Router({
       path: '/classify',
       name: 'Classify',
       component: Classify
+    },
+    {
+      path: '/myAttention',
+      name: 'MyAttention',
+      component: MyAttention
+    },
+    {
+      path: '/recharge',
+      name: 'Recharge',
+      component: Recharge
     },
     {
       path: '/cart',
@@ -68,11 +82,10 @@ export default new Router({
     {
       path: '/shop',
       component: Shop,
-      children: [
-        {
-          path: '/',
-          redirect: 'ShopIndex'
-        },
+      children: [{
+        path: '/',
+        redirect: 'shopIndex'
+      },
         {
           path: 'shopIndex',
           name: 'ShopIndex',
@@ -94,6 +107,21 @@ export default new Router({
           component: ShopClassify
         },
       ]
+    },
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/wool',
+      name: 'Wool',
+      component: Wool
+    },
+    {
+      path: '/patPat',
+      name: 'PatPat',
+      component: PatPat
     },
     {
       path: '/',
@@ -129,6 +157,10 @@ export default new Router({
       path: '/productList',
       name: 'ProductList',
       component: ProductList
+    }, {
+      path: '/vouchers',
+      name: 'Vouchers',
+      component: Vouchers
     }
   ]
 })
