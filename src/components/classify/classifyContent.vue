@@ -1,0 +1,154 @@
+<template>
+  <div class="classify-content">
+    <ClassifyContentLeft :info="left"/>
+    <ClassifyContentRight :content="right"/>
+  </div>
+</template>
+
+<script>
+  import ClassifyContentLeft from './classifyContentLeft'
+  import ClassifyContentRight from './classifyContentRight'
+    export default {
+        name: "classifyContent",
+      data(){
+          return{
+              left:["热门推荐","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码","手机数码"],
+              right:[
+                {
+                  title:'热门推荐',
+                  rightList:[
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    }
+                  ]
+                },
+                {
+                  title:'手机数码',
+                  rightList:[
+                    {
+                      img:'../../../static/img/classify/4.png',
+                      text:'你猜'
+                    },
+                    {
+                      img:'../../../static/img/classify/4.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    },{
+                      img:'../../../static/img/classify/3.png',
+                      text:'你猜'
+                    }
+                  ]
+                },
+
+              ]
+          }
+      },
+     components:{
+       ClassifyContentLeft,
+       ClassifyContentRight
+     }
+    }
+</script>
+
+<style scoped>
+
+</style>

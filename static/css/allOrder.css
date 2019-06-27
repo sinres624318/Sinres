@@ -62,15 +62,208 @@
 /*order-item start*/
 .order-item {
   margin: 30px;
-  padding: 10px;
+  padding: 20px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
 }
 
+/*order-title start*/
+
 .order-title {
   height: 52px;
+  line-height: 52px;
+  display: flex;
 }
 
+.order-title-icon {
+  font-size: 40px;
+  font-weight: 700;
+  color: #aaa;
+}
+
+.order-title-content {
+  flex: 1;
+  padding: 0 40px 0 20px;
+  font-size: 34px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.order-title-content::after {
+  font-family: 'iconfont';
+  content: '\e624';
+  font-weight: 700;
+  position: absolute;
+  right: 10px;
+  font-size: 40px;
+  color: #ccc;
+}
+
+.order-state {
+  font-size: 28px;
+  color: #999;
+  width: 90px;
+  margin-right: 20px;
+}
+
+.order-delete {
+  padding: 0 10px 0 20px;
+  font-size: 28px;
+  position: relative;
+}
+
+.order-delete::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 75%;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0.5);
+
+}
+
+/*order-title end*/
+/*order-content start*/
+.order-content {
+  padding-top: 16px;
+}
+
+.order-product-info {
+  display: flex;
+  align-items: center;
+}
+
+.order-product-img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.order-product-describe {
+  flex: 1;
+  font-size: 28px;
+  line-height: 42px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+
+.order-product-single {
+  text-align: right;
+  font-size: 28px;
+}
+
+.order-product-single-num {
+  color: #999;
+}
+
+/*order-content end*/
+
+/*order-pay-price start*/
+.order-pay-price-wrap {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28px;
+  line-height: 30px;
+  padding: 12px 0;
+}
+
+.order-pay-price {
+  margin-left: 30px;
+}
+
+.order-pay-num {
+  text-align: right;
+  color: #999;
+}
+
+.order-pay-price-text {
+  color: #999;
+}
+
+.order-pay-price-count {
+  display: inline-block;
+}
+
+/*order-pay-price end*/
+/*order-button start*/
+.order-button {
+  padding-top: 20px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order-button:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  transform: scaleY(0.5);
+}
+
+.order-button > button {
+  width: 175px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 28px;
+}
+
+.order-comment-button {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.order-againBuy-button {
+  background-color: #e93b3d;
+  color: #fff;
+}
+
+/*order-button end*/
 /*order-item end*/
+
+/*order-type start*/
+.order-type {
+  height: 88px;
+  line-height: 88px;
+  font-size: 28px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.order-type::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background: #e5e5e5;
+  transform: scaleY(0.5);
+}
+.order-type >div {
+  flex: 1;
+  text-align: center;
+}
+.order-type .focus {
+  color: #e93b3d;
+}
+/*order-type end*/
 /*all-order end*/

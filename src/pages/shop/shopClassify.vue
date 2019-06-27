@@ -1,6 +1,6 @@
 <template>
 <div class="classify">
-  <shopHeader></shopHeader>
+  <ShopHeader></ShopHeader>
  <van-tree-select
     :items="items"
     :main-active-index="mainActiveIndex"
@@ -12,7 +12,7 @@
  
 </template>
 <script>
-import ShopHeader from './../../components/shop/shopHeader'
+import  ShopHeader from './../../components/shop/shopHeader'
 import { TreeSelect } from "vant";
 export default {
   name: "shopClassify",
