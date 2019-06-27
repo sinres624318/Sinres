@@ -33,8 +33,9 @@
 /*register-content*/
 
 .register-content{
-    width: 100%;
+  width: 100%;
   padding: 60px 40px 0 40px;
+  background: white;
 }
 .register-content-import{
   display: flex;

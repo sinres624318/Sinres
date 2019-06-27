@@ -9,7 +9,8 @@ import Shop from './../pages/shop'
 import ShopIndex from './../pages/shop/shopIndex'
 import Index from '../pages/index'
 import Mine from './../pages/mine'
-
+import MyAttention from './../pages/myAttention'
+import Recharge from './../pages/recharge'
 Vue.use(Router)
 
 export default new Router({
@@ -29,6 +30,16 @@ export default new Router({
       path: '/classify',
       name: 'Classify',
       component: Classify
+    },
+    {
+      path: '/myAttention',
+      name: 'MyAttention',
+      component: MyAttention
+    },
+    {
+      path: '/recharge',
+      name: 'Recharge',
+      component: Recharge
     },
     {
       path: '/cart',
