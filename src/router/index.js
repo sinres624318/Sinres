@@ -17,6 +17,7 @@ import Vouchers from './../pages/vouchers'
 import AllOrder from './../pages/allOrder'
 import Auction from './../pages/auction'
 import Search from './../pages/search/search'
+import MyVouchers from './../pages/myVouchers'
 
 Vue.use(Router)
 
@@ -112,10 +113,16 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
-    },{
+    },
+    {
       path:'/vouchers',
       name:'Vouchers',
       component:Vouchers
+    },
+    {
+      path:'/myVouchers',
+      name:'MyVouchers',
+      component:MyVouchers
     }
   ]
 })
