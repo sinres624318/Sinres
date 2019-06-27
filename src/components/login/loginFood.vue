@@ -3,8 +3,8 @@
     <div class="food" >
       <h4 class="food-otherLogin">其他登录方式</h4>
       <div class="food-photo">
-      <a href="javascript:;" class="langing-food-quick-qq"><img src="../../../static/img/landing/1.png" alt=""><span class="food-qq">QQ</span></a>
-      <a href="javascript:;" class="langing-food-quick-wx"><img src="../../../static/img/landing/2.png" alt=""><span
+      <a href="javascript:;" class="langing-food-quick-qq"><img src="../../../static/img/login/QQ.png" alt=""><span class="food-qq">QQ</span></a>
+      <a href="javascript:;" class="langing-food-quick-wx"><img src="../../../static/img/login/wechat.png" alt=""><span
         class="food-wechat">微信</span></a>
       </div>
     </div>

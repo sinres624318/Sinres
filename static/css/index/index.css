@@ -25,6 +25,7 @@ body {
   padding: 0 40px;
 }
 .main {
+  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: 110px;
@@ -612,7 +613,7 @@ display: flex;
 .indexTools-bar {
   position: fixed;
   bottom:0px;
-  height: 110px;
+  height: 100px;
   width: 100%;
   background: #fff;
   display: flex;
@@ -621,10 +622,11 @@ display: flex;
 }
 .indexTools-bar >div {
   width: 20%;
+  text-align: center;
   height: 100%;
 }
 .indexTools-bar img {
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 92px;
 }
 /*toolsBar end*/

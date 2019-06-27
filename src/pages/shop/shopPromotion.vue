@@ -1,23 +1,23 @@
 <template>
   <div class="promotion">
-    <shopHeader></shopHeader>
+    <ShopHeader></ShopHeader>
     <div class="promotionList">
       <p>以下商品参加限时秒杀，欢迎选购</p>
       <div class="promotionLists">
-        <productPromotion></productPromotion>
+        <shopProductPromotion></shopProductPromotion>
       </div>
       
     </div>
   </div>
 </template>
 <script>
-import shopHeader from "./../../components/shop/shopHeader";
-import productPromotion from "./../../components/shop/productPromotion";
+import ShopHeader from "./../../components/shop/shopHeader";
+import ShopProductPromotion from "./../../components/shop/shopProductPromotion";
 export default {
   name: "shopPromotion",
   components: {
-    shopHeader,
-    productPromotion
+    ShopHeader,
+    ShopProductPromotion
   }
 };
 </script>

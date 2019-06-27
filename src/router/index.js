@@ -3,8 +3,12 @@ import Router from 'vue-router'
 import Cart from './../pages/cart'
 import Shop from './../pages/shop'
 import Index from '../pages/index'
+import Wool from '../pages/wool'
+import PatPat from '../pages/patPat'
 import Classify from '../pages/classify'
 import Mine from './../pages/mine'
+import MyAttention from './../pages/myAttention'
+import Recharge from './../pages/recharge'
 import Login from '../pages/login'
 import Register from '../pages/Register'
 import Appliance from './../pages/appliance'
@@ -15,20 +19,21 @@ import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
 import GroupBuy from './../pages/groupBuy/groupBuy'
 import Vouchers from './../pages/vouchers'
-import AllOrder from './../pages/allOrder'
+import AllOrder from '../pages/allOrder'
 import Auction from './../pages/auction'
+import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
+
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register
-    },
+  routes: [{
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
     {
       path: '/login',
       name: 'Login',
@@ -38,6 +43,16 @@ export default new Router({
       path: '/classify',
       name: 'Classify',
       component: Classify
+    },
+    {
+      path: '/myAttention',
+      name: 'MyAttention',
+      component: MyAttention
+    },
+    {
+      path: '/recharge',
+      name: 'Recharge',
+      component: Recharge
     },
     {
       path: '/cart',
@@ -67,11 +82,10 @@ export default new Router({
     {
       path: '/shop',
       component: Shop,
-      children: [
-        {
-          path: '/',
-          redirect: 'ShopIndex'
-        },
+      children: [{
+        path: '/',
+        redirect: 'shopIndex'
+      },
         {
           path: 'shopIndex',
           name: 'ShopIndex',
@@ -100,6 +114,21 @@ export default new Router({
       component: Index
     },
     {
+      path: '/wool',
+      name: 'Wool',
+      component: Wool
+    },
+    {
+      path: '/patPat',
+      name: 'PatPat',
+      component: PatPat
+    },
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
       path: '/allOrder',
       name: 'AllOrder',
       component: AllOrder
@@ -120,9 +149,13 @@ export default new Router({
       component: GroupBuy
     },
     {
-      path:'/vouchers',
-      name:'Vouchers',
-      component:Vouchers
+      path: '/productList',
+      name: 'ProductList',
+      component: ProductList
+    }, {
+      path: '/vouchers',
+      name: 'Vouchers',
+      component: Vouchers
     }
   ]
 })

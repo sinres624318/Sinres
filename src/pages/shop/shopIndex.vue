@@ -70,14 +70,14 @@
     </div>
     <!-- shopList -->
     <div class="shopList">
-      <productV></productV>
+      <ShopProductV></ShopProductV>
     </div>
   </div>
 </template>
 <script>
 import { Search } from "vant";
 import { Swipe, SwipeItem, Lazyload } from "vant";
-import productV from './../../components/shop/productV'
+import ShopProductV from './../../components/shop/shopProductV'
 
 export default {
   name: "shopIndex",
@@ -86,7 +86,7 @@ export default {
     "van-swipe": Swipe,
     "van-swipe-item": SwipeItem,
     Lazyload,
-    productV
+    ShopProductV
   },
   data() {
     return {

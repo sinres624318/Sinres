@@ -1,13 +1,18 @@
 <template>
+  <div class="classify">
     <ClassifyHeader/>
+    <ClassifyContent/>
+  </div>
 </template>
 
 <script>
   import ClassifyHeader from '../components/classify/classifyHeader'
+  import ClassifyContent from '../components/classify/classifyContent'
     export default {
         name: "classify",
       components:{
-        ClassifyHeader
+        ClassifyHeader,
+        ClassifyContent
       }
     }
 </script>

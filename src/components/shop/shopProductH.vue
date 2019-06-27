@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
-  neme: "productH",
+  neme: "shopProductH",
   data() {
     return {
       productList: [
