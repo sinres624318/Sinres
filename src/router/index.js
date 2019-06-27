@@ -25,8 +25,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/register',
       name: 'Register',
       component: Register
@@ -69,10 +68,9 @@ export default new Router({
     {
       path: '/shop',
       component: Shop,
-      children: [
-        {
+      children: [{
           path: '/',
-          redirect:'shopIndex'
+          redirect: 'shopIndex'
         },
         {
           path: 'shopIndex',
@@ -96,9 +94,21 @@ export default new Router({
         },
       ]
     },
-    {path: '/',name: 'Index',component: Index},
-    {path:'/wool', name:'Wool',component:Wool},
-    {path:'/patPat', name:'PatPat',component:PatPat},
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/wool',
+      name: 'Wool',
+      component: Wool
+    },
+    {
+      path: '/patPat',
+      name: 'PatPat',
+      component: PatPat
+    },
     {
       path: '/',
       name: 'Index',
@@ -123,10 +133,10 @@ export default new Router({
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
-    },{
-      path:'/vouchers',
-      name:'Vouchers',
-      component:Vouchers
+    }, {
+      path: '/vouchers',
+      name: 'Vouchers',
+      component: Vouchers
     }
   ]
 })
