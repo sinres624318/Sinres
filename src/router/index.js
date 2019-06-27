@@ -15,8 +15,9 @@ import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
 import GroupBuy from './../pages/groupBuy/groupBuy'
 import Vouchers from './../pages/vouchers'
-import AllOrder from './../pages/allOrder'
+import AllOrder from '../pages/allOrder'
 import Auction from './../pages/auction'
+import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
 
 Vue.use(Router)
@@ -118,10 +119,16 @@ export default new Router({
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
-    },{
-      path:'/vouchers',
-      name:'Vouchers',
-      component:Vouchers
+    },
+    {
+      path: '/vouchers',
+      name: 'Vouchers',
+      component: Vouchers
+    },
+    {
+      path: '/productList',
+      name: 'ProductList',
+      component: ProductList
     }
   ]
 })

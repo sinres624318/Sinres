@@ -1,30 +1,57 @@
 <template>
   <div class="mine-cell">
-    <div class="rel-container"  id="mineOrder">
-      <div class="mine-order-entrance type-unpay">
+    <div class="rel-container" id="mineOrder">
+      <div
+        v-for="(item,index) in list"
+        :key=index
+        :class="['mine-order-entrance',item.className]"
+        @click="orderTypeClickHandle(item.index)">
         <i></i>
-        <span>代付款</span>
-      </div>
-      <div class="mine-order-entrance type-unrecieve">
-        <i></i>
-        <span>待收货</span>
-      </div>
-      <div class="mine-order-entrance type-consult">
-        <i></i>
-        <span>退货/换货</span>
-      </div>
-      <div class="mine-order-entrance type-orders">
-        <i></i>
-        <span>全部订单</span>
+        <span>{{item.text}}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "mineOrderCell"
+  export default {
+    name: "mineOrderCell",
+    data() {
+      return {
+        list: [
+          {
+            className: 'type-unpay',
+            text: '待付款',
+            index:1
+          },
+
+          {
+            className: 'type-unrecieve',
+            text: '待收货',
+            index:2
+          },
+
+          {
+            className: 'type-consult',
+            text: '已完成',
+            index:3
+          },
+
+          {
+            className: 'type-orders',
+            text: '全部订单',
+            index:0
+          },
+
+        ]
+      }
+    },
+    methods: {
+      orderTypeClickHandle(index) {
+        this.$router.replace({name: 'AllOrder', params: {currentIndex: index}})
+      }
     }
+  }
 </script>
 
 <style scoped>

@@ -9,7 +9,7 @@
       </select>
     <input type="text" class="register-content-input" maxlength="11" v-model="telephoneNum" placeholder="请输入手机号"/>
       </div>
-    <div class="register-content-button" @click="transmitHander()">下一步</div>
+    <div class="register-content-button" @click="codeHandle()">下一步</div>
   </div>
  </template>
 
@@ -24,7 +24,7 @@
           }
       },
       methods:{
-        transmitHander(){
+        /*transmitHander(){
           var regs=/(13|15|18|17|16|14|19)\d{9}/;
           if(!regs.test(this.telephoneNum)){
            alert("ghtrhfjhf")
@@ -32,6 +32,21 @@
           this.show=true;
           this.Observer.$emit("handle",[this.telephoneNum,this.show]);
           }
+        }*/
+        codeHandle() {
+          console.log(this.telephoneNum)
+          this.axios.post('http://121.199.63.71:9005/regist', {
+            username: this.telephoneNum
+          })
+            .then((response) => {
+              console.log(response);
+              if (response.data.code === 200) {
+                alert('成功发送')
+              }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
         }
       },
 
