@@ -23,8 +23,8 @@ import AllOrder from '../pages/allOrder'
 import Auction from './../pages/auction'
 import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
-
-
+import MyAssets from './../pages/myAssets/myAssets'
+import AccountManagement from './../pages/accountManagement/accountManagement'
 Vue.use(Router)
 
 export default new Router({
@@ -54,11 +54,13 @@ export default new Router({
       name: 'Recharge',
       component: Recharge
     },
+    /*购物车页*/
     {
       path: '/cart',
       name: 'Cart',
       component: Cart
     },
+    /*我的页面*/
     {
       path: '/mine',
       name: 'Mine',
@@ -108,6 +110,7 @@ export default new Router({
         },
       ]
     },
+    /*首页*/
     {
       path: '/',
       name: 'Index',
@@ -124,11 +127,6 @@ export default new Router({
       component: PatPat
     },
     {
-      path: '/',
-      name: 'Index',
-      component: Index
-    },
-    {
       path: '/allOrder',
       name: 'AllOrder',
       component: AllOrder
@@ -138,6 +136,7 @@ export default new Router({
       name: 'Footprint',
       component: Footprint
     },
+    /*搜索页*/
     {
       path: '/search',
       name: 'Search',
@@ -152,10 +151,23 @@ export default new Router({
       path: '/productList',
       name: 'ProductList',
       component: ProductList
-    }, {
+    },
+    {
       path: '/vouchers',
       name: 'Vouchers',
       component: Vouchers
+    },
+    /*我的资产页*/
+    {
+      path: '/myAssets',
+      name: 'MyAssets',
+      component: MyAssets
+    },
+    /*账号管理*/
+    {
+      path: '/accountManagement',
+      name: 'AccountManagement',
+      component: AccountManagement
     }
   ]
 })

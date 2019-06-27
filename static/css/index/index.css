@@ -524,18 +524,11 @@ display: flex;
   background: url("../../img/exhibition/recommend.png") no-repeat;
   background-size: 100%;
 }
-
-.recommend-content {
-  /*margin: 0 10px;*/
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-}
 .aaa{
   width:49%;
   margin-bottom:8px;
 }
 .recommend-item {
-  /*width: 96%;*/
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;

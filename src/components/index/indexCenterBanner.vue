@@ -30,53 +30,53 @@
             indexClassifyl:[
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'家电',
                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'充值',
+                path: '/recharge'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'拍卖',
+                path: '/auction'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'拍拍',
+                path: '/patPat'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'领券',
+                path: '/vouchers'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'家电',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'家电',
                 path: '/appliance'
               }
               ,
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'家电',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'家电',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'京东超市',
+                text:'家电',
                 path: '/appliance'
               }
             ],
