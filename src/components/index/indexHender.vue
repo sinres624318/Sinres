@@ -1,5 +1,5 @@
 <template>
-  <div class="indexsearch-wrap" >
+  <div class="indexsearch-wrap" :class="{indexwrap:info>scroll}" >
     <div class="indexsearch">
       <div class="indexmenu">
         <i class="iconfont">&#xe62c;</i>
@@ -19,11 +19,17 @@
 <script>
     export default {
         name: "indexHender",
-      mounted() {
-
-      }
+      data(){
+          return{
+            scroll:0
+          }
+      },
+      props:['info']
 
     }
+
+
+
 </script>
 
 <style scoped>

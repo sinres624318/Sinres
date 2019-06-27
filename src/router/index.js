@@ -118,7 +118,8 @@ export default new Router({
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
-    },{
+    },
+    {
       path:'/vouchers',
       name:'Vouchers',
       component:Vouchers

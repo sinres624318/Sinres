@@ -1,5 +1,8 @@
 <template>
   <div class="indexSeckill-wrap">
+    <div class="indexSeckill-wrap-img">
+      <img src="../../../static/img/1.png"/>
+    </div>
     <div class="seckill">
       <div class="seckill-content">
         <div class="seckill-title">
