@@ -19,9 +19,11 @@ import ShopPromotion from './../pages/shop/shopPromotion'
 import ShopClassify from './../pages/shop/shopClassify'
 import GroupBuy from './../pages/groupBuy/groupBuy'
 import Vouchers from './../pages/vouchers'
-import AllOrder from './../pages/allOrder'
+import AllOrder from '../pages/allOrder'
 import Auction from './../pages/auction'
+import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
+import MyVouchers from './../pages/myVouchers'
 
 
 Vue.use(Router)
@@ -29,10 +31,10 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [{
-      path: '/register',
-      name: 'Register',
-      component: Register
-    },
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
     {
       path: '/login',
       name: 'Login',
@@ -74,17 +76,12 @@ export default new Router({
       component: Auction
     },
     {
-      path: '/appliance',
-      name: 'Appliance',
-      component: Appliance
-    },
-    {
       path: '/shop',
       component: Shop,
       children: [{
-          path: '/',
-          redirect: 'shopIndex'
-        },
+        path: '/',
+        redirect: 'shopIndex'
+      },
         {
           path: 'shopIndex',
           name: 'ShopIndex',
@@ -123,11 +120,6 @@ export default new Router({
       component: PatPat
     },
     {
-      path: '/',
-      name: 'Index',
-      component: Index
-    },
-    {
       path: '/allOrder',
       name: 'AllOrder',
       component: AllOrder
@@ -142,10 +134,20 @@ export default new Router({
       name: 'Search',
       component: Search
     },
+
     {
+      path: '/myVouchers',
+      name: 'MyVouchers',
+      component: MyVouchers
+    }, {
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
+    },
+    {
+      path: '/productList',
+      name: 'ProductList',
+      component: ProductList
     }, {
       path: '/vouchers',
       name: 'Vouchers',

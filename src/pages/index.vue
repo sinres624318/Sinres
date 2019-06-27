@@ -1,7 +1,7 @@
 <template>
-  <div class="index">
-    <indexHender></indexHender>
-    <div class="main">
+  <div class="index" ref="index">
+    <indexHender :info="this.scroll"></indexHender>
+    <div class="main" ref="main">
       <indexTopBanner></indexTopBanner>
       <indexCenterBanner></indexCenterBanner>
       <indexSeckill></indexSeckill>
@@ -24,6 +24,11 @@
   import indexRecommend from "../components/index/indexRecommend"
     export default {
         name: "index",
+      data(){
+          return{
+            scroll:0
+          }
+      },
         components:{
           indexHender,
           indexTopBanner,
@@ -33,7 +38,16 @@
           toolsBar,
           indexFour,
           indexRecommend
+        },
+      mounted(){
+        window.addEventListener('scroll',this.handleColor,true)
+      },
+      methods: {
+        handleColor() {
+          var top =  Math.floor(this.$refs.main.scrollTop );
+          this.scroll=top;
         }
+      }
     }
 </script>
 

@@ -2,7 +2,7 @@
   <div class="searchSearch-wrap">
     <div class="searchSearch">
       <div class="searchSmenu">
-        <router-link  tag="i"  to="/" class=" iconfont">&#xe61c;</router-link>
+        <i class=" iconfont" @click="backClickHandle">&#xe61c;</i>
       </div>
       <div class="searchSearch-form">
         <i class="searchSearch-logo"></i>
@@ -18,7 +18,12 @@
 
 <script>
     export default {
-        name: "searchHender"
+        name: "searchHender",
+      methods: {
+        backClickHandle() {
+          this.$router.go(-1);
+        },
+      }
     }
 </script>
 

@@ -3,7 +3,7 @@
     <div class="groupBuyTopBanner">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in banner" :key="item">
-          <router-link tag="a">
+          <router-link tag="a" to="">
             <img :src="item" alt="">
           </router-link>
         </div>
@@ -21,9 +21,9 @@
       data(){
         return{
           banner:[
-            "../../../static/img/banner/banner_1.jpg",
-            "../../../static/img/banner/banner_2.jpg",
-            "../../../static/img/banner/banner_3.jpg",
+            "../../../static/img/groupBuy/baner1.png",
+            "../../../static/img/groupBuy/baner2.png",
+            "../../../static/img/groupBuy/baner1.png",
           ]
         }
       },

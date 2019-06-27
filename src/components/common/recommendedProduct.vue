@@ -14,7 +14,7 @@
             </div>
             <div class="similarity">看相似</div>
           </div>
-          <div class="similar-product-info"></div>
+<!--          <div class="similar-product-info">-->
         </div>
       </div>
     </div>

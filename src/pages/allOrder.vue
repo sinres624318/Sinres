@@ -11,18 +11,21 @@
         <div class="right iconfont" @click="moreMenuClickHandle">&#xe670;</div>
       </template>
     </NavBar>
+    <OrderType></OrderType>
     <OrderItem></OrderItem>
   </div>
 </template>
 
 <script>
-  import NavBar from './../components/common/navBar'
-  import OrderItem from './../components/order/orderItem'
+  import NavBar from '../components/common/navBar'
+  import OrderType from '../components/order/orderType'
+  import OrderItem from '../components/order/orderItem'
   export default {
-    name: "allOrder",
+    name: "mineAllOrder",
     components:{
       NavBar,
-      OrderItem
+      OrderItem,
+      OrderType
     },
     methods: {
       backClickHandle() {

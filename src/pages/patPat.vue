@@ -1,5 +1,23 @@
 <template>
   <div class="patPat">
+    <div class="patPatHeader">
+      <NavBar>
+        <template v-slot:left>
+          <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
+        </template>
+        <template v-slot:title>
+          <div class="title">拍拍-二手优品</div>
+        </template>
+        <template v-slot:right>
+          <div class="right iconfont">
+            <i class="iconfont" @click="$router.push({path:'/classIfy'})">&#xe684;</i>
+            <i class="iconfont" @click="moreMenuClickHandle">&#xe670;</i>
+          </div>
+        </template>
+      </NavBar>
+      <MoreMenu v-show="show"></MoreMenu>
+    </div>
+    <!-- ---------headerEnd-------------- -->
     <div class="patPatBanner">
       <van-swipe :autoplay="3000" indicator-color="orange">
         <van-swipe-item v-for="(item, index) in banner" :key="index">
@@ -33,87 +51,24 @@
       <img src="./../../static/img/patPat/cnxh.png" alt>
     </div>
     <div class="likeIntroduceList">
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
-      <div class="likeIntroduceProduct">
-        <a href="#">
-          <div class="likeIntroduceProductImg">
-            <img src="./../../static/img/patPat/likeIntroduceProduct-1.png" alt="猜你喜欢的商品">
-          </div>
-          <div class="likeProductDescribe">
-            <p>唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气</p>
-            <i>￥</i>
-            <span>9999</span>
-          </div>
-        </a>
-      </div>
+      <PatPatLikeIntroduceProduct></PatPatLikeIntroduceProduct>
     </div>
     <!-- 闲置卖钱 -->
     <div class="patPatNavigation"></div>
     <!-- 拍拍专享 -->
     <div class="patPatExclusive">
-      <a href="#"><img src="./../../static/img/patPat/exclusive1.png" alt=""></a>
-      <a href="#"><img src="./../../static/img/patPat/exclusive2.png" alt=""></a>
-      <a href="#"><img src="./../../static/img/patPat/exclusive3.png" alt=""></a>
-      <a href="#"><img src="./../../static/img/patPat/exclusive4.png" alt=""></a>
+      <a href="#">
+        <img src="./../../static/img/patPat/exclusive1.png" alt>
+      </a>
+      <a href="#">
+        <img src="./../../static/img/patPat/exclusive2.png" alt>
+      </a>
+      <a href="#">
+        <img src="./../../static/img/patPat/exclusive3.png" alt>
+      </a>
+      <a href="#">
+        <img src="./../../static/img/patPat/exclusive4.png" alt>
+      </a>
     </div>
     <!-- 专属推荐 -->
     <div class="patPatRecommend">
@@ -122,154 +77,61 @@
       </a>
     </div>
     <!-- 商品列表 -->
-    <div class="patPatBrilliantList">  
-        <PatPatProduct></PatPatProduct>
+    <div class="patPatBrilliantList">
+      <PatPatProduct></PatPatProduct>
     </div>
   </div>
 </template>
 <script>
-import PatPatProduct from './../components/patPat/patPatProduct'
+import PatPatProduct from "./../components/patPat/patPatProduct";
+import PatPatLikeIntroduceProduct from "./../components/patPat/patPatLikeIntroduceProduct";
 import { Swipe, SwipeItem, Lazyload } from "vant";
+import NavBar from "./../components/common/navBar";
+import MoreMenu from "../components/common/moreMenu";
 
 export default {
   name: "patPat",
   components: {
     "van-swipe": Swipe,
     "van-swipe-item": SwipeItem,
+    NavBar,
     Lazyload,
-    PatPatProduct
+    PatPatLikeIntroduceProduct,
+    PatPatProduct,
+    MoreMenu
   },
   data() {
     return {
       banner: [
         "../../static/img/patPat/pat-banner1.png",
         "../../static/img/patPat/pat-banner2.png"
-      ]
+      ],
+      // flag: false
+      show:true
     };
+  },
+  methods: {
+    backClickHandle() {
+      this.$router.go(-1);
+    },
+    moreMenuClickHandle() {
+      // if(this.show==false){
+      //   this.show=true
+      // }
+      // else if(this.show==true){
+      //   this.show=false
+      // }
+      console.log(1)
+    }
   }
 };
 </script>
 
+
+
+<style src="./../../static/css/patPat.css"></style>
+
 <style scoped>
-.patPat {
-  height: 100%;
-  overflow-y: auto;
-}
-.patPatCard {
-  height: 222px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.patPatCardLeft {
-  width: 314px;
-  height: 192px;
-  margin-right: 10px;
-  display: flex;
-}
-.patPatCardRightTop > a {
-  display: block;
-  width: 380px;
-  height: 90px;
-  margin-bottom: 10px;
-}
-.patPatCardRightBottom {
-  display: flex;
-}
-.patPatCardRightBottom > a {
-  display: block;
-  width: 186px;
-  height: 92px;
-}
-.patPatCardRightBottom > a:nth-child(1) {
-  margin-right: 10px;
-}
 
-/* 猜你喜欢的产品------ */
-.likeIntroduceList {
-  background-color: #f1f1f1;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  display: -webkit-box;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 4px;
-}
-::-webkit-scrollbar {
-  display: none; /*隐藏滚轮*/
-}
-.likeIntroduceProduct {
-  width: 220px;
-  height: 362px;
-  margin-top: 4px;
-  overflow: hidden;
-  background-color: #fff;
-  margin-right: 4px;
-  display: flex;
-}
-.likeIntroduceProductImg {
-  width: 200px;
-  height: 200px;
-}
-.likeProductDescribe {
-  padding: 10px 10px 0px 10px;
-}
-.likeProductDescribe > p {
-  width: 192px;
-  height: 65px;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  color: #000000;
-  font-size: 26px;
-  text-align: left;
-  font-weight: normal;
-  line-height: 32px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  margin-bottom: 28px;
-  -webkit-box-orient: vertical;
-}
-.likeProductDescribe > i {
-  color: red;
-  font-size: 15px;
-}
-.likeProductDescribe > span {
-  color: red;
-  font-size: 22px;
-}
-/* <!-- 闲置卖钱 --> */
-/*  */
-.patPatNavigation {
-  width: 100%;
-  height: 652px;
-  background: url(./../../static/img/patPat/navigation.png) no-repeat;
-  background-size: contain;
-  margin-top: 10px;
-}
-.patPatExclusive {
-  background: url(./../../static/img/patPat/exclusive.png);
-  background-size: contain;
-  width: 100%;
-  height: 768px;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 145px;
-  padding-bottom: 28px;
-  justify-content: center;
-}
-.patPatExclusive>a{
-  width: 346px;
-  height: 294px;
-  margin: 8px;
-}
-.patPatBrilliantList{
-  background: #f1f1f1;
-}
 
-.patPatRecommend{
-  overflow: hidden;
-  display: flex;
-}
 </style>

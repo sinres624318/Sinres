@@ -25,9 +25,11 @@ body {
   padding: 0 40px;
 }
 .main {
+  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-bottom: 110px; ;
+  margin-bottom: 110px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .idexmenu,
@@ -55,7 +57,7 @@ body {
   line-height: 30px;
 }
 .iconfont{
-  font-size:24px;
+  /* font-size:24px; */
 }
 .indexsearch-form {
   width: 548px;
@@ -98,7 +100,7 @@ body {
   font-size: 24px;
   color: #fff;
 }
-/*轮播图*/
+/*顶部轮播图*/
 .slider-wrap {
   position: relative;
   top: 0;
@@ -106,11 +108,6 @@ body {
   height: 368px;
   background: deepskyblue;
 }
-
-.slider-wrap ul {
-  width: 100%;
-}
-
 .slider-wrap img {
   width: 100%;
   height: 368px;
@@ -202,35 +199,16 @@ body {
   display: flex;
   justify-content: center;
 }
-/*中部分页器*/
-/* .indexTopBanner{
-  position:relative ;
-}
-.indexTopBanner .swiper-pagination{
-  position:absolute ;
-  top:540px;
-} */
-/* .indexTopBanner .swiper-pagination-bullet {
-  width:10px;
-  height: 10px;
-   display: inline-block;
-  border-radius: 100%; 
-  border: 8px solid white;
-  opacity: .2;
-}
-.indexTopBanner .swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #fff;
-  width:10px;
-  height: 10px;
-} */
+
 /*京东秒杀*/
 .indexSeckill-wrap {
   overflow: hidden;
-  background-color: #3E144E;
-  height: 352px;
+  height: 520px;
 }
-
+.indexSeckill-wrap-img{
+  margin:0 auto;
+  width:90%;
+}
 .seckill {
   margin: 10px;
   background: #fff;
@@ -333,8 +311,8 @@ body {
 }
 
 .seckill-content {
-  width: 100%;
-}
+   width: 100%;
+ }
 
 .seckill-item-img {
   display: flex;
@@ -550,31 +528,27 @@ display: flex;
   background-size: 100%;
 }
 
-.recommend-content {
-  /*margin: 0 10px;*/
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-}
 .aaa{
   width:49%;
   margin-bottom:8px;
 }
 .recommend-item {
-  width: 96%;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
   padding-bottom: 4px;
 }
-
+.indexwrap{
+  background: red;
+}
 .similar-product {
   background-color: #fff;
   margin-botom:8px ;
 }
 .similar-product-text {
   box-sizing: border-box;
-  height: 68px;
+  height: 66px;
   font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -590,7 +564,7 @@ display: flex;
 }
 
 .similar-product-info {
-  height: .26rem;
+  height: 44px;
   position: relative;
 }
 

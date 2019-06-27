@@ -1,115 +1,388 @@
 
-.groupBuyHender-hender{
+.groupBuy-index{
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  padding: 90px 0 0;
-  background: #f7f7f7;
 }
-/*NavBar start*/
-
-.nav-bar {
+.groupBuy-Main{
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 110px;
+  -webkit-overflow-scrolling: touch;
+}
+.groupBuy-Main::-webkit-scrollbar {
+  display: none;
+}
+/*顶部*/
+.groupBuyHender-header{
+  width: 100%;
   height: 90px;
+  background: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
-  z-index: 999;
-  width: 100%;
-}
-
-
-.nav-bar .title {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  line-height: 90px;
-  text-align: center;
-  width: 100%;
-  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 32px;
-}
-
-.left {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 80px;
-  line-height: 90px;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
+  color: #333333;
   z-index: 99;
-  font-size: 66px;
 }
-
-.right {
-  position: absolute;
-  right: 0;
+.groupBuyHender-header-icon-left{
+  font-size: 58px;
+}
+.groupBuyHender-header>h3{
+  font-weight: 100;
+}
+.groupBuyHender-header-icon-right{
+  width: 156px;
   height: 100%;
-  text-align: center;
-  line-height: 90px;
-  width: 80px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 99;
-  font-size: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+.groupBuyHender-header-icon-right i{
+  font-size: 42px;
+}
+/*搜索*/
+.groupBuy-Sousuo{
+  background: red;
+  height: 90px;
+  margin-top:90px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.groupBuy-form input {
+   outline: none;
+   border: none;
+   font-size: 12px;
+   color: #232326;
+   vertical-align: middle;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   line-height: 30px;
+  padding-left:10px;
+ }
+.groupBuy-form {
+  display: flex;
+  width: 600px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+}
+.groupBuy-zoom {
+  display: inline-block;
+  height: 30px;
+  width: 36px;
+  margin: auto 10px auto 30px;
+  background: url("../../img/tools.png")no-repeat -160px 0;
+  background-size: 400px;
+}
+.groupBuy-loog {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
 
-/*轮播图*/
-.groupBuyslider-wrap {
+  margin: auto 5px;
+  background: url("../../img/groupBuy/5.png")no-repeat 0px 0;
+  background-size: 24px;
+}
+/*顶部轮播图*/
+.groupBuysLider-Wrap {
   position: relative;
   top: 0;
   left: 0;
-  height: 197px;
-  background: deepskyblue;
+  height: 200px;
+  width: 100%;
 }
-
-.groupBuyslider-wrap img {
-  width: 90%;
-  height: 197px;
+.groupBuysLider-Wrap .swiper-slide{
+  padding-left:20px ;
+  padding-right:20px;
+  height: 200px;
+}
+.groupBuysLider-Wrap img {
+  border-radius:20px;
 }
 /*顶部分页器*/
 .groupBuyTopBanner{
   position:relative ;
-  display: flex;
-  justify-content:center;
+  width: 100%;
+  top:10px;
 }
 .groupBuyTopBanner .swiper-pagination{
   position:absolute ;
-  top:210px;
+  top:170px;
 }
 .groupBuyTopBanner .swiper-pagination-bullet {
-  width:10px;
-  height: 10px;
+  width:12px;
+  height: 12px;
   display: inline-block;
   border-radius: 100%;
-  border: 8px solid white;
+  background: #0d0abb;
   opacity: .2;
 }
 .groupBuyTopBanner .swiper-pagination-bullet-active {
   opacity: 1;
   background: #fff;
-  width:10px;
-  height: 10px;
+  border-radius:10px;
+  width:34px;
+  height: 12px;
 }
+/*中部轮播图*/
+.groupBuyCenter-wrap {
+  height: 324px;
+  width: 100%;
+  position: relative;
+  background: #fff;
+  border-radius: 25px 25px 0 0;
+  margin-top: 40px;
+  z-index: 99;
+}
+
+.groupBuyCenter {
+  width: 100%;
+  height: 324px;
+  overflow: hidden;
+  position: relative;
+}
+
+.groupBuyCenter > div {
+  width: 100%;
+}
+
+.classify-l {
+  height: 324px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.groupBuyCenter a {
+  width: 20%;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupBuyCenter img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.groupBuyCenter span {
+  font-size: 24px;
+  color: #000;
+  margin-top: 12px;
+}
+/*今日必拼*/
+.groupBuyData-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:20px;
+  padding-right:20px;
+  color:black;
+}
+.groupBuyData-top-top{
+  display: flex;
+  font-size:42px;
+  font-weight: 600;
+}
+.groupBuyData-top-top span{
+color:red;
+}
+.groupBuyData-top-bottom{
+  display: flex;
+  font-size:20px;
+  color: #666666;
+}
+.groupBuyData-top-bottom-iconfont{
+  font-size:24px;
+  color: #666666;
+}
+/*底部滑动图*/
+.groupBuyData-content {
+  width: 100%;
+}
+.groupBuyData-list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.groupBuyData-list::-webkit-scrollbar {
+  display: none;
+}
+.groupBuyData-item {
+  width: 152px;
+  height: 242px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.groupBuyData-item-img {
+  display: flex;
+  width: 132px;
+  height: 132px;
+}
+
+.groupBuyData-item-img a {
+  display: inline-block;
+}
+
+.groupBuyData-item-img img {
+  width: 132px;
+  height: 132px;
+}
+
+.groupBuyData-item-price {
+  display: flex;
+  height: 88px;
+  width: 100%;
+  flex-direction: column;
+  font-size: 12px;
+  align-items: center;
+}
+.groupBuyData-item-img {
+  display: flex;
+  width: 132px;
+  height: 132px;
+}
+
+.groupBuyData-item-img a {
+  display: inline-block;
+}
+
+.groupBuyData-item-img img {
+  width: 132px;
+  height: 132px;
+}
+.groupBuyData-item-price {
+  display: flex;
+  height: 88px;
+  width: 100%;
+  flex-direction: column;
+  font-size: 12px;
+  align-items: center;
+}
+.groupBuyData-item-price .now-price {
+  color: #e93b3d;
+  display: flex;
+  font-weight: 700;
+}
+
+.groupBuyData-item-price .now-price i {
+  font-size: 12px;
+  align-self: flex-end;
+}
+
+.groupBuyData-item-price .now-price span {
+  font-size: 16px;
+  align-self: flex-end;
+}
+.groupBuyData-item-price .old-price {
+  display: flex;
+  align-items: center;
+  color: #999;
+  text-decoration: line-through;
+}
+/*大家都在拼*/
+.groupBuy-Class{
+  background: #f7f7f7;
+}
+.groupBuy-Class p {
+  height: 80px;
+  text-align: center;
+}
+.groupBuy-Class p span{
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 80px;
+}.groupBuy-Class p span:nth-child(1){
+color:red;
+ }
+.roupBuy-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+.aaa{
+  width:49%;
+  margin-bottom:8px;
+}
+.roupBuy-product {
+  background-color: #fff;
+  margin-botom:8px ;
+}
+.roupBuy-product-text {
+  box-sizing: border-box;
+  height: 65px;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+  color: #232326;
+  margin-top: 5px;
+  line-height: 32px;
+  margin-bottom: 3px;
+  padding: 0 4px;
+}
+
+.roupBuy-product-info {
+  height: 44px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20px ;
+}
+
+.roupBuy-product-price {
+  color: #f23030;
+  padding: 0 5px 0 4px;
+  position: relative;
+  top: 1px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 32px;
+}
+.roupBuy-similarity{
+  color:#9a9a9a;
+  padding:2px 4px;
+  border:1px solid #9a9a9a;
+}
+/*底部*/
 /*toolsBar start*/
-.groupBuyTools-bar {
+.groupBuy-bar {
   position: fixed;
   bottom:0px;
   height: 110px;
   width: 100%;
   background: #fff;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
-.groupBuyTools-bar >div {
-  width: 20%;
-  height: 100%;
+.groupBuy-bar a {
+  width: 25%;
+  text-align: center;
 }
-.groupBuyTools-bar img {
-  width: 100%;
-  height: 100%;
+.groupBuy-bar a img {
+  width:24%;
+  height: 50%;
+}
+.groupBuy-bar a   p{
+  font-size:24px;
+text-align: center;
 }
 /*toolsBar end*/

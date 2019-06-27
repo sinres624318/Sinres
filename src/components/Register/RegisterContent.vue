@@ -18,7 +18,6 @@
  </template>
 
 <script>
-  // import "../../../static/css/register.css"
     export default {
         name: "RegisterContent",
       data(){
@@ -38,6 +37,7 @@
           this.Observer.$emit("handle",[this.telephoneNum,this.show]);
           }
         }
+
       },
       created() {
           this.Observer.$on("handels",(val)=>{
