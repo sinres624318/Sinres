@@ -1,5 +1,4 @@
 <template>
-
     <div class="content" >
       <!--      短信登陆法-->
       <div class="content-note" v-if="find">

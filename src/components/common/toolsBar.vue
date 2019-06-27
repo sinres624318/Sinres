@@ -1,29 +1,29 @@
 <template>
   <div class="indexTools-bar">
     <div class="tools-bar-home">
-      <a href="">
+      <router-link  tag="div" to="/">
         <img src="../../../static/img/bar/home_focus.png" alt="">
-      </a>
+      </router-link>
     </div>
     <div class="tools-bar-classify">
-      <a href="">
+      <router-link  tag="div" to="">
         <img src="../../../static/img/bar/classify.png" alt="">
-      </a>
+      </router-link>
     </div>
     <div class="tools-bar-purchase">
-      <a href="">
+      <router-link  tag="div" to="/groupBuy">
       <img src="../../../static/img/bar/purchase.png" alt="">
-      </a>
+      </router-link>
     </div>
     <div class="tools-bar-cart">
-      <a href="">
+      <router-link  tag="div" to="/cart">
       <img src="../../../static/img/bar/cart.png" alt="">
-      </a>
+        </router-link>
     </div>
     <div class="tools-bar-mine">
-      <a href="">
+      <router-link  tag="div"  to="/mine">
         <img src="../../../static/img/bar/mine.png" alt="">
-      </a>
+        </router-link>
     </div>
   </div>
 </template>

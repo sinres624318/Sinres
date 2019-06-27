@@ -1,10 +1,15 @@
 <template>
   <div class="more-menu">
     <div class="more-menu-list">
-      <div class="menu-item">
-        <i class="index iconfont">&#xe790;</i>
-        <span>首页</span>
-      </div>
+      <router-link
+        tag="div"
+        v-for="(item,index) in menuList"
+        :to="{name:item.path}"
+        class="menu-item"
+        :key="index">
+        <i :class="item.className"></i>
+        <span>{{item.text}}</span>
+      </router-link>
     </div>
     <div class="more-menu-mask"></div>
   </div>
@@ -12,39 +17,39 @@
 
 <script>
   export default {
-    name: "moreMenu"
+    name: "moreMenu",
+    data() {
+      return {
+        menuList: [
+          {
+            className: 'more-menu-index',
+            text: '首页',
+            path: 'Index'
+          },
+          {
+            className: 'more-menu-classify',
+            text: '分类搜索',
+            path: 'Classify'
+          },
+          {
+            className: 'more-menu-cart',
+            text: '购物车',
+            path: 'Cart'
+          },
+          {
+            className: 'more-menu-mine',
+            text: '我的信锐',
+            path: 'Mine'
+          },
+          {
+            className: 'more-menu-footprint',
+            text: '我的足迹',
+            path: 'Footprint'
+          },
+        ]
+      }
+    }
   }
 </script>
 
-<style scoped>
-  .more-menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-  }
-
-  .more-menu-list {
-    position: absolute;
-    right: 20px;
-    width: 250px;
-    background: #0e0e0e;
-    top: 90px;
-    z-index: 9999;
-  }
-
-  .menu-item {
-    color: #fff;
-  }
-
-  .more-menu-mask {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-  }
-  .index {
-
-  }
-</style>
+<style src="./../../../static/css/moreMenu.css"></style>

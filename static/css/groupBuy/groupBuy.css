@@ -1,0 +1,115 @@
+
+.groupBuyHender-hender{
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 90px 0 0;
+  background: #f7f7f7;
+}
+/*NavBar start*/
+
+.nav-bar {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  width: 100%;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*轮播图*/
+.groupBuyslider-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 197px;
+  background: deepskyblue;
+}
+
+.groupBuyslider-wrap img {
+  width: 90%;
+  height: 197px;
+}
+/*顶部分页器*/
+.groupBuyTopBanner{
+  position:relative ;
+  display: flex;
+  justify-content:center;
+}
+.groupBuyTopBanner .swiper-pagination{
+  position:absolute ;
+  top:210px;
+}
+.groupBuyTopBanner .swiper-pagination-bullet {
+  width:10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 100%;
+  border: 8px solid white;
+  opacity: .2;
+}
+.groupBuyTopBanner .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+  width:10px;
+  height: 10px;
+}
+/*toolsBar start*/
+.groupBuyTools-bar {
+  position: fixed;
+  bottom:0px;
+  height: 110px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.groupBuyTools-bar >div {
+  width: 20%;
+  height: 100%;
+}
+.groupBuyTools-bar img {
+  width: 100%;
+  height: 100%;
+}
+/*toolsBar end*/
