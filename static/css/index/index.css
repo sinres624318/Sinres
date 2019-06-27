@@ -2,11 +2,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-.index{
+
+.index {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 /*头部*/
 .indexsearch-wrap {
   background: transparent;
@@ -21,14 +23,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:88px;
+  height: 88px;
   padding: 0 40px;
 }
+
 .main {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-bottom: 110px; ;
+  margin-bottom: 110px;;
 }
 
 .idexmenu,
@@ -43,6 +46,7 @@ body {
   cursor: pointer;
   color: #fff;
 }
+
 .indexsearch-form input {
   outline: none;
   border: none;
@@ -55,9 +59,11 @@ body {
   white-space: nowrap;
   line-height: 30px;
 }
-.iconfont{
-  font-size:24px;
+
+.iconfont {
+  font-size: 24px;
 }
+
 .indexsearch-form {
   width: 548px;
   height: 60px;
@@ -65,6 +71,7 @@ body {
   /*overflow: hidden;*/
   background: #fff;
 }
+
 .search-logo {
   width: 40px;
   height: 30px;
@@ -90,7 +97,7 @@ body {
   height: 30px;
   width: 36px;
   margin: 10px 0 0 5px;
-  background: url("../../img/tools.png")no-repeat -160px 0;
+  background: url("../../img/tools.png") no-repeat -160px 0;
   background-size: 400px;
   vertical-align: middle;
 }
@@ -99,6 +106,7 @@ body {
   font-size: 24px;
   color: #fff;
 }
+
 /*轮播图*/
 .slider-wrap {
   position: relative;
@@ -116,29 +124,34 @@ body {
   width: 100%;
   height: 368px;
 }
+
 /*顶部分页器*/
-.indexTopBanner{
-  position:relative ;
+.indexTopBanner {
+  position: relative;
 }
-.indexTopBanner .swiper-pagination{
-  position:absolute ;
-  top:280px;
+
+.indexTopBanner .swiper-pagination {
+  position: absolute;
+  top: 280px;
 }
+
 .indexTopBanner .swiper-pagination-bullet {
-  width:14px;
+  width: 14px;
   height: 14px;
   display: inline-block;
   border-radius: 100%;
   background: #0d0abb;
   opacity: .2;
 }
+
 .indexTopBanner .swiper-pagination-bullet-active {
   opacity: 1;
   background: #fff;
-  border-radius:10px;
-  width:24px;
+  border-radius: 10px;
+  width: 24px;
   height: 14px;
 }
+
 /*中部轮播图*/
 .indexClassify-wrap {
   height: 324px;
@@ -203,6 +216,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 /*中部分页器*/
 /* .indexTopBanner{
   position:relative ;
@@ -320,9 +334,11 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
 .seckill-list::-webkit-scrollbar {
   display: none;
 }
+
 .seckill-item {
   width: 152px;
   height: 242px;
@@ -383,6 +399,7 @@ body {
   color: #999;
   text-decoration: line-through;
 }
+
 /*东家小院*/
 .exhibition-item {
   display: flex;
@@ -397,6 +414,7 @@ body {
   width: 100%;
   height: 70px;
 }
+
 .exhibition-item img:last-of-type {
   position: relative;
   width: 140px;
@@ -420,12 +438,13 @@ body {
   top: 20px;
   z-index: 99;
   color: #fff;
-  font-size:24px;
+  font-size: 24px;
   max-width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .exhibition-item-three,
 .exhibition-item-four {
   background-color: #f6f6f6;
@@ -440,6 +459,7 @@ body {
   height: 480px;
   border-radius: 5px;
 }
+
 .exhibition-item-three > div:last-of-type,
 .exhibition-item-four > div:last-of-type {
   background: #fff;
@@ -488,10 +508,12 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+
 .exhibition-three-one-title a {
-display: flex;
+  display: flex;
   justify-content: center;
 }
+
 .exhibition-three-one-con {
   display: flex;
   justify-content: center;
@@ -504,15 +526,18 @@ display: flex;
   height: 100%;
   text-align: center;
 }
+
 .exhibition-con-item {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.exhibition-con-item a{
+
+.exhibition-con-item a {
   width: 25%;
   text-align: center;
 }
+
 .exhibition-con-item .exhibition-title {
   display: flex;
   height: 80px;
@@ -530,12 +555,14 @@ display: flex;
   font-size: 24px;
   line-height: 24px;
 }
+
 /*每日一逛*/
 .exhibition-item-four .exhibition-item-title {
   background: url("../../../static/img/exhibition/exhibition_4.jpg") no-repeat;
   background-size: 100%;
 }
-.exhibition-four-one{
+
+.exhibition-four-one {
   display: flex;
 }
 
@@ -556,12 +583,13 @@ display: flex;
   /*display: flex;*/
   /*flex-wrap: wrap;*/
 }
-.aaa{
-  width:49%;
-  margin-bottom:8px;
+
+.aaa {
+  width: 49%;
+  margin-bottom: 8px;
 }
+
 .recommend-item {
-  width: 96%;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -571,8 +599,9 @@ display: flex;
 
 .similar-product {
   background-color: #fff;
-  margin-botom:8px ;
+  margin-botom: 8px;
 }
+
 .similar-product-text {
   box-sizing: border-box;
   height: 68px;
@@ -622,9 +651,9 @@ display: flex;
   width: 218%;
   height: 300%;
   position: absolute;
-  top:-8px;
+  top: -8px;
   left: -6px;
-  border:4px solid #bfbfbf;
+  border: 4px solid #bfbfbf;
   border-radius: 4px;
   -webkit-transform: scale(.5, .5);
   transform: scale(.5, .5);
@@ -632,11 +661,11 @@ display: flex;
   transform-origin: top left;
 }
 
-  /*底部*/
+/*底部*/
 /*toolsBar start*/
 .indexTools-bar {
   position: fixed;
-  bottom:0px;
+  bottom: 0px;
   height: 100px;
   width: 100%;
   background: #fff;
@@ -644,13 +673,16 @@ display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.indexTools-bar >div {
+
+.indexTools-bar > div {
   width: 20%;
   text-align: center;
   height: 100%;
 }
+
 .indexTools-bar img {
   width: 120px;
   height: 92px;
 }
+
 /*toolsBar end*/
