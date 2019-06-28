@@ -1,0 +1,358 @@
+@charset "utf-8";
+/*头部---start*/
+.define-order {
+  height: 100%;
+  overflow-y: auto;
+  background: #f7f7f7;
+}
+
+.define-order-header {
+  width: 100%;
+  height: 90px;
+  background: url("./../img/defineOrder/defineOrderHeaderBG.png") repeat-x top left;
+  background-size: 2px 90px;
+}
+
+.define-order-header > i {
+  display: block;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  line-height: 90px;
+  font-size: 68px;
+  color: #848689;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.define-order-header > p {
+  line-height: 90px;
+  text-align: center;
+  color: #333333;
+  font-size: 32px;
+}
+
+/*头部---end*/
+
+/*address---start*/
+.define-order-address {
+  width: 100%;
+  height: 146px;
+  padding: 24px 20px 32px;
+  background: url("./../img/defineOrder/adressBG.png") repeat-x bottom left;
+  background-size: 128px 10px;
+}
+
+.define-order-userName {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.define-order-userName > li:first-child {
+  font-size: 32px;
+  font-weight: 900;
+  color: #333333;
+  line-height: 45px;
+}
+
+.define-order-userName > li:last-child {
+  font-size: 28px;
+  color: #333333;
+  line-height: 45px;
+}
+
+/*address---end*/
+
+/*订单详细信息*/
+.define-order-info {
+  margin: 30px 0;
+  padding: 0 20px;
+  background: #fff;
+  position: relative;
+}
+
+.define-order-info-shop-name {
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #f4f4f4;
+  padding-left: 40px;
+}
+
+.define-order-info-shop-logo {
+  display: inline-block;
+  width: 32px;
+  height: 30px;
+  margin-right: 5px;
+  position: absolute;
+  left: 20px;
+  top: 23px
+}
+
+.define-order-info-shop-name > span {
+  font-size: 32px;
+  font-weight: 900;
+  color: #333333;
+  line-height: 80px;
+}
+
+/*店铺商品列表*/
+
+.define-order-info-shop-product {
+  width: 100%;
+}
+
+.define-order-info-shop-product > li {
+  width: 100%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.define-order-info-shop-product-img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.define-order-info-shop-product-title {
+  width: 100%;
+  padding-left: 170px;
+  height: 80px;
+  font-size: 28px;
+  font-weight: 900;
+  color: #333333;
+  line-height: 40px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.define-order-info-shop-product-standard {
+  width: 100%;
+  height: 48px;
+  padding-left: 170px;
+  font-size: 24px;
+  color: #999999;
+}
+
+.define-order-info-shop-product-price {
+  width: 100%;
+  height: 60px;
+  padding-left: 170px;
+  font-size: 36px;
+  color: #e93b3d;
+}
+
+.define-order-info-shop-product-count-box {
+  height: 60px;
+  margin-top: -60px;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.define-order-info-shop-product-count {
+  display: inline-block;
+  width: 230px;
+  height: 60px;
+}
+
+.define-order-info-shop-product-count-add, .define-order-info-shop-product-count-min {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.define-order-info-shop-product-count-num {
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 90px;
+  height: 60px;
+  line-height: normal;
+  border: 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  background: #f7f7f7;
+  font-size: 24px;
+  text-align: center;
+}
+
+.define-order-info-shop-product-server {
+  width: 100%;
+  padding: 12px 0 12px 170px;
+  overflow: hidden;
+  border-bottom: 1px solid #ececec;
+}
+
+.define-order-info-shop-product-server > li {
+  float: left;
+  width: 100%;
+}
+
+.define-order-info-shop-product-server-seven-img, .define-order-info-shop-product-server-explain-img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.define-order-info-shop-product-server li span {
+  font-size: 24px;
+  color: #999999;
+  line-height: 35px;
+}
+
+/*配送服务*/
+
+.define-order-distribution-server {
+  width: 100%;
+}
+
+.define-order-distribution-server > li {
+  width: 100%;
+  padding: 20px 40px 20px 0;
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+
+.define-order-distribution-server > li > strong {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  font-weight: 400;
+  font-size: 32px;
+  color: #333333;
+}
+
+.define-order-distribution {
+  width: 100%;
+}
+
+.define-order-distribution > p {
+  margin: 10px 0;
+  text-align: right;
+  font-size: 24px;
+  color: #333333;
+}
+
+.define-order-distribution-info {
+  font-size: 24px;
+  color: #999999;
+}
+
+.define-order-distribution-info > span {
+  float: right;
+}
+
+/*新锐豆*/
+
+.define-order-beans {
+  width: 100%;
+  height: 120px;
+  margin: 30px 0;
+  padding: 25px 25px 25px 0;
+  position: relative;
+}
+
+.define-order-beans-title {
+  width: 145px;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  line-height: 100px;
+}
+
+.define-order-beans-title h3 {
+  font-size: 32px;
+  color: #333333;
+  line-height: 100px;
+  margin-right: 10px;
+}
+.define-order-beans-title-img{
+  width: 30px;
+  height: 30px;
+}
+.define-order-beans p{
+  font-size: 24px;
+  color: #9a9a9a;
+  line-height: 35px;
+  text-align: right;
+}
+/*商品金额*/
+
+.define-order-price{
+  width: 100%;
+  height: 126px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.define-order-product-price,.define-order-product-cost{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.define-order-product-price>h3,.define-order-product-cost>h3{
+  font-size: 28px;
+  color: #333333;
+}
+.define-order-product-cost>h3>span{
+  color: #a0a0a0;
+  margin-left: 5px;
+}
+.define-order-product-price>i,.define-order-product-cost>i{
+  font-size: 24px;
+  color: #e93b3d;
+}
+/*总价*/
+.define-order-total-price{
+  height: 60px;
+  width: 100%;
+  padding-right: 20px;
+  line-height: 60px;
+  text-align: right;
+}
+.define-order-total-price>p{
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  font-weight: 900;
+  font-size: 32px;
+  color: #333333;
+}
+.define-order-total-price>span{
+  font-weight: 900;
+  font-size: 32px;
+  color: #e93b3d;
+}
+
+/*按钮*/
+
+.define-order-submit{
+  width: 100%;
+  height: 95px;
+  margin-top: 50px;
+}
+.define-order-submit-btn{
+  width: 712px;
+  height: 95px;
+  background: #3884ff;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+}

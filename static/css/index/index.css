@@ -59,22 +59,19 @@ body {
   white-space: nowrap;
   line-height: 30px;
 }
-<<<<<<< HEAD
 
 .iconfont {
   font-size: 24px;
 }
 
-=======
-.iconfont{
+.iconfont {
   /* font-size:24px; */
 }
->>>>>>> c1fe61ec53b4eeb6dc559bb6b600e296d457d385
+
 .indexsearch-form {
   width: 548px;
   height: 60px;
   border-radius: 30px;
-  /*overflow: hidden;*/
   background: #fff;
 }
 
@@ -586,12 +583,11 @@ body {
   background-size: 100%;
 }
 
-<<<<<<< HEAD
-=======
-.aaa{
-  width:49%;
-  margin-bottom:8px;
+.aaa {
+  width: 49%;
+  margin-bottom: 8px;
 }
+
 .recommend-item {
   display: flex;
   flex-wrap: wrap;
@@ -599,13 +595,16 @@ body {
   justify-content: space-between;
   padding-bottom: 4px;
 }
-.indexwrap{
+
+.indexwrap {
   background: red;
 }
+
 .similar-product {
   background-color: #fff;
-  margin-botom:8px ;
+  margin-bottom: 8px;
 }
+
 .similar-product-text {
   box-sizing: border-box;
   height: 66px;
@@ -655,16 +654,15 @@ body {
   width: 218%;
   height: 300%;
   position: absolute;
-  top:-8px;
+  top: -8px;
   left: -6px;
-  border:4px solid #bfbfbf;
+  border: 4px solid #bfbfbf;
   border-radius: 4px;
   -webkit-transform: scale(.5, .5);
   transform: scale(.5, .5);
   -webkit-transform-origin: top left;
   transform-origin: top left;
 }
->>>>>>> c1fe61ec53b4eeb6dc559bb6b600e296d457d385
 
 /*底部*/
 /*toolsBar start*/
