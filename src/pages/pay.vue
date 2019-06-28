@@ -14,7 +14,8 @@
     <PayNeedPay/>
     <PayOtherPay/>
     <PayOtherPayItem/>
-    <PaySubmit/>
+    <PaySubmit @receive="letShadowShow"></PaySubmit>
+    <PayShadow v-if="show" @handleHide="funHide"></PayShadow>
   </div>
 
 </template>
@@ -25,6 +26,7 @@
   import PayOtherPay from './../components/pay/payOtherPay'
   import PayOtherPayItem from './../components/pay/payOtherPayItem'
   import PaySubmit from './../components/pay/paySubmit'
+  import PayShadow from './../components/pay/payShadow'
     export default {
         name: "pay",
         components:{
@@ -32,8 +34,22 @@
           PayNeedPay,
           PayOtherPay,
           PayOtherPayItem,
-          PaySubmit
+          PaySubmit,
+          PayShadow
+        },
+      data(){
+          return{
+            show:false
+          }
+      },
+      methods:{
+        letShadowShow(val){
+          this.show = val
+        },
+        funHide(val){
+          this.show = val
         }
+      }
     }
 </script>
 <style src="./../../static/font/iconfont.css"></style>
