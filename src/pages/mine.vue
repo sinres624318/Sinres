@@ -30,6 +30,8 @@
   import MineActivity from '../components/mine/mineActivity'
   import MineRecommend from '../components/mine/mineRecommend'
   import MoreMenu from '../components/common/moreMenu'
+  import {goBack} from './../assets/js/common'
+
   export default {
     name: "mine",
     data() {
@@ -49,7 +51,8 @@
     },
     methods: {
       backClickHandle() {
-        this.$router.go(-1);
+        console.log(this.$router);
+        goBack(this.$router)
       },
       moreMenuClickHandle() {
         this.flag = !this.flag;

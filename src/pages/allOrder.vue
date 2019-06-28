@@ -20,21 +20,26 @@
   import NavBar from '../components/common/navBar'
   import OrderType from '../components/order/orderType'
   import OrderItem from '../components/order/orderItem'
+  import {goBack} from './../assets/js/common'
+
   export default {
     name: "mineAllOrder",
-    components:{
+    components: {
       NavBar,
       OrderItem,
       OrderType
     },
     methods: {
       backClickHandle() {
-        this.$router.go(-1);
+        goBack(this.$router)
       },
       moreMenuClickHandle() {
         this.flag = !this.flag;
       }
-    }
+    },
+    mounted() {
+      console.log(this.$router);
+    },
   }
 </script>
 

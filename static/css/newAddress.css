@@ -1,0 +1,85 @@
+.newAddress-fist {
+
+  background: #f7f7f7;
+  height: 100%;
+}
+/*NavBar start*/
+
+.nav-bar {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f7f7f7;
+  z-index: 999;
+  width: 100%;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*NavBar end*/
+
+.newAddress-fist .van-address-edit{
+  margin-top: 90px;
+}
+.newAddress-fist .van-cell{
+  height:86px;
+  line-height: 86px;
+  font-size: 26px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.newAddress-fist .van-cell__title {
+  color:#999999;
+}
+.newAddress-fist  .van-address-edit__buttons{
+  background: white;
+}
+.newAddress-fist .van-button--danger{
+  font-size: 30px;
+  line-height:90px ;
+  height: 90px;
+  border-radius: 10px;
+}
+.newAddress-fist .van-button--default {
+  font-size: 30px;
+  line-height:90px ;
+  height: 90px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}

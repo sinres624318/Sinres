@@ -48,7 +48,7 @@
     },
     methods: {
       orderTypeClickHandle(index) {
-        this.$router.replace({name: 'AllOrder', params: {currentIndex: index}})
+        this.$router.push({name: 'AllOrder', params: {currentIndex: index}})
       }
     }
   }
