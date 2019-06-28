@@ -32,7 +32,6 @@ import DefineOrder from './../pages/defineOrder'
 import Pay from './../pages/pay'
 
 
-
 Vue.use(Router)
 
 export default new Router({
@@ -199,6 +198,6 @@ export default new Router({
       path: '/newAddress',
       name: 'NewAddress',
       component: NewAddress
-    }
+    },
   ]
 })
