@@ -5,6 +5,15 @@ import App from './App'
 import router from './router'
 import 'lib-flexible/flexible'
 import axios from './../utils/request'
+
+
+
+
+
+
+
+
+
 axios.defaults.withCredentials=true
 Vue.prototype.axios = axios
 

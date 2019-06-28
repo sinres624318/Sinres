@@ -1,58 +1,28 @@
 <template>
-  <div id="app">
-    <GoodsAction>
-      <GoodsActionIcon
-        icon="chat-o"
-        text="客服"
-        @click="onClickIcon"
-      />
-      <GoodsActionButton
-        icon="cart-o"
-        text="购物车"
-        @click="onClickIcon"
-      />
-      <GoodsActionButton
-        type="warning"
-        text="加入购物车"
-        @click="onClickButton"
-      />
-      <GoodsActionButton
-        type="danger"
-        text="立即购买"
-        @click="onClickButton"
-      />
-    </GoodsAction>
-  </div>
+	<router-view></router-view>
+	<!-- <Details></Details> -->
+	<!-- <DetailsItem></DetailsItem> -->
 </template>
 
 <script>
-  import {
-    GoodsAction,
-    GoodsActionIcon,
-    GoodsActionButton
-  } from 'vant';
-
+		// 页面级组件
+    // import Details from './pages/details';
+		// 页面级组件
+		// import DetailsItem from './pages/detailsItem';
 
   export default {
     name: 'App',
-    components:{
-      GoodsAction,
-      GoodsActionIcon,
-      GoodsActionButton,
-    },
-    methods: {
-      onClickIcon() {
-        Toast('点击图标');
-      },
-      onClickButton() {
-        Toast('点击按钮');
-      }
-    }
+		// 注册
+//     components:{
+//       Details,
+// 			DetailsItem,
+//     },
+    
   }
 </script>
 
 <style>
   #app {
-    height: 50px;
+
   }
 </style>
