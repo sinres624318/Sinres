@@ -22,34 +22,35 @@
   import toolsBar from "../components/common/toolsBar"
   import indexFour from "../components/index/indexFour"
   import indexRecommend from "../components/index/indexRecommend"
-    export default {
-        name: "index",
-      data(){
-          return{
-            scroll:0
-          }
-      },
-        components:{
-          indexHender,
-          indexTopBanner,
-          indexCenterBanner,
-          indexSeckill,
-          indexThree,
-          toolsBar,
-          indexFour,
-          indexRecommend
-        },
-      mounted(){
-        window.addEventListener('scroll',this.handleColor,true)
-      },
-      methods: {
-        handleColor() {
-          var top =  Math.floor(this.$refs.main.scrollTop );
-          this.scroll=top;
-        }
+
+  export default {
+    name: "index",
+    data() {
+      return {
+        scroll: 0
+      }
+    },
+    components: {
+      indexHender,
+      indexTopBanner,
+      indexCenterBanner,
+      indexSeckill,
+      indexThree,
+      toolsBar,
+      indexFour,
+      indexRecommend
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleColor, true)
+    },
+    methods: {
+      handleColor() {
+        var top = Math.floor(this.$refs.main.scrollTop);
+        this.scroll = top;
       }
     }
+  }
 </script>
-<style  src="../../static/css/index/index.css"></style>
+<style src="../../static/css/index/index.css"></style>
 <style scoped>
 </style>
