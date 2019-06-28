@@ -34,7 +34,7 @@
       </div>
       <div class="exhibition-three-two exhibition-con-item">
         <div class="exhibition-con-item">
-          <a href="" v-for="item in exhibitionconitem">
+          <a href="" v-for="(item,index) in exhibitionconitem" :key="index">
             <div class="exhibition-title">
               <strong>{{item.text1}}</strong>
               <p>{{item.text2}}</p>
