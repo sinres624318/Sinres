@@ -28,6 +28,10 @@ import AccountManagement from './../pages/accountManagement/accountManagement'
 import MyVouchers from './../pages/myVouchers'
 import ShippingAddress from './../pages/shippingAddress/shippingAddress'
 import  NewAddress from './../pages/newAddress/newAddress'
+import DefineOrder from './../pages/defineOrder'
+import Pay from './../pages/pay'
+
+
 
 Vue.use(Router)
 
@@ -43,6 +47,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path:'/pay',
+      name:'Pay',
+      component:Pay
     },
     {
       path: '/classify',
@@ -72,7 +81,7 @@ export default new Router({
       component: Mine
     },
     {
-      path: 'appliance',
+      path: '/appliance',
       name: 'Appliance',
       component: Appliance
     },
@@ -161,6 +170,11 @@ export default new Router({
       path: '/vouchers',
       name: 'Vouchers',
       component: Vouchers
+    },
+    {
+      path: '/defineOrder',
+      name: 'DefineOrder',
+      component: DefineOrder
     },
     /*我的资产页*/
     {

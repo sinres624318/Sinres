@@ -13,6 +13,7 @@
     </NavBar>
     <van-address-edit
       :area-list="areaList"
+      show-delete
       show-set-default
       show-search-result
       :search-result="searchResult"
