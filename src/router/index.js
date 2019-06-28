@@ -24,6 +24,8 @@ import Auction from './../pages/auction'
 import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
 import MyVouchers from './../pages/myVouchers'
+import DefineOrder from './../pages/defineOrder'
+import Pay from './../pages/pay'
 
 
 Vue.use(Router)
@@ -39,6 +41,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path:'/pay',
+      name:'Pay',
+      component:Pay
     },
     {
       path: '/classify',
@@ -158,10 +165,16 @@ export default new Router({
       path: '/productList',
       name: 'ProductList',
       component: ProductList
-    }, {
+    },
+    {
       path: '/vouchers',
       name: 'Vouchers',
       component: Vouchers
+    },
+    {
+      path: '/defineOrder',
+      name:'DefineOrder',
+      component:DefineOrder
     }
   ]
 })
