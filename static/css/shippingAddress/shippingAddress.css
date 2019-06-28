@@ -1,0 +1,83 @@
+.shippingAddress-fist{
+  background: #f8f8f8;
+  height: 100%;
+  position: relative;
+}
+/*NavBar start*/
+
+.nav-bar {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f8f8f8;
+  z-index: 999;
+  width: 100%;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*NavBar end*/
+/*底部*/
+.shippingAddressFooter{
+  margin-top: 99px;
+}
+.shippingAddressFooter .van-address-item {
+  height: 180px;
+  margin-bottom: 10px;
+}
+.shippingAddressFooter .van-address-item__name{
+  line-height: 50px;
+  color:#333333;
+  font-size:30px;
+  font-weight: 600;
+}
+.shippingAddressFooter .van-address-item__address {
+  line-height: 50px;
+  font-size:30px;
+  color: #666666;
+}
+.shippingAddressFooter  .van-button--danger {
+  color: #fff;
+  background-color: red;
+  font-size:32px ;
+}
+.shippingAddressFooter  .van-address-list__add{
+  height: 90px;
+}

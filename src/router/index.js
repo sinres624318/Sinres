@@ -26,7 +26,8 @@ import Search from './../pages/search/search'
 import MyAssets from './../pages/myAssets/myAssets'
 import AccountManagement from './../pages/accountManagement/accountManagement'
 import MyVouchers from './../pages/myVouchers'
-
+import ShippingAddress from './../pages/shippingAddress/shippingAddress'
+import  NewAddress from './../pages/newAddress/newAddress'
 
 Vue.use(Router)
 
@@ -172,6 +173,18 @@ export default new Router({
       path: '/accountManagement',
       name: 'AccountManagement',
       component: AccountManagement
+    },
+    /*收货地址*/
+    {
+      path: '/shippingAddress',
+      name: 'ShippingAddress',
+      component: ShippingAddress
+    },
+    /*新增收货地址*/
+    {
+      path: '/newAddress',
+      name: 'NewAddress',
+      component: NewAddress
     }
   ]
 })

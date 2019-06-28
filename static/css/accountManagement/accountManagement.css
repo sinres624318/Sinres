@@ -1,3 +1,7 @@
+.accountManage-Bos{
+  height: 100%;
+  background: #f7f7f7;
+}
 /*NavBar start*/
 
 .nav-bar {
@@ -52,13 +56,16 @@
 /*NavBar end*/
 .accountManage{
   margin-top: 90px;
+  padding-bottom: 30px;
   padding-left:20px ;
   padding-right:20px ;
+  background: white;
 }
 .accountManage p{
   font-size: 34px;
   line-height: 90px;
   text-align: left;
+  color: #333333;
 }
 .accountManage-top{
   height:200px;
@@ -112,4 +119,48 @@
 .accountManage-top-right p{
   color:red;
   font-size: 32px;
+}
+.accountManage-Center-Top{
+  background: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top:28px ;
+  margin-bottom:28px ;
+  display: flex;
+  justify-content: space-between;
+}
+.accountManage-Center-Top .iconfont{
+  color: #999999;
+  font-size: 32px;
+}
+.accountManage-Center-Top span:nth-child(1){
+  color: #333333;
+  font-size: 34px;
+  line-height: 90px;
+}
+.accountManage-Center-Top span:nth-child(2){
+  color: #999999;
+  font-size: 24px;
+  line-height: 90px;
+}
+.accountManage-Center-Bottom-Classfiy{
+  background: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.accountManage-Center-Bottom-Classfiy .iconfont{
+  color: #999999;
+  font-size: 32px;
+}
+.accountManage-Center-Bottom-Classfiy span:nth-child(1){
+  color: #333333;
+  font-size: 34px;
+  line-height: 90px;
+}
+.accountManage-Center-Bottom-Classfiy span:nth-child(2){
+  color: #999999;
+  font-size: 24px;
+  line-height: 90px;
 }
