@@ -25,6 +25,7 @@
   import CartShop from './../components/cart/cartShop'
   import CartTotalPrice from './../components/cart/cartTotalPrice'
   import CartProductEdit from './../components/cart/cartProductEdit'
+  import {goBack} from './../assets/js/common'
 
   export default {
     name: "cart",
@@ -36,12 +37,9 @@
     },
     methods: {
       onClickLeft() {
-        this.$router.go(-1)
+        goBack(this.$router)
       }
     }
   }
 </script>
 <style src="./../../static/css/cart/cart.css"></style>
-<style scoped>
-
-</style>

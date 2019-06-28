@@ -2,10 +2,13 @@
   <div class="my-cell">
     <div class="rel-container" id="myAsset">
       <div class="assets-item">
-        <div class="assets-item-val">
+        <router-link
+          tag="tag"
+          :to="{name:'MyVouchers'}"
+          class="assets-item-val">
           <span class="assets-val">0</span>
           <span class="assets-unit">张</span>
-        </div>
+        </router-link>
         <div class="assets-item-key">京东券</div>
       </div>
       <div class="assets-item">

@@ -196,6 +196,9 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.goods .content {
+  width: 100%;
+}
 
 .goods .sku {
   overflow: hidden;

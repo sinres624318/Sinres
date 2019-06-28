@@ -1,6 +1,8 @@
 @charset "utf-8";
 /*NavBar start*/
-
+NavBar{
+  border-bottom: 2px solid #e5e5e5;
+}
 .nav-bar {
   height: 90px;
   position: fixed;

@@ -23,6 +23,7 @@ import AllOrder from '../pages/allOrder'
 import Auction from './../pages/auction'
 import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
+import MyVouchers from './../pages/myVouchers'
 
 
 Vue.use(Router)
@@ -143,15 +144,15 @@ export default new Router({
       name: 'Search',
       component: Search
     },
+
     {
+      path: '/myVouchers',
+      name: 'MyVouchers',
+      component: MyVouchers
+    }, {
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
-    },
-    {
-      path: '/vouchers',
-      name: 'Vouchers',
-      component: Vouchers
     },
     {
       path: '/productList',
