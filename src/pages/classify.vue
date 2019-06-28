@@ -11,8 +11,8 @@
     export default {
         name: "classify",
       components:{
-        ClassifyHeader,
-        ClassifyContent
+        ClassifyHeader,       
+        ClassifyContent,
       }
     }
 </script>

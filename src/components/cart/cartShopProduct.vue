@@ -1,9 +1,9 @@
 <template>
-  <div class="product-item">
-    <div class="goods">
+  <div class="shop-product-item">
+    <div class="product-item-goods">
       <div class="icon_select"></div>
       <img src="../../../static/img/cart/appleComputer.jpg" alt="">
-      <div class="content">
+      <div class="goods-content">
         <div class="name">
           <span class="proNameJs">Apple Macbook Pro 13.3【带触控栏】Core i5 8G 512G SSD 深空灰 苹果笔记本电脑 轻薄本 MR9R2CH/A</span>
         </div>

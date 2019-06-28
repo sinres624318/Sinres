@@ -1,5 +1,5 @@
 <template>
-  <div class="index" ref="index">
+  <div class="index">
     <indexHender :info="this.scroll"></indexHender>
     <div class="main" ref="main">
       <indexTopBanner></indexTopBanner>
@@ -9,7 +9,6 @@
       <indexFour></indexFour>
       <indexRecommend></indexRecommend>
     </div>
-    <toolsBar></toolsBar>
   </div>
 </template>
 
@@ -19,9 +18,9 @@
   import indexCenterBanner from "../components/index/indexCenterBanner"
   import indexSeckill from "../components/index/indexSeckill"
   import indexThree from "../components/index/indexThree"
-  import toolsBar from "../components/common/toolsBar"
   import indexFour from "../components/index/indexFour"
   import indexRecommend from "../components/index/indexRecommend"
+
 
   export default {
     name: "index",
@@ -36,7 +35,6 @@
       indexCenterBanner,
       indexSeckill,
       indexThree,
-      toolsBar,
       indexFour,
       indexRecommend
     },
