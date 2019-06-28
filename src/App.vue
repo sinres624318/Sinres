@@ -1,28 +1,26 @@
 <template>
-	<router-view></router-view>
-	<!-- <Details></Details> -->
-	<!-- <DetailsItem></DetailsItem> -->
+  <div id="app">
+    <router-view></router-view>
+    <ToolsBar v-if="$route.meta.flag"></ToolsBar>
+  </div>
+
 </template>
-
 <script>
-		// 页面级组件
-    // import Details from './pages/details';
-		// 页面级组件
-		// import DetailsItem from './pages/detailsItem';
-
+import ToolsBar from './components/common/toolsBar'
   export default {
     name: 'App',
-		// 注册
-//     components:{
-//       Details,
-// 			DetailsItem,
-//     },
-    
+    components: {ToolsBar},
+    data() {
+      return {}
+    }
   }
+
+
 </script>
 
 <style>
   #app {
-
+    height: 100%;
+    overflow: hidden;
   }
 </style>

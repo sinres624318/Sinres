@@ -1,0 +1,314 @@
+@charset "utf-8";
+.my-vouchers {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  overflow-y: auto;
+}
+
+/*NavBar start*/
+NavBar {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.nav-bar {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*NavBar end*/
+/*优惠券使用情况*/
+
+.my-vouchers-use {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  border-bottom: 2px solid #e5e5e5;
+  padding-top: 92px;
+}
+
+.my-vouchers-use > li {
+  flex: 1;
+  line-height: 90px;
+  font-size: 28px;
+  color: #666666;
+  text-align: center;
+  height: 90px;
+}
+
+/*优惠券分类*/
+
+.my-vouchers-type {
+  height: 90px;
+  width: 100%;
+  padding-right: 90px;
+  background: #fff;
+  display: flex;
+  position: relative;
+}
+
+.my-vouchers-type span {
+  flex: 1;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.my-vouchers-type span em {
+  font-style: normal;
+  font-size: 28px;
+  color: #666666;
+}
+
+.my-vouchers-type span i {
+  font-size: 26px;
+  color: #cccccc;
+  margin-left: 15px;
+}
+
+.my-vouchers-type-rule {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 90px;
+  width: 90px;
+  background: url("./../img/myVouchers/pull-bg.png") no-repeat left center;
+  background-size: 3px 90px;
+  text-align: center;
+  line-height: 90px;
+}
+
+.my-vouchers-type-rule > i {
+  font-size: 24px;
+  color: #cdcdcd;
+}
+
+.my-vouchers-type-rule-title {
+  width: 100%;
+  height: 104px;
+  padding: 20px 0;
+  background: #fff;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  border-top: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.my-vouchers-type-rule-title-info {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  border: 1px solid #000;
+  border-radius: 60px;
+}
+
+.my-vouchers-type-rule-title-info span {
+  font-size: 26px;
+  color: #666666;
+}
+
+.my-vouchers-type-rule-title-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+/*阴影部分*/
+.my-vouchers-shadow {
+  width: 100%;
+  height: 2000px;
+  background: #000;
+  opacity: .3;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 5;
+}
+
+/*类型*/
+.my-vouchers-all-type {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: #fff;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.my-vouchers-all-type > li {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 80px;
+  font-size: 24px;
+  color: #000000;
+  text-align: left;
+}
+
+/*优惠券状态*/
+.my-vouchers-state {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: #fff;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.my-vouchers-state > li {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 80px;
+  font-size: 24px;
+  color: #000000;
+  text-align: left;
+}
+
+.my-vouchers-granularity {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: #fff;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.my-vouchers-granularity > li {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 80px;
+  font-size: 24px;
+  color: #000000;
+  text-align: left;
+}
+
+.my-vouchers-main {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-vouchers-item {
+  width: 710px;
+  height: 224px;
+  border-radius: 10px;
+  background: url("./../img/myVouchers/myVouchersItem.png") repeat-x top;
+  background-size: 3px 11px;
+  box-shadow: 5px 10px 6px 4px #d0cecf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0;
+  margin-top: 30px;
+}
+
+.my-vouchers-item-left {
+  width: 240px;
+  height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-vouchers-item-left-top {
+  color: #c9a86d;
+}
+
+.my-vouchers-item-left-top > i {
+  font-size: 20px;
+}
+
+.my-vouchers-item-left-top > span {
+  font-size: 76px;
+  font-weight: 900;
+}
+
+.my-vouchers-item-left-deep {
+  font-size: 28px;
+  color: #c9a86d;
+}
+
+.my-vouchers-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.my-vouchers-item-title {
+  width: 400px;
+  height: 130px;
+  font-size: 24px;
+  color: #777777;
+  line-height: 36px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}

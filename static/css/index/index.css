@@ -1,0 +1,409 @@
+.index{
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+  background: #f6f6f6;
+}
+
+/*头部*/
+
+.indexsearch-wrap {
+  background: transparent;
+  width: 100%;
+  height: 88px;
+  position: fixed;
+  z-index: 999;
+}
+.indexwrap{
+  background:red;
+}
+.indexsearch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  padding: 0 40px;
+}
+
+.main {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 110px;;
+}
+
+.idexmenu,
+.search-form,
+.login {
+  display: flex;
+}
+
+
+.indexmenu i {
+  font-size: 56px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.indexsearch-form input {
+  outline: none;
+  border: none;
+  margin: 14px 0 0 5px;
+  padding-left: 5px;
+  font-size: 24px;
+  color: #232326;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+.iconfont {
+  font-size: 24px;
+}
+
+.iconfont {
+  /* font-size:24px; */
+}
+
+.indexsearch-form {
+  width: 548px;
+  height: 60px;
+  border-radius: 30px;
+  background: #fff;
+}
+
+.search-logo {
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  background: url("../../img/search.png") no-repeat;
+  background-size: 40px 30px;
+  margin: 10px 8px 0 16px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.search-logo::after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #ddd;
+  top: 0;
+  left: 48px;
+  height: 30px;
+}
+
+.search-zoom {
+  display: inline-block;
+  height: 30px;
+  width: 36px;
+  margin: 10px 0 0 5px;
+  background: url("../../img/tools.png") no-repeat -160px 0;
+  background-size: 400px;
+  vertical-align: middle;
+}
+
+.indexlogin > a {
+  font-size: 24px;
+  color: #fff;
+}
+
+
+/*轮播图*/
+/*顶部轮播图*/
+.slider-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 368px;
+  background: deepskyblue;
+}
+
+.slider-wrap img {
+  width: 100%;
+  height: 368px;
+}
+
+/*顶部分页器*/
+.indexTopBanner {
+  position: relative;
+}
+
+.indexTopBanner .swiper-pagination {
+  position: absolute;
+  top: 280px;
+}
+
+.indexTopBanner .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #0d0abb;
+  opacity: .2;
+}
+
+.indexTopBanner .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+  border-radius: 10px;
+  width: 24px;
+  height: 14px;
+}
+
+/*中部轮播图*/
+.indexClassify-wrap {
+  height: 324px;
+  width: 100%;
+  position: relative;
+  background: #fff;
+  border-radius: 25px 25px 0 0;
+  margin-top: -40px;
+  z-index: 99;
+}
+
+.indexClassify {
+  width: 100%;
+  height: 324px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.indexClassify > div {
+  width: 100%;
+}
+
+.classify-l {
+  height: 324px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.classify-r {
+  display: flex;
+  flex-wrap: wrap;
+  height: 324px;
+}
+
+.indexClassify a {
+  width: 20%;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indexClassify img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.indexClassify span {
+  font-size: 24px;
+  color: #000;
+  margin-top: 12px;
+}
+
+.classify-slide {
+  position: absolute;
+  bottom: 4px !important;
+  height: 5px;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/*东家小院*/
+.exhibition-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibition-item > div:last-of-type {
+  background-color: #3E144E;
+}
+
+.exhibition-item-title {
+  width: 100%;
+  height: 100px;
+}
+
+.exhibition-item img:last-of-type {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.exhibition-item strong {
+  position: relative;
+  top: 20px;
+  z-index: 99;
+  color: #fff;
+  font-size: 32px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.exhibition-item span {
+  position: relative;
+  top: 20px;
+  z-index: 99;
+  color: #fff;
+  font-size: 24px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.exhibition-item-three,
+.exhibition-item-four {
+  background-color: #f6f6f6;
+  overflow: hidden;
+  width: 100%;
+}
+
+.exhibition-three,
+.exhibition-four {
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.exhibition-item-three > div:last-of-type,
+.exhibition-item-four > div:last-of-type {
+  background: #fff;
+}
+
+.exhibition-item-three .exhibition-item-title {
+  background: url("../../../static/img/exhibition/exhibition_3.jpg") no-repeat;
+  background-size: 100%;
+}
+
+
+.exhibition-three-one {
+  display: flex;
+}
+
+.exhibition-three-one > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.exhibition-three-one-l{
+  border-right: 3px solid #f6f6f6;
+  padding-bottom: 10px;
+}
+.exhibition-three-one-title {
+  padding-left: 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exhibition-three-one-title span {
+  background: linear-gradient(90deg, #45CAFF, #1471FB);
+  color: transparent;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  -webkit-background-clip: text;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.exhibition-three-one-title p {
+  font-size: 24px;
+  line-height: 50px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.exhibition-three-one-title a {
+  display: flex;
+  justify-content: center;
+}
+
+.exhibition-three-one-con {
+  display: flex;
+  justify-content: center;
+}
+
+.exhibition-three-one-con > a {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.exhibition-three-one-con > a>img{
+  margin: 5px auto;
+
+}
+
+.exhibition-con-item {
+  display: flex;
+  width: 100%;
+}
+
+.exhibition-con-item a {
+  width: 25%;
+  text-align: center;
+  border-right: 3px solid #f6f6f6;
+  border-top: 3px solid #f6f6f6;
+  padding-bottom: 20px;
+}
+
+.exhibition-con-item .exhibition-title {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.exhibition-con-item .exhibition-title strong {
+  font-size: 30px;
+  line-height: 36px;
+  background: linear-gradient(90deg, #FE8537, #F02B2B);
+  -webkit-background-clip: text;
+  color: transparent;
+  
+}
+
+.exhibition-con-item .exhibition-title p {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*每日一逛*/
+.exhibition-item-four .exhibition-item-title {
+  background: url("../../../static/img/exhibition/exhibition_4.jpg") no-repeat;
+  background-size: 100%;
+}
+
+/*为你推荐*/
+.indexRecommend-wrap {
+  background-color: #f0f2f5;
+  padding-top: 10px;
+}
+
+.recommend-title {
+  height: 76px;
+  background: url("../../img/exhibition/recommend.png") no-repeat;
+  background-size: 100%;
+}
+
+
+

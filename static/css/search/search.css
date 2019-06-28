@@ -1,0 +1,97 @@
+/*头部*/
+body{
+  background: #f6f6f6;
+}
+.searchSearch-wrap {
+  background: #fff;
+  width: 100%;
+  height: 88px;
+  border-bottom: 1px solid #f6f6f6;
+}
+.searchSearch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:88px;
+  padding: 0 40px;
+}
+.searchSmenu,
+.searchSearch-form,
+.searchSlogin {
+  display: flex;
+}
+.searchSmenu i {
+  font-size: 56px;
+  cursor: pointer;
+  color: #2e2e2e;
+}
+.searchSearch-form input {
+  outline: none;
+  border: none;
+  padding-left: 5px;
+  font-size: 24px;
+  color: #232326;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 24px;
+  background: #f7f7f7;
+}
+.searchSearch-form {
+  width: 500px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+.searchSearch-logo {
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+}
+
+.searchSearch-zoom {
+  display: inline-block;
+  height: 30px;
+  width: 36px;
+  margin: 15px 0 0 5px;
+  background: url("../../img/tools.png")no-repeat -160px 0;
+  background-size: 400px;
+  vertical-align: middle;
+}
+
+.searchSlogin > a {
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  background: red;
+  width: 80px;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+.search-Center{
+  background: white;
+  padding:38px 26px;
+}
+.search-Center h3{
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom:23px ;
+}
+.search-Search{
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-Search  p{
+  width: 150px;
+  font-size:24px;
+  line-height:46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #f6f6f6;
+  margin:4px 5px;
+}

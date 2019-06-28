@@ -1,0 +1,172 @@
+.accountManage-Bos{
+  height: 100%;
+  background: #f7f7f7;
+}
+/*NavBar start*/
+
+.nav-bar {
+  height: 90px;
+  border-bottom:1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  width: 100%;
+}
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
+}
+
+/*NavBar end*/
+.accountManage{
+  margin-top: 90px;
+  padding-bottom: 30px;
+  padding-left:20px ;
+  padding-right:20px ;
+  background: white;
+}
+.accountManage p{
+  font-size: 34px;
+  line-height: 90px;
+  text-align: left;
+  color: #333333;
+}
+.accountManage-top{
+  height:200px;
+  border: 2px solid red;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.accountManage-top-img{
+  width: 120px;
+  height:120px;
+  overflow: hidden;
+  background: #669900;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:20px ;
+  margin-right:20px ;
+}
+.accountManage-top-img img{
+  width: 80px;
+  height:80px;
+}
+.accountManage-top-name p {
+  line-height: 64px;
+  font-size: 26px;
+}
+.accountManage-top-name p:nth-child(1){
+   color:black;
+   font-size: 32px;
+ }
+.accountManage-top-name p:nth-child(2){
+  color:#828080;
+  font-size: 32px;
+}
+.accountManage-top-right{
+  height: 60px;
+  width: 158px;
+  background:#ffe4e4;
+  position: absolute;
+  top:0px;
+  right:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius:20px ;
+}
+.accountManage-top-right p{
+  color:red;
+  font-size: 32px;
+}
+.accountManage-Center-Top{
+  background: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top:28px ;
+  margin-bottom:28px ;
+  display: flex;
+  justify-content: space-between;
+}
+.accountManage-Center-Top .iconfont{
+  color: #999999;
+  font-size: 32px;
+}
+.accountManage-Center-Top span:nth-child(1){
+  color: #333333;
+  font-size: 34px;
+  line-height: 90px;
+}
+.accountManage-Center-Top span:nth-child(2){
+  color: #999999;
+  font-size: 24px;
+  line-height: 90px;
+}
+.accountManage-Center-Bottom{
+  background: white;
+}
+.accountManage-Center-Bottom-Classfiy{
+  margin-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:2px solid #e5e5e5;
+}
+.accountManage-Center-Bottom .accountManage-Center-Bottom-Classfiy:nth-child(5){
+  border:0;
+}
+.accountManage-Center-Bottom-Classfiy .iconfont{
+  color: #999999;
+  font-size: 32px;
+}
+.accountManage-Center-Bottom-Classfiy span:nth-child(1){
+  color: #333333;
+  font-size: 34px;
+  line-height: 90px;
+}
+.accountManage-Center-Bottom-Classfiy span:nth-child(2){
+  color: #999999;
+  font-size: 24px;
+  line-height: 90px;
+}
