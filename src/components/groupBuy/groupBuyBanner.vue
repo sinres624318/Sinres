@@ -4,7 +4,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item in banner" :key="item">
           <router-link tag="a" to="">
-            <img :src="item" alt="">
+            <img :src="item.banner" alt="">
           </router-link>
         </div>
       </div>
