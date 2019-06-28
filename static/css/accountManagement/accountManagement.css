@@ -50,3 +50,66 @@
 }
 
 /*NavBar end*/
+.accountManage{
+  margin-top: 90px;
+  padding-left:20px ;
+  padding-right:20px ;
+}
+.accountManage p{
+  font-size: 34px;
+  line-height: 90px;
+  text-align: left;
+}
+.accountManage-top{
+  height:200px;
+  border: 2px solid red;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.accountManage-top-img{
+  width: 120px;
+  height:120px;
+  overflow: hidden;
+  background: #669900;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:20px ;
+  margin-right:20px ;
+}
+.accountManage-top-img img{
+  width: 80px;
+  height:80px;
+}
+.accountManage-top-name p {
+  line-height: 64px;
+  font-size: 26px;
+}
+.accountManage-top-name p:nth-child(1){
+   color:black;
+   font-size: 32px;
+ }
+.accountManage-top-name p:nth-child(2){
+  color:#828080;
+  font-size: 32px;
+}
+.accountManage-top-right{
+  height: 60px;
+  width: 158px;
+  background:#ffe4e4;
+  position: absolute;
+  top:0px;
+  right:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius:20px ;
+}
+.accountManage-top-right p{
+  color:red;
+  font-size: 32px;
+}

@@ -10,7 +10,7 @@
       </div>
       <div class="register-mask-content-bottom">
         <p @click="vanishHandle">取消</p>
-        <p class="register-mask-content-bottom-p">确定</p>
+        <p @click="verifyHandel()" class="register-mask-content-bottom-p">确定</p>
       </div>
     </div>
   </div>
@@ -35,6 +35,10 @@
       methods:{
         vanishHandle(){
           this.show=false;
+        },
+        verifyHandel(){
+          this.show=false
+          this.Observer.$emit("handels",1);
         }
       }
     }

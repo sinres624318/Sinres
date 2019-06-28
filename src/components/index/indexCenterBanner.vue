@@ -45,7 +45,7 @@
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'拍拍',
+                text:'拍拍二手',
                 path: '/patPat'
               },
               {
@@ -55,29 +55,28 @@
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'家电',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'家电',
-                path: '/appliance'
-              }
-              ,
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'家电',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'家电',
+                text:'信瑞超市',
                 path: '/appliance'
               },
               {
-                img:'../../../static/img/classify/1.png',
-                text:'家电',
-                path: '/appliance'
+                img:'../../../static/img/classify/r8.png',
+                text:'拍拍二手',
+                path: '/patPat'
+              },
+              {
+                img:'../../../static/img/classify/wool-logo.png',
+                text:'薅羊毛',
+                path: '/wool'
               }
             ],
             indexClassifyr:[
@@ -127,9 +126,6 @@
       mounted() {
         var mySwiper = new Swiper('.indexClassify', {
           loop:true,
-          // pagination: {
-          //   el: '.swiper-pagination',
-          // },
         });
       }
     }

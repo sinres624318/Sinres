@@ -25,15 +25,19 @@ import ProductList from './../pages/productList'
 import Search from './../pages/search/search'
 import MyAssets from './../pages/myAssets/myAssets'
 import AccountManagement from './../pages/accountManagement/accountManagement'
+import MyVouchers from './../pages/myVouchers'
+
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [{
+  routes: [
+    {
     path: '/register',
     name: 'Register',
     component: Register
-  },
+    },
     {
       path: '/login',
       name: 'Login',
@@ -75,11 +79,6 @@ export default new Router({
       path: '/auction',
       name: 'Auction',
       component: Auction
-    },
-    {
-      path: '/appliance',
-      name: 'Appliance',
-      component: Appliance
     },
     {
       path: '/shop',
@@ -142,7 +141,12 @@ export default new Router({
       name: 'Search',
       component: Search
     },
+
     {
+      path: '/myVouchers',
+      name: 'MyVouchers',
+      component: MyVouchers
+    }, {
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy
