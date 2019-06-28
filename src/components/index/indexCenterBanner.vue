@@ -30,13 +30,28 @@
             indexClassifyl:[
               {
                 img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
+                text:'家电',
                path: '/appliance'
               },
               {
                 img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
+                text:'充值',
+                path: '/recharge'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'拍卖',
+                path: '/auction'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'拍拍二手',
+                path: '/patPat'
+              },
+              {
+                img:'../../../static/img/classify/1.png',
+                text:'领券',
+                path: '/vouchers'
               },
               {
                 img:'../../../static/img/classify/1.png',
@@ -62,22 +77,6 @@
                 img:'../../../static/img/classify/wool-logo.png',
                 text:'薅羊毛',
                 path: '/wool'
-              }
-              ,
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
               }
             ],
             indexClassifyr:[
@@ -127,9 +126,6 @@
       mounted() {
         var mySwiper = new Swiper('.indexClassify', {
           loop:true,
-          // pagination: {
-          //   el: '.swiper-pagination',
-          // },
         });
       }
     }

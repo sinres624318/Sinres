@@ -2,7 +2,7 @@
   <div class="groupBuysLider-Wrap">
     <div class="groupBuyTopBanner">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in banner" :key="item">
+        <div class="swiper-slide" v-for="(item,index) in banner" :key="index">
           <router-link tag="a" to="">
             <img :src="item" alt="">
           </router-link>
