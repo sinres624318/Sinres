@@ -143,12 +143,18 @@
   font-size: 24px;
   line-height: 90px;
 }
-.accountManage-Center-Bottom-Classfiy{
+.accountManage-Center-Bottom{
   background: white;
+}
+.accountManage-Center-Bottom-Classfiy{
+  margin-left: 20px;
   padding-right: 20px;
-  padding-left: 20px;
   display: flex;
   justify-content: space-between;
+  border-bottom:2px solid #e5e5e5;
+}
+.accountManage-Center-Bottom .accountManage-Center-Bottom-Classfiy:nth-child(5){
+  border:0;
 }
 .accountManage-Center-Bottom-Classfiy .iconfont{
   color: #999999;
