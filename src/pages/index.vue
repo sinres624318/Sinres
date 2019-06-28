@@ -47,8 +47,6 @@
       }
     }
 </script>
-
-<style  src="../../static/font/iconfont.css"></style>
 <style  src="../../static/css/index/index.css"></style>
 <style scoped>
 </style>

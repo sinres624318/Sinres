@@ -4,6 +4,7 @@
   height: 100%;
   background: #f6f6f6;
 }
+
 /*头部*/
 
 .indexsearch-wrap {
@@ -21,15 +22,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:88px;
+  height: 88px;
   padding: 0 40px;
 }
+
 .main {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-bottom: 110px;
-  -webkit-overflow-scrolling: touch;
+  margin-bottom: 110px;;
 }
 
 .idexmenu,
@@ -44,6 +45,7 @@
   cursor: pointer;
   color: #fff;
 }
+
 .indexsearch-form input {
   outline: none;
   border: none;
@@ -56,12 +58,22 @@
   white-space: nowrap;
   line-height: 30px;
 }
+
+.iconfont {
+  font-size: 24px;
+}
+
+.iconfont {
+  /* font-size:24px; */
+}
+
 .indexsearch-form {
   width: 548px;
   height: 60px;
   border-radius: 30px;
   background: #fff;
 }
+
 .search-logo {
   width: 40px;
   height: 30px;
@@ -87,7 +99,7 @@
   height: 30px;
   width: 36px;
   margin: 10px 0 0 5px;
-  background: url("../../img/tools.png")no-repeat -160px 0;
+  background: url("../../img/tools.png") no-repeat -160px 0;
   background-size: 400px;
   vertical-align: middle;
 }
@@ -96,6 +108,9 @@
   font-size: 24px;
   color: #fff;
 }
+
+
+/*轮播图*/
 /*顶部轮播图*/
 .slider-wrap {
   position: relative;
@@ -104,33 +119,39 @@
   height: 368px;
   background: deepskyblue;
 }
+
 .slider-wrap img {
   width: 100%;
   height: 368px;
 }
+
 /*顶部分页器*/
-.indexTopBanner{
-  position:relative ;
+.indexTopBanner {
+  position: relative;
 }
-.indexTopBanner .swiper-pagination{
-  position:absolute ;
-  top:280px;
+
+.indexTopBanner .swiper-pagination {
+  position: absolute;
+  top: 280px;
 }
+
 .indexTopBanner .swiper-pagination-bullet {
-  width:14px;
+  width: 14px;
   height: 14px;
   display: inline-block;
   border-radius: 100%;
   background: #0d0abb;
   opacity: .2;
 }
+
 .indexTopBanner .swiper-pagination-bullet-active {
   opacity: 1;
   background: #fff;
-  border-radius:10px;
-  width:24px;
+  border-radius: 10px;
+  width: 24px;
   height: 14px;
 }
+
 /*中部轮播图*/
 .indexClassify-wrap {
   height: 324px;
@@ -210,6 +231,7 @@
   width: 100%;
   height: 100px;
 }
+
 .exhibition-item img:last-of-type {
   position: relative;
   width: 140px;
@@ -233,12 +255,13 @@
   top: 20px;
   z-index: 99;
   color: #fff;
-  font-size:24px;
+  font-size: 24px;
   max-width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .exhibition-item-three,
 .exhibition-item-four {
   background-color: #f6f6f6;
@@ -252,6 +275,7 @@
   background: #fff;
   border-radius: 15px;
 }
+
 .exhibition-item-three > div:last-of-type,
 .exhibition-item-four > div:last-of-type {
   background: #fff;
@@ -303,10 +327,12 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
 .exhibition-three-one-title a {
-display: flex;
+  display: flex;
   justify-content: center;
 }
+
 .exhibition-three-one-con {
   display: flex;
   justify-content: center;
@@ -324,17 +350,20 @@ display: flex;
   margin: 5px auto;
 
 }
+
 .exhibition-con-item {
   display: flex;
   width: 100%;
 }
-.exhibition-con-item a{
+
+.exhibition-con-item a {
   width: 25%;
   text-align: center;
   border-right: 3px solid #f6f6f6;
   border-top: 3px solid #f6f6f6;
   padding-bottom: 20px;
 }
+
 .exhibition-con-item .exhibition-title {
   display: flex;
   height: 100px;
@@ -357,6 +386,7 @@ display: flex;
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
 /*每日一逛*/
 .exhibition-item-four .exhibition-item-title {
   background: url("../../../static/img/exhibition/exhibition_4.jpg") no-repeat;

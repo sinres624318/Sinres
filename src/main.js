@@ -7,6 +7,7 @@ import 'lib-flexible/flexible'
 import {Lazyload} from 'vant';
 import axios from './../utils/request'
 import Observer from "./Observer";
+import store from "./store";
 
 Vue.prototype.Observer = Observer;
 import './../static/font/iconfont.css'
@@ -21,6 +22,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: {App},
   template: '<App/>'
