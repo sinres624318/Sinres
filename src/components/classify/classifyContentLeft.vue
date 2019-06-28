@@ -9,7 +9,6 @@
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
     export default {
         name: "classifyContentLeft",
       props:{
@@ -20,12 +19,6 @@
           return{
             isActive:0,
           }
-      },
-      mounted() {
-        let scroll = new BScroll('.wrapper',{
-          scrollY: true,
-          click: true
-        })
       },
       methods:{
         amendHandel(index){
