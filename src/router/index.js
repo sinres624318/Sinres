@@ -36,11 +36,25 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
+  linkActiveClass: 'focus',
+  routes: [{
+      path: '/',
+      redirect: {
+        name: 'Index'
+      }
+    },
     {
-    path: '/register',
-    name: 'Register',
-    component: Register
+      path: '/index',
+      name: 'Index',
+      component: Index,
+      meta: {
+        flag: true
+      }
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     },
     {
       path: '/login',
@@ -55,7 +69,10 @@ export default new Router({
     {
       path: '/classify',
       name: 'Classify',
-      component: Classify
+      component: Classify,
+      meta: {
+        flag: true
+      }
     },
     {
       path: '/myAttention',
@@ -71,13 +88,19 @@ export default new Router({
     {
       path: '/cart',
       name: 'Cart',
-      component: Cart
+      component: Cart,
+      meta: {
+        flag: false
+      }
     },
     /*我的页面*/
     {
       path: '/mine',
       name: 'Mine',
-      component: Mine
+      component: Mine,
+      meta: {
+        flag: true
+      }
     },
     {
       path: '/appliance',
@@ -93,9 +116,9 @@ export default new Router({
       path: '/shop',
       component: Shop,
       children: [{
-        path: '/',
-        redirect: 'shopIndex'
-      },
+          path: '/',
+          redirect: 'shopIndex'
+        },
         {
           path: 'shopIndex',
           name: 'ShopIndex',
@@ -117,12 +140,6 @@ export default new Router({
           component: ShopClassify
         },
       ]
-    },
-    /*首页*/
-    {
-      path: '/',
-      name: 'Index',
-      component: Index
     },
     {
       path: '/wool',
@@ -158,7 +175,10 @@ export default new Router({
     }, {
       path: '/groupBuy',
       name: 'GroupBuy',
-      component: GroupBuy
+      component: GroupBuy,
+      meta: {
+        flag: false
+      }
     },
     {
       path: '/productList',

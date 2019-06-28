@@ -4,6 +4,7 @@
   height: 100%;
   background: #ffffff;
   overflow-y: auto;
+  position: relative;
 }
 
 /*NavBar start*/
@@ -152,4 +153,62 @@ NavBar {
 }
 .pay-submit>span{
   margin-right: 5px;
+}
+
+/*阴影*/
+.pay-shadow{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .3);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay-shadow-prompt{
+  width: 633px;
+  height: 353px;
+  background: #fff;
+  border-radius: 10px;
+}
+.pay-shadow-prompt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-shadow-prompt>h3{
+  font-size: 36px;
+  color: #000;
+  line-height: 36px;
+  padding: 55px 0 35px;
+  width: 100%;
+  text-align: center;
+}
+.pay-shadow-prompt>p{
+  width: 530px;
+  font-size: 32px;
+  line-height: 50px;
+  color: #232326;
+}
+.pay-or-select{
+  width: 100%;
+  height: 90px;
+  border-top: 2px solid #e9eaed;
+  display: flex;
+}
+.pay-or-select>i{
+  flex: 1;
+  line-height: 90px;
+  text-align: center;
+  font-size: 32px;
+}
+/*切换样式*/
+.orange{
+  background: #f03210;
+  color: #fff;
+  font-weight: 900;
 }
