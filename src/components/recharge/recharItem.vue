@@ -6,7 +6,6 @@
           <li v-for="(item,index) in list" @click="styleHandel(index)" :class="{unique:num==index}">{{item}}</li>
         </ul>
       </div>
-      <input type="text" maxlength="11" ref="input" class="reachar-item-input" placeholder="请输入充值号码"/>
     </div>
 
 </template>
@@ -17,15 +16,17 @@
       data(){
           return{
             list:["充话费","充流量","加油卡"],
-            num:0
+            num:0,
+            photo:''
           }
       },
       methods:{
           styleHandel(index){
              this.num=index;
-             this.Observer.$emit("handel",[this.num,this.$refs.input.value])
-          }
-      }
+            this.Observer.$emit("handel",this.num);
+          },
+
+      },
     }
 </script>
 
