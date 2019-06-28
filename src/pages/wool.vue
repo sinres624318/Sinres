@@ -1,5 +1,23 @@
 <template>
   <div class="wool">
+    <div class="woolHeader">
+      <NavBar>
+      <template v-slot:left>
+        <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
+      </template>
+      <template v-slot:title>
+        <div class="title">优质羊毛</div>
+      </template>
+      <template v-slot:right>
+        <div class="right iconfont">
+          <i class="iconfont" @click="$router.push({path:'/classIfy'})">&#xe684;</i>
+          <i class="iconfont" @click="moreMenuClickHandle">&#xe670;</i>
+        </div>
+      </template>
+    </NavBar>
+    <MoreMenu v-if="flag"></MoreMenu>
+    </div>
+     <!-- ---------headerEnd-------------- -->
     <div class="woolBanner">
       <img src="../../static/img/wool/wool-banner.png" alt="尽情领优惠，一键薅羊毛">
     </div>
@@ -44,121 +62,32 @@
 </template>
 <script>
 import WoolProduct from './../components/wool/woolProduct'
+import NavBar from "./../components/common/navBar";
+import MoreMenu from "../components/common/moreMenu";
 export default {
   name: "wool",
   components:{
-      WoolProduct
+      WoolProduct,
+       NavBar,
+    MoreMenu
+  },
+  date(){
+    return{
+      flag:false
+    }
+  },
+  methods:{
+    backClickHandle() {
+      this.$router.go(-1);
+    },
+    moreMenuClickHandle() {
+      this.flag = !this.flag;
+    }
   }
 };
 </script>
-<style scoped>
-.wool {
-  height: 100%;
-  overflow-y: auto;
-}
+<style src="../../static/css/wool.css"></style>
 
-.woolProductList {
-  padding: 10px 20px 0;
-  background: #921b1b;
-}
-.woolCouponCenter,.woolSign,.woolFreeTrial,.woolBuyNow{
-  position: relative;
-}
-.woolCouponCenter>a,.woolSign>a,.woolFreeTrial>a,.woolBuyNow>a{
-  display: block;
-  position: absolute;
-}
-.woolCouponCenter a:nth-of-type(1){
-  width: 317px;
-  height: 305px;
-  top: 18px;
-  left: 51px;
-}
-.woolCouponCenter a:nth-of-type(2){
-  width: 145px;
-  height: 145px;
-  top: 18px;
-  left: 389px;
-}
-.woolCouponCenter a:nth-of-type(3){
-  width: 145px;
-  height: 145px;
-  top: 18px;
-  left: 554px;
-}
-.woolCouponCenter a:nth-of-type(4){
-  width: 145px;
-  height: 145px;
-  left: 389px;
-  top: 180px;
-}
-.woolCouponCenter a:nth-of-type(5){
-  width: 145px;
-  top: 180px;
-  left: 554px;
-  height: 145px;
-}
-/* -------------签到有礼-------------- */
-.woolSign a:nth-of-type(1){
-  width: 320px;
-  height: 330px;
-  top: 130px;
-  left: 50px;
-}
-.woolSign a:nth-of-type(2){
-  width: 310px;
-  height: 162px;
-  top: 486px;
-  left: 50px;
-}
-.woolSign a:nth-of-type(3){
-  width: 310px;
-  height: 162px;
-  top: 130px;
-  left: 390px;
-}
-.woolSign a:nth-of-type(4){
-  width: 310px;
-  height: 334px;
-  left: 390px;
-  top: 306px;
-}
-/* ---------免费试用------ */
-.woolFreeTrial a:nth-of-type(1){
-  width: 314px;
-  height: 452px;
-  top: 108px;
-  left: 48px;
-}
-.woolFreeTrial a:nth-of-type(2){
-  width: 314px;
-  height: 452px;
-  top: 108px;
-  left: 386px;
-}
-/* ------------------ */
-.woolBuyNow a:nth-of-type(1){
-  width: 332px;
-  height: 224px;
-  top: 28px;
-  left: 30px;
-}
-.woolBuyNow a:nth-of-type(2){
-  width: 332px;
-  height: 224px;
-  top: 28px;
-  left: 384px;
-}
-.woolBuyNow a:nth-of-type(3){
-  width: 332px;
-  height: 224px;
-  top: 276px;
-  left: 30px;
-}
-.woolBuyNow a:nth-of-type(4){
-  width: 332px;
-  height: 224px;
-  left: 384px;
-  top: 276px;
-}
+<style scoped>
+
 </style>

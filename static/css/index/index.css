@@ -60,7 +60,6 @@ body {
   width: 548px;
   height: 60px;
   border-radius: 30px;
-  /*overflow: hidden;*/
   background: #fff;
 }
 .search-logo {
@@ -524,7 +523,6 @@ display: flex;
   background: url("../../img/exhibition/recommend.png") no-repeat;
   background-size: 100%;
 }
-
 .aaa{
   width:49%;
   margin-bottom:8px;
@@ -541,11 +539,11 @@ display: flex;
 }
 .similar-product {
   background-color: #fff;
-  margin-botom:8px ;
+  margin-bottom:8px ;
 }
 .similar-product-text {
   box-sizing: border-box;
-  height: 68px;
+  height: 66px;
   font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -606,7 +604,7 @@ display: flex;
 /*toolsBar start*/
 .indexTools-bar {
   position: fixed;
-  bottom:0px;
+  bottom:0;
   height: 100px;
   width: 100%;
   background: #fff;
