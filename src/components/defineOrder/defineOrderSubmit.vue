@@ -1,7 +1,7 @@
 <template>
-    <div class="define-order-submit">
+    <router-link to="/pay" tag="div" class="define-order-submit">
       <input class="define-order-submit-btn" type="button" value="在线支付">
-    </div>
+    </router-link>
 </template>
 
 <script>
