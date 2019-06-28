@@ -3,7 +3,7 @@
     <div class="rel-container" id="myAsset">
       <div class="assets-item">
         <router-link
-          tag="tag"
+          tag="div"
           :to="{name:'MyVouchers'}"
           class="assets-item-val">
           <span class="assets-val">0</span>
