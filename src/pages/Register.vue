@@ -1,8 +1,8 @@
 <template>
   <div class="register">
-    <RegisterHeader/>
+    <RegisterHeader @click="onClickLeft"/>
     <RegisterContent/>
-    <RegisterMask/>
+    <RegisterMask />
     <RegisterMaskTwo/>
   </div>
 </template>
@@ -12,6 +12,7 @@
   import RegisterContent from "../components/Register/RegisterContent"
   import RegisterMask from "../components/Register/RegisterMask"
   import RegisterMaskTwo from '../components/Register/RegisterMaskTwo'
+
     export default {
         name: "Register",
       components:{
@@ -19,6 +20,29 @@
         RegisterContent,
         RegisterMask,
         RegisterMaskTwo
+      },
+      data(){
+          return{
+            time:120
+          }
+      },
+      methods:{
+          // countdownHandel(){
+          //   var countdown=setInterval(()=>{
+          //     this.time>0?this.time--:clearInterval(countdown);
+          //     console.log(this.time);
+          //   },1000);
+          // },
+        vanishHandle(){
+          this.show=false;
+        },
+        onClickLeft() {
+          goBack(this.$router)
+        },
+        // verifyHandle(){
+        //   this.show=false;
+        //   this.Observer.$emit("handels",1);
+        // }
       }
     }
 </script>

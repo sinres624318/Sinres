@@ -1,7 +1,7 @@
 <template>
     <div class="classify-header">
-      <div class="classify-header-left">
-        <span></span>
+      <div class="classify-header-left" @click="onClickLeft">
+        <span ></span>
       </div>
       <div class="classify-header-middle">
         <i class="iconfont search">&#xe68d;</i>
@@ -14,8 +14,14 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
     export default {
-        name: "classifyHeader"
+        name: "classifyHeader",
+      methods:{
+        onClickLeft() {
+          goBack(this.$router)
+        },
+      }
     }
 </script>
 

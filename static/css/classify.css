@@ -30,6 +30,7 @@
   line-height: 60px;
   background: #F7F7F7;
   display: flex;
+  font-size: 24px;
 }
 .classify-header-middle i{
   margin: 0 0 0 30px;
@@ -83,8 +84,9 @@
   line-height: 90px;
   text-align: center;
   font-size: 28px;
+  background: #f7f7f7;
 }
-.unique{
+.classify-content-left .unique{
   color: red;
   background: white;
 }
