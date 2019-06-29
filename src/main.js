@@ -8,6 +8,7 @@ import {Lazyload} from 'vant';
 import axios from './../utils/request'
 import Observer from "./Observer";
 import store from "./store";
+import {getCookie} from './assets/js/common.js'
 
 Vue.prototype.Observer = Observer;
 import './../static/font/iconfont.css'
@@ -19,6 +20,21 @@ Vue.use(Lazyload);
 
 Vue.config.productionTip = false
 
+
+
+
+router.beforeEach((to, from, next) => {
+  if ((to.name == "Mine" || to.name == "Cart")) {
+    if (!getCookie('username')) {
+      console.log(getCookie('username'))
+      next('/login');
+    } else {
+      next();
+    }
+  }else {
+    next();
+  }
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
