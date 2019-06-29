@@ -14,7 +14,7 @@
 		
 		<!-- 服务 -->
 		<div class="details_recommend_servicePromise">
-			<div>
+			<div class="details_recommend-class">
 				<img src="../../../static/img/Details/line.gif" alt="">
 				<h3>服务承诺</h3>
 				<img src="../../../static/img/Details/line.gif" alt="">
@@ -22,18 +22,15 @@
 			<p>{{serviceContent.servicePromise}}</p>
 		</div>
 		<!-- 权利 -->
-		
 		<div class="details_recommend_right">
-			<div>
+			<div class="details_recommend-class">
 				<img src="../../../static/img/Details/line.gif" alt="">
 				<h3>权利声明</h3>
 				<img src="../../../static/img/Details/line.gif" alt="">
 			</div>
 			<p>
-				
-                        京东商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东商城重要的经营资源，未经许可，禁止非法转载使用。
-                        本站商品信息均来自于厂商，其真实性、准确性和合法性由信息拥有者（厂商）负责。本站不提供任何保证，并不承担任何法律责任。
-	
+          京东商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东商城重要的经营资源，未经许可，禁止非法转载使用。
+          本站商品信息均来自于厂商，其真实性、准确性和合法性由信息拥有者（厂商）负责。本站不提供任何保证，并不承担任何法律责任。
 		    </p>
 		</div>
 		
@@ -41,7 +38,7 @@
 		<!-- 价格 -->
 		  
 		  <div class="details_recommend_priceStatement">
-			  <div>
+			  <div class="details_recommend-class">
 				<img src="../../../static/img/Details/line.gif" alt="">
 				<h3>价格说明</h3>
 				<img src="../../../static/img/Details/line.gif" alt="">

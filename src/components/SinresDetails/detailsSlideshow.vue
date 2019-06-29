@@ -2,9 +2,6 @@
 	<div class="details_slideshow">
 		<van-swipe :autoplay="3000" indicator-color="white">
 			<van-swipe-item v-for="(item,index) in banner"><img :src="item" alt=""></van-swipe-item>
-			<!-- <van-swipe-item>2</van-swipe-item>
-			<van-swipe-item>3</van-swipe-item>
-			<van-swipe-item>4</van-swipe-item> -->
 		</van-swipe>
 		
 		

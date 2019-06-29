@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* CSS Document */
-<<<<<<< HEAD
 html,
 body,
 ul,
@@ -29,9 +28,7 @@ fieldset,
 c {
 	border: none;
 }
-=======
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, button { margin:0; padding:0; }
->>>>>>> f2f7e9705358597f23c079481c823716ac17286a
 
 img {
 	vertical-align: middle;
@@ -63,19 +60,19 @@ body {
 	font: 12px Avenir, Helvetica, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
+
 a {
 	color: #666;
 	text-decoration: none;
 }
-=======
+
 button{outline:none;border: none;}
 
 ul, ol ,li{ list-style:none; }
->>>>>>> f2f7e9705358597f23c079481c823716ac17286a
+
 
 /*清除浮动*/
-<<<<<<< HEAD
+
 .clearFix::after {
 	content: '';
 	display: block;
@@ -86,14 +83,14 @@ ul, ol ,li{ list-style:none; }
 }
 
 * {
-	box-sizing: border-box
-=======
+	box-sizing: border-box}
+
 .clearFix::after{content: '';display: block;height: 0;overflow: hidden;visibility: hidden;clear: both;}
 *{box-sizing:border-box}
 body,html{
   height: 100%;
   overflow: hidden;
->>>>>>> f2f7e9705358597f23c079481c823716ac17286a
+
 }
 
 body,
@@ -103,14 +100,12 @@ html {
 }
 
 i {
-<<<<<<< HEAD
+
 	font-style: normal;
 }
 
 
 
 
-=======
-  font-style: normal;
-}
->>>>>>> f2f7e9705358597f23c079481c823716ac17286a
+
+
