@@ -3,17 +3,22 @@
     <van-address-list
       v-model="chosenAddressId"
       :list="list"
-      :disabled-list="disabledList"
-    />
+      @add="onAdd"
+      @edit="onEdit"
+    >
+    </van-address-list>
   </div>
 </template>
 
 <script>
-import { AddressList } from 'vant';
+  import { SwipeCell } from 'vant';
+
+  import { AddressList } from 'vant';
     export default {
         name: "shippingAddressFooter",
       components:{
         'van-address-list':AddressList,
+        'van-swipe-cell':SwipeCell
       },
         data() {
           return {
@@ -37,7 +42,7 @@ import { AddressList } from 'vant';
 
         methods: {
           onAdd() {
-            Toast('新增地址');
+            window.location.href="/newAddress"
           },
 
           onEdit(item, index) {

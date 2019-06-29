@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
   import NavBar from '../../components/common/navBar'
   import ShippingAddressFooter from '../../components/shippingAddress/shippingAddressFooter'
     export default {
@@ -26,7 +27,7 @@
       },
       methods: {
         backClickHandle() {
-          this.$router.go(-1);
+          goBack(this.$router)
         },
       }
     }

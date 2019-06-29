@@ -2,7 +2,7 @@
   <div class="accountManage-Center">
     <div class="accountManage-Center-Top">
       <span>收货地址管理</span>
-      <router-link tag="span" to="">管理我的地址<i class="iconfont">&#xe624;</i></router-link>
+      <router-link tag="span" to="/shippingAddress">管理我的地址<i class="iconfont">&#xe624;</i></router-link>
     </div>
     <div class="accountManage-Center-Bottom">
       <div  class="accountManage-Center-Bottom-Classfiy">

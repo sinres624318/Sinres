@@ -1,3 +1,4 @@
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import Cart from './../pages/cart'
@@ -33,12 +34,35 @@ import Pay from './../pages/pay'
 
 
 
+import DetailsItem from '../pages/detailsItem'
+import  Details from '../pages/details'
+
+
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  linkActiveClass: 'focus',
-  routes: [{
+  linkActiveClass:"focus",
+  routes: [
+		{
+			path:'/details',
+			name:'Details',
+			component:Details
+		},
+		{
+      path: '/detailsItem',
+      name: 'DetailsItem',
+      component: DetailsItem
+    },
+    
+   
+    
+  
+     
+  
+
+ {
       path: '/',
       redirect: {
         name: 'Index'
@@ -219,6 +243,7 @@ export default new Router({
       path: '/newAddress',
       name: 'NewAddress',
       component: NewAddress
-    }
+    },
   ]
 })
+
