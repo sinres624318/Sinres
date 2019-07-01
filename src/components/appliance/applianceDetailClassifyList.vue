@@ -1,6 +1,6 @@
 <template>
     <div class="appliance-detail-classify-list">
-      <ApplianceDetailClassifyItem/>
+      <ApplianceDetailClassifyItem :sendApplianceClassify="sendApplianceClassify"/>
     </div>
 </template>
 
@@ -10,7 +10,13 @@
         name: "applianceDetailClassifyList",
         components:{
           ApplianceDetailClassifyItem
+        },
+      props:{
+        sendApplianceClassify:{
+          type:Array,
+          required:true
         }
+      }
     }
 </script>
 
