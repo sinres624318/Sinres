@@ -1,6 +1,6 @@
 <template>
   <div class="classify-content-right">
-    <div class="wrappers">
+
     <div class="classify-content-right-chunk" v-for="(item,index) in content" v-if="Num==index">
     <h4>{{item.title}}</h4>
     <div class="classify-content-right-modul" >
@@ -13,11 +13,11 @@
     </div>
   </div>
     </div>
-  </div>
+
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+
     export default {
         name: "classifyContentRight",
       data(){
@@ -34,12 +34,6 @@
             this.Num=val
           });
       },
-      mounted() {
-        let scroll = new BScroll('.wrappers',{
-          scrollY: true,
-          click: true
-        })
-      }
     }
 </script>
 

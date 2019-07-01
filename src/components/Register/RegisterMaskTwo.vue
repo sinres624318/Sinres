@@ -32,8 +32,6 @@
         },
         changeHandel(){
           this.show=false;
-
-
         }
       }
     }

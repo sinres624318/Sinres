@@ -3,6 +3,7 @@
     <router-view></router-view>
     <ToolsBar v-if="$route.meta.flag"></ToolsBar>
   </div>
+
 </template>
 <script>
 import ToolsBar from './components/common/toolsBar'

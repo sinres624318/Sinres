@@ -25,6 +25,7 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
   import NavBar from '../../components/common/navBar'
   import { AddressEdit } from 'vant';
     export default {
@@ -42,7 +43,7 @@
 
       methods: {
         backClickHandle() {
-          this.$router.go(-1);
+          goBack(this.$router)
         },
         onSave() {
           Toast('save');

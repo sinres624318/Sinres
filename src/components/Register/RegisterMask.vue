@@ -10,7 +10,7 @@
       </div>
       <div class="register-mask-content-bottom">
         <p @click="vanishHandle">取消</p>
-        <p @click="verifyHandel()" class="register-mask-content-bottom-p">确定</p>
+        <p @click="verifyHandle()" class="register-mask-content-bottom-p">确定</p>
       </div>
     </div>
   </div>
@@ -25,20 +25,19 @@
             show:false
           }
       },
-
+      // props:["down"],
       created() {
           this.Observer.$on("handle",(val)=>{
             this.photo = val[0];
             this.show=val[1];
-          })
+          });
       },
       methods:{
-        vanishHandle(){
+
+        verifyHandle(){
           this.show=false;
-        },
-        verifyHandel(){
-          this.show=false
           this.Observer.$emit("handels",1);
+
         }
       }
     }

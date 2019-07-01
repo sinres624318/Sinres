@@ -27,9 +27,9 @@
            spaceBetween: 10,
           effect:"coverflow",
           centeredSlides: true,
-          // direction:'horizontal',
+          direction:'horizontal',
           autoplay:{
-            delay:3000
+            delay:2000
           },
            loop:"true",
           pagination: {

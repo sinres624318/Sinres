@@ -17,11 +17,12 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
     export default {
         name: "searchHender",
       methods: {
         backClickHandle() {
-          this.$router.go(-1);
+          goBack(this.$router)
         },
       }
     }
