@@ -11,11 +11,19 @@
         <div class="right iconfont">&#xe670;</div>
       </template>
     </NavBar>
-    <CartProductEdit v-if="cartInfo.cartShopList" @changeProductHandle="changeProductHandle"></CartProductEdit>
+    <CartProductEdit
+      v-if="cartInfo.cartShopList"
+      @changeProductHandle="changeProductHandle"></CartProductEdit>
     <Loading v-if="!cartInfo.cartShopList"></Loading>
-    <CartShop v-if="cartInfo.cartShopList" v-for="(shop,index) in cartInfo.cartShopList" :key="index"
-              :shop="shop"></CartShop>
-    <CartTotalPrice v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
+    <CartShop
+      v-if="cartInfo.cartShopList"
+      v-for="(shop,index) in cartInfo.cartShopList"
+      :key="index"
+      :sID="index"
+      :shop="shop"></CartShop>
+    <CartTotalPrice
+      :allCheck="cartInfo.checked"
+      v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
     <CartProductEditBar v-if="!flag"></CartProductEditBar>
   </div>
 </template>

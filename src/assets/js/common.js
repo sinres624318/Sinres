@@ -24,9 +24,12 @@ const getCookie = (key) => {
     }
   }
   return null;
-}
+};
+
+
 module.exports = {
   goBack,
   saveCookie,
-  getCookie
+  getCookie,
+
 };

@@ -114,8 +114,10 @@
   margin-left: -20px;
 }
 
-.shop-title-wrap .focus::after {
-  background-image: url("./.././../../static/img/cart/checked.png");
+
+.cart .cart-shop .checked .icon_select::after,
+.cart .checked .icon_select::after {
+  background-image: url('./../../../static/img/cart/checked.png');
 }
 
 .shop-photo {
@@ -469,8 +471,10 @@
   font-size: 24px;
   transform: translateX(-50%);
 }
+
 .cart-product-edit-bar .cart-product-edit-bar-check-all .selected::after {
-  background:url("./../../../static/img/cart/checked.png");
+  background: url("./../../../static/img/cart/checked.png");
   background-size: 100%;
 }
+
 /*edit-bar end*/

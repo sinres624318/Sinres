@@ -2,7 +2,7 @@
   <div class="pay">
     <NavBar>
       <template v-slot:left>
-        <router-link class="left iconfont" to="/vouchers" tag="div">&#xe61c;</router-link>
+        <div class="left iconfont" @click="backClickHandle"  tag="div">&#xe61c;</div>
       </template>
       <template v-slot:title>
         <div class="title">信锐收银台</div>
@@ -27,6 +27,7 @@
   import PayOtherPayItem from './../components/pay/payOtherPayItem'
   import PaySubmit from './../components/pay/paySubmit'
   import PayShadow from './../components/pay/payShadow'
+  import {goBack} from './../assets/js/common.js'
     export default {
         name: "pay",
         components:{
@@ -48,6 +49,9 @@
         },
         funHide(val){
           this.show = val
+        },
+        backClickHandle(){
+          goBack(this.$router)
         }
       }
     }

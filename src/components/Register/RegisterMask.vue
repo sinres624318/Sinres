@@ -1,16 +1,16 @@
 <template>
-  <div class="register-mask" v-if="show">
+  <div class="register-mask">
     <div class="register-mask-content">
       <div class="register-mask-content-top">
         <img src="../../../static/img/Register/1.png">
       </div>
       <div class="register-mask-content-middle">
         <span>我们将发送短信/语音验证码至:</span>
-        <span>{{photo}}</span>
+        <span>{{TEL}}</span>
       </div>
       <div class="register-mask-content-bottom">
-        <p @click="vanishHandle">取消</p>
-        <p @click="verifyHandle()" class="register-mask-content-bottom-p">确定</p>
+        <p @click="confirmCancelSendCodeHandle()">取消</p>
+        <p @click="confirmSendCodeHandle()" class="register-mask-content-bottom-p">确定</p>
       </div>
     </div>
   </div>
@@ -20,27 +20,21 @@
   export default {
     name: "RegisterMask",
     data() {
-      return {
-        photo: '',
-        show: false
+      return {}
+    },
+    props: {
+      TEL: {
+        type: String,
+        required: true
       }
     },
-
-    created() {
-      this.Observer.$on("handle", (val) => {
-        this.photo = val[0];
-        this.show = val[1];
-      })
-    },
     methods: {
-      vanishHandle() {
-        this.show = false;
+      confirmCancelSendCodeHandle() {
+        this.$emit('confirmCancelSendCode', false)
       },
-      verifyHandle() {
-        this.show = false
-        this.Observer.$emit("handels", 1);
+      confirmSendCodeHandle() {
+        this.$emit('confirmSendCode', {flag: false, TEL: this.TEL})
       },
-
     }
   }
 </script>

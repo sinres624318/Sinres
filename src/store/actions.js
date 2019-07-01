@@ -6,10 +6,6 @@ import {cartInfo} from "../api/url";
 export default {
   getCartInfo(context) {
     /*发送请求*/
-    /*console.log("aaa");
-    const result = await cartInfoHandle()
-    console.log(result);
-    context.commit('setData', result)*/
     axios.post(cartInfo)
       .then((data) => {
         console.log(data);
