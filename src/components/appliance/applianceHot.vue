@@ -4,7 +4,7 @@
         <img src="./../../../static/applianceImg/applianceHot-01.png">
       </div>
       <div class="appliance-hot-list">
-        <div class="appliance-hot-item" v-for="(item,index) in guessLike.guessLike">
+        <div class="appliance-hot-item" v-for="(item,index) in guessLike.guessLike" :key="index">
           <div class="appliance-hot-item-img">
             <img :src="item.img">
           </div>

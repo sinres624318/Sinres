@@ -1,6 +1,6 @@
 <template>
   <div class="appliance-week-item-warp">
-    <div class="appliance-week-item" v-for="(item,index) in weekHotInfo[0]">
+    <div class="appliance-week-item" v-for="(item,index) in weekHotInfo[0]" :key="index">
       <div class="appliance-week-rank">{{item.ranking}}</div>
       <div class="appliance-week-item-img">
         <img :src="item.img">

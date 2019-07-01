@@ -1,6 +1,6 @@
 <template>
     <div class="appliance-recommended-welfare">
-      <div class="appliance-recommended" v-for="recommend in welfare.recommended">
+      <div class="appliance-recommended" v-for="recommend in welfare.recommended" :key="index">
         <img :src="welfare.recommended">
       </div>
       <div class="appliance-welfare">

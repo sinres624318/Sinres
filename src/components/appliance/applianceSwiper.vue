@@ -2,7 +2,7 @@
   <div class="appliance-swiper-box">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(item,index) in banner.banner"><img :src="item"></div>
+        <div class="swiper-slide" v-for="(item,index) in banner.banner" :key="index"><img :src="item"></div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>

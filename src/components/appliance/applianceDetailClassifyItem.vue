@@ -1,6 +1,6 @@
 <template>
     <div class="appliance-detail-classify-item-warp">
-      <div class="appliance-detail-classify-item" v-for="(item,index) in sendApplianceClassify[0]">
+      <div class="appliance-detail-classify-item" v-for="(item,index) in sendApplianceClassify[0]" :key="index">
         <div class="appliance-detail-classify-item-img">
           <img :src="item.img">
         </div>

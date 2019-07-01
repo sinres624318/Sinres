@@ -2,7 +2,7 @@
     <div class="appliance-brand">
       <ApplianceAd></ApplianceAd>
       <div class="appliance-brand-list">
-        <div class="appliance-brand-item" v-for="(item,index) in brand.brand">
+        <div class="appliance-brand-item" v-for="(item,index) in brand.brand" :key="index">
           <h3>{{item.title}}</h3>
           <h4>{{item.describe}}</h4>
           <div class="appliance-brand-item-img">

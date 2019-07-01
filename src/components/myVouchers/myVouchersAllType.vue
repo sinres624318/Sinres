@@ -1,5 +1,5 @@
 <template>
-    <ul class="my-vouchers-all-type">
+    <ul class="my-vouchers-all-type" v-if="show" @click="displayAllType">
       <li>
         全部类型
       </li>
@@ -29,7 +29,17 @@
 
 <script>
     export default {
-        name: "myVouchersAllType"
+        name: "myVouchersAllType",
+      data(){
+          return{
+            show:true
+          }
+      },
+      methods:{
+        displayAllType(){
+          this.$emit("sendAllType",false)
+        }
+      }
     }
 </script>
 
