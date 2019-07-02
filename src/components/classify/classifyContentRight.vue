@@ -1,12 +1,13 @@
 <template>
   <div class="classify-content-right">
 
-    <div class="classify-content-right-chunk" v-for="(item,index) in content" v-if="Num==index">
-    <h4>{{item.title}}</h4>
-    <div class="classify-content-right-modul" >
+    <div class="classify-content-right-chunk" v-for="(item,index) in right" v-if="Num==index">
+      <img :src="item.banner" alt="" class="classify-content-right-chunk-banner">
+    <div class="classify-content-right-modul" v-for="(a,index) in item.rightList">
+      <h4>{{a.title}}</h4>
       <ul>
-        <li v-for="small in item.rightList">
-          <img :src="small.img" alt="">
+        <li v-for="small in a.rightSmall">
+          <img :src="small.img" >
           <span>{{small.text}}</span>
         </li>
       </ul>
@@ -26,9 +27,11 @@
         }
       },
       props:{
-        content:Array,
-        default:''
-      },
+        right:{
+          type:Array,
+        required:true
+        }
+    },
       created() {
           this.Observer.$on("handel",(val)=>{
             this.Num=val

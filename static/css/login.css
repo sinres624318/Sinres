@@ -1,4 +1,7 @@
 /*login*/
+.landing{
+  background: white;
+}
 /*landingheader*/
 .header {
   width: 100%;
@@ -9,6 +12,7 @@
   align-items: center;
   font-size: 32px;
   font-weight: 800;
+  background: white;
 }
 
 .header-left {
@@ -124,6 +128,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   margin-top: 40px;
+  background: white;
 }
 
 .content-account-telephoto {
@@ -132,6 +137,7 @@
   font-size: 32px;
   width: 464px;
   height: 80px ;
+  background:white ;
 }
 
 .content-account-findpwd {
