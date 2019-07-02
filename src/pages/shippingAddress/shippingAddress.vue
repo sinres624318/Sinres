@@ -11,26 +11,43 @@
         <div class="right iconfont" ></div>
       </template>
     </NavBar>
-    <ShippingAddressFooter></ShippingAddressFooter>
+    <ShippingAddressCenter></ShippingAddressCenter>
+    <ShippingAddressFoot></ShippingAddressFoot>
   </div>
 </template>
 
 <script>
   import {goBack} from './../../assets/js/common'
   import NavBar from '../../components/common/navBar'
-  import ShippingAddressFooter from '../../components/shippingAddress/shippingAddressFooter'
-    export default {
-        name: "shippingAddress",
-      components:{
-        NavBar,
-        ShippingAddressFooter,
-      },
-      methods: {
-        backClickHandle() {
-          goBack(this.$router)
-        },
+  import ShippingAddressCenter from '../../components/shippingAddress/shippingAddressCenter'
+  import ShippingAddressFoot from '../../components/shippingAddress/shippingAddressFoot'
+  export default {
+    name: "shippingAddress",
+    data(){
+      return{
+        shippingAddressInfo:{},
       }
+    },
+    components:{
+      NavBar,
+      ShippingAddressCenter,
+      ShippingAddressFoot
+    },
+    methods: {
+      backClickHandle() {
+        goBack(this.$router)
+      },
+    },
+    created() {
+      this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/shippingAddress")
+        .then((data)=>{
+          this.shippingAddressInfo=data.data
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
     }
+  }
 </script>
 <style src="../../../static/font/iconfont.css"></style>
 <style src="../../../static/css/shippingAddress/shippingAddress.css"></style>

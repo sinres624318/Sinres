@@ -6,86 +6,36 @@
     </p>
     <div class="roupBuy-content">
       <div class="roupBuy-item">
-        <div class="aaa" v-for="item in recommenditem">
+        <router-link :to="item.path" class="roupBuy-item-product" v-for="item in groupBuyClass.groupBuyEveryone" :key="item" >
           <div class="roupBuy-product">
             <div class="roupBuy-posre">
-              <img :src="item.Img" alt="">
+              <img :src="item.img" alt="">
             </div>
-            <div class="roupBuy-product-text">{{item.text1}}</div>
+            <div class="roupBuy-product-text">{{item.describe}}</div>
             <div class="roupBuy-product-info">
               <div class="roupBuy-product-price">
                 <i>&yen;</i>
-                <span>{{item.text2}}</span>
+                <span>{{item.price}}</span>
               </div>
               <div class="roupBuy-similarity">看相似</div>
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "groupBuyClass",
-      data(){
-        return{
-          recommenditem:[
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            },
-            {
-              Img:'../../../static/img/classify/2.png',
-              text1:'黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-              text2:'1066'
-            }
-          ]
-        }
+  export default {
+    name: "groupBuyClass",
+    props:{
+      groupBuyClass:{
+        type:Object,
+        required:true
       }
     }
+  }
 </script>
 
 <style scoped>

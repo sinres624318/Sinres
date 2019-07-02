@@ -1,14 +1,15 @@
 <template>
   <div class="index">
     <indexHender :info="this.scroll"></indexHender>
-    <div class="main" ref="main">
-      <indexTopBanner></indexTopBanner>
-      <indexCenterBanner></indexCenterBanner>
-      <indexSeckill></indexSeckill>
-      <indexThree></indexThree>
-      <indexFour></indexFour>
-      <indexRecommend></indexRecommend>
+    <div class="main" ref="main"  v-if="indexInfo.seckill">
+      <indexTopBanner :indexTopBanner="indexInfo"></indexTopBanner>
+      <indexCenterBanner :indexCenterBanner="indexInfo"></indexCenterBanner>
+      <indexSeckill :indexSeckill="indexInfo"></indexSeckill>
+      <indexThree :indexThree="indexInfo" ></indexThree>
+      <indexFour :indexFour="indexInfo"></indexFour>
+      <indexRecommend  :indexRecommend="indexInfo"></indexRecommend>
     </div>
+    <Loading v-if="!indexInfo.banner"></Loading>
   </div>
 </template>
 
@@ -20,13 +21,14 @@
   import indexThree from "../components/index/indexThree"
   import indexFour from "../components/index/indexFour"
   import indexRecommend from "../components/index/indexRecommend"
-
+  import Loading from "../components/common/loading"
 
   export default {
     name: "index",
     data() {
       return {
-        scroll: 0
+        scroll: 0,
+      indexInfo:{},
       }
     },
     components: {
@@ -36,7 +38,8 @@
       indexSeckill,
       indexThree,
       indexFour,
-      indexRecommend
+      indexRecommend,
+      Loading
     },
     mounted() {
       window.addEventListener('scroll', this.handleColor, true)
@@ -46,6 +49,18 @@
         var top = Math.floor(this.$refs.main.scrollTop);
         this.scroll = top;
       }
+    },
+    created() {
+      this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/index")
+        .then((data)=>{
+          this.indexInfo=data.data
+          console.log(
+            this.indexInfo
+          )
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
     }
   }
 </script>

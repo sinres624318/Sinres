@@ -2,7 +2,7 @@
   <div class="indexSeckill-wrap">
     <!-- 深夜有故事GIF图 -->
     <div class="indexSeckill-wrap-img">
-      <img src="../../../static/img/1.png">
+      <img :src="indexSeckill.ad">
     </div>
     
     <div class="seckill">
@@ -31,7 +31,7 @@
             tag="div"
             to
             class="seckill-item"
-            v-for="(item,index) in seckillContext"
+            v-for="(item,index) in indexSeckill.seckill.seckillContext"
             :key="index"
           >
           <a href="#">
@@ -66,58 +66,6 @@ export default {
       min:0,
       sec:0,
       day:0,
-      seckillContext: [
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        },
-        {
-          img: "../../../static/img/seckill/seckill-product-1.png",
-          seckillPrice: "219",
-          originalPrice: "399"
-        }
-      ]
     }
   },
   mounted: function () {
@@ -140,6 +88,12 @@ export default {
       setTimeout(function () {
         that.countdown()
       }, 1000)
+    }
+  },
+  props:{
+    indexSeckill:{
+      type:Object,
+      required:true
     }
   }
   }

@@ -165,17 +165,11 @@
 .indexClassify > div {
   width: 100%;
 }
-
-.classify-l {
+.indexClassify .swiper-slide {
   height: 324px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-}
-
-.classify-r {
-  display: flex;
-  flex-wrap: wrap;
-  height: 324px;
 }
 
 .indexClassify a {
@@ -208,7 +202,130 @@
   display: flex;
   justify-content: center;
 }
+/*秒杀*/
+.indexSeckill-wrap{
+  margin-top: 10px;
+}
+.indexSeckill-wrap-img{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.seckill{
+  margin: 20px;
+  background: #fff;
+  border-radius: 15px;
+  padding:10px;
+}
+.seckill-title {
+  height: 68px;
+  background: url("./../../../static/img/seckill/seckill.png") no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
+.seckill-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seckill-title strong {
+  font-size: 24px;
+  color: #232326;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.seckill-title .seckill-title-text {
+  height: 54px;
+  width: 138px;
+  margin-right: 6px;
+  margin-left: 9px;
+  margin-top: 8px;
+  background: url("./../../../static/img/seckill/seckill_title.png") no-repeat;
+  background-size: 100%;
+}
+
+.seckill_time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+.seckill_time>div{
+  width: 36px;
+  line-height: 34px;
+  color: #232326;
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  border: 2px solid #dfdfdf;
+}
+.more-seckill-wrap{
+
+  color: #e43130;
+  font-size: 20px;
+  padding-right: 22px;
+}
+
+.more-seckill{
+  background: url("./../../../static/img/seckill/more.png");
+  background-size: contain;
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* ----------秒杀产品----------- */
+.seckill-list {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+.seckill-list::-webkit-scrollbar {
+  display: none;
+}
+.seckill-item {
+  width: 152px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.seckill-item-img img {
+  width: 132px;
+  height: 132px;
+}
+.seckill-item-price {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: 12px;
+  align-items: center;
+}
+.now-price {
+  color: #e93b3d;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.now-price>i {
+  font-size: 17px;
+  align-self: flex-end;
+}
+.now-price>span {
+  font-size: 26px;
+  align-self: flex-end;
+}
+.old-price {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #999;
+  text-decoration: line-through;
+  margin-top: 10px;
+}
 /*东家小院*/
 .exhibition-item {
   display: flex;
@@ -221,7 +338,7 @@
 
 .exhibition-item-title {
   width: 100%;
-  height: 100px;
+  height: 76px;
 }
 
 .exhibition-item img:last-of-type {
@@ -234,7 +351,6 @@
   position: relative;
   top: 20px;
   z-index: 99;
-  color: #fff;
   font-size: 32px;
   max-width: 100%;
   text-overflow: ellipsis;
@@ -346,6 +462,7 @@
 .exhibition-con-item {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .exhibition-con-item a {
@@ -366,10 +483,8 @@
 .exhibition-con-item .exhibition-title strong {
   font-size: 30px;
   line-height: 36px;
-  background: linear-gradient(90deg, #FE8537, #F02B2B);
-  -webkit-background-clip: text;
-  color: transparent;
-  
+
+
 }
 
 .exhibition-con-item .exhibition-title p {
@@ -384,7 +499,11 @@
   background: url("../../../static/img/exhibition/exhibition_4.jpg") no-repeat;
   background-size: 100%;
 }
-
+.exhibition-item-four .exhibition-con-item  .exhibition-title strong{
+  background: linear-gradient(90deg, #FE8537, #F02B2B);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 /*为你推荐*/
 .indexRecommend-wrap {
   background-color: #f0f2f5;

@@ -1,21 +1,21 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <div class="recommend-items" v-for="(item,index) in recommenditem" :key="index">
+      <router-link class="recommend-items" :to="item.path" v-for="(item,index) in recommendedProduct.productList" :key="index">
         <div class="similar-product">
           <div class="similar-posre">
-            <img :src="item.Img" alt="">
+            <img :src="item.img" alt="">
           </div>
-          <div class="similar-product-text">{{item.text1}}</div>
+          <div class="similar-product-text">{{item.describe}}</div>
           <div class="similar-product-info">
             <div class="similar-product-price">
               <i>￥</i>
-              <span>{{item.text2}}</span>
+              <span>{{item.price}}</span>
               <p>看相似</p>
             </div>
           </div>
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -23,25 +23,31 @@
 <script>
   export default {
     name: "recommendedProduct",
-    data() {
-      return {
-        recommenditem: [
-          {
-            Img: '../../../static/img/classify/2.png',
-            text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
-          },
-          {
-            Img: '../../../static/img/classify/2.png',
-            text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
-          },
-          {
-            Img: '../../../static/img/classify/2.png',
-            text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
-          }
-        ]
+    // data() {
+    //   return {
+    //     recommenditem: [
+    //       {
+    //         Img: '../../../static/img/classify/2.png',
+    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
+    //         text2: '1066'
+    //       },
+    //       {
+    //         Img: '../../../static/img/classify/2.png',
+    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
+    //         text2: '1066'
+    //       },
+    //       {
+    //         Img: '../../../static/img/classify/2.png',
+    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
+    //         text2: '1066'
+    //       }
+    //     ]
+    //   }
+    // },
+    props:{
+      recommendedProduct:{
+        type:Object,
+        required:true
       }
     }
   }

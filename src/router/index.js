@@ -30,10 +30,9 @@ import ShippingAddress from './../pages/shippingAddress/shippingAddress'
 import NewAddress from './../pages/newAddress/newAddress'
 import DefineOrder from './../pages/defineOrder'
 import Pay from './../pages/pay'
-
-
 import DetailsItem from '../pages/detailsItem'
 import Details from '../pages/details'
+import EditAddress from '../pages/editAddress/editAddress'
 
 
 Vue.use(Router)
@@ -245,6 +244,12 @@ export default new Router({
       path: '/newAddress',
       name: 'NewAddress',
       component: NewAddress
+    },
+    /*编辑收货地址*/
+    {
+      path: '/editAddress',
+      name: 'EditAddress',
+      component: EditAddress
     },
   ]
 })
