@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div v-if="shopProductInfo">
+
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
@@ -9,35 +10,54 @@
     <div class="shopHeader">
       <div class="shopHeaderLogo">
         <a href>
-          <img src="./../../../static/img/shop/shopLogo.png" alt>
+          <img v-if="shopProductInfo.header.img" :src="shopProductInfo.header.img" alt>
         </a>
       </div>
       <div class="shopHeaderName">
-        <h3>ThinkPad自营旗舰店</h3>
+        <h3>{{this.shopProductInfo.header.tit}}</h3>
         <p>信瑞自营</p>
       </div>
       <div class="shopHeaderCollect">
         <div>收藏</div>
-        <span>3.4万人收藏</span>
+        <span>{{this.shopProductInfo.header.collect}}万人收藏</span>
       </div>
     </div>
     <!-- search------------ -->
     <div class="allSearch">
       <van-search placeholder="搜索本店商品"/>
     </div>
+    <Loading v-if="!shopProductInfo"></Loading>
   </div>
 </template>
 <script>
 import { Search } from "vant";
+import Loading from './../../components/common/loading'
 export default {
   name: "shopHeader",
   components:{
-    'van-search':Search
+    'van-search':Search,
+    Loading
+  },
+  data(){
+    return{
+      shopProductInfo:''
+    }
+  },
+  methods:{
+
+  },
+  created() {
+    this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/product").then((data)=>{
+      this.shopProductInfo=data.data;
+    }).catch((err)=>{
+      console.log('err')
+    })
   }
 };
 </script>
-
+<style src='./../../../static/css/reset.css'></style>
 <style>
+
 .bgimg {
   position: absolute;
   top: 0;

@@ -1,50 +1,85 @@
 <template>
   <div class="shop">
     <router-view></router-view>
-    <van-tabbar
-  v-model="active"
-  active-color="orange"
-  inactive-color="#000"
->
-      <van-tabbar-item replace :to="{name:'ShopIndex'}" icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item replace :to="{name: 'ShopAllProduct'}" icon="bag-o">全部商品</van-tabbar-item>
-      <van-tabbar-item replace :to="{name:'ShopPromotion'}" icon="hot-o">商品促销</van-tabbar-item>
-      <van-tabbar-item replace :to="{name:'ShopClassify'}" icon="apps-o">商品分类</van-tabbar-item>
-    </van-tabbar>
+    <div class="shopTabbar">
+      <div class="tools-bar-ShopIndex">
+        <router-link tag="div" :to="{name:'ShopIndex'}">
+          <i class="van-icon van-icon-home-o"></i>
+          <p>首页</p>
+        </router-link>
+      </div>
+      <div class="tools-bar-ShopAllProduct">
+        <router-link tag="div" :to="{name:'ShopAllProduct'}">
+          <i class="van-icon van-icon-bag-o"></i>
+          <p>全部商品</p>
+        </router-link>
+      </div>
+      <div class="tools-bar-ShopPromotion">
+        <router-link tag="div" :to="{name:'ShopPromotion'}">
+          <i class="van-icon van-icon-hot-o"></i>
+          <p>商品促销</p>
+        </router-link>
+      </div>
+      <div class="tools-bar-ShopClassify">
+        <router-link tag="div" :to="{name:'ShopClassify'}">
+           <i class="van-icon van-icon-apps-o"></i>
+          <p>商品分类</p>
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import { Tabbar, TabbarItem } from 'vant';
 export default {
   name: "shop",
   components: {
-    'van-tabbar':Tabbar,
-    'van-tabbar-item':TabbarItem,
   },
   data() {
-    return {
-    
-    };
+    return {};
   }
 };
 </script>
-
+<style src='./../../static/css/reset.css'></style>
 <style>
 .shop {
   overflow-y: auto;
   height: 100%;
   background-size: 100%;
 }
-.van-tabbar{
+/* shoptabbar */
+.shopTabbar{
+  position: fixed;
+  bottom: 0px;
   height: 96px;
+  width: 100%;
+  background: #fff;
+  z-index:9999999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  -webkit-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  -moz-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
 }
-.van-tabbar-item{
-  font-size: 20px;
-  height: 96px;
+.shopTabbar>div{
+  width: 25%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
-.van-icon{
+.van-icon {
   font-size: large;
 }
+.shopTabbar{
+  font-size: 20px;
+}
+.shopTabbar .focus{
+  color: red;
+}
+
+
 
 </style>
 
