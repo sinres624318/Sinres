@@ -73,7 +73,7 @@
   background: #fff;
 }
 
-.shop {
+.cart-shop {
   margin-bottom: 30px;
 }
 
@@ -114,8 +114,10 @@
   margin-left: -20px;
 }
 
-.shop-title-wrap .focus::after {
-  background-image: url("./.././../../static/img/cart/checked.png");
+
+.cart .cart-shop .checked .icon_select::after,
+.cart .checked .icon_select::after {
+  background-image: url('./../../../static/img/cart/checked.png');
 }
 
 .shop-photo {
@@ -157,25 +159,24 @@
   background-size: 24px auto;
 }
 
-.cart .goods {
+.cart .product-item-goods {
   position: relative;
   min-height: 150px;
   padding: 10px 0 30px 256px;
   background: #fff;
 }
 
-.cart.goods .icon_select {
+.cart .product-item-goods .icon_select {
   left: 0;
   width: 126px;
-  height: 100%;
 }
 
-.cart .goods .icon_select::after {
+.cart .product-item-goods .icon_select::after {
   top: 70px;
   left: 42px;
 }
 
-.cart .goods img {
+.cart .product-item-goods img {
   position: absolute;
   left: 86px;
   top: 10px;
@@ -184,7 +185,7 @@
   height: 150px;
 }
 
-.cart .goods .name {
+.cart .product-item-goods .name {
   font-size: 28px;
   padding-right: 20px;
   margin-bottom: 10px;
@@ -197,11 +198,11 @@
   -webkit-box-orient: vertical;
 }
 
-.cart .goods .content {
+.cart .product-item-goods .goods-content {
   width: 100%;
 }
 
-.cart .goods .sku {
+.cart .product-item-goods .sku {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -283,11 +284,11 @@
   margin-right: 30px;
 }
 
-.cart .product-item {
+.cart .shop-product-item {
   position: relative;
 }
 
-.product-item::before,
+.shop-product-item::before,
 .cart-total-price::after {
   display: block;
   content: "";
@@ -306,7 +307,7 @@
   left: 0;
 }
 
-.cart .product-item:first-of-type::before {
+.cart .shop-product-item:first-of-type::before {
   height: 0;
 }
 
@@ -470,8 +471,25 @@
   font-size: 24px;
   transform: translateX(-50%);
 }
+
 .cart-product-edit-bar .cart-product-edit-bar-check-all .selected::after {
-  background:url("./../../../static/img/cart/checked.png");
+  background: url("./../../../static/img/cart/checked.png");
   background-size: 100%;
 }
+
 /*edit-bar end*/
+/*empty-cart-wrap start*/
+.empty-cart-wrap {
+  padding: 60px 0 30px;
+}
+.empty-cart-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+.empty-cart-text {
+  font-size: 32px;
+  text-align: center;
+  margin: 22px 0;
+}
+/*empty-cart-wrap end*/

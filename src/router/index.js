@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Router from 'vue-router'
 import Cart from './../pages/cart'
@@ -28,22 +27,20 @@ import MyAssets from './../pages/myAssets/myAssets'
 import AccountManagement from './../pages/accountManagement/accountManagement'
 import MyVouchers from './../pages/myVouchers'
 import ShippingAddress from './../pages/shippingAddress/shippingAddress'
-import  NewAddress from './../pages/newAddress/newAddress'
+import NewAddress from './../pages/newAddress/newAddress'
 import DefineOrder from './../pages/defineOrder'
 import Pay from './../pages/pay'
 
 
-
 import DetailsItem from '../pages/detailsItem'
-import  Details from '../pages/details'
-
+import Details from '../pages/details'
 
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  linkActiveClass:"focus",
+  linkActiveClass: "focus",
   routes: [
     /*详情*/
 		{
@@ -82,9 +79,9 @@ export default new Router({
       component: Login
     },
     {
-      path:'/pay',
-      name:'Pay',
-      component:Pay
+      path: '/pay',
+      name: 'Pay',
+      component: Pay
     },
     {
       path: '/classify',
@@ -138,9 +135,9 @@ export default new Router({
       path: '/shop',
       component: Shop,
       children: [{
-          path: '/',
-          redirect: 'shopIndex'
-        },
+        path: '/',
+        redirect: 'shopIndex'
+      },
         {
           path: 'shopIndex',
           name: 'ShopIndex',

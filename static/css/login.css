@@ -1,4 +1,7 @@
 /*login*/
+.landing{
+  background: white;
+}
 /*landingheader*/
 .header {
   width: 100%;
@@ -134,6 +137,7 @@
   font-size: 32px;
   width: 464px;
   height: 80px ;
+  background:white ;
 }
 
 .content-account-findpwd {

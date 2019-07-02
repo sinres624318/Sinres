@@ -18,9 +18,9 @@
       <MyVouchersShadow v-if="show" @handleLetShow="letShow"></MyVouchersShadow>
       <MyVouchersShadow v-if="showState" @handleStateShow="letStateShow"></MyVouchersShadow>
       <MyVouchersShadow v-if="showGranularity" @handleGranularityShow="letGranularityShow"></MyVouchersShadow>
-      <MyVouchersAllType v-if="show"></MyVouchersAllType>
-      <MyVouchersState v-if="showState"></MyVouchersState>
-      <MyVouchersGranularity v-if="showGranularity"></MyVouchersGranularity>
+      <MyVouchersAllType v-if="show"@sendAllType="handleAllType"></MyVouchersAllType>
+      <MyVouchersState v-if="showState" @sendState="displayState"></MyVouchersState>
+      <MyVouchersGranularity v-if="showGranularity" @sendGranularity="displayGranularity"></MyVouchersGranularity>
     </div>
 </template>
 
@@ -57,6 +57,15 @@
         },
         letGranularityShow(val){
           this.showGranularity = val
+        },
+        handleAllType(val){
+          this.show = val
+        },
+        displayState(){
+          this.showState = false
+        },
+        displayGranularity(){
+          this.showGranularity = false
         }
       },
       components:{

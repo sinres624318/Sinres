@@ -9,8 +9,6 @@
             <p @click="changeHandel" class="register-mask-two-txt-food-p2">同意</p>
           </div>
         </div>
-
-
     </div>
 </template>
 

@@ -2,7 +2,7 @@
     <div class="vouchers-main">
       <div class="vouchers-main-info">
         <VouchersMainInfoBar/>
-        <VouchersMainInfoList/>
+        <VouchersMainInfoList :vouchersInfo="vouchersInfo"/>
       </div>
     </div>
 </template>
@@ -15,7 +15,13 @@
         components:{
           VouchersMainInfoBar,
           VouchersMainInfoList
+        },
+      props:{
+        vouchersInfo:{
+          type:Object,
+          required:true
         }
+      }
     }
 </script>
 

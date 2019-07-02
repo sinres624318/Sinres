@@ -1,6 +1,6 @@
 <template>
     <div class="auction-main">
-      <AuctionList/>
+      <AuctionList :sendType="sendAuctionType"/>
     </div>
 </template>
 
@@ -10,7 +10,14 @@
         name: "auctionMain",
         components:{
           AuctionList
+        },
+
+      props:{
+        sendAuctionType:{
+          type:Array,
+          required:true
         }
+      }
     }
 </script>
 

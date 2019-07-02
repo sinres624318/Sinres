@@ -20,11 +20,14 @@
       <div class="notice">京享值84325</div>
       <div class="notice goto-arrow">小白信用100.6</div>
     </div>
-    <div class="account-wrap">
+    <router-link
+      tag="div"
+      :to="{name:'AccountManagement'}"
+      class="account-wrap">
       <div class="account-wrap-content">
         账号管理
       </div>
-    </div>
+    </router-link>
     <div class="plus-black-wrap">
       <div class="inner">
         <div class="title">

@@ -10,10 +10,10 @@
   import ClassifyContentRight from './classifyContentRight'
     export default {
         name: "classifyContent",
-      props:{
-        info:{
-          type:Object,
-          required:true
+      props: {
+        info: {
+          type: Object,
+          required: true
         }
       },
      components:{

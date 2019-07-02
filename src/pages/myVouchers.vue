@@ -12,9 +12,9 @@
       </template>
     </NavBar>
     <ul class="my-vouchers-use">
-      <li>待使用</li>
-      <li>已使用</li>
-      <li>已过期</li>
+      <li :class="{'myVouchersFocus':currentIndex == 1}" @click="myVouchersHandleLeft">待使用</li>
+      <li :class="{'myVouchersFocus':currentIndex == 2}" @click="myVouchersHandleMiddle">已使用</li>
+      <li :class="{'myVouchersFocus':currentIndex == 3}" @click="myVouchersHandleRight">已过期</li>
     </ul>
     <MyVouchersType/>
     <MyVouchersMain/>
@@ -37,6 +37,20 @@
     methods: {
       backClickHandle() {
         goBack(this.$router)
+      },
+      myVouchersHandleLeft(){
+        this.currentIndex = 1
+      },
+      myVouchersHandleMiddle(){
+        this.currentIndex = 2
+      },
+      myVouchersHandleRight(){
+        this.currentIndex = 3
+      }
+    },
+    data(){
+      return{
+        currentIndex:1
       }
     }
   }

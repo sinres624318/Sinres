@@ -1,6 +1,6 @@
 <template>
     <div class="vouchers-main-info-item">
-      <div class="vouchers-main-info-item-single" v-for="(item,index) in ledList">
+      <div class="vouchers-main-info-item-single" v-for="(item,index) in vouchersInfo.ledList">
         <h3>{{item.vouchersUseCondition}}</h3>
         <span>满{{item.minusPrice}}元可以使用</span>
         <p>{{item.title}}</p>
@@ -12,87 +12,13 @@
 <script>
     export default {
         name: "vouchersMainInfoItem",
-        data(){
-          return{
-            ledList:[
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              },
-              {
-                vouchersUseCondition:200,
-                minusPrice:299,
-                title:"个人护理部分商品"
-              }
-            ]
-          }
+
+      props:{
+        vouchersInfo:{
+          type:Object,
+          required:true
         }
+      }
     }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="appliance-week-list">
-      <ApplianceWeekItem></ApplianceWeekItem>
+      <ApplianceWeekItem :weekHotInfo="weekHotInfo"></ApplianceWeekItem>
     </div>
 </template>
 
@@ -10,7 +10,13 @@
         name: "applianceWeekList",
         components:{
           ApplianceWeekItem
-        }
+        },
+        props:{
+          weekHotInfo:{
+            type:Array,
+            required:true
+          }
+      }
     }
 </script>
 

@@ -1,8 +1,17 @@
 <template>
-  <div class="shop">
-    <CartShopTitle v-if="shop" :title="shop.shopName"></CartShopTitle>
+  <div class="cart-shop">
+    <CartShopTitle
+      v-if="shop"
+      :sID="sID"
+      :shopCheck="shop.checked"
+      :title="shop.shopName"></CartShopTitle>
     <div class="product-List" v-if="shop">
-      <CartShopProduct v-for="(item,index) in shop.productList" :key="index"></CartShopProduct>
+      <CartShopProduct
+        v-for="(item,index) in shop.productList"
+        :pID="index"
+        :sID="sID"
+        :product="item"
+        :key="index"></CartShopProduct>
     </div>
   </div>
 </template>
@@ -20,6 +29,11 @@
     props: {
       shop: {
         type: Object,
+        required: true
+      },
+      sID: {
+        type: Number,
+        required: true
       }
     }
   }
