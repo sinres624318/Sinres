@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
   import NavBar from '../../components/common/navBar'
   import AccountManagementHenner from '../../components/accountManagement/accountManagementHenner'
   import AccountManagementCenter from '../../components/accountManagement/accountManagementCenter'
@@ -34,7 +35,7 @@
       },
       methods: {
         backClickHandle() {
-          this.$router.go(-1);
+          goBack(this.$router)
         },
         moreMenuClickHandle() {
           this.flag = !this.flag;

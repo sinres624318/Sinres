@@ -27,18 +27,34 @@ import MyAssets from './../pages/myAssets/myAssets'
 import AccountManagement from './../pages/accountManagement/accountManagement'
 import MyVouchers from './../pages/myVouchers'
 import ShippingAddress from './../pages/shippingAddress/shippingAddress'
-import  NewAddress from './../pages/newAddress/newAddress'
+import NewAddress from './../pages/newAddress/newAddress'
 import DefineOrder from './../pages/defineOrder'
 import Pay from './../pages/pay'
 
+
+import DetailsItem from '../pages/detailsItem'
+import Details from '../pages/details'
 
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  linkActiveClass: 'focus',
-  routes: [{
+  linkActiveClass: "focus",
+  routes: [
+    /*详情*/
+		{
+			path:'/details',
+			name:'Details',
+			component:Details
+		},
+    /*商品评论*/
+		{
+      path: '/detailsItem',
+      name: 'DetailsItem',
+      component: DetailsItem
+    },
+    {
       path: '/',
       redirect: {
         name: 'Index'
@@ -63,9 +79,9 @@ export default new Router({
       component: Login
     },
     {
-      path:'/pay',
-      name:'Pay',
-      component:Pay
+      path: '/pay',
+      name: 'Pay',
+      component: Pay
     },
     {
       path: '/classify',
@@ -103,11 +119,13 @@ export default new Router({
         flag: true
       }
     },
+    /*家电*/
     {
       path: '/appliance',
       name: 'Appliance',
       component: Appliance
     },
+    /*拍卖*/
     {
       path: '/auction',
       name: 'Auction',
@@ -117,9 +135,9 @@ export default new Router({
       path: '/shop',
       component: Shop,
       children: [{
-          path: '/',
-          redirect: 'shopIndex'
-        },
+        path: '/',
+        redirect: 'shopIndex'
+      },
         {
           path: 'shopIndex',
           name: 'ShopIndex',
@@ -142,21 +160,25 @@ export default new Router({
         },
       ]
     },
+    /*羊毛*/
     {
       path: '/wool',
       name: 'Wool',
       component: Wool
     },
+    /*拍拍二手*/
     {
       path: '/patPat',
       name: 'PatPat',
       component: PatPat
     },
+    /*订单*/
     {
       path: '/allOrder',
       name: 'AllOrder',
       component: AllOrder
     },
+    /*足迹*/
     {
       path: '/footprint',
       name: 'Footprint',
@@ -168,12 +190,14 @@ export default new Router({
       name: 'Search',
       component: Search
     },
-
+    /*我的优惠券*/
     {
       path: '/myVouchers',
       name: 'MyVouchers',
       component: MyVouchers
-    }, {
+    },
+    /*团购*/
+    {
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy,
@@ -181,11 +205,13 @@ export default new Router({
         flag: false
       }
     },
+    /*产品列表*/
     {
       path: '/productList',
       name: 'ProductList',
       component: ProductList
     },
+    /*优惠券*/
     {
       path: '/vouchers',
       name: 'Vouchers',
@@ -219,6 +245,7 @@ export default new Router({
       path: '/newAddress',
       name: 'NewAddress',
       component: NewAddress
-    }
+    },
   ]
 })
+

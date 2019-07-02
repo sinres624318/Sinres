@@ -16,7 +16,23 @@
           DefineOrderHeader,
           DefineOrderAddress,
           DefineOrderInfo
-        }
+        },
+      data(){
+          return{
+            defineOrderInfo:{}
+          }
+      },
+      created() {
+          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/defineOrder")
+            .then((data)=>{
+              console.log(data);
+              this.defineOrderInfo = data.data;
+              console.log(this.defineOrderInfo)
+            })
+            .catch((err)=>{
+              console.log(err)
+            })
+      }
     }
 </script>
 <style src="./../../static/css/defineOrder.css"></style>

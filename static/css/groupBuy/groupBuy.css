@@ -14,35 +14,54 @@
   display: none;
 }
 /*顶部*/
-.groupBuyHender-header{
-  width: 100%;
+/*NavBar start*/
+
+.nav-bar {
   height: 90px;
-  background: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 32px;
-  color: #333333;
-  z-index: 99;
+  background: #f8f8f8;
+  z-index: 999;
+  width: 100%;
 }
-.groupBuyHender-header-icon-left{
-  font-size: 58px;
-}
-.groupBuyHender-header>h3{
-  font-weight: 100;
-}
-.groupBuyHender-header-icon-right{
-  width: 156px;
+
+
+.nav-bar .title {
+  position: absolute;
+  left: 0;
   height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  line-height: 90px;
+  text-align: center;
+  width: 100%;
+  padding: 0 80px;
+  font-size: 32px;
 }
-.groupBuyHender-header-icon-right i{
-  font-size: 42px;
+
+.left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  line-height: 90px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 66px;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 90px;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 40px;
 }
 /*搜索*/
 .groupBuy-Sousuo{

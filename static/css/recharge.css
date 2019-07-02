@@ -103,9 +103,10 @@
   display: block;
   width: 100%;
 }
-.heightColor{
+.recharge-content-first-ul .heightColor{
   background: red;
   color: white;
+  border: none;
 }
 .recharge-content-first-favorable{
   background: white;

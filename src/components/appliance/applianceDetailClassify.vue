@@ -1,7 +1,7 @@
 <template>
     <div class="appliance-detail-classify">
-      <ApplianceDetailClassifyBar/>
-      <ApplianceDetailClassifyList/>
+      <ApplianceDetailClassifyBar @applianceClassifyHandleBar="handleApplianceClassify"/>
+      <ApplianceDetailClassifyList :sendApplianceClassify="sendApplianceClassify"/>
     </div>
 </template>
 
@@ -13,6 +13,17 @@
       components:{
         ApplianceDetailClassifyBar,
         ApplianceDetailClassifyList
+      },
+      props:{
+        sendApplianceClassify:{
+          type:Array,
+          required:true
+        }
+      },
+      methods:{
+        handleApplianceClassify(val){
+          this.$emit("applianceClassifyHandleBar",val)
+        }
       }
     }
 </script>

@@ -2,7 +2,7 @@
   <div class="appliance-swiper-box">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(item,index) in banner"><img :src="item"></div>
+        <div class="swiper-slide" v-for="(item,index) in banner.banner" :key="index"><img :src="item"></div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
@@ -18,16 +18,7 @@
         name: "applianceSwiper",
         data(){
           return{
-            banner:[
-              "./../../../static/applianceImg/applianceImg01.jpg",
-              "./../../../static/applianceImg/applianceImg02.jpg",
-              "./../../../static/applianceImg/applianceImg03.jpg",
-              "./../../../static/applianceImg/applianceImg04.jpg",
-              "./../../../static/applianceImg/applianceImg05.jpg",
-              "./../../../static/applianceImg/applianceImg06.jpg",
-              "./../../../static/applianceImg/applianceImg07.jpg",
-              "./../../../static/applianceImg/applianceImg08.jpg"
-            ]
+
           }
         },
       mounted() {
@@ -36,9 +27,9 @@
            spaceBetween: 10,
           effect:"coverflow",
           centeredSlides: true,
-          // direction:'horizontal',
+          direction:'horizontal',
           autoplay:{
-            delay:3000
+            delay:2000
           },
            loop:"true",
           pagination: {
@@ -46,7 +37,12 @@
             clickable: true,
           },
         });
-
+      },
+      props:{
+          banner:{
+            type:Object,
+            required:true
+          }
       }
     }
 </script>

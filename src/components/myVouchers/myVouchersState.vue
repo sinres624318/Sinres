@@ -1,5 +1,5 @@
 <template>
-    <ul class="my-vouchers-state">
+    <ul class="my-vouchers-state" v-if="showState" @click="displayState">
       <li>
         全部状态
       </li>
@@ -17,7 +17,17 @@
 
 <script>
     export default {
-        name: "myVouchersState"
+        name: "myVouchersState",
+        data(){
+          return{
+            showState:true
+          }
+        },
+      methods:{
+        displayState(){
+          this.$emit("sendState")
+        }
+      }
     }
 </script>
 

@@ -151,6 +151,8 @@
   font-size: 28px;
   line-height: 42px;
   display: -webkit-box;
+  box-orient: vertical;
+  -moz-box-orient: vertical;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
@@ -237,6 +239,17 @@
   color: #fff;
 }
 
+.order-cancel-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.order-goPay-button {
+  background-color: #e93b3d;
+  color: #fff;
+}
+
 /*order-button end*/
 /*order-item end*/
 
@@ -250,6 +263,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .order-type::after {
   content: '';
   display: block;
@@ -259,12 +273,15 @@
   background: #e5e5e5;
   transform: scaleY(0.5);
 }
-.order-type >div {
+
+.order-type > div {
   flex: 1;
   text-align: center;
 }
+
 .order-type .focus {
   color: #e93b3d;
 }
+
 /*order-type end*/
 /*all-order end*/

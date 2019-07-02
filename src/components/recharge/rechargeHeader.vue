@@ -1,6 +1,6 @@
 <template>
     <div class="recharge-header">
-      <div class="recharge-header-left">
+      <div class="recharge-header-left" @click="onClickLeft()">
         <span></span>
       </div>
       <div class="recharge-header-middle">
@@ -13,8 +13,14 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
     export default {
-        name: "rechargeHeader"
+        name: "rechargeHeader",
+      methods:{
+        onClickLeft() {
+          goBack(this.$router)
+        },
+      }
     }
 </script>
 

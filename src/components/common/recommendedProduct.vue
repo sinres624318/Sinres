@@ -50,9 +50,6 @@
 <style scoped>
 
 /*为你推荐*/
-
-
-
 .recommend-item {
   display: flex;
   flex-wrap: wrap;
