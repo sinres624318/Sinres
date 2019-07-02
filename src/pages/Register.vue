@@ -22,7 +22,6 @@
   import RegisterMask from "../components/Register/RegisterMask"
   import RegisterMaskTwo from '../components/Register/RegisterMaskTwo'
   import {Notify} from 'vant';
-  import {downTime} from './../assets/js/common.js'
 
   export default {
     name: "Register",
@@ -62,7 +61,7 @@
           });
           return;
         }
-        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL, "idtf":code})
+        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL, "idtf": code})
           .then((data) => {
             if (data.code == 200) {
               console.log("注册成功！");
@@ -130,7 +129,7 @@
       },
       confirmCancelSendCodeHandle(val) {
         this.maskFlag = val;
-        this.buttonFlag = !val;
+        this.buttonFlag = val;
       }
     }
   }

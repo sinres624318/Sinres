@@ -1,7 +1,7 @@
 <template>
     <div class="appliance-week">
-      <ApplianceWeekBar></ApplianceWeekBar>
-      <ApplianceWeekList></ApplianceWeekList>
+      <ApplianceWeekBar :weekHot="weekHot" @receiveWeek="receiveHandleWeek"></ApplianceWeekBar>
+      <ApplianceWeekList :weekHotInfo="weekHotInfo"></ApplianceWeekList>
     </div>
 </template>
 
@@ -13,6 +13,26 @@
       components:{
         ApplianceWeekBar,
         ApplianceWeekList
+      },
+      props:{
+        weekHot:{
+          type:Object,
+          required:true
+        },
+        weekHotInfo:{
+          type: Array,
+          required: true
+        }
+      },
+      methods:{
+
+        receiveHandleWeek(val){
+          this.$emit("receiveWeek",val)
+        }
+      },
+      data(){
+          return{
+          }
       }
     }
 </script>

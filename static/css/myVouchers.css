@@ -312,3 +312,8 @@ NavBar {
   word-break: break-all;
   overflow: hidden;
 }
+/* 点击事件*/
+.my-vouchers-use .myVouchersFocus{
+  color: #ec595b;
+  background: url("./../img/myVouchers/myVouchersTypeBG.png") repeat-x bottom left;
+}

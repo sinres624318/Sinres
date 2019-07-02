@@ -1,7 +1,6 @@
 <template>
 		<div class="details_item">
 			<DetailsItemHeader></DetailsItemHeader>
-			
 			<DetailsItemContent></DetailsItemContent>
 			<DetailsGoodsAction></DetailsGoodsAction>
 		</div>

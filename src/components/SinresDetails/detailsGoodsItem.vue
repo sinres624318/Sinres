@@ -1,6 +1,5 @@
 <template>
 	<div class="DetailsGoodsItem">
-         
 		<!--  -->
 		<div class="items">
 			<a href=""><img src="../../../static/img/Details/back.png" alt=""></a>
@@ -13,7 +12,6 @@
 			<a href="">推荐</a>
 			<a href=""><img src="../../../static/img/Details/menu.png" alt=""></a>
 		</div>
-
 		<!--  -->
 		<div class="address">
 			<div>
@@ -29,7 +27,6 @@
 			</div>
 
 		</div>
-
 		<!-- service_state -->
 		<div class="service_state">
 			<div>
@@ -49,7 +46,6 @@
 
 			</div>
 		</div>
-
 		<!-- 评价 -->
 		<div class="details_evaluation">
 			<!-- 评价头部 -->
@@ -83,15 +79,13 @@
 			<!-- 查看全部评价 -->
 			<!-- 路由跳转 -->
 			
-			<router-link to='/detailsItem' exact>
+			<router-link to='/detailsItem' >
 				<div class="check_all">
-					
 					<a>
 						<p>查看全部评价</p>
 						<!-- 向右的图标要改路径 -->
 						<img src="../../../static/img/Details/back_right.png" alt="">
 					</a>
-					
 				</div>
 			</router-link>
 			
@@ -99,22 +93,13 @@
 			
 
 		</div>
-
-
-
 	</div>
-
-
-
 </template>
-
 <script>
 	export default {
 		name: "DetailsGoodsItem",
 		data() {
-
-			return {
-
+      return {
 				address: '北京朝阳区三环到四环之间',
 				weight: '2.5kg',
 				service: {
@@ -161,7 +146,6 @@
 
 
 			}
-
 		}
 
 

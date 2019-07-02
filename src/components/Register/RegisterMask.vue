@@ -34,7 +34,7 @@
       },
       confirmSendCodeHandle() {
         this.$emit('confirmSendCode', {flag: false, TEL: this.TEL})
-      },
+      }
     }
   }
 </script>

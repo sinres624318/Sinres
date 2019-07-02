@@ -1,7 +1,7 @@
 <template>
     <div class="appliance-recommended-welfare">
-      <div class="appliance-recommended" v-for="recommend in recommended">
-        <img :src="recommend">
+      <div class="appliance-recommended" v-for="recommend in welfare.recommended" :key="index">
+        <img :src="welfare.recommended">
       </div>
       <div class="appliance-welfare">
         <div class="appliance-welfare-top">
@@ -11,7 +11,7 @@
           <p>爆款限时秒杀</p>
         </div>
         <div class="appliance-welfare-deep">
-          <div class="appliance-welfare-deep-item" v-for="(item,index) in welfare">
+          <div class="appliance-welfare-deep-item" v-for="(item,index) in welfare.welfare">
             <h3>{{item.title}}</h3>
             <h4>{{item.describe}}</h4>
             <div class="appliance-welfare-deep-item-img">
@@ -26,22 +26,11 @@
 <script>
     export default {
         name: "applianceRecommendedWelfare",
-      data(){
-          return{
-            recommended:["./../../../static/applianceImg/applianceRecommended.png"],
-            welfare:[
-              {
-                title:"智能家电",
-                describe:"让生活更聪明",
-                img:"./../../../static/applianceImg/applianceWelfareImg-01.jpg"
-              },
-              {
-                title:"精锐家电",
-                describe:"信锐独享好物",
-                img:"./../../../static/applianceImg/applianceWelfareImg-02.png"
-              }
-            ],
-          }
+      props:{
+        welfare:{
+          type:Object,
+          required:true
+        }
       }
     }
 </script>

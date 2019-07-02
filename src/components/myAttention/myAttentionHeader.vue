@@ -1,6 +1,6 @@
 <template>
   <div class="myAttention-header">
-    <div class="myAttention-header-left">
+    <div class="myAttention-header-left" @click="onClickLeft()">
       <span></span>
     </div>
     <div class="myAttention-header-middle">
@@ -13,8 +13,14 @@
 </template>
 
 <script>
+  import {goBack} from './../../assets/js/common'
   export default {
-    name: "classifyHeader"
+    name: "classifyHeader",
+    methods:{
+      onClickLeft() {
+        goBack(this.$router)
+      },
+    }
   }
 </script>
 

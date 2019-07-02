@@ -42,12 +42,14 @@ export default new Router({
   mode: 'history',
   linkActiveClass: "focus",
   routes: [
-    {
-      path: '/details',
-      name: 'Details',
-      component: Details
-    },
-    {
+    /*详情*/
+		{
+			path:'/details',
+			name:'Details',
+			component:Details
+		},
+    /*商品评论*/
+		{
       path: '/detailsItem',
       name: 'DetailsItem',
       component: DetailsItem
@@ -117,11 +119,13 @@ export default new Router({
         flag: true
       }
     },
+    /*家电*/
     {
       path: '/appliance',
       name: 'Appliance',
       component: Appliance
     },
+    /*拍卖*/
     {
       path: '/auction',
       name: 'Auction',
@@ -156,21 +160,25 @@ export default new Router({
         },
       ]
     },
+    /*羊毛*/
     {
       path: '/wool',
       name: 'Wool',
       component: Wool
     },
+    /*拍拍二手*/
     {
       path: '/patPat',
       name: 'PatPat',
       component: PatPat
     },
+    /*订单*/
     {
       path: '/allOrder',
       name: 'AllOrder',
       component: AllOrder
     },
+    /*足迹*/
     {
       path: '/footprint',
       name: 'Footprint',
@@ -182,12 +190,14 @@ export default new Router({
       name: 'Search',
       component: Search
     },
-
+    /*我的优惠券*/
     {
       path: '/myVouchers',
       name: 'MyVouchers',
       component: MyVouchers
-    }, {
+    },
+    /*团购*/
+    {
       path: '/groupBuy',
       name: 'GroupBuy',
       component: GroupBuy,
@@ -195,11 +205,13 @@ export default new Router({
         flag: false
       }
     },
+    /*产品列表*/
     {
       path: '/productList',
       name: 'ProductList',
       component: ProductList
     },
+    /*优惠券*/
     {
       path: '/vouchers',
       name: 'Vouchers',

@@ -20,22 +20,18 @@
 					<p class="all_people_goods">全部商品</p>
 				</div>
 			</div>
-			
 			<!-- 三 -->
 			<div>
 				<img src="../../../static/img/Details/enter_store.gif" alt="">
 				<img src="../../../static/img/Details/focus_store.gif" alt="">
 			</div>
 		</div>
-		
 		<!-- 主要内容 -->
 		<div class="details_evaluate_main">
 			<!-- 主要内容下面的标题 -->
 			<div class="details_evaluate_main_title">
 				<h1>店铺推荐</h1>
 			</div>
-			
-			
 			<div class="details_evaluate_main_content">
 				<!-- 循环的内容 -->
 				<div v-for="(item,index) in shopInfo.shopRecommend" :key='index' class="details_evaluate_main_content_item">
@@ -43,33 +39,18 @@
 						<img :src="each_item.img" alt="">
 						<h2>{{each_item.title}}</h2>
 						<p>{{each_item.describe}}</p>
-						<h3>{{each_item.price}}</h3>
+						<h3>￥{{each_item.price}}</h3>
 					</div>
 				</div>
-				
-				
 			</div>
-			
-			
-			
-			
-			
 		</div>
-		
-		
-		
-
 	</div>
 </template>
 
 <script>
 	export default {
 		name: "DetailsEvaluate",
-
-
 		data() {
-
-
 			return {
 				shopInfo: {
 					shopID: "int",
@@ -131,29 +112,9 @@
 						}]
 					]
 				}
-
-
-
-
-
 			}
-
-
-
-
-
 		},
 		//方法
-
-
-
-
-
-
-
-
-
-
 	}
 </script>
 

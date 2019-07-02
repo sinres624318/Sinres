@@ -1,6 +1,6 @@
 <template>
     <div class="vouchers-main-info-list">
-      <VouchersMainInfoItem/>
+      <VouchersMainInfoItem :vouchersInfo="vouchersInfo"/>
     </div>
 </template>
 
@@ -10,7 +10,13 @@
         name: "vouchersMainInfoList",
         components:{
           VouchersMainInfoItem
+        },
+      props:{
+        vouchersInfo:{
+          type:Object,
+          required:true
         }
+      }
     }
 </script>
 
