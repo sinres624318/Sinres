@@ -31,11 +31,7 @@
     },
     methods: {
       checkShopHandle() {
-        let currentChecked = !this.$store.state.cartInfo.cartShopList[this.sID].checked;
-        this.$store.state.cartInfo.cartShopList[this.sID].checked = currentChecked;
-        this.$store.state.cartInfo.cartShopList[this.sID].productList.forEach((product,index)=>{
-          product.checked = currentChecked
-        })
+        this.$store.commit('shopAllCheckHandle',this.sID)
       }
     }
   }

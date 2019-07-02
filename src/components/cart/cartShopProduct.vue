@@ -67,11 +67,7 @@
         this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].productNum--
       },
       checkProductHandle() {
-        this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].checked = !this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].checked;
-        this.shopCheckHandle();
-      },
-      shopCheckHandle() {
-        this.$store.commit('shopCheckHandle',this.sID)
+        this.$store.commit('productCheckHandle',{sID:this.sID,pID:this.pID})
       }
     }
   }

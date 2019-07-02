@@ -478,3 +478,18 @@
 }
 
 /*edit-bar end*/
+/*empty-cart-wrap start*/
+.empty-cart-wrap {
+  padding: 60px 0 30px;
+}
+.empty-cart-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+.empty-cart-text {
+  font-size: 32px;
+  text-align: center;
+  margin: 22px 0;
+}
+/*empty-cart-wrap end*/

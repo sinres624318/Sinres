@@ -30,12 +30,6 @@ button{outline:none;border: none;}
 
 ul, ol ,li{ list-style:none; }
 
-/*清除浮动*/
-
-* {
-  box-sizing: border-box
-}
-
 body, html {
   height: 100%;
   overflow: hidden;

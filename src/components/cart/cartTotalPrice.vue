@@ -1,13 +1,15 @@
 <template>
   <div :class="[allCheck?'checked':'','cart-total-price']">
-    <i class="icon_select">全选</i>
+    <i
+      @click="allCheckHandle"
+      class="icon_select">全选</i>
     <div class="total" id="totalConfirmDiv">
       <div>
         <p>
           <span>总计：</span>
-          <strong id="totalPrice">¥13999.00</strong>
+          <strong id="totalPrice">¥{{totalPrice}}</strong>
         </p>
-        <span id="totalBackMoney">总额¥13999.00 立减¥0.00</span>
+        <span id="totalBackMoney">总额&nbsp;¥{{totalPrice}}&nbsp;立减&nbsp;¥0.00</span>
       </div>
       <router-link
         :to="{name:'DefineOrder'}"
@@ -26,6 +28,15 @@
       allCheck: {
         type: Boolean,
         required: true
+      },
+      totalPrice: {
+        type: String,
+        required: true
+      }
+    },
+    methods: {
+      allCheckHandle() {
+        this.$store.commit('allCheckHandle')
       }
     }
   }
