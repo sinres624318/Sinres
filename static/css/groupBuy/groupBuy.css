@@ -248,6 +248,8 @@
   display: flex;
   width: 132px;
   height: 132px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .groupBuyData-item-img a {

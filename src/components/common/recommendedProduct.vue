@@ -1,7 +1,7 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <router-link class="recommend-items" :to="item.path" v-for="(item,index) in recommendedProduct.productList" :key="index">
+      <router-link class="recommend-items" to="" v-for="(item,index) in recommendedProduct.productList" :key="index">
         <div class="similar-product">
           <div class="similar-posre">
             <img :src="item.img" alt="">
@@ -23,27 +23,6 @@
 <script>
   export default {
     name: "recommendedProduct",
-    // data() {
-    //   return {
-    //     recommenditem: [
-    //       {
-    //         Img: '../../../static/img/classify/2.png',
-    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-    //         text2: '1066'
-    //       },
-    //       {
-    //         Img: '../../../static/img/classify/2.png',
-    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-    //         text2: '1066'
-    //       },
-    //       {
-    //         Img: '../../../static/img/classify/2.png',
-    //         text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-    //         text2: '1066'
-    //       }
-    //     ]
-    //   }
-    // },
     props:{
       recommendedProduct:{
         type:Object,
@@ -67,9 +46,9 @@
   width:49%;
   margin-bottom:10px;
 }
-.indexwrap{
-  background: #e43130;
-}
+/*.indexwrap{*/
+/*  background: #e43130;*/
+/*}*/
 .similar-product {
   background-color: #fff;
   margin-bottom:5px ;

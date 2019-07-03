@@ -3,7 +3,7 @@
     <div class="exhibition-item-title"></div>
     <div class="exhibition-three">
       <div class="exhibition-three-one">
-        <div class="exhibition-three-one-l" v-for="item in indexThree.yard.contenttop" :key="item">
+        <div class="exhibition-three-one-l" v-for="(item,index) in indexThree.yard.contenttop" :key="index">
           <div class="exhibition-three-one-title">
             <span>{{item.contentTitle}}</span>
             <p>{{item.contentDescribe}}</p>
@@ -17,12 +17,12 @@
       </div>
       <div class="exhibition-three-two exhibition-con-item">
         <div class="exhibition-con-item">
-          <a href="" v-for="(item,index) in indexThree.yard.contentbottom" :key="index">
+          <a href="" v-for="itemse in indexThree.yard.contentbottom" :key="itemse">
             <div class="exhibition-title">
-              <strong>{{item.contentTitle}}</strong>
-              <p>{{item.contentDescribe}}</p>
+              <strong>{{itemse.contentTitle}}</strong>
+              <p>{{itemse.contentDescribe}}</p>
             </div>
-            <img v-if="item.imgs" :src="item.imgs" alt="">
+            <img v-if="itemse.imgs" :src="itemse.imgs" alt="">
           </a>
         </div>
       </div>

@@ -3,13 +3,13 @@
     <div class="indexClassify">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <router-link tag="a"  :to="item.path" v-for="(item,index) in indexCenterBanner.indexClassify1" :key="index">
+          <router-link tag="a"  to="" v-for="(item,index) in indexCenterBanner.indexClassify1" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
         </div>
         <div class="classify-r swiper-slide">
-          <router-link tag="a" to="" href="" v-for="(item,index) in indexCenterBanner.indexClassifyr" :key="index">
+          <router-link tag="a" :to="item.path"  v-for="(item,index) in indexCenterBanner.indexClassifyr" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
