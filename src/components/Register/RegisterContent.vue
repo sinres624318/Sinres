@@ -12,6 +12,7 @@
                class="register-content-input"
                maxlength="11"
                v-model="telephoneNum"
+               @input="registerButtonStatusHandle"
                placeholder="请输入手机号"/>
         <span v-if="!flag" @click="obtainCodeHandle()">获取验证码</span>
         <span v-if="flag">{{countDown}}s后重新获取</span>
@@ -22,9 +23,14 @@
         v-model="code"
         class="register-content-input-two"
         maxlength="6"
+        @input="registerButtonStatusHandle"
         placeholder="请输入验证码">
     </div>
-    <div class="register-content-button" @click="submitHandle()">注册</div>
+    <button
+      :class="['register-content-button',registerFlag?'can-register':'']"
+      :disabled="!registerFlag"
+      @click="submitHandle()">注册
+    </button>
   </div>
 </template>
 
@@ -37,7 +43,7 @@
       return {
         telephoneNum: '',
         num: 0,
-        code: ""
+        code: "",
       }
     },
     props: {
@@ -49,9 +55,13 @@
         type: Number,
         required: true
       },
-      codeFlag:{
-        type:Boolean,
-        required:true
+      codeFlag: {
+        type: Boolean,
+        required: true
+      },
+      registerFlag: {
+        type: Boolean,
+        required: true
       }
     },
     methods: {
@@ -62,10 +72,15 @@
         })
       },
       submitHandle() {
-        /*f2cb20eba8b34501bcc420a7d75064dc*/
         this.$emit('registerSubmit', {
           TEL: this.telephoneNum,
-          code:this.code
+          code: this.code
+        })
+      },
+      registerButtonStatusHandle() {
+        this.$emit('registerButtonStatusHandle', {
+          TEL: this.telephoneNum,
+          code: this.code
         })
       }
     }

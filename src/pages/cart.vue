@@ -35,7 +35,10 @@
   import CartProductEdit from './../components/cart/cartProductEdit'
   import CartProductEditBar from './../components/cart/cartProductEditBar'
   import Loading from '../components/common/loading'
-  import {goBack} from './../assets/js/common'
+  import {
+    goBack,
+    getCookie
+  } from './../assets/js/common'
 
   export default {
     name: "cart",
@@ -61,7 +64,7 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo');
+      this.$store.dispatch('getCartInfo',getCookie('token'));
 
     },
     computed: {

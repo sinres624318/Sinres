@@ -25,8 +25,8 @@ Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
   if ((to.name == "Mine" || to.name == "Cart")) {
-    if (!getCookie('username')) {
-      console.log(getCookie('username'))
+    if (!getCookie('token')) {
+      console.log(getCookie('token'))
       next('/login');
     } else {
       next();

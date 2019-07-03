@@ -9,10 +9,12 @@ import {
 export default {
   getCartInfo(context,token) {
     /*发送请求*/
+    console.log(token);
+    let singleQuotes = '"';
     axios.post(cartInfo,{"token":token})
       .then((data) => {
-        console.log(data);
-        context.commit('setData', data.data)
+        console.log(data.data.cartProductList);
+        context.commit('setData', data.data.cartProductList)
       })
       .catch((err) => {
         console.log(err);
