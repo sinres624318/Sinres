@@ -7,8 +7,7 @@
   line-height: 88px;
   display: flex;
   align-items: center;
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 40px;
 }
 
 .header-left {
@@ -37,7 +36,7 @@
   outline: none;
   font-size: 32px;
   height: 80px;
-  margin-top: 40px;
+  margin: 40px 0 ;
   border-bottom: 1px solid #efefef;
   width: 100%;
 }
@@ -71,9 +70,19 @@
   border-radius: 2px;
   text-align: center;
   padding-left: 32px;
-  border-left: 2px solid #efefef;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.content-password-findpwd::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.5);
 }
 
 .content-password-input {
@@ -101,6 +110,10 @@
   margin-top: 60px;
 }
 
+.content .can-login {
+  background-image: linear-gradient(90deg, #f10000, #ff2000 73%, #ff4f18);
+}
+
 .content-way {
   display: flex;
   width: 100%;
@@ -117,13 +130,13 @@
 
 .content-account-first {
   width: 100%;
-  height: 82px ;
+  height: 82px;
   border-bottom: 2px solid #efefef;
   line-height: 80px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .content-account-telephoto {
@@ -131,20 +144,32 @@
   outline: none;
   font-size: 32px;
   width: 464px;
-  height: 80px ;
+  height: 80px;
+}
+
+.obtain-verify-code-wrap {
+  width: 200px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.obtain-verify-code-wrap::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width:2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.5);
+  background: #ccc;
 }
 
 .content-account-findpwd {
   border: 0;
-  height: 80px;
-  display: inline-block;
-}
-.content-account-findpwd {
-  border: 0;
+  background: #ffffff;
   outline: none;
-  background: white;
-  border-left: 2px solid #efefef;
-  font-size: 32px;
 }
 
 .content-account-two {
@@ -155,14 +180,17 @@
   border-bottom: 2px solid #efefef;
   font-size: 32px;
 }
-.langing-food-quick-qq img{
+
+.langing-food-quick-qq img {
   width: 120px;
   height: 120px;
 }
+
 .langing-food-quick-wx img {
   width: 120px;
   height: 120px;
 }
+
 .langing-food-quick-qq img {
   width: 96px;
   height: 96px;
@@ -211,6 +239,8 @@
 }
 
 /*landingcontent*/
-
-
 /*login*/
+.error-info {
+  font-size: 30px;
+  padding: 20px 0;
+}
