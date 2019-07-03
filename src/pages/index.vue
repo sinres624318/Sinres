@@ -2,7 +2,7 @@
   <div class="index">
     <indexHender :info="this.scroll"></indexHender>
     <div class="main" ref="main">
-      <indexTopBanner></indexTopBanner>
+      <indexTopBanner :indexTopBanner="indexInfo "></indexTopBanner>
       <indexCenterBanner></indexCenterBanner>
       <indexSeckill></indexSeckill>
       <indexThree></indexThree>
@@ -26,7 +26,8 @@
     name: "index",
     data() {
       return {
-        scroll: 0
+        scroll: 0,
+        indexInfo: {},
       }
     },
     components: {
@@ -46,6 +47,16 @@
         var top = Math.floor(this.$refs.main.scrollTop);
         this.scroll = top;
       }
+    },
+    created() {
+      this.axios.get("http://10.35.162.113:9005/index/")
+        .then((data) => {
+          console.log(data)
+          this.indexInfo = data.data;
+          console.log(this.indexInfo)
+        }).catch((err) => {
+        console.log(err)
+      })
     }
   }
 </script>

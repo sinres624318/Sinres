@@ -9,10 +9,11 @@
 
 <script>
   import {goBack} from './../../assets/js/common.js'
+
   export default {
     name: "LoginHeader",
-    methods:{
-      goBackClickHandle(){
+    methods: {
+      goBackClickHandle() {
         goBack(this.$router)
       }
     }

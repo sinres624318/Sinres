@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-for="(item,index) in productList" :key="index" class="allProductItem">
+    <div v-for="(item,index) in shopProductInfoHandle.productList" :key="index" class="allProductItem">
       <a href="#">
         <div class="productTtemPic">
-          <img :src="item.img" alt>
+          <img v-if="item.img" :src="item.img" alt>
         </div>
         <div class="productItemRight">
           <p>{{item.tit}}</p>
@@ -24,33 +24,17 @@
 </template>
 <script>
 export default {
-  neme: "shopProductH",
-  data() {
-    return {
-      productList: [
-        {
-          productID: "1",
-          img: "./../../../static/img/shop/allProductPic410x410.png",
-          tit:
-            "联想ThinkPad X390（39CD）英特尔酷睿i5 13.3英寸轻薄笔记本电脑（i5-8265U 8G 256GSSD FHD",
-          pic: "5999.00",
-          evaluate: "5888",
-          rate: "98%"
-        },
-        {
-          productID: "2",
-          img: "./../../../static/img/shop/allProductPic410x410.png",
-          tit:
-            "联想ThinkPad X390（39CD）英特尔酷睿i5 13.3英寸轻薄笔记本电脑（i5-8265U 8G 256GSSD FHD",
-          pic: "5999.00",
-          evaluate: "5888",
-          rate: "98%"
-        },
-      ]
-    };
+  name: "shopProductH",
+  props:{
+    shopProductInfoHandle:{
+      type:Object,
+      required:true
+    }
+
   }
 };
 </script>
+<style src='./../../../static/css/reset.css'></style>
 <style scoped>
 .allProductItem > a {
   display: flex;

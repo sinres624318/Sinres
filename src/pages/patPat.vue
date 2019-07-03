@@ -80,6 +80,7 @@
     <div class="patPatBrilliantList">
       <PatPatProduct></PatPatProduct>
     </div>
+    <Loading></Loading>
   </div>
 </template>
 <script>
@@ -88,6 +89,7 @@ import PatPatLikeIntroduceProduct from "./../components/patPat/patPatLikeIntrodu
 import { Swipe, SwipeItem, Lazyload } from "vant";
 import NavBar from "./../components/common/navBar";
 import MoreMenu from "../components/common/moreMenu";
+import Loading from "../components/common/loading";
 
 export default {
   name: "patPat",
@@ -98,7 +100,8 @@ export default {
     Lazyload,
     PatPatLikeIntroduceProduct,
     PatPatProduct,
-    MoreMenu
+    MoreMenu,
+    Loading
   },
   data() {
     return {

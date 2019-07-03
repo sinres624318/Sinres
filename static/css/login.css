@@ -1,4 +1,7 @@
 /*login*/
+.landing{
+  background: white;
+}
 /*landingheader*/
 .header {
   width: 100%;
@@ -8,6 +11,7 @@
   display: flex;
   align-items: center;
   font-size: 40px;
+  background: white;
 }
 
 .header-left {
@@ -137,6 +141,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   margin: 40px 0;
+  background: white;
 }
 
 .content-account-telephoto {
@@ -145,6 +150,7 @@
   font-size: 32px;
   width: 464px;
   height: 80px;
+  background:white ;
 }
 
 .obtain-verify-code-wrap {

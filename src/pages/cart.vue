@@ -21,17 +21,8 @@
       :key="index"
       :sID="index"
       :shop="shop"></CartShop>
-    <div
-      class="empty-cart-wrap"
-      v-if="!cartInfo.cartShopList">
-      <div class="empty-cart-img">
-        <img src="./.././../static/img/cart/emptyCart.png" alt="">
-      </div>
-      <div class="empty-cart-text">购物车空空如也，去逛逛吧~</div>
-    </div>
     <CartTotalPrice
       :allCheck="cartInfo.checked"
-      :totalPrice="totalPrice"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
     <CartProductEditBar v-if="!flag"></CartProductEditBar>
   </div>
@@ -79,9 +70,6 @@
     computed: {
       cartInfo() {
         return this.$store.state.cartInfo
-      },
-      totalPrice(){
-        return this.$store.state.cartTotalPrice
       }
     }
   }
