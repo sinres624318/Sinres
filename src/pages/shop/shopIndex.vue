@@ -1,12 +1,10 @@
 <template>
   <div>
-
-
     <div class="shopIndex" v-if="shopProductInfo">
       <!-- shop-header -->
       <!-- 背景蒙版 -->
       <div class="bgimg">
-        <img src="./../../../static/img/shop/shop_background.jpg" alt>
+        <img v-if="this.shopProductInfo.header.img" :src='shopProductInfo.header.img' alt>
         <p></p></div>
       <div class="shopHeader">
         <div class="shopHeaderLogo">
@@ -50,9 +48,9 @@
           <img v-if="item" :src="item" alt>
         </a>
       </div>
-      <div class="productModel">
-        <img v-if="this.shopProductInfo.productModel.img" :src="this.shopProductInfo.productModel.img" alt>
-        <div class="productModelLink">
+      <div class="productModel" v-for="aa in shopProductInfo.productModel">
+        <img :src='aa.img' alt>
+        <div class="productModelLink" >
           <div class="productModelFirst">
             <a herf="javascript:;"
                @click="detailsClickHandle(1)"
@@ -113,6 +111,8 @@
           name: 'Details',
           params: {productID: this.shopProductInfo.productModel.productIDList[index]}
         })
+        console.log(this.shopProductInfo.productModel.productIDList[index])
+
       },
     },
     created() {

@@ -42,7 +42,6 @@
 				DetailsEvaluate,//(评价)
 				DetailsRecommend,//(推荐)
       },
-
       methods: {
         backClickHandle() {
           goBack(this.$router)
