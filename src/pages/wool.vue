@@ -6,7 +6,7 @@
           <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
         </template>
         <template v-slot:title>
-          <div class="title">优质羊毛</div>
+          <div class="title">小羊小羊猫猫猫</div>
         </template>
         <template v-slot:right>
           <div class="right iconfont">
@@ -55,8 +55,7 @@
       <img src="../../static/img/wool/Today's explosives.png" alt="今日爆品">
     </div>
     <div class="woolProductList">
-      <WoolProduct :woolProductInfoHandle="woolProductInfo.woolProduct"></WoolProduct>
-
+      <WoolProduct :woolProductInfoHandle="woolProductInfo"></WoolProduct>
     </div>
   </div>
 </template>
@@ -72,9 +71,9 @@
       NavBar,
       MoreMenu
     },
-    date() {
+    data() {
       return {
-        woolProductInfo: '',
+        woolProductInfo:{},
         flag: false
       }
     },
@@ -89,7 +88,7 @@
     created() {
       this.axios.get('https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/woolProduct').then((response) => {
         this.woolProductInfo = response.data;
-        console.log(response)
+        console.log(this.woolProductInfo)
       }).catch((error) => {
         console.log(error)
       })

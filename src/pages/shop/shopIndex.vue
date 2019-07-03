@@ -76,7 +76,6 @@
       <!-- shopList -->
       <div class="shopList">
         <ShopProductV v-if="flag" :shopProductInfoHandle="shopProductInfo.roductList"></ShopProductV>
-
       </div>
     </div>
     <Loading v-if="!shopProductInfo"></Loading>
