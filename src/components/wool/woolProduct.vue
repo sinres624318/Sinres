@@ -1,6 +1,6 @@
 <template>
   <div class="woolProductLists">
-    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle" :key='index'>
+    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle.woolProduct" :key='index'>
       <a href="#">
         <div class="woolProductImg">
           <img :src="item.img" alt="商品">
@@ -35,15 +35,10 @@
     name: 'woolProduct',
     props: {
       woolProductInfoHandle:{
-        type:Array,
+        type:Object,
         required:true
       }
     },
-    data() {
-      return {
-
-      }
-    }
   }
 </script>
 <style scoped>
