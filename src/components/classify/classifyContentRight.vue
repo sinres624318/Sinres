@@ -7,7 +7,7 @@
       <h4>{{a.title}}</h4>
       <ul>
         <li v-for="small in a.rightSmall">
-          <img :src="small.img" >
+          <img :src="small.img" @click="clickHandel(small.productTypeID)">
           <span>{{small.text}}</span>
         </li>
       </ul>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-
     export default {
         name: "classifyContentRight",
       data(){
@@ -37,6 +36,15 @@
             this.Num=val
           });
       },
+      methods:{
+          clickHandel(ID){
+            this.$router.push({
+              path:'/productList',
+              params:{productTypeID:ID}
+            });
+          },
+
+      }
     }
 </script>
 

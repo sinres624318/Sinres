@@ -17,8 +17,8 @@
           <p>京豆</p>
         </div>
         <div class="recharge-content-first-buy">
-         <span>合计: ￥<i ref="i">0.00</i></span>
-          <a href="#">立即下单</a>
+         <span>合计: ￥<i ref="i">0</i></span>
+          <a href="#" @click="rechargeRouter()">立即下单</a>
         </div>
       </div>
       <div class="recharge-content-two"  v-if="show==1">
@@ -41,7 +41,7 @@
         </div>
         <div class="recharge-content-two-buy">
           <span>合计: ￥<i ref="i">0.00</i></span>
-          <a href="#">立即下单</a>
+          <a href="#" @click="rechargesRouter">立即下单</a>
         </div>
       </div>
     </div>
@@ -79,7 +79,6 @@
             figure:-1,
           }
       },
-
       methods:{
         numHandel(index,item){
           var regs = /^(13|14|15|16|17|18|19)\d{9}$/;
@@ -94,6 +93,22 @@
 
 
         },
+        rechargeRouter(){
+          if (this.telephoneNum!='' && this.$refs.i.innerHTML!=0){
+            this.$router.push({
+              path:'/pay',
+              params:{tel:this.telephoneNum,pri:this.$refs.i.innerHTML}
+            })
+          }
+        },
+        rechargesRouter(){
+          if (this.telephoneNum2!='' && this.$refs.i.innerHTML!=0){
+            this.$router.push({
+              path:'/pay',
+              params:{tel:this.telephoneNum2,pri:this.$refs.i.innerHTML}
+            })
+          }
+        }
       },
       created() {
           indexHender:{

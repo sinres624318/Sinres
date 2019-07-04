@@ -1,11 +1,13 @@
 <template>
     
 </template>
+
 <script>
-export default {
-    
-}
+    export default {
+        name: "foodprintContent"
+    }
 </script>
+
 <style scoped>
 
 </style>
