@@ -6,7 +6,7 @@
           <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
         </template>
         <template v-slot:title>
-          <div class="title">小羊小羊猫猫猫</div>
+          <div class="title">精品羊毛</div>
         </template>
         <template v-slot:right>
           <div class="right iconfont">

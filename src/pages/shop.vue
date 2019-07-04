@@ -57,9 +57,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -webkit-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -moz-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  box-shadow: 0 0 20px 0 hsla(0, 6%, 58%, 0.6);
 }
 .shopTabbar>div{
   width: 25%;

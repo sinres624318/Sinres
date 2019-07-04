@@ -40,9 +40,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -webkit-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -moz-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  box-shadow: 0 0 20px 0 hsla(0, 6%, 58%, 0.6);
 }
 .indexTools-bar > div {
   width: 20%;
@@ -56,42 +54,42 @@ export default {
 /*toolsBar end*/
 
 .tools-bar-home >div{
-  background: url('./../../../static/img/bar/home.png');
+  background: url('./../../../static/img/bar/home.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-home .focus{
-  background: url('./../../../static/img/bar/home_focus.png');
+  background: url('./../../../static/img/bar/home_focus.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-classify >div{
-  background: url('./../../../static/img/bar/classify.png');
+  background: url('./../../../static/img/bar/classify.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-classify .focus{
-  background: url('./../../../static/img/bar/classify_focus.png');
+  background: url('./../../../static/img/bar/classify_focus.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-mine >div{
-  background: url('./../../../static/img/bar/mine.png');
+  background: url('./../../../static/img/bar/mine.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-mine .focus{
-  background: url('./../../../static/img/bar/mine_focus.png');
+  background: url('./../../../static/img/bar/mine_focus.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-cart >div{
-  background: url('./../../../static/img/bar/cart.png');
+  background: url('./../../../static/img/bar/cart.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
 .tools-bar-purchase >div{
-  background: url('./../../../static/img/bar/purchase.png');
+  background: url('./../../../static/img/bar/purchase.png') no-repeat;
   background-size:120px 92px;
   background-position: center;
 }
