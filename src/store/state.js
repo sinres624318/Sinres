@@ -1,4 +1,5 @@
 export default {
   cartInfo: {},
-  cartTotalPrice:''
+  cartTotalPrice:'',
+  cartProductNum:''
 }

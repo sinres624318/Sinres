@@ -35,11 +35,13 @@ Number.prototype.add = function (arg) {
 
 function countPrice(state, cartInfo) {
   let totalPrice = 0;
+  let productNum = 0;
   for (let i = 0; i < cartInfo.cartShopList.length; i++) {
     let productList = cartInfo.cartShopList[i].productList;
     for (let j = 0; j < productList.length; j++) {
       if (productList[j].checked) {
         totalPrice = totalPrice.add(parseFloat(productList[j].price).mul(Number(productList[j].productNum)));
+        productNum += productList[j].productNum;
       }
     }
   }
@@ -50,6 +52,7 @@ function countPrice(state, cartInfo) {
     totalPrice = priceString + '.00';
   }
   state.cartTotalPrice = String(totalPrice);
+  state.cartProductNum = String(productNum);
 }
 
 export default {

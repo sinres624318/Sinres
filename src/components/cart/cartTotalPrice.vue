@@ -15,7 +15,7 @@
         :to="{name:'DefineOrder'}"
         class="buy buyJs">
         <span>去结算</span>
-        <em>(1件)</em>
+        <em>({{productNum}}件)</em>
       </router-link>
     </div>
   </div>
@@ -31,6 +31,10 @@
       },
       totalPrice: {
         type: String,
+        required: true
+      },
+      productNum:{
+        type:String,
         required: true
       }
     },

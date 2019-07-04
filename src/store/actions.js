@@ -7,7 +7,7 @@ import {
 } from "../api/url";
 
 export default {
-  getCartInfo(context, {token,vue}) {
+  getCartInfo(context, {token, vue}) {
     /*发送请求*/
 
     axios.post(cartInfo, {"token": token})
@@ -18,7 +18,7 @@ export default {
           console.log(data);
           context.commit('setData', data)
         } else if (data.code === 401) {
-          vue.$router.replace({name:'Login'})
+          vue.$router.replace({name: 'Login'})
         }
 
       })
@@ -80,17 +80,18 @@ export default {
       })
   },
   deleteProduct(context, val) {
-    let {sID, pID, token} = val;
-    let cartShopList = context.state.cartInfo.cartShopList;
-    let productID = cartShopList[pID].productList[sID].productID;
-    console.log(productID);
+    let {productID, token} = val;
     axios.post(deleteProduct, {
       "productID": JSON.stringify([productID]),
       "token": token
     })
       .then((data) => {
         console.log(data);
-        cartShopList[pID].productList.splice(sID, 1)
+        if (cartShopList[pID].productList.length <= 1) {
+          cartShopList.splice(pID, 1)
+        } else {
+          cartShopList[pID].productList.splice(sID, 1)
+        }
       })
       .catch((err) => {
         console.log(err);

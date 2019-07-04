@@ -29,9 +29,12 @@
       :shop="shop"></CartShop>
     <CartTotalPrice
       :totalPrice="totalPrice"
+      :productNum="productNum"
       :allCheck="cartInfo.checked"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
-    <CartProductEditBar v-if="!flag"></CartProductEditBar>
+    <CartProductEditBar
+      :allCheck="cartInfo.checked"
+      v-if="!flag"></CartProductEditBar>
   </div>
 </template>
 
@@ -80,6 +83,9 @@
       },
       totalPrice() {
         return this.$store.state.cartTotalPrice
+      },
+      productNum() {
+        return this.$store.state.cartProductNum
       }
     },
     beforeUpdate() {
