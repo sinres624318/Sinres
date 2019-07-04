@@ -15,23 +15,21 @@
       v-if="cartInfo.cartShopList"
       @changeProductHandle="changeProductHandle"></CartProductEdit>
     <Loading v-if="!cartInfo.cartShopList"></Loading>
+    <div class="empty-cart-wrap" v-if="emptyFlag">
+      <div class="empty-cart-img">
+        <img src="./../.././static/img/cart/emptyCart.png" alt="">
+      </div>
+      <div class="empty-cart-text">购物车空空如也，再转转吧~</div>
+    </div>
     <CartShop
       v-if="cartInfo.cartShopList"
       v-for="(shop,index) in cartInfo.cartShopList"
       :key="index"
       :sID="index"
       :shop="shop"></CartShop>
-    <div
-      class="empty-cart-wrap"
-      v-if="!cartInfo.cartShopList">
-      <div class="empty-cart-img">
-        <img src="./.././../static/img/cart/emptyCart.png" alt="">
-      </div>
-      <div class="empty-cart-text">购物车空空如也，去逛逛吧~</div>
-    </div>
     <CartTotalPrice
-      :allCheck="cartInfo.checked"
       :totalPrice="totalPrice"
+      :allCheck="cartInfo.checked"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
     <CartProductEditBar v-if="!flag"></CartProductEditBar>
   </div>
@@ -44,7 +42,10 @@
   import CartProductEdit from './../components/cart/cartProductEdit'
   import CartProductEditBar from './../components/cart/cartProductEditBar'
   import Loading from '../components/common/loading'
-  import {goBack} from './../assets/js/common'
+  import {
+    goBack,
+    getCookie
+  } from './../assets/js/common'
 
   export default {
     name: "cart",
@@ -59,6 +60,7 @@
     data() {
       return {
         flag: true,
+        emptyFlag: false
       }
     },
     methods: {
@@ -70,16 +72,18 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo');
-
+      this.$store.dispatch('getCartInfo', getCookie('token'));
     },
     computed: {
       cartInfo() {
         return this.$store.state.cartInfo
       },
-      totalPrice(){
+      totalPrice() {
         return this.$store.state.cartTotalPrice
       }
+    },
+    beforeUpdate() {
+      this.emptyFlag = this.cartInfo.cartShopList.length > 0 ? false : true
     }
   }
 </script>

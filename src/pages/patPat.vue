@@ -20,7 +20,7 @@
     <!-- ---------headerEnd-------------- -->
     <div class="patPatBanner">
       <van-swipe :autoplay="3000" indicator-color="orange">
-        <van-swipe-item v-for="(item, index) in banner" :key="index">
+        <van-swipe-item v-for="(item, index) in this.patPatInfo.banner" :key="index">
           <img v-lazy="item">
         </van-swipe-item>
       </van-swipe>
@@ -51,23 +51,15 @@
       <img src="./../../static/img/patPat/cnxh.png" alt>
     </div>
     <div class="likeIntroduceList">
-      <PatPatLikeIntroduceProduct></PatPatLikeIntroduceProduct>
+      <PatPatLikeIntroduceProduct
+        :patPatLikeIntroduceProductHandle="patPatInfo"></PatPatLikeIntroduceProduct>
     </div>
     <!-- 闲置卖钱 -->
     <div class="patPatNavigation"></div>
     <!-- 拍拍专享 -->
     <div class="patPatExclusive">
-      <a href="#">
-        <img src="./../../static/img/patPat/exclusive1.png" alt>
-      </a>
-      <a href="#">
-        <img src="./../../static/img/patPat/exclusive2.png" alt>
-      </a>
-      <a href="#">
-        <img src="./../../static/img/patPat/exclusive3.png" alt>
-      </a>
-      <a href="#">
-        <img src="./../../static/img/patPat/exclusive4.png" alt>
+      <a href="#" v-for="(item,index) in this.patPatInfo.exclusive">
+        <img :src="item" alt>
       </a>
     </div>
     <!-- 专属推荐 -->
@@ -78,55 +70,55 @@
     </div>
     <!-- 商品列表 -->
     <div class="patPatBrilliantList">
-      <PatPatProduct></PatPatProduct>
+      <PatPatProduct :patPatPrilliantProductHandle="patPatInfo"></PatPatProduct>
     </div>
+    <Loading></Loading>
   </div>
 </template>
 <script>
-import PatPatProduct from "./../components/patPat/patPatProduct";
-import PatPatLikeIntroduceProduct from "./../components/patPat/patPatLikeIntroduceProduct";
-import { Swipe, SwipeItem, Lazyload } from "vant";
-import NavBar from "./../components/common/navBar";
-import MoreMenu from "../components/common/moreMenu";
+  import PatPatProduct from "./../components/patPat/patPatProduct";
+  import PatPatLikeIntroduceProduct from "./../components/patPat/patPatLikeIntroduceProduct";
+  import {Swipe, SwipeItem, Lazyload} from "vant";
+  import NavBar from "./../components/common/navBar";
+  import MoreMenu from "../components/common/moreMenu";
+  import Loading from "../components/common/loading";
 
-export default {
-  name: "patPat",
-  components: {
-    "van-swipe": Swipe,
-    "van-swipe-item": SwipeItem,
-    NavBar,
-    Lazyload,
-    PatPatLikeIntroduceProduct,
-    PatPatProduct,
-    MoreMenu
-  },
-  data() {
-    return {
-      banner: [
-        "../../static/img/patPat/pat-banner1.png",
-        "../../static/img/patPat/pat-banner2.png"
-      ],
-      // flag: false
-      show:true
-    };
-  },
-  methods: {
-    backClickHandle() {
-      this.$router.go(-1);
+  export default {
+    name: "patPat",
+    components: {
+      "van-swipe": Swipe,
+      "van-swipe-item": SwipeItem,
+      NavBar,
+      Lazyload,
+      PatPatLikeIntroduceProduct,
+      PatPatProduct,
+      MoreMenu,
+      Loading
     },
-    moreMenuClickHandle() {
-      // if(this.show==false){
-      //   this.show=true
-      // }
-      // else if(this.show==true){
-      //   this.show=false
-      // }
-      console.log(1)
-    }
-  }
-};
-</script>
+    data(){
+      return {
+        show: false,
+        patPatInfo:{},
 
+      }
+    },
+    created(){
+      this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/patPatInfo").then((response)=>{
+        this.patPatInfo=response.data;
+      }).catch((error)=>{
+        console.log(error)
+      })
+    },
+    methods: {
+      backClickHandle() {
+        this.$router.go(-1);
+      },
+      moreMenuClickHandle() {
+        this.show = !this.show
+      }
+    }
+  };
+</script>
 
 
 <style src="./../../static/css/patPat.css"></style>

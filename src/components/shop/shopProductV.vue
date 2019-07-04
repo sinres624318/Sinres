@@ -1,8 +1,8 @@
 <template>
   <div class="shopList">
-    <div class="shopListItem" v-for="(item,index) in productList" :key="index">
+    <div class="shopListItem" v-for="(item,index) in shopProductInfoHandle" :key="index">
       <a href="#" >
-        <img :src="item.img">
+        <img v-if="item.img" :src="item.img" alt="商品">
         <div class="shopListItemBottom">
           <p>{{item.tit}}</p>
           <div class="pic">
@@ -27,33 +27,17 @@
 </template>
 <script>
 export default {
-  name: "productV",
-  data() {
-    return {
-      productList: [
-        {
-          productID: "1",
-          img: "./../../../static/img/shop/shop_list_item_pic.png",
-          tit:
-            "联想ThinkPad X390（39CD）英特尔酷睿i5 13.3英寸轻薄笔记本电脑（i5-8265U 8G 256GSSD FHD",
-          pic: "5999.00",
-          evaluate: "5888",
-          rate: "98%"
-        },
-        {
-          productID: "2",
-          img: "./../../../static/img/shop/allProductPic410x410.png",
-          tit:
-            "联想ThinkPad X390（39CD）英特尔酷睿i5 13.3英寸轻薄笔记本电脑（i5-8265U 8G 256GSSD FHD",
-          pic: "5999.00",
-          evaluate: "5888",
-          rate: "98%"
-        }
-      ]
-    };
+  name: "shopProductV",
+  props:{
+    shopProductInfoHandle:{
+      type:Array,
+      required:true
+    }
   }
+
 };
 </script>
+<style src='./../../../static/css/reset.css'></style>
 <style scoped>
 .shopList{
     display: flex;

@@ -17,7 +17,7 @@
     <MineAssetsCell></MineAssetsCell>
     <MineActivity></MineActivity>
     <MineRecommend></MineRecommend>
-    <MoreMenu v-if="flag"></MoreMenu>
+    <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
   </div>
 </template>
 
@@ -51,11 +51,14 @@
     },
     methods: {
       backClickHandle() {
-        console.log(this.$router);
         goBack(this.$router)
       },
       moreMenuClickHandle() {
-        this.flag = !this.flag;
+        console.log(1);
+        this.flag = true;
+      },
+      maskClickHandle(val) {
+        this.flag = val;
       }
     }
   }

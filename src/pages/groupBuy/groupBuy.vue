@@ -2,10 +2,10 @@
   <div class="groupBuy-index">
     <groupBuyHender></groupBuyHender>
     <div class="groupBuy-Main">
-    <groupBuySousuo></groupBuySousuo>
-    <groupBuyBanner></groupBuyBanner>
-    <groupBuyCenterBanner></groupBuyCenterBanner>
-    <groupBuyDay></groupBuyDay>
+      <groupBuySousuo></groupBuySousuo>
+      <groupBuyBanner></groupBuyBanner>
+      <groupBuyCenterBanner></groupBuyCenterBanner>
+      <groupBuyDay></groupBuyDay>
       <groupBuyClass></groupBuyClass>
     </div>
     <groupBuyFooter></groupBuyFooter>
@@ -20,18 +20,30 @@
   import groupBuyDay from '../../components/groupBuy/groupBuyDay'
   import groupBuyFooter from '../../components/groupBuy/groupBuyFooter'
   import groupBuyClass from '../../components/groupBuy/groupBuyClass'
-    export default {
-        name: "groupBuy",
-      components:{
-        groupBuyHender,
-        groupBuySousuo,
-        groupBuyBanner,
-        groupBuyCenterBanner,
-        groupBuyDay,
-        groupBuyFooter,
-        groupBuyClass
-      }
+  import {groupBuy} from "../../api/url";
+
+  export default {
+    name: "groupBuy",
+    components: {
+      groupBuyHender,
+      groupBuySousuo,
+      groupBuyBanner,
+      groupBuyCenterBanner,
+      groupBuyDay,
+      groupBuyFooter,
+      groupBuyClass
+    },
+    created() {
+      this.axios.get(groupBuy)
+        .then((data) => {
+          console.log(data.data);
+          context.commit('setData', data.data)
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     }
+  }
 </script>
 <style src="../../../static/font/iconfont.css"></style>
 <style src="../../../static/css/groupBuy/groupBuy.css"></style>

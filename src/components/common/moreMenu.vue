@@ -11,7 +11,7 @@
         <span>{{item.text}}</span>
       </router-link>
     </div>
-    <div class="more-menu-mask"></div>
+    <div class="more-menu-mask" @click="maskClickHandle"></div>
   </div>
 </template>
 
@@ -47,6 +47,11 @@
             path: 'Footprint'
           },
         ]
+      }
+    },
+    methods:{
+      maskClickHandle(){
+        this.$emit('maskClickHandle',false);
       }
     }
   }
