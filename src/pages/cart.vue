@@ -72,7 +72,7 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo', getCookie('token'));
+      this.$store.dispatch('getCartInfo', {token:getCookie('token'),vue:this});
     },
     computed: {
       cartInfo() {
