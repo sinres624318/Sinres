@@ -25,11 +25,15 @@ const getCookie = (key) => {
   }
   return null;
 };
+const regs = /(13|15|18|17|16|14|19)\d{9}/;
 
+const verifyTEL = (TEL)=>{
+  return regs.test(TEL);
+};
 
 module.exports = {
   goBack,
   saveCookie,
   getCookie,
-
+  verifyTEL,
 };

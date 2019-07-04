@@ -1,13 +1,13 @@
 <template>
   <div class="index">
     <indexHender :info="this.scroll"></indexHender>
-    <div class="main" ref="main"  v-if="indexInfo.seckill">
-      <indexTopBanner :indexTopBanner="indexInfo"></indexTopBanner>
-      <indexCenterBanner :indexCenterBanner="indexInfo"></indexCenterBanner>
-      <indexSeckill :indexSeckill="indexInfo"></indexSeckill>
-      <indexThree :indexThree="indexInfo" ></indexThree>
-      <indexFour :indexFour="indexInfo"></indexFour>
-      <indexRecommend  :indexRecommend="indexInfo"></indexRecommend>
+    <div class="main" ref="main" v-if="indexInfo.ad">
+      <indexTopBanner  :indexTopBanner="indexInfo.banner"></indexTopBanner>
+      <indexCenterBanner v-if="indexInfo.ad" :indexCenterBanner="indexInfo.indexClassify"></indexCenterBanner>
+      <indexSeckill v-if="indexInfo.ad"  :ad="indexInfo.ad"></indexSeckill>
+      <indexThree :indexThrees="indexInfo"></indexThree>
+      <indexFour></indexFour>
+      <indexRecommend :indexRecommend="indexInfo"></indexRecommend>
     </div>
     <Loading v-if="!indexInfo.banner"></Loading>
   </div>
@@ -28,7 +28,7 @@
     data() {
       return {
         scroll: 0,
-      indexInfo:{},
+        indexInfo: {},
       }
     },
     components: {
@@ -53,13 +53,10 @@
     created() {
       this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/index")
       // this.axios.get("http://10.35.162.113:9005/index/")
-        .then((data)=>{
-          this.indexInfo=data.data
-          console.log(
-            this.indexInfo
-          )
+        .then((data) => {
+          this.indexInfo = data.data
         })
-        .catch((err)=>{
+        .catch((err) => {
           console.log(err)
         })
     }

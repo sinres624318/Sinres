@@ -4,7 +4,7 @@
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
-      <img src="./../../../static/img/shop/shop_background.jpg" alt>
+      <img v-if="shopProductInfo.header.img" :src="shopProductInfo.header.img" alt>
       <p></p>
     </div>
     <div class="shopHeader">

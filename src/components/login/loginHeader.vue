@@ -1,20 +1,21 @@
 <template>
   <div class="header">
-    <div class="header-left" @click="onClickLeft">
-      <span ></span>
+    <div class="header-left" @click="goBackClickHandle">
+      <span></span>
     </div>
-    京东登陆
+    登陆
   </div>
 </template>
 
 <script>
-  import {goBack} from './../../assets/js/common'
+  import {goBack} from './../../assets/js/common.js'
+
   export default {
     name: "LoginHeader",
-    methods:{
-      onClickLeft() {
+    methods: {
+      goBackClickHandle() {
         goBack(this.$router)
-      },
+      }
     }
   }
 </script>

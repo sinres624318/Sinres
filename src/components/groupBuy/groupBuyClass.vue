@@ -6,7 +6,7 @@
     </p>
     <div class="roupBuy-content">
       <div class="roupBuy-item">
-        <router-link  to="" class="roupBuy-item-product" v-for="item in groupBuyClass.groupBuyEveryone" :key="item" >
+        <router-link  to="" class="roupBuy-item-product" v-for="(item,index) in groupBuyClass.groupBuyEveryone" :key="index" >
           <div class="roupBuy-product">
             <div class="roupBuy-posre">
               <img :src="item.img" alt="">

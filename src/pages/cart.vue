@@ -21,17 +21,8 @@
       :key="index"
       :sID="index"
       :shop="shop"></CartShop>
-    <div
-      class="empty-cart-wrap"
-      v-if="!cartInfo.cartShopList">
-      <div class="empty-cart-img">
-        <img src="./.././../static/img/cart/emptyCart.png" alt="">
-      </div>
-      <div class="empty-cart-text">购物车空空如也，去逛逛吧~</div>
-    </div>
     <CartTotalPrice
       :allCheck="cartInfo.checked"
-      :totalPrice="totalPrice"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
     <CartProductEditBar v-if="!flag"></CartProductEditBar>
   </div>
@@ -44,7 +35,10 @@
   import CartProductEdit from './../components/cart/cartProductEdit'
   import CartProductEditBar from './../components/cart/cartProductEditBar'
   import Loading from '../components/common/loading'
-  import {goBack} from './../assets/js/common'
+  import {
+    goBack,
+    getCookie
+  } from './../assets/js/common'
 
   export default {
     name: "cart",
@@ -70,15 +64,12 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo');
+      this.$store.dispatch('getCartInfo',getCookie('token'));
 
     },
     computed: {
       cartInfo() {
         return this.$store.state.cartInfo
-      },
-      totalPrice(){
-        return this.$store.state.cartTotalPrice
       }
     }
   }

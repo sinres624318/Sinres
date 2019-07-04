@@ -2,7 +2,7 @@
   <div class="indexSeckill-wrap">
     <!-- 深夜有故事GIF图 -->
     <div class="indexSeckill-wrap-img">
-      <img :src="indexSeckill.ad">
+      <img :src="ad">
     </div>
     
     <div class="seckill">
@@ -31,7 +31,7 @@
             tag="div"
             to
             class="seckill-item"
-            v-for="(item,index) in indexSeckill.seckill.seckillContext"
+            v-for="(item,index) in seckill.seckillContext"
             :key="index"
           >
           <a href="#">
@@ -66,6 +66,63 @@ export default {
       min:0,
       sec:0,
       day:0,
+      seckill: {
+        "time": "直接是几点几分几秒",
+        seckillContext: [
+          //十个对象
+          {
+            "img": "../../../static/img/seckill/1.png",
+            "seckillPrice": "79",
+            "originalPrice": "99"
+          },
+          {
+            "img": "../../../static/img/seckill/2.png",
+            "seckillPrice": "28.9",
+            "originalPrice": "33.9"
+          },
+          {
+            "img": "../../../static/img/seckill/3.png",
+            "seckillPrice": "499",
+            "originalPrice": "599"
+          },
+          {
+            "img": "../../../static/img/seckill/4.png",
+            "seckillPrice": "499",
+            "originalPrice": "799"
+          },
+          {
+            "img": "../../../static/img/seckill/5.png",
+            "seckillPrice": "139",
+            "originalPrice": "159"
+          },
+          {
+            "img": "../../../static/img/seckill/6.png",
+            "seckillPrice": "69",
+            "originalPrice": "79"
+          },
+          {
+            "img": "../../../static/img/seckill/7.png",
+            "seckillPrice": "96",
+            "originalPrice": "259"
+          },
+          {
+            "img": "../../../static/img/seckill/8.png",
+            "seckillPrice": "11",
+            "originalPrice": "33.8"
+          },
+          {
+            "img": "../../../static/img/seckill/9.png",
+            "seckillPrice": "99",
+            "originalPrice": "149"
+          },
+          {
+            "img": "../../../static/img/seckill/10.png",
+            "seckillPrice": "1499",
+            "originalPrice": "1999"
+          }
+
+        ]
+      },
     }
   },
   mounted: function () {
@@ -73,7 +130,7 @@ export default {
   },
   methods: {
     countdown: function () {
-      const end = Date.parse(new Date('2019-06-30'))
+      const end = Date.parse(new Date('2019-07-30'))
       const now = Date.parse(new Date())
       const msec = end - now
       let day = parseInt(msec / 1000 / 60 / 60 / 24)
@@ -91,8 +148,8 @@ export default {
     }
   },
   props:{
-    indexSeckill:{
-      type:Object,
+    ad:{
+      type:String,
       required:true
     }
   }

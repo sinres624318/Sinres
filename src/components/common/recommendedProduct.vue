@@ -1,12 +1,12 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <router-link class="recommend-items" to="" v-for="(item,index) in recommendedProduct.productList" :key="index">
+      <router-link class="recommend-items" to="" v-for="(item,index) in recommendedProduct.product_list" :key="index">
         <div class="similar-product">
           <div class="similar-posre">
             <img :src="item.img" alt="">
           </div>
-          <div class="similar-product-text">{{item.describe}}</div>
+          <div class="similar-product-text">{{item.title}}</div>
           <div class="similar-product-info">
             <div class="similar-product-price">
               <i>￥</i>
