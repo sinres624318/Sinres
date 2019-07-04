@@ -9,6 +9,7 @@
     <ApplianceWeek v-if="applianceInfo.weekHot" :weekHot="applianceInfo" @receiveWeek="receiveHandleWeek" :weekHotInfo="barInfo"></ApplianceWeek>
     <ApplianceDetailClassify v-if="applianceInfo.television" @applianceClassifyHandleBar="handleApplianceClassify" :sendApplianceClassify="applianceClassifyInfo"></ApplianceDetailClassify>
     <Loading v-if="!applianceInfo.banner"></Loading>
+    <MoreMenu v-if="flag"></MoreMenu>
   </div>
 </template>
 <script>
@@ -21,6 +22,7 @@
   import ApplianceWeek from './../components/appliance/applianceWeek'
   import ApplianceDetailClassify from './../components/appliance/applianceDetailClassify'
   import Loading from './../components/common/loading'
+  import MoreMenu from './../components/common/moreMenu'
     export default {
         name: "appliance",
       components:{
@@ -32,10 +34,12 @@
         ApplianceBrand,
         ApplianceWeek,
         ApplianceDetailClassify,
-        Loading
+        Loading,
+        MoreMenu
       },
       created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/appliance")
+          // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/appliance")
+        this.axios.get("http://10.35.162.113:9005/index/appliance")
             .then((data)=>{
               this.applianceInfo = data.data;
               this.barInfo.push(data.data.weekHot);
@@ -49,7 +53,8 @@
           return{
             applianceInfo:{},
             barInfo:[],
-            applianceClassifyInfo:[]
+            applianceClassifyInfo:[],
+            flag:false
           }
       },
       methods:{
@@ -82,6 +87,9 @@
             this.applianceClassifyInfo = [];
             this.applianceClassifyInfo.push(this.applianceInfo.kitchen)
           }
+        },
+        handleMoreMenu(val){
+          this.flag = val
         }
       }
     }

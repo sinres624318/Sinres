@@ -4,7 +4,7 @@
         <div class="appliance-detail-classify-item-img">
           <img :src="item.img">
         </div>
-        <div class="appliance-detail-classify-item-title">{{item.describe}}</div>
+        <div class="appliance-detail-classify-item-title">{{item.describes}}</div>
         <div class="appliance-detail-classify-item-price">
           <i>￥{{item.seckillPrice}}</i>
           <span>￥{{item.originalPrice}}</span>

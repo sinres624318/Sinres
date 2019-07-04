@@ -1,6 +1,6 @@
 <template>
     <div class="define-order-address">
-      <ul class="define-order-userName" v-for="(item,index) in address">
+      <ul class="define-order-userName" v-for="(item,index) in sendAddress.address">
         <li>
           {{item.userName}}
           {{item.userTel}}
@@ -15,15 +15,15 @@
         name: "defineOrderAddress",
         data(){
           return{
-            address:[
-              {
-                userName:"小明",
-                userTel:"138****2314",
-                userAddress:"陕西西安市雁塔区丈八沟街道南窑头东区8排"
-              }
-            ]
+
           }
+        },
+      props:{
+        sendAddress:{
+          type:Object,
+          required:true
         }
+      }
     }
 </script>
 
