@@ -54,6 +54,7 @@
       // this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/index")
       this.axios.get("http://10.35.162.113:9005/index/")
         .then((data) => {
+          consoloe.log(data)
           this.indexInfo = data.data
         })
         .catch((err) => {
