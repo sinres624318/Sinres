@@ -31,7 +31,18 @@
 
 <script>
   export default {
-    name: "mineAssetsCell"
+    name: "mineAssetsCell",
+    created() {
+      this.axios.post("http://10.35.162.133:9005/mine/collect/shop/",{
+        "token":123456
+      })
+        .then((data)=>{
+          console.log(data.data);
+        })
+        .catch((error)=>{
+          console.log(error);
+        })
+    }
   }
 </script>
 

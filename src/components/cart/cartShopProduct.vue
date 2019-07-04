@@ -9,7 +9,7 @@
       <img :src="product.img" alt="">
       <div class="goods-content">
         <div class="name">
-          <span class="proNameJs">{{product.describe}}</span>
+          <span class="proNameJs">{{product.goodsdescribe}}</span>
         </div>
         <p class="sku">{{product.model}}</p>
         <div class="goods_line">
@@ -32,7 +32,7 @@
         </div>
         <div class="goods_sub_line">
           <span class="m_action_item">移入关注</span>
-          <span class="m_action_item">删除</span>
+          <span class="m_action_item" @click="deleteProductHandle">删除</span>
         </div>
       </div>
     </div>
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+  import {getCookie} from './../../assets/js/common.js'
+
   export default {
     name: "cartShopProduct",
     props: {
@@ -57,17 +59,29 @@
       }
     },
     methods: {
+      deleteProductHandle(){
+        this.$store.dispatch('deleteProduct', {
+          "sID": this.sID,
+          "pID": this.pID,
+          "token": getCookie('token')
+        });
+      },
       addClickHandle() {
-        this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].productNum++
+        this.$store.dispatch('addProduct', {
+          "sID": this.sID,
+          "pID": this.pID,
+          "token": getCookie('token')
+        });
       },
       minusClickHandle() {
-        if (this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].productNum <= 1) {
-          return;
-        }
-        this.$store.state.cartInfo.cartShopList[this.sID].productList[this.pID].productNum--
+        this.$store.dispatch('minusProduct', {
+          "sID": this.sID,
+          "pID": this.pID,
+          "token": getCookie('token')
+        });
       },
       checkProductHandle() {
-        this.$store.commit('productCheckHandle',{sID:this.sID,pID:this.pID})
+        this.$store.commit('productCheckHandle', {sID: this.sID, pID: this.pID})
       }
     }
   }

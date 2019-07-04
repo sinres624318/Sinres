@@ -74,6 +74,9 @@
   .woolCouponCenter,.woolSign,.woolFreeTrial,.woolBuyNow{
     position: relative;
   }
+  a{
+    cursor: pointer;
+  }
   .woolCouponCenter>a,.woolSign>a,.woolFreeTrial>a,.woolBuyNow>a{
     display: block;
     position: absolute;

@@ -1,0 +1,68 @@
+/*footprint*/
+.footprint{
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scroll: touch;
+}
+/*footprintHeader*/
+.footprint-header{
+  width: 100%;
+  height: 88px;
+  text-align: center;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  border-bottom: 1px solid rgb(239,239,239);
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+}
+.footprint-header-left {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(-45deg);
+  margin-left: 40px;
+  display: inline-block;
+}
+.footprint-header-middle{
+  width: 586px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+/*footprintHeader*/
+
+/*footprintcompile*/
+.footprint-compile{
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80px;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  background: white;
+}
+.footprint-compile p:first-child{
+  font-size: 32px;
+  color: #666666;
+}
+.footprint-compile p:last-child{
+  font-size: 30px;
+  color:red;
+}
+.footprint .footprint-food{
+  margin-top: 160px;
+}
+/*footprintcompile*/
+/*footprint*/

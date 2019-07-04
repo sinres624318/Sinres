@@ -22,6 +22,7 @@
   import groupBuyFooter from '../../components/groupBuy/groupBuyFooter'
   import groupBuyClass from '../../components/groupBuy/groupBuyClass'
   import Loading from "./../../components/common/loading";
+  import {groupBuy} from "../../api/url";
   export default {
     name: "groupBuy",
     data(){
@@ -29,7 +30,7 @@
         groupBuyInfo:{},
       }
     },
-    components:{
+    components: {
       groupBuyHender,
       groupBuySousuo,
       groupBuyBanner,
@@ -47,7 +48,7 @@
         })
         .catch((err)=>{
           console.log(err)
-        })
+      })
     }
   }
 </script>
