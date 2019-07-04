@@ -3,7 +3,7 @@
     <div class="groupBuyCenter">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <router-link   to="" v-for="(item,index) in groupBuyCenterBanner.groupBuyClassify" :key="index">
+          <router-link   to="" v-for="(item,index) in groupBuyCenterBanner.grouyBuyClassify" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>

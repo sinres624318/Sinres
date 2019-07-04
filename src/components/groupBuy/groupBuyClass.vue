@@ -11,7 +11,7 @@
             <div class="roupBuy-posre">
               <img :src="item.img" alt="">
             </div>
-            <div class="roupBuy-product-text">{{item.describe}}</div>
+            <div class="roupBuy-product-text">{{item.goodsdescribe}}</div>
             <div class="roupBuy-product-info">
               <div class="roupBuy-product-price">
                 <i>&yen;</i>

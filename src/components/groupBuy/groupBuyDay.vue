@@ -22,11 +22,11 @@
             <div class="groupBuyData-item-price">
                             <span class="now-price">
                                 <i>￥</i>
-                                <span>{{item.seckillPrice}}</span>
+                                <span>{{item.groupBuyPrice}}</span>
                             </span>
               <span class="old-price">
-                                <i>￥</i>
-                                <span>{{item.originalPrice}}</span>
+                                <i>拼</i>
+                                <span>{{item.groupBuyPeople}}</span>
                             </span>
             </div>
           </router-link>

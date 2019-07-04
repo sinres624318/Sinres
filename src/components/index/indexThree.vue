@@ -33,8 +33,8 @@
       </div>
       <div class="exhibition-three-bottom-center">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="item in newp" :key="item">
-              <p>{{item.title}}</p>
+            <div class="swiper-slide" v-for="(item,index) in indexThrees.news" :key="index">
+              <p>{{item}}</p>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -49,30 +49,6 @@
   import 'swiper/dist/css/swiper.min.css'
     export default {
         name: "indexThree",
-      data(){
-          return{
-            newp:[
-              {
-                title:'1'
-              },
-              {
-                title:'2'
-              },
-              {
-                title:'3'
-              },
-              {
-                title:'4'
-              },
-              {
-                title:'5'
-              },
-              {
-                title:'6'
-              }
-            ]
-          }
-      },
       mounted() {
         var mySwiper = new Swiper('.exhibition-three-bottom-center', {
           autoplay: true,//等同于以下设置
