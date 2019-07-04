@@ -7,12 +7,20 @@ import {
 } from "../api/url";
 
 export default {
-  getCartInfo(context, token) {
+  getCartInfo(context, {token,vue}) {
     /*发送请求*/
+
     axios.post(cartInfo, {"token": token})
-      .then((data) => {
-        console.log(data.data);
-        context.commit('setData', data.data)
+      .then((response) => {
+        let data = response.data;
+        console.log(data.code);
+        if (data.code === 200) {
+          console.log(data);
+          context.commit('setData', data)
+        } else if (data.code === 401) {
+          vue.$router.replace({name:'Login'})
+        }
+
       })
       .catch((err) => {
         console.log(err);
@@ -77,12 +85,12 @@ export default {
     let productID = cartShopList[pID].productList[sID].productID;
     console.log(productID);
     axios.post(deleteProduct, {
-      "productID":JSON.stringify([productID]),
+      "productID": JSON.stringify([productID]),
       "token": token
     })
       .then((data) => {
         console.log(data);
-        cartShopList[pID].productList.splice(sID,1)
+        cartShopList[pID].productList.splice(sID, 1)
       })
       .catch((err) => {
         console.log(err);
