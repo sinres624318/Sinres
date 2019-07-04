@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import Router from 'vue-router'
 import Cart from './../pages/cart'
@@ -31,8 +30,6 @@ import ShippingAddress from './../pages/shippingAddress/shippingAddress'
 import NewAddress from './../pages/newAddress/newAddress'
 import DefineOrder from './../pages/defineOrder'
 import Pay from './../pages/pay'
-
-
 import DetailsItem from '../pages/detailsItem'
 import Details from '../pages/details'
 

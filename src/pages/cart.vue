@@ -15,6 +15,12 @@
       v-if="cartInfo.cartShopList"
       @changeProductHandle="changeProductHandle"></CartProductEdit>
     <Loading v-if="!cartInfo.cartShopList"></Loading>
+    <div class="empty-cart-wrap" v-if="emptyFlag">
+      <div class="empty-cart-img">
+        <img src="./../.././static/img/cart/emptyCart.png" alt="">
+      </div>
+      <div class="empty-cart-text">购物车空空如也，再转转吧~</div>
+    </div>
     <CartShop
       v-if="cartInfo.cartShopList"
       v-for="(shop,index) in cartInfo.cartShopList"
@@ -22,6 +28,7 @@
       :sID="index"
       :shop="shop"></CartShop>
     <CartTotalPrice
+      :totalPrice="totalPrice"
       :allCheck="cartInfo.checked"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
     <CartProductEditBar v-if="!flag"></CartProductEditBar>
@@ -53,6 +60,7 @@
     data() {
       return {
         flag: true,
+        emptyFlag: false
       }
     },
     methods: {
@@ -64,13 +72,18 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo',getCookie('token'));
-
+      this.$store.dispatch('getCartInfo', getCookie('token'));
     },
     computed: {
       cartInfo() {
         return this.$store.state.cartInfo
+      },
+      totalPrice() {
+        return this.$store.state.cartTotalPrice
       }
+    },
+    beforeUpdate() {
+      this.emptyFlag = this.cartInfo.cartShopList.length > 0 ? false : true
     }
   }
 </script>
