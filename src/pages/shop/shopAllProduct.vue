@@ -72,7 +72,7 @@
       }
     },
     created() {
-      this.axios.get("http://10.35.162.113:9005/shop/" + this.shopId + "/all").then((data) => {
+      this.axios.get("http://10.35.162.104:9005/shop/" + this.shopId + "/all").then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

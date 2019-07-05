@@ -94,7 +94,7 @@
     // "https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/shopProductInfo"
     created(){
       // let shopId=this.$route.params.shopId;
-      this.axios.get("http://10.35.162.113:9005/shop/shopIndex/"+this.shopId).then((data) => {
+      this.axios.get("http://10.35.162.104:9005/shop/shopIndex/"+this.shopId).then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {
