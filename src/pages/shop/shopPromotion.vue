@@ -1,6 +1,6 @@
 <template>
   <div class="promotion" v-if="shopProductInfo">
-    <ShopHeader :shopProductInfo="shopProductInfo"></ShopHeader>
+    <ShopHeader :shopProductInfo="shopProductInfo" v-if="shopProductInfo"></ShopHeader>
     <div class="promotionList">
       <p>以下商品参加限时秒杀，欢迎选购</p>
       <div class="promotionLists">

@@ -3,13 +3,13 @@
     <div class="indexClassify">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <router-link tag="a"  :to="item.path" v-for="(item,index) in indexClassifyl" :key="index">
+          <router-link tag="a"  :to="a[index]" v-for="(item,index) in indexCenterBanner[0]" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
         </div>
         <div class="classify-r swiper-slide">
-          <router-link tag="a" to="" href="" v-for="(item,index) in indexClassifyr" :key="index">
+          <router-link tag="a"  :to="b[index]" v-for="(item,index) in indexCenterBanner[1]" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
@@ -26,111 +26,47 @@
     export default {
         name: "indexCenterBanner",
       data(){
-          return{
-            indexClassifyl:[
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'家电',
-               path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'充值',
-                path: '/recharge'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'拍卖',
-                path: '/auction'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'拍拍二手',
-                path: '/patPat'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'领券',
-                path: '/vouchers'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'信瑞超市',
-                path: '/appliance'
-              },
-              {
-                img:'../../../static/img/classify/r8.png',
-                text:'拍拍二手',
-                path: '/patPat'
-              },
-              {
-                img:'../../../static/img/classify/wool-logo.png',
-                text:'薅羊毛',
-                path: '/wool'
-              }
-            ],
-            indexClassifyr:[
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              },
-              {
-                img:'../../../static/img/classify/1.png',
-                text:'海囤全球'
-              }
-            ]
-          }
+        return{
+          a:[
+            "/auction",
+            "/appliance",
+            "/appliance",
+            "/patPat",
+            "/appliance",
+            "/recharge",
+            "/appliance",
+            "/vouchers",
+            "/appliance",
+            "/appliance",
+          ],
+          b:[
+            "/appliance",
+            "/auction",
+            "/appliance",
+            "/patPat",
+            "/appliance",
+            "/recharge",
+            "/appliance",
+            "/patPat",
+            "/appliance",
+            "/appliance",
+          ]
+        }
       },
       mounted() {
         var mySwiper = new Swiper('.indexClassify', {
           loop:true,
+          Observer:true
         });
+      },
+      props:{
+        indexCenterBanner:{
+          type:Array,
+          required:true
+        }
       }
     }
 </script>
-
 <style scoped>
 
 </style>

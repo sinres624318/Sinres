@@ -1,6 +1,6 @@
 <template>
   <div class="shopList">
-    <div class="shopListItem" v-for="(item,index) in shopProductInfo" :key="index">
+    <div class="shopListItem" v-for="(item,index) in shopProductInfo" :key="index" @click="toDetailsHandle(item.productID)">
       <a href="#" >
         <img v-if="item.img" :src="item.img" alt="商品">
         <div class="shopListItemBottom">
@@ -33,7 +33,15 @@ export default {
       type:Array,
       required:true
     }
-  }
+  },
+  methods: {
+    toDetailsHandle(id) {
+      this.$router.push({
+        path: '/details',
+        query: {productID: id}
+      })
+    }
+  },
 
 };
 </script>

@@ -1,6 +1,5 @@
 <template>
   <div class="shop">
-
     <!--    <transition>-->
       <router-view :shopId="shopId"></router-view>
 <!--    </transition>-->
@@ -33,7 +32,6 @@
   </div>
 </template>
 <script>
-import shopIndex from "./shop/shopIndex";
 export default {
   name: "shop",
   components: {
@@ -44,8 +42,9 @@ export default {
     };
   },
   created() {
-    this.shopId='101'
-      // this.$route.params.shopId;
+    this.shopId='104'
+    // this.shopId=this.$route.query.shopId;
+    console.log(this.$route.query.shopId)
   }
 };
 </script>

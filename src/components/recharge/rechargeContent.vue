@@ -90,24 +90,58 @@
             this.figure=index;
             this.$refs.i.innerHTML=item;
           }
-
-
         },
         rechargeRouter(){
-          if (this.telephoneNum!='' && this.$refs.i.innerHTML!=0){
-            this.$router.push({
-              path:'/pay',
-              params:{tel:this.telephoneNum,pri:this.$refs.i.innerHTML}
+            let a=this.$refs.i.innerHTML;
+          this.axios.post("http://10.35.162.3:9005/index/paycost/phone/",{
+            "token":"123456",
+            "tel":"this.telephoneNum",
+            "payasset":a
+          })
+            .then((data)=>{
+                let phone=data.data;
+                if(phone.code===400){
+                  this.$router.push({
+                    path:'/login'
+                  })
+                };
+              if (phone.code===200&&this.telephoneNum!=='' && this.$refs.i.innerHTML!==0){
+                this.$router.push({
+                  path:'/pay',
+                  params:{xinxi:phone}
+                })
+              };
+                console.log(data);
             })
-          }
+            .catch((err)=>{
+              console.log(err);
+            })
         },
         rechargesRouter(){
-          if (this.telephoneNum2!='' && this.$refs.i.innerHTML!=0){
-            this.$router.push({
-              path:'/pay',
-              params:{tel:this.telephoneNum2,pri:this.$refs.i.innerHTML}
+            let b=this.$refs.i.innerHTML;
+          this.axios.post("http://10.35.162.3:9005/index/paycost/traffic/",{
+            "token":"1234-56",
+            "tel":"this.telephoneNum2",
+            "payasset":b
+          })
+            .then((data)=>{
+              let traffic=data.data;
+              if (traffic.code===400){
+                this.$router.push({
+                  path:'/login'
+                })
+              }
+              if (traffic.code===200&&this.telephoneNum2!=='' && this.$refs.i.innerHTML!==0){
+                this.$router.push({
+                  path:'/pay',
+                  params:{xinxi:traffic}
+                })
+              };
+
             })
-          }
+            .catch((err)=>{
+              console.log(err);
+            })
         }
       },
       created() {

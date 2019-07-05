@@ -1,16 +1,12 @@
 <template>
-  <div>
-
-  </div>
+    <div class="successOfGet">
+      领取成功
+    </div>
 </template>
 
 <script>
-
     export default {
-        name: "shippingAddressHender",
-      components:{
-
-      }
+        name: "successOfGet"
     }
 </script>
 

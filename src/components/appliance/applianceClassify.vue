@@ -1,7 +1,7 @@
 <template>
     <div class="appliance-classify">
       <div class="appliance-classify-list">
-        <div class="appliance-classify-item" v-for="(item,index) in applianceClassify.applianceClassify" :key="index">
+        <div class="appliance-classify-item" v-for="(item,index) in applianceClassify.applianceClassify" :key="index" @click="handleSendType(item.productType)">
           <div class="appliance-classify-item-img">
             <img :src="item.img">
           </div>
@@ -18,6 +18,11 @@
         applianceClassify:{
           type:Object,
           required:true
+        }
+      },
+      methods:{
+        handleSendType(productType){
+            this.$router.push({name:'ProductList',params:{'productType':productType}})
         }
       }
     }

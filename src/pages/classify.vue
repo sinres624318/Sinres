@@ -25,9 +25,9 @@
         ClassifyHeader,       
         ClassifyContent,
       },
-      // http://10.35.161.13:9005/classify/
+      //http://10.35.161.13:9005/classify/
       created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d171afa074c2119ab90b684/example/classify")
+          this.axios.get("http://10.35.162.63:9005/classify/")
             .then((data)=>{
               console.log(data.data);
               this.classifyInfo=data.data;

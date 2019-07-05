@@ -1,6 +1,5 @@
 <template>
   <div v-if="shopProductInfo">
-
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
@@ -38,26 +37,12 @@ export default {
     'van-search':Search,
     Loading
   },
-  // data(){
-  //   return{
-  //     shopProductInfo:''
-  //   }
-  // },
   props:{
     shopProductInfo:{
       type:Object,
       required:true
     }
   },
-
-  // created() {
-  //   this.axios.get("http://10.35.162.113:9005/shop/shopIndex/104/").then((data)=>{
-  //     this.shopProductInfo=data.data;
-  //     console.log(this.shopProductInfo)
-  //   }).catch((err)=>{
-  //     console.log('err')
-  //   })
-  // }
 };
 </script>
 <style src='./../../../static/css/reset.css'></style>

@@ -3,7 +3,7 @@
     <div class="groupBuyCenter">
       <div class="swiper-wrapper">
         <div class="classify-l swiper-slide">
-          <router-link   to=" " v-for="(item,index) in groupBuyCenterl" :key="index">
+          <router-link   to="" v-for="(item,index) in groupBuyCenterBanner.grouyBuyClassify" :key="index">
             <img :src="item.img" alt="">
             <span>{{item.text}}</span>
           </router-link>
@@ -16,56 +16,14 @@
 
 <script>
   export default {
-        name: "groupBuyCenterBanner",
-    data(){
-      return{
-        groupBuyCenterl:[
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          },
-          {
-            img:'../../../static/img/groupBuy/1.webp',
-            text:'一元福利',
-          }
-        ],
+    name: "groupBuyCenterBanner",
+    props:{
+      groupBuyCenterBanner:{
+        type:Object,
+        required:true
       }
-    },
-    mounted() {
     }
-    }
+  }
 </script>
 
 <style scoped>

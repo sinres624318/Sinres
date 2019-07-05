@@ -1,6 +1,6 @@
 <template>
   <div class="woolProductLists">
-    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle.woolProduct" :key='index'>
+    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle.woolProduct" :key='index' @click="toDetailsHandle(item.productID)">
       <a href="#">
         <div class="woolProductImg">
           <img :src="item.img" alt="商品">
@@ -37,6 +37,14 @@
       woolProductInfoHandle:{
         type:Object,
         required:true
+      }
+    },
+    methods: {
+      toDetailsHandle(id) {
+        this.$router.push({
+          path: '/details',
+          query: {productID: id}
+        })
       }
     },
   }

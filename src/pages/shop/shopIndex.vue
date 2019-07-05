@@ -1,39 +1,7 @@
 <template>
   <div>
     <div class="shopIndex" v-if="shopProductInfo">
-      <!-- shop-header -->
-      <!-- 背景蒙版 -->
-<!--      <div class="bgimg">-->
-<!--        <img v-if="this.shopProductInfo.header.img" :src='shopProductInfo.header.img' alt>-->
-<!--        <p></p></div>-->
-<!--      <div class="shopHeader">-->
-<!--        <div class="shopHeaderLogo">-->
-<!--          <a href>-->
-<!--            <img v-if="this.shopProductInfo.header.img" :src='shopProductInfo.header.img'>-->
-<!--          </a>-->
-<!--        </div>-->
-<!--        <div class="shopHeaderName">-->
-<!--          <h3>{{this.shopProductInfo.header.tit}}</h3>-->
-<!--          <p>信瑞自营</p>-->
-<!--        </div>-->
-<!--        <div class="shopHeaderCollect">-->
-<!--          <a href="#">-->
-<!--            <div>收藏</div>-->
-<!--          </a>-->
-<!--          <span>{{this.shopProductInfo.header.collect}}万人收藏</span>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      &lt;!&ndash; shopNav &ndash;&gt;-->
-<!--      <div class="shopNav">-->
-<!--        <div class="shopNavInput">-->
-<!--          <van-search placeholder="搜商品"/>-->
-<!--        </div>-->
-<!--        <div class="shopNavList">-->
-<!--          <div>精选</div>-->
-<!--          <div>商品</div>-->
-<!--        </div>-->
-<!--      </div>-->
-      <ShopHeader :shopProductInfo="shopProductInfo"></ShopHeader>
+      <ShopHeader :shopProductInfo="shopProductInfo" v-if="shopProductInfo"></ShopHeader>
       <!-- shopSwipter -->
       <div class="shopSwipter">
         <van-swipe :autoplay="3000" indicator-color="orange">

@@ -1,6 +1,6 @@
 <template>
-  <div class="indexsearch-wrap" :class="{indexwrap:info>scroll}" >
-    <div class="indexsearch">
+  <div class="indexsearch-wrap">
+    <div class="indexsearch"  :class="{indexwrap:info>scroll}" >
       <div class="indexmenu">
         <i class="iconfont">&#xe62c;</i>
       </div>
