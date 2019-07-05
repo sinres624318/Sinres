@@ -23,8 +23,8 @@
 
           }).catch((err)=>{
             console.log(err)
-          })
-          console.log(sendDefineOrders)
+          });
+          console.log(sendDefineOrders);
           this.$router.push({name:'Pay',params:{totalPrice:sendDefineOrders.total}})
         }
       },

@@ -3,3 +3,5 @@ export const addProduct = 'http://10.35.162.104:9005/cart/updata/';
 export const minusProduct = 'http://10.35.162.104:9005/cart/updata/';
 export const deleteProduct = 'http://10.35.162.104:9005/cart/delete/';
 export const userInfo = 'http://10.35.162.104:9005/mine/';
+export const defineOrder = 'http://10.35.162.104:9005/cart/paycart/';
+export const appliance ='http://10.35.162.104:9005/index/appliance';

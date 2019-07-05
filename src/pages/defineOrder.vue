@@ -13,7 +13,9 @@
   import DefineOrderInfo from './../components/defineOrder/defineOrderInfo'
   import Loading from './../components/common/loading'
   import {getCookie} from './../assets/js/common'
-    export default {
+  import {defineOrder} from "../api/url";
+
+  export default {
         name: "defineOrder",
         components:{
           DefineOrderHeader,
