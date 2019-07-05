@@ -9,6 +9,7 @@
 </template>
 
 <script>
+  import {getCookie} from './../../assets/js/common'
   export default {
     name: "cartProductEditBar",
     props: {

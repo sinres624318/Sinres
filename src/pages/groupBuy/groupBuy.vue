@@ -20,7 +20,6 @@
   import groupBuyDay from '../../components/groupBuy/groupBuyDay'
   import groupBuyFooter from '../../components/groupBuy/groupBuyFooter'
   import groupBuyClass from '../../components/groupBuy/groupBuyClass'
-  import {groupBuy} from "../../api/url";
 
   export default {
     name: "groupBuy",
@@ -32,16 +31,6 @@
       groupBuyDay,
       groupBuyFooter,
       groupBuyClass
-    },
-    created() {
-      this.axios.get(groupBuy)
-        .then((data) => {
-          console.log(data.data);
-          context.commit('setData', data.data)
-        })
-        .catch((err) => {
-          console.log(err);
-        })
     }
   }
 </script>
