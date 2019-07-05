@@ -23,6 +23,8 @@
           }
       },
       created() {
+          let a=this.$route;
+          console.log(a);
           this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/defineOrder")
             .then((data)=>{
               console.log(data);

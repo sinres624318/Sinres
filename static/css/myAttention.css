@@ -96,7 +96,8 @@
   display: -webkit-box;
   color: #000;
   font-weight: 600;
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
+  margin-top:40px;
 }
 .myAttention-content-bottom-right-introduce{
   display: flex;

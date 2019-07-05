@@ -26,7 +26,10 @@
       Loding
     },
     created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d171afa074c2119ab90b684/example/myAttention")
+          this.axios.post("http://10.35.162.3:9005/mine/collect/",
+             {
+                "token":"123456",
+           })
             .then((data)=>{
               this.myAttentionData=data.data;
             })
