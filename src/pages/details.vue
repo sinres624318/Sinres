@@ -67,25 +67,24 @@
 				this.flag = !this.flag;
 			}
 		},
-     //https://www.easy-mock.com/mock/5d1c7e29c6ffa44a60b5edaf/example/banner
-		//请求数据
-		//?productID=1005&token=4dc7c68973ee4997a90dcf6702b661f7
-		//http://10.35.161.33:9005/detail/?productID=1005&token=''"
 		created() {
 			let a=this.$route.query.productID;
-			this.axios.post("http://10.35.161.33:9005/detail/add/",{
-				"token":"4dc7c68973ee4997a90dcf6702b661f7",
-				"productID":1005,
-				'shopID':'101',
-				'productNum':4
-				}).then((response) => {
+
+			this.axios.get("http://10.35.162.104:9005/detail/?productID=1005&",{"token":''})
+			.then((response) => {
 				this.detailsInfo = response.data;
-				console.log(this.detailsInfo)
+				console.log(response.data)
 				// console.log(this.detailsInfo);
 			}).catch((error) => {
 				console.log(error)
 			})
+			
 		},
+		 //
+
+
+
+
 	}
 </script>
 

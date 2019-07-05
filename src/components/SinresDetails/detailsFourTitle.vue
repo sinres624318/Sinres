@@ -28,35 +28,25 @@
 		z-index: 99999999999999;
 	
 	}
-	
 	.items>a {
 		font-size: 26px;
 		color: #535353;
 		flex: 1;
 	}
-	
 	.items>a:nth-child(2) {
 		color: #e4393c;
 	}
-	
-	
-	
 	.items>a:first-child>img {
 		width: 34px;
 		height: 34px;
 	}
-	
 	.items>a:nth-child(2)>img {
 		width: 34px;
 		height: 34px;
 	}
-	
 	/* 三个点的样式 */
 	.items>a:last-child>img {
 		width: 50px;
 		height: 10px;
 	}
-	
-	
-	
 </style>

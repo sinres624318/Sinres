@@ -21,14 +21,10 @@
 			</div>
 			
 		</div>
-		
 		<div class="details-mask_top">
 			<div>加入购物车</div>
 			<div>立即购买</div>
-		</div>
-		
-		
-		
+		</div>	
 	</div>
 </template>
 

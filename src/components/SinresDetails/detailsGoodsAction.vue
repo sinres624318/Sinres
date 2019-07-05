@@ -21,18 +21,11 @@
 </template>
 
 <script>
-	// 引入
 	import {
 		GoodsAction,
 		GoodsActionIcon,
 		GoodsActionButton
 	} from 'vant';
-
-
-	
-
-
-	// 抛出
 	export default {
 		name: 'DetailsGoodsAction',
 		
@@ -42,10 +35,6 @@
 				show:false,
 			}
 		},
-		
-		
-		
-		//注册
 		components: {
 			'van-goods-action': GoodsAction,
 			'van-goods-action-icon': GoodsActionIcon,
@@ -53,7 +42,6 @@
 			
 
 		},
-
 		methods:{
 			chooseGoods(){
 				this.flag=!this.flag;
@@ -70,16 +58,6 @@
 				//console.log(val)
 			})
 		}
-		
-
-
-
-
-
-
-
-
-
 	}
 </script>
 
@@ -87,12 +65,10 @@
 	.van-goods-action {
 		display: flex;
 	}
-
 	.van-goods-action>a {
-		flex: 1;
+		flex:1;
 	}
-
 	.van-goods-action>button {
-		flex: 1;
+		flex:1;
 	}
 </style>

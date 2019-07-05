@@ -10,15 +10,10 @@
 <script>
 	// 引入DetailsItemHeader
   import DetailsItemHeader from "../components/detailsItem/detailsItemHeader"
-	
 	// 引入DetailsItemContent
 	import DetailsItemContent from "../components/detailsItem/detailsItemContent"
-	
-	
 	// 引入detailsGoodsAction
 	import DetailsGoodsAction from "../components/SinresDetails/detailsGoodsAction"
-	
-	
     export default {
       name: "DetailsItem",
 	  data() {
@@ -26,11 +21,7 @@
 	  		detailsItemInfo:{}
 	  	}
 	  	
-	  },
-	  
-	
-	
-	 
+	  }, 
 	  //请求数据
 	  created() {
 	  	this.axios.get("http://10.35.161.33:9005/detail/comment/?productID=1005").then((response) => {
@@ -40,20 +31,11 @@
 	  		console.log(error)
 	  	})
 	  },
-	
-	  
-	  
-			// 注册
       components:{
 				DetailsItemHeader,
 				DetailsItemContent,
 				DetailsGoodsAction,
-      },
-			
-			
-			
-			
-			
+      },		
     }
 </script>
 

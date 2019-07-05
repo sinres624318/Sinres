@@ -50,12 +50,6 @@
 <script>
 	export default {
 		name: "DetailsEvaluate",
-		
-		
-		
-		
-		
-		
 		data() {
 			return {
 				shopInfo: {

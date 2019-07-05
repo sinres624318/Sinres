@@ -1,6 +1,5 @@
 <template>
 	<div class="detailsTopHeader">
-		
       <NavBar>
         <template v-slot:left>
           <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
@@ -9,12 +8,7 @@
         <template v-slot:right>
           <div class="right iconfont" >&#xe670;</div>
         </template>
-      </NavBar>
-		
-		
-		
-		
-		
+      </NavBar>	
 	</div>
 </template>
 
@@ -35,22 +29,11 @@
 				this.$router.back();
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 </script>
 
 <style>
 	.detailsTopHeader{
-		/* background-color: green; */
 	}
 	/*NavBar start*/
 	.nav-bar {
@@ -72,7 +55,6 @@
 	  padding: 0 80px;
 	  font-size: 32px;
 	}
-	
 	.left {
 	  position: absolute;
 	  left: 0;
@@ -85,7 +67,6 @@
 	  z-index: 99;
 	  font-size: 66px;
 	}
-	
 	.right {
 	  position: absolute;
 	  right: 0;

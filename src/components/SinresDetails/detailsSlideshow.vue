@@ -3,9 +3,6 @@
 		<van-swipe :autoplay="3000" indicator-color="white">
 			<van-swipe-item v-for="(item,index) in detailsSlideshowHandle.banner"><img :src="item" alt=""></van-swipe-item>
 		</van-swipe>
-
-
-
 	</div>
 </template>
 
@@ -23,7 +20,6 @@
 			'van-swipe-item': SwipeItem
 
 		},
-		
 		// 接收
 		props: {
 			detailsSlideshowHandle: {
@@ -32,44 +28,6 @@
 			}
 
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-		data() {
-
-
-			return {
-				
-				banner: [
-					"../../../static/img/Details/details_banner.jpg",
-					"../../../static/img/Details/details_banner.jpg",
-					"../../../static/img/Details/details_banner.jpg",
-					"../../../static/img/Details/details_banner.jpg"
-				]
-				
-
-			}
-
-
-		},
-
-*/
-
-
 	}
 </script>
 
