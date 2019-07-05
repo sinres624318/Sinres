@@ -21,6 +21,9 @@
           type:Array,
           required:true
         }
+      },
+      mounted() {
+          console.log(this.sendType)
       }
     }
 </script>

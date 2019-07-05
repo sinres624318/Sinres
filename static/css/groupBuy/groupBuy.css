@@ -73,16 +73,16 @@
   align-items: center;
 }
 .groupBuy-form input {
-   outline: none;
-   border: none;
-   font-size: 12px;
-   color: #232326;
-   vertical-align: middle;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   line-height: 30px;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  color: #232326;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
   padding-left:10px;
- }
+}
 .groupBuy-form {
   display: flex;
   width: 600px;
@@ -212,7 +212,7 @@
   font-weight: 600;
 }
 .groupBuyData-top-top span{
-color:red;
+  color:red;
 }
 .groupBuyData-top-bottom{
   display: flex;
@@ -248,6 +248,8 @@ color:red;
   display: flex;
   width: 132px;
   height: 132px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .groupBuyData-item-img a {
@@ -308,7 +310,6 @@ color:red;
   display: flex;
   align-items: center;
   color: #999;
-  text-decoration: line-through;
 }
 /*大家都在拼*/
 .groupBuy-Class{
@@ -323,8 +324,9 @@ color:red;
   font-size: 36px;
   font-weight: 600;
   line-height: 80px;
-}.groupBuy-Class p span:nth-child(1){
-color:red;
+}
+.groupBuy-Class p span:nth-child(1){
+   color:red;
  }
 .roupBuy-item {
   display: flex;
@@ -333,7 +335,7 @@ color:red;
   justify-content: space-between;
   padding-bottom: 4px;
 }
-.aaa{
+.roupBuy-item-product{
   width:49%;
   margin-bottom:8px;
 }
@@ -402,6 +404,6 @@ color:red;
 }
 .groupBuy-bar a   p{
   font-size:24px;
-text-align: center;
+  text-align: center;
 }
 /*toolsBar end*/

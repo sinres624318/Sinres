@@ -1,8 +1,9 @@
 <template>
     <div class="define-order">
       <DefineOrderHeader/>
-      <DefineOrderAddress/>
-      <DefineOrderInfo/>
+      <DefineOrderAddress v-if="defineOrderInfo.address" :sendAddress="defineOrderInfo"/>
+      <DefineOrderInfo v-if="defineOrderInfo.product" :sendDefineOrder="defineOrderInfo"/>
+      <Loading v-if="!defineOrderInfo.product"/>
     </div>
 </template>
 
@@ -10,12 +11,14 @@
   import DefineOrderHeader from './../components/defineOrder/defineOrderHeader'
   import DefineOrderAddress from './../components/defineOrder/defineOrderAddress'
   import DefineOrderInfo from './../components/defineOrder/defineOrderInfo'
+  import Loading from './../components/common/loading'
     export default {
         name: "defineOrder",
         components:{
           DefineOrderHeader,
           DefineOrderAddress,
-          DefineOrderInfo
+          DefineOrderInfo,
+          Loading
         },
       data(){
           return{
@@ -26,14 +29,27 @@
           let a=this.$route;
           console.log(a);
           this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/defineOrder")
+          console.log(this.$route);
+          this.axios.post("http://10.35.162.3:9005/cart/payord/",{
+            "token":"123456",
+            "order_list":[
+
+                '1001','13445'
+
+            ],
+            "total":2233,
+            "paypassword":"564321"
+        })
             .then((data)=>{
-              console.log(data);
               this.defineOrderInfo = data.data;
-              console.log(this.defineOrderInfo)
+              console.log(data)
             })
             .catch((err)=>{
               console.log(err)
             })
+      },
+      mounted() {
+
       }
     }
 </script>

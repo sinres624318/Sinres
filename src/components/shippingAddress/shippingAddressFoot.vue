@@ -5,9 +5,9 @@
 </template>
 
 <script>
-    export default {
-        name: "shippingAddressFoot"
-    }
+  export default {
+    name: "shippingAddressFoot"
+  }
 </script>
 
 <style scoped>

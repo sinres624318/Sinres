@@ -40,6 +40,9 @@
       moreMenuClickHandle() {
         this.flag = !this.flag;
       }
+    },
+    mounted() {
+      console.log(this.$route.params.productType)
     }
   }
 </script>

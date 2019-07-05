@@ -5,7 +5,7 @@
         <p>您的订单在23小时59分钟内未支付将被取消，请尽快完成支付。</p>
         <div class="pay-or-select">
           <i>继续支付</i>
-          <i :class="{'orange':show ==true}" @click="change()">确认离开</i>
+          <router-link to="/defineOrder" tag="i" :class="{'orange':show ==true}" @click="change()">确认离开</router-link>
         </div>
       </div>
     </div>

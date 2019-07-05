@@ -66,3 +66,14 @@ i {
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+i{
+  font-style: normal;
+}

@@ -55,29 +55,95 @@
 
 /*NavBar end*/
 /*底部*/
-.shippingAddressFooter{
-  margin-top: 99px;
+/*手动*/
+.shippingAddressCenter-fist{
+  margin-top: 90px;
 }
-.shippingAddressFooter .van-address-item {
-  height: 180px;
+.shippingAddressCenter{
+  height: 170px;
+  width: 750px;
+  display: flex;
+  background: white;
   margin-bottom: 10px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling:touch;
 }
-.shippingAddressFooter .van-address-item__name{
-  line-height: 50px;
-  color:#333333;
+.shippingAddressCenter::-webkit-scrollbar {
+  display: none;
+}
+.shippingAddressCenter-top{
+  display: flex;
+  width: 750px;
+  height: 170px;
+}
+.shippingAddressCenter-top-top{
+  display: flex;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.shippingAddressCenter-top-top{
+  height: 170px;
+}
+.shippingAddressCenter-top-top span{
+  display: inline-block;
+  width: 30px;
+  height:30px;
+  border: 1px solid #E8E8E8;
+  border-radius: 50%;
+}
+.active {
+  background: red;
+}
+.shippingAddressCenter-top-bottom{
+  height: 170px;
+  width: 700px;
+  padding-top:10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.shippingAddressCenter-top-bottom h3{
   font-size:30px;
-  font-weight: 600;
-}
-.shippingAddressFooter .van-address-item__address {
   line-height: 50px;
-  font-size:30px;
-  color: #666666;
 }
-.shippingAddressFooter  .van-button--danger {
-  color: #fff;
-  background-color: red;
-  font-size:32px ;
+.shippingAddressCenter-top-bottom p{
+  font-size:26px;
+  line-height: 50px;
+  color:#666666;
 }
-.shippingAddressFooter  .van-address-list__add{
-  height: 90px;
+.shippingAddressCenter-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shippingAddressCenter-center p{
+  width: 120px;
+  font-size:30px ;
+  text-align: center;
+  color:red;
+}
+.shippingAddressCenter-bottom{
+  background: red;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shippingAddressCenter-bottom p{
+  color:white;
+  text-align: center;
+  width: 120px;
+}
+/*底部*/
+.shippingAddressFoot{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  font-size: 32px;
+  color:white;
+  line-height: 90px;
 }

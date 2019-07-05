@@ -1,14 +1,15 @@
 <template>
   <div class="index">
     <indexHender :info="this.scroll"></indexHender>
-    <div class="main" ref="main">
-      <indexTopBanner :indexTopBanner="indexInfo "></indexTopBanner>
-      <indexCenterBanner></indexCenterBanner>
-      <indexSeckill></indexSeckill>
-      <indexThree></indexThree>
+    <div class="main" ref="main" v-if="indexInfo.ad">
+      <indexTopBanner  :indexTopBanner="indexInfo.banner"></indexTopBanner>
+      <indexCenterBanner v-if="indexInfo.ad" :indexCenterBanner="indexInfo.indexClassify"></indexCenterBanner>
+      <indexSeckill v-if="indexInfo.ad"  :ad="indexInfo.ad"></indexSeckill>
+      <indexThree :indexThrees="indexInfo"></indexThree>
       <indexFour></indexFour>
-      <indexRecommend></indexRecommend>
+      <indexRecommend :indexRecommend="indexInfo"></indexRecommend>
     </div>
+    <Loading v-if="!indexInfo.banner"></Loading>
   </div>
 </template>
 
@@ -20,7 +21,7 @@
   import indexThree from "../components/index/indexThree"
   import indexFour from "../components/index/indexFour"
   import indexRecommend from "../components/index/indexRecommend"
-
+  import Loading from "../components/common/loading"
 
   export default {
     name: "index",
@@ -37,7 +38,8 @@
       indexSeckill,
       indexThree,
       indexFour,
-      indexRecommend
+      indexRecommend,
+      Loading
     },
     mounted() {
       window.addEventListener('scroll', this.handleColor, true)
@@ -49,14 +51,15 @@
       }
     },
     created() {
+      // this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/index")
       this.axios.get("http://10.35.162.113:9005/index/")
         .then((data) => {
           console.log(data)
-          this.indexInfo = data.data;
-          console.log(this.indexInfo)
-        }).catch((err) => {
-        console.log(err)
-      })
+          this.indexInfo = data.data
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 </script>

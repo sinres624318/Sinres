@@ -10,7 +10,7 @@
 <script>
   import MyAttentionHeader from "../components/myAttention/myAttentionHeader"
   import MyAttentionContent from "../components/myAttention/myAttentionContent"
-  import MyAttentionBottom from '../components/common/recommendedProduct'
+  import MyAttentionBottom from '../components/myAttention/muAttentionBottom'
   import Loding from './../components/common/loading'
   export default {
         name: "myAttention",
@@ -41,6 +41,7 @@
   }
 </script>
 <style src="../../static/css/myAttention.css"></style>
+<!--<style src="../../static/css/common/recommendedProduct.css"></style>-->
 <style scoped>
 
 </style>

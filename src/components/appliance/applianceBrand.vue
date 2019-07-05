@@ -4,7 +4,7 @@
       <div class="appliance-brand-list">
         <div class="appliance-brand-item" v-for="(item,index) in brand.brand" :key="index">
           <h3>{{item.title}}</h3>
-          <h4>{{item.describe}}</h4>
+          <h4>{{item.describes}}</h4>
           <div class="appliance-brand-item-img">
             <img :src="item.img">
           </div>

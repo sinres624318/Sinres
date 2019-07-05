@@ -1,7 +1,7 @@
 <template>
   <div class="indexRecommend-wrap">
     <div class="recommend-title"></div>
-    <recommendedProduct></recommendedProduct>
+    <recommendedProduct :recommendedProduct="indexRecommend"></recommendedProduct>
   </div>
 </template>
 
@@ -11,6 +11,12 @@
         name: "indexRecommend",
       components:{
         recommendedProduct,
+      },
+      props:{
+        indexRecommend:{
+          type:Object,
+          required:true
+        }
       }
     }
 </script>
