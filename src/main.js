@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import 'lib-flexible/flexible'
 import {Lazyload} from 'vant';
+import { PasswordInput, NumberKeyboard } from 'vant';
 import axios from './../utils/request'
 import store from "./store";
 import {getCookie} from './assets/js/common.js'
@@ -16,6 +17,7 @@ import './../static/font/iconfont.css'
 axios.defaults.withCredentials = true
 Vue.prototype.axios = axios
 Vue.use(Lazyload);
+Vue.use(PasswordInput).use(NumberKeyboard);
 
 
 Vue.config.productionTip = false

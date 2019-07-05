@@ -1,37 +1,37 @@
 <template>
     <div class="define-order-info">
-      <div class="define-order-info-shop-name">
-        <div class="define-order-info-shop-logo">
-          <img src="./../../../static/img/defineOrder/shopLogo-01.png" alt="">
-        </div>
-        <span>新锐自营</span>
-      </div>
-      <DefineOrderInfoShopProduct/>
+      <DefineOrderInfoShopList :sendDefineOrder="sendDefineOrder"/>
       <DefineOrderDistributionServer/>
       <DefineOrderBeans/>
-      <DefineOrderPrice/>
-      <DefineOrderTotalPrice/>
+      <DefineOrderPrice :sendDefineOrder="sendDefineOrder"/>
+      <DefineOrderTotalPrice :sendDefineOrder="sendDefineOrder"/>
       <DefineOrderSubmit/>
     </div>
 </template>
 
 <script>
-  import DefineOrderInfoShopProduct from './defineOrderInfoShopProduct'
   import DefineOrderDistributionServer from './defineOrderDistributionServer'
   import DefineOrderBeans from './defineOrderBeans'
   import DefineOrderPrice from './defineOrderPrice'
   import DefineOrderTotalPrice from './defineOrderTotalPrice'
   import DefineOrderSubmit from './defineOrderSubmit'
+  import DefineOrderInfoShopList from './defineOrderInfoShopList'
     export default {
         name: "defineOrderInfo",
         components:{
-          DefineOrderInfoShopProduct,
           DefineOrderDistributionServer,
           DefineOrderBeans,
           DefineOrderPrice,
           DefineOrderTotalPrice,
-          DefineOrderSubmit
+          DefineOrderSubmit,
+          DefineOrderInfoShopList
+        },
+      props:{
+        sendDefineOrder:{
+          type:Object,
+          required:true
         }
+      }
     }
 </script>
 

@@ -24,7 +24,8 @@
           }
       },
       created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/auction")
+          // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/auction")
+        this.axios.get("http://10.35.162.113:9005/index/auction")
             .then((data)=>{
               this.auctionInfo = data.data;
               this.auctionType = data.data.auction

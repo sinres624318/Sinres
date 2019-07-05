@@ -17,6 +17,9 @@
           type:Array,
           required:true
         }
+      },
+      mounted() {
+          console.log(this.sendAuctionType)
       }
     }
 </script>

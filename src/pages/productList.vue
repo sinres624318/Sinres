@@ -41,8 +41,9 @@
         this.flag = !this.flag;
       }
     },
-    created(){
+    created() {
       console.log(this.$route.params.productType);
+      let productType = this.$route.params.productType;
     }
   }
 </script>

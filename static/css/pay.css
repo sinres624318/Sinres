@@ -101,36 +101,42 @@ NavBar {
   color: #848689;
   font-weight: 900;
 }
-.pay-other-pay-item{
+
+.pay-other-pay-item {
   width: 100%;
   padding: 15px 20px;
 }
-.pay-other-pay-item>li{
+
+.pay-other-pay-item > li {
   width: 710px;
   height: 120px;
   box-shadow: 0 30px 40px 10px #f8f8f8;
   position: relative;
 }
-.pay-other-pay-item-logo{
+
+.pay-other-pay-item-logo {
   width: 50px;
   height: 50px;
   position: absolute;
   top: 20px;
   left: 10px;
 }
-.pay-other-pay-item>li>h3 {
+
+.pay-other-pay-item > li > h3 {
   font-size: 28px;
   color: #2e2d2d;
   line-height: 43px;
   padding-left: 110px;
 }
-.pay-other-pay-item>li>p{
+
+.pay-other-pay-item > li > p {
   font-size: 28px;
   color: #848484;
   line-height: 43px;
   padding-left: 110px;
 }
-.pay-other-pay-item-great{
+
+.pay-other-pay-item-great {
   width: 45px;
   height: 45px;
   position: absolute;
@@ -139,7 +145,7 @@ NavBar {
 }
 
 /*确认支付*/
-.pay-submit{
+.pay-submit {
   width: 100%;
   height: 100px;
   position: fixed;
@@ -151,36 +157,41 @@ NavBar {
   font-size: 32px;
   color: #fff;
 }
-.pay-submit>span{
+
+.pay-submit > span {
   margin-right: 5px;
 }
 
 /*阴影*/
-.pay-shadow{
+.pay-shadow {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0,0,0, .3);
+  background: rgba(0, 0, 0, .3);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pay-shadow-prompt{
+
+.pay-shadow-prompt {
   width: 633px;
   height: 353px;
   background: #fff;
   border-radius: 10px;
+  overflow: hidden;
 }
-.pay-shadow-prompt{
+
+.pay-shadow-prompt {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.pay-shadow-prompt>h3{
+
+.pay-shadow-prompt > h3 {
   font-size: 36px;
   color: #000;
   line-height: 36px;
@@ -188,27 +199,70 @@ NavBar {
   width: 100%;
   text-align: center;
 }
-.pay-shadow-prompt>p{
+
+.pay-shadow-prompt > p {
   width: 530px;
   font-size: 32px;
   line-height: 50px;
   color: #232326;
 }
-.pay-or-select{
+
+.pay-or-select {
   width: 100%;
   height: 90px;
   border-top: 2px solid #e9eaed;
   display: flex;
 }
-.pay-or-select>i{
+
+.pay-or-select > i {
   flex: 1;
   line-height: 90px;
   text-align: center;
   font-size: 32px;
 }
+
 /*切换样式*/
-.orange{
+.orange {
   background: #f03210;
   color: #fff;
   font-weight: 900;
+}
+
+
+/*输入密码样式*/
+
+
+.pay-password {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .3;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.van-number-keyboard .van-number-keyboard__body i{
+  height: 100px!important;
+  line-height: 100px!important;
+  font-size: 36px;
+  color: #000;
+}
+/*.van-number-keyboard{*/
+/*  padding-bottom: 500px;*/
+/*}*/
+
+.van-number-keyboard {
+  position: fixed;
+  bottom: 300px;
+}
+.van-password-input{
+  margin-top: 540px;
+}
+.van-password-input>ul>li{
+  height: 80px;
+  font-size: 48px;
 }
