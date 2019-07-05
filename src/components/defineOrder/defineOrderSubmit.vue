@@ -5,8 +5,10 @@
 </template>
 
 <script>
-  import {getCookie} from './../../assets/js/common'
-    export default {
+  import {getCookie} from './../../assets/js/common';
+  import {defineOrderSubmit} from "./../../api/url";
+
+  export default {
         name: "defineOrderSubmit",
       data(){
         return{
@@ -15,9 +17,9 @@
       },
       methods:{
         reqHandleInfo(sendDefineOrders){
-          this.axios.post("http://10.35.162.104:9005/cart/crtord/",{
+          this.axios.post(defineOrderSubmit,{
             "token":getCookie('token'),
-            "goodsList":sendproductlist
+            "goodsList":this.sendproductlist
           }).then((data)=>{
             this.submitInfo = data.data.data
 

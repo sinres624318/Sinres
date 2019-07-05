@@ -64,7 +64,7 @@
         this.pwdShow = val
       }
     },
-    mounted() {
+    created() {
       this.money = this.$route.params.totalPrice
     }
   }

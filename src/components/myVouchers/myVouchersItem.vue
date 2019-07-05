@@ -1,6 +1,6 @@
 <template>
   <div class="my-vouchers-list">
-    <div class="my-vouchers-item" v-for="(item,index) in vouchers">
+    <div class="my-vouchers-item" v-for="(item,index) in vouchers" :key="index">
       <div class="my-vouchers-item-left">
         <div class="my-vouchers-item-left-top">
           <i>￥</i>

@@ -10,7 +10,9 @@
   import AuctionHeader from './../components/auction/auctionHeader'
   import AuctionMain from './../components/auction/auctionMain'
   import Loading from './../components/common/loading'
-    export default {
+  import {auctionurl} from "./../api/url";
+
+  export default {
         name: "auction",
         components:{
           AuctionHeader,
@@ -25,7 +27,7 @@
       },
       created() {
           // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/auction")
-        this.axios.get("http://10.35.162.113:9005/index/auction")
+        this.axios.get(auctionurl)
             .then((data)=>{
               this.auctionInfo = data.data;
               this.auctionType = data.data.auction

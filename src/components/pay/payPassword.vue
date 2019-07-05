@@ -17,7 +17,9 @@
 
 <script>
   import { PasswordInput, NumberKeyboard } from 'vant';
-  import {getCookie} from "./../../assets/js/common"
+  import {getCookie} from "./../../assets/js/common";
+  import {payPassword} from "./../../api/url";
+
   export default {
     name: "payPassword",
     components:{
@@ -35,13 +37,13 @@
       onInput(key) {
         this.value = (this.value + key).slice(0, 6);
         if(this.value.length==6){
-          this.axios.post("http://10.35.162.104:9005/cart/payord/",{
+          this.axios.post(payPassword,{
             "token":getCookie('token'),
             "order_list":[
               "1907053726996130",
               "1907052673666131"
             ],
-            "total":sendMoney,
+            "total":this.sendMoney,
             "paypassword":this.value
           })
         }
