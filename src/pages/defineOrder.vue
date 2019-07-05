@@ -2,8 +2,8 @@
     <div class="define-order">
       <DefineOrderHeader/>
       <DefineOrderAddress v-if="defineOrderInfo.address" :sendAddress="defineOrderInfo"/>
-      <DefineOrderInfo v-if="defineOrderInfo.product" :sendDefineOrder="defineOrderInfo"/>
-      <Loading v-if="!defineOrderInfo.product"/>
+      <DefineOrderInfo v-if="defineOrderInfo.goodslist" :sendDefineOrder="defineOrderInfo" :sendproductlist="productlist"/>
+      <Loading v-if="!defineOrderInfo.goodslist"/>
     </div>
 </template>
 
@@ -12,6 +12,7 @@
   import DefineOrderAddress from './../components/defineOrder/defineOrderAddress'
   import DefineOrderInfo from './../components/defineOrder/defineOrderInfo'
   import Loading from './../components/common/loading'
+  import {getCookie} from './../assets/js/common'
     export default {
         name: "defineOrder",
         components:{
@@ -22,27 +23,19 @@
         },
       data(){
           return{
-            defineOrderInfo:{}
+            defineOrderInfo:{},
+            productlist:[]
           }
       },
       created() {
-          let a=this.$route;
-          console.log(a);
-          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/defineOrder")
-          console.log(this.$route);
-          this.axios.post("http://10.35.162.3:9005/cart/payord/",{
-            "token":"123456",
-            "order_list":[
-
-                '1001','13445'
-
-            ],
-            "total":2233,
-            "paypassword":"564321"
+          let goodslist = this.$route.params.goodslist
+          this.productlist.push(this.$route.params.goodslist)
+          this.axios.post("http://10.35.162.104:9005/cart/paycart/",{
+            "token":getCookie('token'),
+            "goodsList":goodslist
         })
             .then((data)=>{
-              this.defineOrderInfo = data.data;
-              console.log(data)
+              this.defineOrderInfo = data.data.data;
             })
             .catch((err)=>{
               console.log(err)

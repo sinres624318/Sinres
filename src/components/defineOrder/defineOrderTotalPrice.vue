@@ -1,7 +1,7 @@
 <template>
     <div class="define-order-total-price">
       <p>总价：</p>
-      <span>￥{{sendDefineOrder.product[0].productList[0].price}}</span>
+      <span>￥{{sendDefineOrders.total}}</span>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
     export default {
         name: "defineOrderTotalPrice",
         props:{
-          sendDefineOrder:{
+          sendDefineOrders:{
             type:Object,
             required:true
           }

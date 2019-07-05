@@ -13,13 +13,13 @@ export default {
     axios.post(cartInfo, {"token": token})
       .then((response) => {
         let data = response.data;
-        console.log(data.code);
-        if (data.code === 200) {
+        // console.log(data.code);
+        // if (data.code === 200) {
           console.log(data);
           context.commit('setCartData', data)
-        } else if (data.code === 401) {
-          vue.$router.replace({name: 'Login'})
-        }
+        // } else if (data.code === 401) {
+        //   vue.$router.replace({name: 'Login'})
+        // }
       })
       .catch((err) => {
         console.log(err);

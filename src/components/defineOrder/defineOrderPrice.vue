@@ -2,7 +2,7 @@
     <div class="define-order-price">
       <div class="define-order-product-price">
         <h3>商品金额</h3>
-        <i>￥{{sendDefineOrder.product[0].productList[0].price}}.00</i>
+        <i>￥{{sendDefineOrders.total}}.00</i>
       </div>
       <div class="define-order-product-cost">
         <h3>运费<span>(总重：0.600kg)</span></h3>
@@ -15,13 +15,15 @@
     export default {
         name: "defineOrderPrice",
         props:{
-          sendDefineOrder:{
-            sendDefineOrder:{
+          sendDefineOrders:{
+
               type:Object,
               required:true
-            }
+
           }
-        }
+        },
+      mounted() {
+      }
     }
 </script>
 

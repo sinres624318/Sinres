@@ -41,7 +41,7 @@ function countPrice(state, cartInfo) {
     for (let j = 0; j < productList.length; j++) {
       if (productList[j].checked) {
         totalPrice = totalPrice.add(parseFloat(productList[j].price).mul(Number(productList[j].productNum)));
-        productNum += productList[j].productNum;
+        productNum += Number(productList[j].productNum);
       }
     }
   }
