@@ -1,10 +1,11 @@
 <template>
-    <div class="define-order">
-      <DefineOrderHeader/>
-      <DefineOrderAddress v-if="defineOrderInfo.address" :sendAddress="defineOrderInfo"/>
-      <DefineOrderInfo v-if="defineOrderInfo.goodslist" :sendDefineOrder="defineOrderInfo" :sendproductlist="productlist"/>
-      <Loading v-if="!defineOrderInfo.goodslist"/>
-    </div>
+  <div class="define-order">
+    <DefineOrderHeader/>
+    <DefineOrderAddress v-if="defineOrderInfo.address" :sendAddress="defineOrderInfo"/>
+    <DefineOrderInfo v-if="defineOrderInfo.goodslist" :sendDefineOrder="defineOrderInfo"
+                     :sendproductlist="productlist"/>
+    <Loading v-if="!defineOrderInfo.goodslist"/>
+  </div>
 </template>
 
 <script>
@@ -13,38 +14,40 @@
   import DefineOrderInfo from './../components/defineOrder/defineOrderInfo'
   import Loading from './../components/common/loading'
   import {getCookie} from './../assets/js/common'
-    export default {
-        name: "defineOrder",
-        components:{
-          DefineOrderHeader,
-          DefineOrderAddress,
-          DefineOrderInfo,
-          Loading
-        },
-      data(){
-          return{
-            defineOrderInfo:{},
-            productlist:[]
-          }
-      },
-      created() {
-          let goodslist = this.$route.params.goodslist
-          this.productlist.push(this.$route.params.goodslist)
-          this.axios.post("http://10.35.162.104:9005/cart/paycart/",{
-            "token":getCookie('token'),
-            "goodsList":goodslist
-        })
-            .then((data)=>{
-              this.defineOrderInfo = data.data.data;
-            })
-            .catch((err)=>{
-              console.log(err)
-            })
-      },
-      mounted() {
 
+  export default {
+    name: "defineOrder",
+    components: {
+      DefineOrderHeader,
+      DefineOrderAddress,
+      DefineOrderInfo,
+      Loading
+    },
+    data() {
+      return {
+        defineOrderInfo: {},
+        productlist: []
       }
+    },
+    created() {
+      let goodslist = this.$route.params.goodslist
+      console.log(goodslist[0]);
+      this.productlist.push(this.$route.params.goodslist)
+      this.axios.post("http://10.35.162.104:9005/cart/paycart/", {
+        "token": getCookie('token'),
+        "goodsList": goodslist
+      })
+        .then((data) => {
+          this.defineOrderInfo = data.data.data;
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    mounted() {
+
     }
+  }
 </script>
 <style src="./../../static/css/defineOrder.css"></style>
 <style src="./../../static/font/iconfont.css"></style>
