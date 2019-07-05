@@ -11,7 +11,7 @@
         <div class="right iconfont" ></div>
       </template>
     </NavBar>
-    <ShippingAddressCenter></ShippingAddressCenter>
+    <ShippingAddressCenter :ShippingAddressCenter="shippingAddressInfo"></ShippingAddressCenter>
     <ShippingAddressFoot></ShippingAddressFoot>
   </div>
 </template>
@@ -39,9 +39,13 @@
       },
     },
     created() {
-      this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/shippingAddress")
+      // this.axios.post("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/shippingAddress")
+      this.axios.post("http://10.35.162.133:9005/mine/set/address/",{
+        "token":"123456"
+      })
         .then((data)=>{
-          this.shippingAddressInfo=data.data
+          this.shippingAddressInfo=data.data.data;
+          console.log(this.shippingAddressInfo)
         })
         .catch((err)=>{
           console.log(err)

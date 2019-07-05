@@ -1,7 +1,7 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <router-link class="recommend-items" to="" v-for="(item,index) in recommendedProduct.product_list" :key="index">
+      <a class="recommend-items" @click="shopHandel(item.productID)" v-for="(item,index) in recommendedProduct.product_list" :key="index">
         <div class="similar-product">
           <div class="similar-posre">
             <img :src="item.img" alt="">
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
@@ -28,7 +28,13 @@
         type:Object,
         required:true
   }
+    },
+    methods:{
+      shopHandel(productID){
+        console.log(productID)
+        this.$router.push({name:'Details', params:{productID:productID}});
     }
+  },
   }
 </script>
 

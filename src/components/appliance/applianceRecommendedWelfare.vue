@@ -11,7 +11,7 @@
           <p>爆款限时秒杀</p>
         </div>
         <div class="appliance-welfare-deep">
-          <div class="appliance-welfare-deep-item" v-for="(item,index) in welfare.welfare">
+          <div class="appliance-welfare-deep-item" v-for="(item,index) in welfare.welfare" :key="index">
             <h3>{{item.title}}</h3>
             <h4>{{item.describe}}</h4>
             <div class="appliance-welfare-deep-item-img">

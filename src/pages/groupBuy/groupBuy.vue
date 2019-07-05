@@ -42,7 +42,7 @@
     },
     created() {
       // this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/groupBuy")
-      this.axios.get("http://10.35.161.27:9005/groupBuy/")
+      this.axios.get("http://10.35.161.33:9005/groupBuy/")
         .then((data)=>{
           this.groupBuyInfo=data.data
         })

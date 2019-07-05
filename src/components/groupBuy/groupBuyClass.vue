@@ -6,7 +6,7 @@
     </p>
     <div class="roupBuy-content">
       <div class="roupBuy-item">
-        <router-link  to="" class="roupBuy-item-product" v-for="(item,index) in groupBuyClass.groupBuyEveryone" :key="index" >
+        <a @click="shopHandel(item.productID)"  class="roupBuy-item-product" v-for="(item,index) in groupBuyClass.groupBuyEveryone" :key="index" >
           <div class="roupBuy-product">
             <div class="roupBuy-posre">
               <img :src="item.img" alt="">
@@ -20,7 +20,7 @@
               <div class="roupBuy-similarity">看相似</div>
             </div>
           </div>
-        </router-link>
+        </a>
       </div>
     </div>
   </div>
@@ -33,6 +33,11 @@
       groupBuyClass:{
         type:Object,
         required:true
+      }
+    },
+    methods:{
+      shopHandel(productID){
+        this.$router.push({name:'Details', params:{productID:productID}})
       }
     }
   }
