@@ -39,8 +39,8 @@
       methods:{
           clickHandel(ID){
             this.$router.push({
-              path:'/productList',
-              params:{productTypeID:ID}
+              name:'ProductList',
+              params:{productType:ID}
             });
           },
 

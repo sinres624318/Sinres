@@ -107,7 +107,7 @@
           "account": this.account,
           "password": this.password
         };
-        this.axios.post('http://10.35.162.133:9005/login/', info)
+        this.axios.post('http://10.35.162.104:9005/login/', info)
           .then((response) => {
             console.log(response);
             let data = response.data;
@@ -145,7 +145,7 @@
             this.countDown--
           }, 1000);
           this.verifyCodeFlag = false;
-          this.axios.post('http://10.35.162.133:9005/login/', {
+          this.axios.post('http://10.35.162.104:9005/login/', {
             "tel": this.TEL
           })
             .then((data) => {

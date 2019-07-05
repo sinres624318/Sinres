@@ -26,7 +26,10 @@
           }
       },
       created() {
-          console.log(this.$route)
+          let a=this.$route;
+          console.log(a);
+          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/defineOrder")
+          console.log(this.$route);
           this.axios.post("http://10.35.162.3:9005/cart/payord/",{
             "token":"123456",
             "order_list":[

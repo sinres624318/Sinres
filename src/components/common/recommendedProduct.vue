@@ -33,10 +33,10 @@
     },
     methods: {
       shopHandel(productID) {
-        console.log(productID)
+        console.log(productID);
         this.$router.push({name: 'Details', params: {productID: productID}});
       }
-    },
+    }
   }
 </script>
 

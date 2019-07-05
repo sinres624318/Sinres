@@ -73,14 +73,16 @@
           });
           return;
         }
-        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL, "idtf": code})
+        this.axios.post('http://10.35.162.104:9005/regist/', {"tel": TEL, "idtf": code})
           .then((response) => {
             let data = response.data;
             if (data.code == 200) {
               console.log("注册成功！");
+              console.log(data);
               saveCookie('userID', data.data.user_id, 7);
               saveCookie('userName', data.data.user_name, 7);
               saveCookie('token', data.data.token, 7);
+              this.$router.replace({name:'Index'})
             }
           })
           .catch((err) => {
@@ -115,7 +117,7 @@
           this.countDown--
         }, 1000);
         console.log(TEL);
-        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL})
+        this.axios.post('http://10.35.162.104:9005/regist/', {"tel": TEL})
           .then((data) => {
             if (data.data.code == 200) {
               console.log("验证码发送成功！");

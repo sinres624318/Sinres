@@ -119,8 +119,8 @@
         this.shopProductInfo = data.data;
       }).catch((err) => {
         console.log(err)
-      })
-    }
+      });
+    },
   }
 
 </script>

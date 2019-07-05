@@ -11,12 +11,12 @@
         </p>
         <span id="totalBackMoney">总额&nbsp;¥{{totalPrice}}&nbsp;立减&nbsp;¥0.00</span>
       </div>
-      <div
+      <a href="javascript:;"
         @click="countProductHandle"
         class="buy buyJs">
         <span>去结算</span>
         <em>({{productNum}}件)</em>
-      </div>
+      </a>
     </div>
   </div>
 </template>
