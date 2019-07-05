@@ -1,13 +1,11 @@
 <template>
     <div class="define-order-info-shop-list">
-      <div class="define-order-info-shop-list-item" v-for="(item,index) in sendDefineOrder.product">
+      <div class="define-order-info-shop-list-item" v-for="(item,index) in sendDefineOrders.goodslist">
         <div class="define-order-info-shop-name">
-          <div class="define-order-info-shop-logo">
-            <img :src="item.shopLogo" alt="">
-          </div>
-          <span>{{item.productShop}}</span>
+
+          <span>{{item.shopname}}</span>
         </div>
-        <DefineOrderInfoShopProduct :sendDefineOrderShopProduct="sendDefineOrder.product"/>
+        <DefineOrderInfoShopProduct :sendDefineOrderShopProduct="sendDefineOrders.goodslist"/>
       </div>
 
     </div>
@@ -21,10 +19,12 @@
       DefineOrderInfoShopProduct
     },
     props:{
-      sendDefineOrder:{
+      sendDefineOrders:{
         type:Object,
         required:true
       }
+    },
+    created() {
     }
   }
 </script>

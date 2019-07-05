@@ -1,13 +1,19 @@
 <template>
     <div class="pay-need-pay">
       <h3>需支付:</h3>
-      <i>￥4499.00</i>
+      <i>￥{{totalMoney}}</i>
     </div>
 </template>
 
 <script>
     export default {
-        name: "payNeedPay"
+        name: "payNeedPay",
+      props:{
+        totalMoney:{
+          type:Number,
+          required:true
+        }
+      }
     }
 </script>
 

@@ -11,12 +11,12 @@
         <div class="right iconfont">&#xe670;</div>
       </template>
     </NavBar>
-    <PayNeedPay/>
+    <PayNeedPay :totalMoney="money"/>
     <PayOtherPay/>
     <PayOtherPayItem/>
-    <PaySubmit @receive="letShadowShow"></PaySubmit>
+    <PaySubmit @receive="letShadowShow" :totalMoney="money"></PaySubmit>
     <PayShadow v-if="show" @handleHide="funHide"></PayShadow>
-    <PayPassword v-if="pwdShow" @sendfalse="handleReceivePwd"/>
+    <PayPassword v-if="pwdShow" @sendfalse="handleReceivePwd" :sendMoney="money"/>
   </div>
 
 </template>
@@ -45,7 +45,8 @@
     data() {
       return {
         show: false,
-        pwdShow:false
+        pwdShow:false,
+        money:""
       }
     },
     methods: {
@@ -62,6 +63,9 @@
       handleReceivePwd(val){
         this.pwdShow = val
       }
+    },
+    mounted() {
+      this.money = this.$route.params.totalPrice
     }
   }
 </script>

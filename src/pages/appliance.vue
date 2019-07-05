@@ -39,7 +39,7 @@
       },
       created() {
           // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/appliance")
-        this.axios.get("http://10.35.162.113:9005/index/appliance")
+        this.axios.get("http://10.35.162.104:9005/index/appliance")
             .then((data)=>{
               console.log(data)
               this.applianceInfo = data.data;

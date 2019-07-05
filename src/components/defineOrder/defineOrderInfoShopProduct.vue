@@ -1,12 +1,13 @@
 <template>
     <ul class="define-order-info-shop-product">
-      <li v-for="(item,index) in sendDefineOrderShopProduct[0].productList">
+      <li v-for="(item,index) in sendDefineOrderShopProduct">
         <div class="define-order-info-shop-product-img">
-          <img :src="item.img">
+          <img :src="item.productpic">
         </div>
         <div class="define-order-info-shop-product-title">{{item.title}}</div>
         <p class="define-order-info-shop-product-standard">{{item.standard}}</p>
-        <p class="define-order-info-shop-product-price">￥{{item.price}}</p>
+        <p class="define-order-info-shop-product-price">￥{{item.productprice}}</p>
+        <h3 class="define-order-info-shop-product-count-box">×{{item.productnum}}</h3>
         <ul class="define-order-info-shop-product-server">
           <li>
             <div class="define-order-info-shop-product-server-seven-img">

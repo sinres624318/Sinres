@@ -1,7 +1,7 @@
 <template>
     <div class="pay-submit" @click="letShow()">
       <span>微信支付</span>
-      <i>￥4499.00</i>
+      <i>￥{{totalMoney}}</i>
     </div>
 </template>
 
@@ -12,6 +12,14 @@
         letShow(){
           this.$emit("receive",true)
         }
+      },
+      props:{
+        totalMoney:{
+          type:Number,
+          required:true
+        }
+      },
+      mounted() {
       }
     }
 </script>
