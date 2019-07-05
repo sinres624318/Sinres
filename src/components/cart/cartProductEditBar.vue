@@ -29,6 +29,7 @@
             }
           })
         });
+        console.log(productIDList);
         this.$store.dispatch('deleteProduct', {
           "productID": productIDList,
           "token": getCookie('token')

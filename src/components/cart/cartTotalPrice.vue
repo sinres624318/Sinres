@@ -11,12 +11,12 @@
         </p>
         <span id="totalBackMoney">总额&nbsp;¥{{totalPrice}}&nbsp;立减&nbsp;¥0.00</span>
       </div>
-      <router-link
-        :to="{name:'DefineOrder'}"
+      <div
+        @click="countProductHandle"
         class="buy buyJs">
         <span>去结算</span>
         <em>({{productNum}}件)</em>
-      </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -33,12 +33,24 @@
         type: String,
         required: true
       },
-      productNum:{
-        type:String,
+      productNum: {
+        type: String,
         required: true
       }
     },
     methods: {
+      countProductHandle() {
+        let goodslist = [];
+        let productList = this.$store.state.cartInfo.cartShopList;
+        productList.forEach((shop, shopIndex) => {
+          shop.productList.forEach((product, productIndex) => {
+            if (product.checked) {
+              goodslist.push(product.productID)
+            }
+          })
+        });
+        this.$router.push({name:'DefineOrder' ,params:{goodslist}})
+      },
       allCheckHandle() {
         this.$store.commit('allCheckHandle')
       }

@@ -3,78 +3,65 @@
     <div class="exhibition-item-title"></div>
     <div class="exhibition-three">
       <div class="exhibition-three-one">
-        <div class="exhibition-three-one-l">
+        <div class="exhibition-three-one-l" v-for="(item,index) in indexThrees.yard.contenttop" :key="index">
           <div class="exhibition-three-one-title">
-            <span>组装电脑</span>
-            <p>DIY你的台式电脑</p>
+            <span>{{item.contentTitle}}</span>
+            <p>{{item.contentDescribe}}</p>
           </div>
           <div class="exhibition-three-one-con">
-            <a href="">
-              <img src="../../../static/img/exhibition/one/exhibition_con_three_1.jpg" alt="">
-            </a>
-            <a href="">
-              <img src="../../../static/img/exhibition/one/exhibition_con_three_2.jpg" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="exhibition-three-one-r">
-          <div class="exhibition-three-one-title">
-            <span>宅家必选</span>
-            <p>首选舒适</p>
-          </div>
-          <div class="exhibition-three-one-con">
-            <a href="">
-              <img src="../../../static/img/exhibition/one/exhibition_con_three_3.jpg" alt="">
-            </a>
-            <a href="">
-              <img src="../../../static/img/exhibition/one/exhibition_con_three_4.jpg" alt="">
+            <a href="" v-for="items in item.imgs" :key="items">
+              <img v-if="items" :src="items" alt="">
             </a>
           </div>
         </div>
       </div>
       <div class="exhibition-three-two exhibition-con-item">
         <div class="exhibition-con-item">
-          <a href="" v-for="(item,index) in exhibitionconitem" :key="index">
+          <a href="" v-for="(itemse,index) in indexThrees.yard.contentbottom" :key="index">
             <div class="exhibition-title">
-              <strong>{{item.text1}}</strong>
-              <p>{{item.text2}}</p>
+              <strong>{{itemse.contentTitle}}</strong>
+              <p>{{itemse.contentDescribe}}</p>
             </div>
-            <img :src="item.Img" alt="">
+            <img v-if="itemse.type_img" :src="itemse.type_img" alt="">
           </a>
         </div>
       </div>
+    </div>
+    <div  class="exhibition-three-bottom">
+      <div  class="exhibition-three-bottom-top">
+        <img src="../../../static/img/index/1.png">
+      </div>
+      <div class="exhibition-three-bottom-center">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="(item,index) in indexThrees.news" :key="index">
+              <p>{{item}}</p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
+      <div class="exhibition-three-bottom-bottom"><p>更多</p></div>
     </div>
   </div>
 </template>
 
 <script>
+  import Swiper from "swiper/dist/js/swiper.min"
+  import 'swiper/dist/css/swiper.min.css'
     export default {
         name: "indexThree",
-      data(){
-          return{
-            exhibitionconitem:[
-              {
-                text1:'吃货礼包',
-                text2:'嘴巴很寂寞',
-                Img:"../../../static/img/exhibition/one/exhibition_con_three_2.jpg"
-              },
-              {
-                text1:'吃货礼包',
-                text2:'嘴巴很寂寞',
-                Img:"../../../static/img/exhibition/one/exhibition_con_three_2.jpg"
-              },
-              {
-                text1:'吃货礼包',
-                text2:'嘴巴很寂寞',
-                Img:"../../../static/img/exhibition/one/exhibition_con_three_2.jpg"
-              },
-              {
-                text1:'吃货礼包',
-                text2:'嘴巴很寂寞',
-                Img:"../../../static/img/exhibition/one/exhibition_con_three_2.jpg"
-              },
-            ]
-          }
+      mounted() {
+        var mySwiper = new Swiper('.exhibition-three-bottom-center', {
+          autoplay: true,//等同于以下设置
+          direction:'vertical',
+          Observer: true,
+          loop: true,
+        });
+      },
+      props:{
+        indexThrees:{
+          type:Object,
+          required:true
+        }
       }
     }
 </script>

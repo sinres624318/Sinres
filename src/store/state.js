@@ -1,5 +1,6 @@
 export default {
   cartInfo: {},
   cartTotalPrice:'',
-  cartProductNum:''
+  cartProductNum:'',
+  userInfo:{}
 }

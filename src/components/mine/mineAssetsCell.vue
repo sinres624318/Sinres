@@ -6,7 +6,7 @@
         :to="{name:'MyAttention'}"
         class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">0</span>
+          <span class="assets-val">{{browseInfo.collectProduct}}</span>
         </div>
         <span class="assets-item-key">商品收藏</span>
       </router-link>
@@ -15,13 +15,13 @@
         :to="{name:'MyAttention'}"
         class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">0</span>
+          <span class="assets-val">{{browseInfo.collectShop}}</span>
         </div>
         <span class="assets-item-key">店铺收藏</span>
       </router-link>
       <div class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">0</span>
+          <span class="assets-val">{{browseInfo.footprint}}</span>
         </div>
         <span class="assets-item-key">我的足迹</span>
       </div>
@@ -32,17 +32,12 @@
 <script>
   export default {
     name: "mineAssetsCell",
-    created() {
-      this.axios.post("http://10.35.162.133:9005/mine/collect/shop/",{
-        "token":123456
-      })
-        .then((data)=>{
-          console.log(data.data);
-        })
-        .catch((error)=>{
-          console.log(error);
-        })
-    }
+    props: {
+      browseInfo: {
+        type: Object,
+        required: true
+      }
+    },
   }
 </script>
 

@@ -14,13 +14,13 @@ import Observer from "./Observer";
 Vue.prototype.Observer = Observer;
 import './../static/font/iconfont.css'
 
-axios.defaults.withCredentials = true
-Vue.prototype.axios = axios
+axios.defaults.withCredentials = true;
+Vue.prototype.axios = axios;
 Vue.use(Lazyload);
 Vue.use(PasswordInput).use(NumberKeyboard);
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 
 
@@ -28,7 +28,7 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   if ((to.name == "Mine" || to.name == "Cart")) {
     if (!getCookie('token')) {
-      console.log(getCookie('token'))
+      console.log(getCookie('token'));
       next('/login');
     } else {
       next();

@@ -13,7 +13,6 @@
     </NavBar>
     <van-address-edit
       :area-list="areaList"
-      show-delete
       show-set-default
       show-search-result
       :search-result="searchResult"
@@ -28,11 +27,13 @@
   import {goBack} from './../../assets/js/common'
   import NavBar from '../../components/common/navBar'
   import { AddressEdit } from 'vant';
+  import areaList from './../../assets/js/area'
     export default {
         name: "newAddress",
       components:{
         NavBar,
         'van-address-edit':AddressEdit,
+        areaList
       },
       data() {
         return {
@@ -45,8 +46,8 @@
         backClickHandle() {
           goBack(this.$router)
         },
-        onSave() {
-          Toast('save');
+        onSave(e) {
+          console.log(e)
         },
         onDelete() {
           Toast('delete');

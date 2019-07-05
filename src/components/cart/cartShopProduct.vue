@@ -60,9 +60,9 @@
     },
     methods: {
       deleteProductHandle(){
+        console.log(this.product.productID);
         this.$store.dispatch('deleteProduct', {
-          "sID": this.sID,
-          "pID": this.pID,
+          "productID": [this.product.productID],
           "token": getCookie('token')
         });
       },

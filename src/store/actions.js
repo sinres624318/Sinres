@@ -3,7 +3,8 @@ import {
   cartInfo,
   addProduct,
   minusProduct,
-  deleteProduct
+  deleteProduct,
+  userInfo
 } from "../api/url";
 
 export default {
@@ -15,13 +16,28 @@ export default {
         console.log(data.code);
         if (data.code === 200) {
           console.log(data);
-          context.commit('setData', data)
+          context.commit('setCartData', data)
         } else if (data.code === 401) {
           vue.$router.replace({name: 'Login'})
         }
       })
       .catch((err) => {
         console.log(err);
+      })
+  },
+  getUserInfo(context,{token, vue}) {
+    axios.post(userInfo, {"token": token})
+      .then((response) => {
+        let data = response.data;
+        if (data.code === 200) {
+          console.log(data.data);
+          context.commit('setUserData', data.data)
+        } else if (data.code === 401) {
+          vue.$router.replace({name: 'Login'})
+        }
+      })
+      .catch((error) => {
+        console.log(error);
       })
   },
   addProduct(context, val) {
@@ -80,18 +96,27 @@ export default {
   deleteProduct(context, val) {
     let {productID, token} = val;
     let cartShopList = context.state.cartInfo.cartShopList;
+    console.log(cartShopList, productID);
     axios.post(deleteProduct, {
-      "productID": JSON.stringify([productID]),
+      "productID": JSON.stringify(productID),
       "token": token
     })
       .then((data) => {
-        cartShopList.forEach((shop, shopIndex) => {
-          shop.productList.forEach((product, productIndex) => {
-            if (productID.indexOf(product.productID) > -1) {
-
+        console.log(data);
+        if (data.data.code === 200) {
+          for (let i = 0; i < cartShopList.length; i++) {
+            for (let j = 0; j < cartShopList.productList.length; j++) {
+              console.log(cartShopList[i].productList[j].checked);
+              if (cartShopList[i].productList[j].checked) {
+                if (cartShopList[i].productList.length <= 1) {
+                  cartShopList.splice(i, 1);
+                } else {
+                  cartShopList[i].productList.splice(j, 1);
+                }
+              }
             }
-          })
-        })
+          }
+        }
       })
       .catch((err) => {
         console.log(err);

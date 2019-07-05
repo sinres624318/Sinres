@@ -6,7 +6,7 @@
           tag="div"
           :to="{name:'MyVouchers'}"
           class="assets-item-val">
-          <span class="assets-val">0</span>
+          <span class="assets-val">{{assetInfo.vouchers}}</span>
           <span class="assets-unit">张</span>
         </router-link>
         <div class="assets-item-key">京东券</div>
@@ -16,27 +16,27 @@
         :to="{name:'MyAssets'}"
         class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">23165.16</span>
+          <span class="assets-val">{{assetInfo.balance}}</span>
           <span class="assets-unit">元</span>
         </div>
-        <div class="assets-item-key">白条额度</div>
+        <div class="assets-item-key">余额</div>
       </router-link>
       <router-link
         tag="div"
         :to="{name:'MyAssets'}"
         class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">3185</span>
+          <span class="assets-val">{{assetInfo.integral}}</span>
           <span class="assets-unit">个</span>
         </div>
-        <div class="assets-item-key">京豆</div>
+        <div class="assets-item-key">积分</div>
       </router-link>
       <router-link
         tag="div"
         :to="{name:'MyAssets'}"
         class="assets-item">
         <div class="assets-item-val">
-          <span class="assets-val">0</span>
+          <span class="assets-val">{{assetInfo.redPacket}}</span>
           <span class="assets-unit">元</span>
         </div>
         <div class="assets-item-key">红包</div>
@@ -53,9 +53,15 @@
 </template>
 
 <script>
-    export default {
-        name: "mineAssetCell"
-    }
+  export default {
+    name: "mineAssetCell",
+    props: {
+      assetInfo: {
+        type: Object,
+        required: true
+      }
+    },
+  }
 </script>
 
 <style scoped>

@@ -3,16 +3,16 @@
     <div class="user-info">
       <div class="avatar-wrap">
         <div class="avatar">
-          <img src="../../../static/img/mine/user_photo.jpg" alt="">
+          <img :src="accountInfo.userPhoto" alt="">
         </div>
       </div>
       <div class="personal-wrap">
         <div class="name-wrap">
-          <span class="name">小明</span>
+          <span class="name">{{accountInfo.userName}}</span>
           <span class="mine-user-info-name-edit"></span>
           <div class="vip v5"></div>
         </div>
-        <div class="pin">用户名：jd-85cas568465as</div>
+        <div class="pin">用户名：{{accountInfo.userID}}</div>
       </div>
     </div>
     <div class="hor-tips">
@@ -40,9 +40,15 @@
 </template>
 
 <script>
-    export default {
-        name: "mineUserInfo"
+  export default {
+    name: "mineUserInfo",
+    props: {
+      accountInfo: {
+        type: Object,
+        required: true
+      }
     }
+  }
 </script>
 
 <style scoped>

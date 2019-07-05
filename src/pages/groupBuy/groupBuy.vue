@@ -1,13 +1,14 @@
 <template>
   <div class="groupBuy-index">
     <groupBuyHender></groupBuyHender>
-    <div class="groupBuy-Main">
+    <div class="groupBuy-Main" v-if="groupBuyInfo">
       <groupBuySousuo></groupBuySousuo>
-      <groupBuyBanner></groupBuyBanner>
-      <groupBuyCenterBanner></groupBuyCenterBanner>
-      <groupBuyDay></groupBuyDay>
-      <groupBuyClass></groupBuyClass>
+      <groupBuyBanner :groupBuyBanner="groupBuyInfo"></groupBuyBanner>
+      <groupBuyCenterBanner :groupBuyCenterBanner="groupBuyInfo"></groupBuyCenterBanner>
+      <groupBuyDay :groupBuyDay="groupBuyInfo"></groupBuyDay>
+      <groupBuyClass :groupBuyClass="groupBuyInfo"></groupBuyClass>
     </div>
+    <Loading v-if="!groupBuyInfo.banner"></Loading>
     <groupBuyFooter></groupBuyFooter>
   </div>
 </template>
@@ -20,9 +21,15 @@
   import groupBuyDay from '../../components/groupBuy/groupBuyDay'
   import groupBuyFooter from '../../components/groupBuy/groupBuyFooter'
   import groupBuyClass from '../../components/groupBuy/groupBuyClass'
+  import Loading from "./../../components/common/loading";
 
   export default {
     name: "groupBuy",
+    data(){
+      return{
+        groupBuyInfo:{},
+      }
+    },
     components: {
       groupBuyHender,
       groupBuySousuo,
@@ -30,7 +37,18 @@
       groupBuyCenterBanner,
       groupBuyDay,
       groupBuyFooter,
-      groupBuyClass
+      groupBuyClass,
+      Loading
+    },
+    created() {
+      // this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/groupBuy")
+      this.axios.get("http://10.35.161.33:9005/groupBuy/")
+        .then((data)=>{
+          this.groupBuyInfo=data.data
+        })
+        .catch((err)=>{
+          console.log(err)
+      })
     }
   }
 </script>

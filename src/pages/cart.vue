@@ -27,6 +27,7 @@
       :key="index"
       :sID="index"
       :shop="shop"></CartShop>
+    <recommendedProduct :recommendedProduct="{product_list:cartInfo.ProuductList}"></recommendedProduct>
     <CartTotalPrice
       :totalPrice="totalPrice"
       :productNum="productNum"
@@ -44,6 +45,7 @@
   import CartTotalPrice from './../components/cart/cartTotalPrice'
   import CartProductEdit from './../components/cart/cartProductEdit'
   import CartProductEditBar from './../components/cart/cartProductEditBar'
+  import recommendedProduct from './../components/common/recommendedProduct'
   import Loading from '../components/common/loading'
   import {
     goBack,
@@ -58,6 +60,7 @@
       CartTotalPrice,
       CartProductEdit,
       CartProductEditBar,
+      recommendedProduct,
       Loading
     },
     data() {
@@ -75,7 +78,7 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo', {token:getCookie('token'),vue:this});
+      this.$store.dispatch('getCartInfo', {token: getCookie('token'), vue: this});
     },
     computed: {
       cartInfo() {

@@ -56,9 +56,12 @@ function countPrice(state, cartInfo) {
 }
 
 export default {
-  setData(state, cartInfo) {
+  setCartData(state, cartInfo) {
     countPrice(state, cartInfo);
     state.cartInfo = cartInfo;
+  },
+  setUserData(state, userInfo){
+    state.userInfo = userInfo;
   },
   /**
    * 购物车选择商品

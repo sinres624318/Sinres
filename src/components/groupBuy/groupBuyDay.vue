@@ -13,7 +13,7 @@
     <div  class="groupBuyData-content">
       <div class="groupBuyData-content">
         <div class="groupBuyData-list">
-          <router-link tag="div" to="" class="groupBuyData-item"  v-for="(item,index) in seckillContext" :key="index">
+          <router-link tag="div" to="" class="groupBuyData-item"  v-for="(item,index) in groupBuyDay.groupBuyeveryone" :key="index">
             <div class="groupBuyData-item-img">
               <a href="">
                 <img :src="item.img" alt="">
@@ -22,11 +22,11 @@
             <div class="groupBuyData-item-price">
                             <span class="now-price">
                                 <i>￥</i>
-                                <span>{{item.seckillPrice}}</span>
+                                <span>{{item.groupBuyPrice}}</span>
                             </span>
               <span class="old-price">
-                                <i>￥</i>
-                                <span>{{item.originalPrice}}</span>
+                                <i>拼</i>
+                                <span>{{item.groupBuyPeople}}</span>
                             </span>
             </div>
           </router-link>
@@ -36,66 +36,14 @@
   </div>
 </template>
 <script>
-    export default {
-        name: "groupBuyDay",
-      data(){
-        return{
-          seckillContext:[
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            },
-            {
-              img:"../../../static/img/seckill/seckill_1.jpg",
-              seckillPrice:'219' ,
-              originalPrice:'399'
-            }
-          ]
-        }
-      },
-          mounted() {
-        }
+  export default {
+    name: "groupBuyDay",
+    props:{
+      groupBuyDay:{
+        type:Object,
+        required:true
+      }
+    }
   }
 </script>
 

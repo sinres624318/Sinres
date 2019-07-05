@@ -10,7 +10,7 @@
 <script>
   import MyAttentionHeader from "../components/myAttention/myAttentionHeader"
   import MyAttentionContent from "../components/myAttention/myAttentionContent"
-  import MyAttentionBottom from '../components/myAttention/myAttentionBottom'
+  import MyAttentionBottom from '../components/common/recommendedProduct'
   import Loding from './../components/common/loading'
   export default {
         name: "myAttention",

@@ -11,12 +11,12 @@
         <div class="right iconfont" @click="moreMenuClickHandle">&#xe670;</div>
       </template>
     </NavBar>
-    <MineUserInfo></MineUserInfo>
+    <MineUserInfo v-if="userInfo.accountInfo" :accountInfo="userInfo.accountInfo"></MineUserInfo>
     <MineOrderCell></MineOrderCell>
-    <MineAssetCell></MineAssetCell>
-    <MineAssetsCell></MineAssetsCell>
+    <MineAssetCell v-if="userInfo.assetInfo" :assetInfo="userInfo.assetInfo"></MineAssetCell>
+    <MineAssetsCell v-if="userInfo.browseInfo" :browseInfo="userInfo.browseInfo"></MineAssetsCell>
     <MineActivity></MineActivity>
-    <MineRecommend></MineRecommend>
+    <MineRecommend v-if="userInfo.productList" :recommendedProduct="userInfo.productList"></MineRecommend>
     <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
   </div>
 </template>
@@ -30,7 +30,10 @@
   import MineActivity from '../components/mine/mineActivity'
   import MineRecommend from '../components/mine/mineRecommend'
   import MoreMenu from '../components/common/moreMenu'
-  import {goBack} from './../assets/js/common'
+  import {
+    goBack,
+    getCookie
+  } from './../assets/js/common'
 
   export default {
     name: "mine",
@@ -59,6 +62,14 @@
       },
       maskClickHandle(val) {
         this.flag = val;
+      }
+    },
+    created() {
+      this.$store.dispatch('getUserInfo', {token: getCookie('token'), vue: this})
+    },
+    computed: {
+      userInfo() {
+        return this.$store.state.userInfo
       }
     }
   }

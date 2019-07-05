@@ -20,7 +20,7 @@
         <span>账号登录密码</span>
         <span>定期修改更安全<i class="iconfont">&#xe624;</i></span>
       </div>
-      <div class="accountManage-Center-Bottom-Classfiy">
+      <div class="accountManage-Center-Bottom-Classfiy" @click="modifyPayPasswordHandle">
         <span>京东支付密码</span>
         <span>已设置<i class="iconfont">&#xe624;</i></span>
       </div>
@@ -29,15 +29,69 @@
         <span>7400****@qq.com<i class="iconfont">&#xe624;</i></span>
       </div>
     </div>
+
+    <van-popup
+      position="bottom"
+      v-model="modalShow">
+      <van-password-input
+        :value="value"
+        info="密码为 6 位数字"
+        @focus="showKeyboard = true"
+      />
+      <van-number-keyboard
+        :show="showKeyboard"
+        extra-key="."
+        theme="custom"
+        close-button-text="完成"
+        @hide="change"
+        @input="onInput"
+        @delete="onDelete"
+      />
+    </van-popup>
   </div>
 </template>
 
 <script>
+  import {
+    PasswordInput,
+    NumberKeyboard,
+    Popup
+  } from 'vant';
+
   export default {
-    name: "accountManagementCenter"
+    name: "accountManagementCenter",
+    components: {
+      'van-password-input': PasswordInput,
+      'van-number-keyboard': NumberKeyboard,
+      'van-popup': Popup
+    },
+    data() {
+      return {
+        value: '',
+        showKeyboard: true,
+        modalShow: false,
+        modifyPayPasswordFlag: true
+      }
+    },
+    methods: {
+      change(){
+          console.log(this.value);
+      },
+      modifyPayPasswordHandle() {
+        this.modalShow = true;
+      },
+      onInput(key) {
+        this.value = (this.value + key).slice(0, 6);
+      },
+      onDelete() {
+        this.value = this.value.slice(0, this.value.length - 1);
+      }
+    }
   }
 </script>
 
 <style scoped>
-
+  .van-number-keyboard {
+    position: relative;
+  }
 </style>

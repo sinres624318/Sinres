@@ -1,8 +1,8 @@
 <template>
   <div class="order-item">
-    <OrderTitle></OrderTitle>
-    <OrderContent></OrderContent>
-    <OrderButton></OrderButton>
+    <OrderTitle :orderTitle="order"></OrderTitle>
+    <OrderContent :orderContent="order"></OrderContent>
+    <OrderButton :orderContent="order"></OrderButton>
   </div>
 </template>
 
@@ -17,6 +17,12 @@
       OrderTitle,
       OrderContent,
       OrderButton
+    },
+    props: {
+      order: {
+        type: Object,
+        required: true
+      }
     }
   }
 </script>

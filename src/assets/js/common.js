@@ -2,7 +2,7 @@ const goBack = ($router) => {
   $router.back();
 };
 
-const saveCookie = (key, value, day, path, domain) => {
+const saveCookie = (key,value, day, path, domain) => {
   let date = new Date();
   date.setDate(date.getDate() + day);
   let str = document.cookie = key + '=' + escape(value) + ';expires' + date.toGMTString();
