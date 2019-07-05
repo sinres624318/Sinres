@@ -37,6 +37,17 @@
         this.flag = !this.flag;
       }
     },
+    created() {
+      this.axios.post("http://10.35.162.3:9005/mine/order/", {
+        "token": 123456
+      })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    },
     mounted() {
       console.log(this.$router);
     },

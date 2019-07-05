@@ -1,6 +1,6 @@
 <template>
   <div class="appliance">
-    <ApplianceHeader></ApplianceHeader>
+    <ApplianceHeader @sendMore="handleMoreMenu"></ApplianceHeader>
     <ApplianceSwiper v-if="applianceInfo.banner" :banner="applianceInfo"></ApplianceSwiper>
     <ApplianceHot v-if="applianceInfo.guessLike" :guessLike="applianceInfo"></ApplianceHot>
     <ApplianceClassify v-if="applianceInfo.applianceClassify" :applianceClassify="applianceInfo"></ApplianceClassify>
@@ -9,7 +9,7 @@
     <ApplianceWeek v-if="applianceInfo.weekHot" :weekHot="applianceInfo" @receiveWeek="receiveHandleWeek" :weekHotInfo="barInfo"></ApplianceWeek>
     <ApplianceDetailClassify v-if="applianceInfo.television" @applianceClassifyHandleBar="handleApplianceClassify" :sendApplianceClassify="applianceClassifyInfo"></ApplianceDetailClassify>
     <Loading v-if="!applianceInfo.banner"></Loading>
-    <MoreMenu v-if="flag"></MoreMenu>
+    <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
   </div>
 </template>
 <script>
@@ -41,6 +41,7 @@
           // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/appliance")
         this.axios.get("http://10.35.162.113:9005/index/appliance")
             .then((data)=>{
+              console.log(data)
               this.applianceInfo = data.data;
               this.barInfo.push(data.data.weekHot);
               this.applianceClassifyInfo.push(data.data.television)
@@ -90,6 +91,9 @@
         },
         handleMoreMenu(val){
           this.flag = val
+        },
+        maskClickHandle(val) {
+          this.flag = val;
         }
       }
     }

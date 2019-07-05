@@ -1,6 +1,6 @@
 <template>
   <div class="likeIntroduceLists">
-    <div class="likeIntroduceProduct" v-for="(item,index) in likeintroduce " :key="index">
+    <div class="likeIntroduceProduct" v-for="(item,index) in patPatLikeIntroduceProductHandle.likeintroduce " :key="index">
       <a href="#">
         <div class="likeIntroduceProductImg">
           <img :src="item.img" alt="猜你喜欢的商品">
@@ -17,53 +17,11 @@
 <script>
 export default {
   name: "patPatLikeIntroduceProduct",
-  data() {
-    return {
-      likeintroduce: [
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "1"
-        },
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "2"
-        },
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "3"
-        },
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "4"
-        },
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "5"
-        },
-        {
-          img: "./../../static/img/patPat/likeIntroduceProduct-1.png",
-          describe:
-            "唐人（TR)JZT—279全新未开封 多层防爆钢化玻璃 猛火爆炒 熄火保护 节能燃气 台嵌两用双灶 天然气",
-          price: "6999",
-          productID: "1"
-        }
-      ]
-    };
+  props:{
+    patPatLikeIntroduceProductHandle:{
+      type:Object,
+      required:true
+    }
   }
 };
 </script>

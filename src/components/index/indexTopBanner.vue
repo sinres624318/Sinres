@@ -2,7 +2,7 @@
   <div class="indexsLider-Wrap">
     <div class="indexTopBanner">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in banner" :key="item">
+        <div class="swiper-slide" v-for="item in indexTopBanner.banner" :key="item">
           <router-link tag="a" to="">
             <img :src="item" alt="">
           </router-link>
@@ -40,6 +40,12 @@
             el: '.swiper-pagination',
           },
         });
+      },
+      props:{
+        indexTopBanner:{
+          type:Object,
+          required:true
+        }
       }
 
     }

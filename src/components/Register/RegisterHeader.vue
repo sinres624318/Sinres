@@ -3,7 +3,7 @@
     <div class="register-header-left" @click="onClickLeft()">
       <span ></span>
     </div>
-    京东注册
+    京东
   </div>
 </template>
 

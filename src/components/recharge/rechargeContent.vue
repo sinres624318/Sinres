@@ -26,7 +26,7 @@
 
         <div class="recharge-content-first-ul">
         <ul>
-          <li v-for="(item,index) in lists" :class="{heightColor:num==index}" @click="numHandel(index,item.text)">
+          <li v-for="(item,index) in lists" :class="{heightColor:figure==index}" @click="numHandel(index,item.text)">
             {{item.price}}
             <i v-show="finds"><span >售价:</span>{{item.text}}</i>
           </li>
@@ -75,9 +75,11 @@
             finds:false,
             num:-1,
             telephoneNum: '',
-            telephoneNum2: ''
+            telephoneNum2: '',
+            figure:-1,
           }
       },
+
       methods:{
         numHandel(index,item){
           var regs = /^(13|14|15|16|17|18|19)\d{9}$/;
@@ -86,7 +88,7 @@
             this.$refs.i.innerHTML=item;
           }
           if (regs.test(this.telephoneNum2)) {
-            this.num=index;
+            this.figure=index;
             this.$refs.i.innerHTML=item;
           }
 
@@ -97,6 +99,15 @@
           indexHender:{
             this.Observer.$on("handel",(val)=>{
               this.show=val;
+              val!=0?this.telephoneNum='':this.telephoneNum='';
+              val!=0?this.find=false:this.find=false;
+              val!=0?this.num=-1:this.num=-1;
+              val!=0?this.$refs.i.innerHTML=0:this.$refs.i.innerHTML=0;
+              val!=1?this.telephoneNum2='':this.telephoneNum2='';
+              val!=1?this.finds=false:this.finds=false;
+              val!=1?this.figure=-1:this.figure=-1;
+              val!=1?this.$refs.i.innerHTML=0:this.$refs.i.innerHTML=0;
+
             });
             }
         },

@@ -1,7 +1,7 @@
 <template>
   <div class="productPromotion">
-    <a href="#" v-for="(item,index) in productList" :key="index">
-      <img :src="item.img">
+    <a href="#" v-for="(item,index) in shopProductInfoHandle" :key="index">
+      <img v-if="item.img" :src="item.img">
       <div class="shopListItemLeft">
         <p>{{item.describe}}</p>
         <div class="pic">
@@ -20,62 +20,20 @@
 <script>
 export default {
   name: "productPromotion",
+  props:{
+    shopProductInfoHandle:{
+      type:Array,
+      required:true
+    }
+  },
   data() {
     return {
-      productList: [
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        },
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        },
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        },
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        },
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        },
-        {
-          productID: "1",
-          img:
-            "//img12.360buyimg.com/mobilecms/s410x410_jfs/t1/19621/28/13637/300650/5ca1d871Ed48607b4/ed87ad0e1d3fae8c.jpg!q70.dpg.webp",
-          describe: "小米米家 米家头盔护具套装 黑 M",
-          price: "189",
-          oldPrice: "￥199.00"
-        }
-      ]
+
     };
   }
 };
 </script>
+<style src='./../../../static/css/reset.css'></style>
 <style scoped>
 .productPromotion {
   padding: 30px;

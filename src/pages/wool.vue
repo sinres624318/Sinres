@@ -2,22 +2,22 @@
   <div class="wool">
     <div class="woolHeader">
       <NavBar>
-      <template v-slot:left>
-        <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
-      </template>
-      <template v-slot:title>
-        <div class="title">优质羊毛</div>
-      </template>
-      <template v-slot:right>
-        <div class="right iconfont">
-          <i class="iconfont" @click="$router.push({path:'/classIfy'})">&#xe684;</i>
-          <i class="iconfont" @click="moreMenuClickHandle">&#xe670;</i>
-        </div>
-      </template>
-    </NavBar>
-    <MoreMenu v-if="flag"></MoreMenu>
+        <template v-slot:left>
+          <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
+        </template>
+        <template v-slot:title>
+          <div class="title">小羊小羊猫猫猫</div>
+        </template>
+        <template v-slot:right>
+          <div class="right iconfont">
+            <i class="iconfont" @click="$router.push({path:'/classIfy'})">&#xe684;</i>
+            <i class="iconfont" @click="moreMenuClickHandle">&#xe670;</i>
+          </div>
+        </template>
+      </NavBar>
+      <MoreMenu v-if="flag"></MoreMenu>
     </div>
-     <!-- ---------headerEnd-------------- -->
+    <!-- ---------headerEnd-------------- -->
     <div class="woolBanner">
       <img src="../../static/img/wool/wool-banner.png" alt="尽情领优惠，一键薅羊毛">
     </div>
@@ -55,36 +55,45 @@
       <img src="../../static/img/wool/Today's explosives.png" alt="今日爆品">
     </div>
     <div class="woolProductList">
-        <WoolProduct></WoolProduct>
-      
+      <WoolProduct :woolProductInfoHandle="woolProductInfo"></WoolProduct>
     </div>
   </div>
 </template>
 <script>
-import WoolProduct from './../components/wool/woolProduct'
-import NavBar from "./../components/common/navBar";
-import MoreMenu from "../components/common/moreMenu";
-export default {
-  name: "wool",
-  components:{
+  import WoolProduct from './../components/wool/woolProduct'
+  import NavBar from "./../components/common/navBar";
+  import MoreMenu from "../components/common/moreMenu";
+
+  export default {
+    name: "wool",
+    components: {
       WoolProduct,
-       NavBar,
-    MoreMenu
-  },
-  date(){
-    return{
-      flag:false
-    }
-  },
-  methods:{
-    backClickHandle() {
-      this.$router.go(-1);
+      NavBar,
+      MoreMenu
     },
-    moreMenuClickHandle() {
-      this.flag = !this.flag;
+    data() {
+      return {
+        woolProductInfo:{},
+        flag: false
+      }
+    },
+    methods: {
+      backClickHandle() {
+        this.$router.go(-1);
+      },
+      moreMenuClickHandle() {
+        this.flag = !this.flag;
+      },
+    },
+    created() {
+      this.axios.get('https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/woolProduct').then((response) => {
+        this.woolProductInfo = response.data;
+        console.log(this.woolProductInfo)
+      }).catch((error) => {
+        console.log(error)
+      })
     }
-  }
-};
+  };
 </script>
 <style src="../../static/css/wool.css"></style>
 

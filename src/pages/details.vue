@@ -42,7 +42,6 @@
 				DetailsEvaluate,//(评价)
 				DetailsRecommend,//(推荐)
       },
-
       methods: {
         backClickHandle() {
           goBack(this.$router)
@@ -50,6 +49,9 @@
         moreMenuClickHandle() {
           this.flag = !this.flag;
         }
+      },
+      mounted() {
+        console.log(this.$route.params.productID)
       }
     }
 </script>

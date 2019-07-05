@@ -1,6 +1,6 @@
 <template>
     <div class="appliance-detail-classify-item-warp">
-      <div class="appliance-detail-classify-item" v-for="(item,index) in sendApplianceClassify[0]" :key="index">
+      <div class="appliance-detail-classify-item" v-for="(item,index) in sendApplianceClassify[0]" :key="index" @click="handleProductID(item.productID)">
         <div class="appliance-detail-classify-item-img">
           <img :src="item.img">
         </div>
@@ -21,6 +21,11 @@
         sendApplianceClassify: {
           type: Array,
           required: true
+        }
+      },
+      methods:{
+        handleProductID(productID){
+          this.$router.push({name:'Details',params:{'productID':productID}})
         }
       }
     }

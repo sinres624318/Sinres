@@ -120,6 +120,25 @@
   height: 40px;
   line-height: 40px;
 }
+.myAttention-content-shop{
+  display: flex;
+  padding: 40px 40px;
+  border-bottom: 1px solid #cccccc;
+}
+.myAttention-content-shop img{
+  width: 200px;
+  height: 100px;
+  margin-right: 40px;
+}
+.myAttention-content-shop-son p{
+  margin-bottom: 20px;
+}
+.myAttention-content-shop-son span{
+  color: white;
+  background: red;
+  padding: 5px;
+  border-radius: 5px;
+}
 /*MyAttentionContent*/
 
 /*myAttentionBottom*/

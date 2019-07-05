@@ -26,6 +26,7 @@
           }
       },
       created() {
+          console.log(this.$route)
           this.axios.post("http://10.35.162.3:9005/cart/payord/",{
             "token":"123456",
             "order_list":[

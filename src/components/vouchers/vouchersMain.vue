@@ -2,7 +2,7 @@
     <div class="vouchers-main">
       <div class="vouchers-main-info">
         <VouchersMainInfoBar/>
-        <VouchersMainInfoList :vouchersInfo="vouchersInfo"/>
+        <VouchersMainInfoList :vouchersInfo="vouchersInfo" @sendVouchers="handleSendVouchers"/>
       </div>
     </div>
 </template>
@@ -20,6 +20,11 @@
         vouchersInfo:{
           type:Object,
           required:true
+        }
+      },
+      methods:{
+        handleSendVouchers(val){
+          this.$emit("sendVouchers",val)
         }
       }
     }
