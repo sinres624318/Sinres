@@ -1,6 +1,6 @@
 <template>
     <div class="vouchers-main-info-list">
-      <VouchersMainInfoItem :vouchersInfo="vouchersInfo"/>
+      <VouchersMainInfoItem :vouchersInfo="vouchersInfo" @sendVouchers="handleSendVouchers"/>
     </div>
 </template>
 
@@ -15,6 +15,11 @@
         vouchersInfo:{
           type:Object,
           required:true
+        }
+      },
+      methods:{
+        handleSendVouchers(val){
+          this.$emit("sendVouchers",val)
         }
       }
     }

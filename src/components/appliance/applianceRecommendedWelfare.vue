@@ -1,7 +1,7 @@
 <template>
     <div class="appliance-recommended-welfare">
-      <div class="appliance-recommended" v-for="recommend in welfare.recommended" :key="index">
-        <img :src="welfare.recommended">
+      <div class="appliance-recommended">
+        <img src="./../../../static/applianceImg/applianceRecommended.png" alt="">
       </div>
       <div class="appliance-welfare">
         <div class="appliance-welfare-top">
@@ -13,7 +13,7 @@
         <div class="appliance-welfare-deep">
           <div class="appliance-welfare-deep-item" v-for="(item,index) in welfare.welfare" :key="index">
             <h3>{{item.title}}</h3>
-            <h4>{{item.describe}}</h4>
+            <h4>{{item.describes}}</h4>
             <div class="appliance-welfare-deep-item-img">
               <img :src="item.img">
             </div>

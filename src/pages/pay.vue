@@ -16,6 +16,7 @@
     <PayOtherPayItem/>
     <PaySubmit @receive="letShadowShow"></PaySubmit>
     <PayShadow v-if="show" @handleHide="funHide"></PayShadow>
+    <PayPassword v-if="pwdShow" @sendfalse="handleReceivePwd"/>
   </div>
 
 </template>
@@ -28,6 +29,7 @@
   import PaySubmit from './../components/pay/paySubmit'
   import PayShadow from './../components/pay/payShadow'
   import {goBack} from './../assets/js/common.js'
+  import PayPassword from './../components/pay/payPassword'
 
   export default {
     name: "pay",
@@ -37,22 +39,28 @@
       PayOtherPay,
       PayOtherPayItem,
       PaySubmit,
-      PayShadow
+      PayShadow,
+      PayPassword
     },
     data() {
       return {
-        show: false
+        show: false,
+        pwdShow:false
       }
     },
     methods: {
       letShadowShow(val) {
-        this.show = val
+        console.log(val)
+        this.pwdShow = val
       },
       funHide(val) {
         this.show = val
       },
       backClickHandle() {
-        goBack(this.$router)
+        this.show = true
+      },
+      handleReceivePwd(val){
+        this.pwdShow = val
       }
     }
   }
