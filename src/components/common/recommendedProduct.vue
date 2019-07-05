@@ -1,7 +1,7 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <div class="recommend-items" v-for="(item,index) in recommenditem" :key="index">
+      <router-link class="recommend-items" :to="item.path" v-for="(item,index) in recommenditem" :key="index">
         <div class="similar-product">
           <div class="similar-posre">
             <img :src="item.Img" alt="">
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -29,17 +29,20 @@
           {
             Img: '../../../static/img/classify/2.png',
             text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
+            text2: '1066',
+            path:'/details',
           },
           {
             Img: '../../../static/img/classify/2.png',
             text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
+            text2: '1066',
+            path:'/details',
           },
           {
             Img: '../../../static/img/classify/2.png',
             text1: '黑科技MAUS薯片蓝牙鼠标无线苹果笔记本台式电脑家用办公便携 蓝色键鼠套装',
-            text2: '1066'
+            text2: '1066',
+            path:'/details',
           }
         ]
       }
