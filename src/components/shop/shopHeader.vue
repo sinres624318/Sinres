@@ -1,5 +1,6 @@
 <template>
   <div v-if="shopProductInfo">
+
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
