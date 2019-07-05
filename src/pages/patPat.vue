@@ -102,9 +102,11 @@
 
       }
     },
+    // https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/patPatInfo
     created(){
-      this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/patPatInfo").then((response)=>{
+      this.axios.get("http://10.35.162.113:9005/index/patPat").then((response)=>{
         this.patPatInfo=response.data;
+        console.log(this.patPatInfo)
       }).catch((error)=>{
         console.log(error)
       })

@@ -1,9 +1,11 @@
 <template>
   <div class="shop">
-    <router-view></router-view>
+    <!--    <transition>-->
+      <router-view :shopId="shopId"></router-view>
+<!--    </transition>-->
     <div class="shopTabbar">
       <div class="tools-bar-ShopIndex">
-        <router-link tag="div" :to="{name:'ShopIndex'}">
+        <router-link tag="div" :to="{name:'ShopIndex'}" :shopHeader="shopHeader">
           <i class="van-icon van-icon-home-o"></i>
           <p>首页</p>
         </router-link>
@@ -35,12 +37,29 @@ export default {
   components: {
   },
   data() {
-    return {};
+    return {
+      shopId:'',
+    };
+  },
+  created() {
+    this.shopId='104'
+    // this.shopId=this.$route.query.shopId;
+    console.log(this.$route.query.shopId)
   }
 };
 </script>
 <style src='./../../static/css/reset.css'></style>
 <style>
+
+  /*.v-enter,*/
+  /*.v-leave-to{*/
+  /*  opacity:0 ;*/
+  /*  transform: translate(80px);*/
+  /*}*/
+  /*.v-enter-active,*/
+  /*.v-leave-active{*/
+  /*  transition: all 0.3s ease;*/
+  /*}*/
 .shop {
   overflow-y: auto;
   height: 100%;
@@ -57,9 +76,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -webkit-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
-  -moz-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  box-shadow: 0 0 20px 0 hsla(0, 6%, 58%, 0.6);
 }
 .shopTabbar>div{
   width: 25%;

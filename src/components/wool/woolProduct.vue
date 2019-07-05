@@ -1,6 +1,6 @@
 <template>
   <div class="woolProductLists">
-    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle.woolProduct" :key='index'>
+    <div class="woolProduct" v-for="(item,index) in woolProductInfoHandle.woolProduct" :key='index' @click="toDetailsHandle(item.productID)">
       <a href="#">
         <div class="woolProductImg">
           <img :src="item.img" alt="商品">
@@ -13,12 +13,12 @@
               <span>{{item.price}}</span>.00
             </div>
             <div class="woolProOldPic">
-              <del>{{item.oldPrice}}</del>
+              <del>￥{{item.oldPrice}}</del>
             </div>
           </div>
           <div class="woolProductEvaluate">
-            <span>{{item.evaluate}}</span>
-            <span>{{item.evaluateRate}}</span>
+            <span>{{item.evaluate}}条评价</span>
+            <span>{{item.evaluateRate}}好评</span>
           </div>
           <div class="toCardImg">
             <a href="#">
@@ -37,6 +37,14 @@
       woolProductInfoHandle:{
         type:Object,
         required:true
+      }
+    },
+    methods: {
+      toDetailsHandle(id) {
+        this.$router.push({
+          path: '/details',
+          query: {productID: id}
+        })
       }
     },
   }

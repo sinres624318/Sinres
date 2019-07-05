@@ -9,7 +9,7 @@
         <a href="#"  onclick=" return false; ">编辑</a>
       </div>
       <div class="myAttention-content-bottom" v-for="item in list.myAttentionList" v-if="num==0">
-        <img :src="item.img" alt="" @click="routerHandel(item.productId)">
+        <img :src="item.img" alt="" @click="routerHandel(item.productID)">
         <div class="myAttention-content-bottom-right">
           <p class="myAttention-content-bottom-right-p1">{{item.text}}</p>
           <div class="myAttention-content-bottom-right-introduce">
@@ -62,14 +62,14 @@
         },
         routerHandel(id){
           this.$router.push({
-            name:'Details',
-            params:{productId:id}
+            path:'/details',
+            query:{productID:id}
           });
         },
         shopHandel(id){
           this.$router.push({
-            name:'shop',
-            params:{shopId:id}
+            path:'/shop',
+            query:{shopId:id}
           });
         }
       }

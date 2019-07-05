@@ -1,16 +1,16 @@
 <template>
   <div class="productPromotion">
-    <a href="#" v-for="(item,index) in shopProductInfoHandle" :key="index">
+    <a href="#" v-for="(item,index) in shopProductInfoHandle" :key="index" @click="toDetailsHandle(item.productID)">
       <img v-if="item.img" :src="item.img">
       <div class="shopListItemLeft">
-        <p>{{item.describe}}</p>
+        <p>{{item.title}}</p>
         <div class="pic">
           <em>￥</em>
           <span>{{item.price}}</span>
           <em>.00</em>
         </div>
         <div class="oldPic">
-          <del>{{item.oldPrice}}</del>
+          <del>￥{{item.oldPrice}}</del>
         </div>
         <div class="promotionBtn">秒杀</div>
       </div>
@@ -26,11 +26,14 @@ export default {
       required:true
     }
   },
-  data() {
-    return {
-
-    };
-  }
+  methods: {
+    toDetailsHandle(id) {
+      this.$router.push({
+        path: '/details',
+        query: {productID: id}
+      })
+    }
+  },
 };
 </script>
 <style src='./../../../static/css/reset.css'></style>
@@ -61,6 +64,7 @@ export default {
   text-overflow: ellipsis;
   overflow: hidden;
   height: 62px;
+  overflow-y: hidden;
 }
 .shopListItemLeft .pic{
     margin-top: 36px;

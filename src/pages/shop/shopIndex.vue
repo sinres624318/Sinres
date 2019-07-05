@@ -1,38 +1,7 @@
 <template>
   <div>
     <div class="shopIndex" v-if="shopProductInfo">
-      <!-- shop-header -->
-      <!-- 背景蒙版 -->
-      <div class="bgimg">
-        <img v-if="this.shopProductInfo.header.img" :src='shopProductInfo.header.img' alt>
-        <p></p></div>
-      <div class="shopHeader">
-        <div class="shopHeaderLogo">
-          <a href>
-            <img v-if="this.shopProductInfo.header.img" :src='shopProductInfo.header.img'>
-          </a>
-        </div>
-        <div class="shopHeaderName">
-          <h3>{{this.shopProductInfo.header.tit}}</h3>
-          <p>信瑞自营</p>
-        </div>
-        <div class="shopHeaderCollect">
-          <a href="#">
-            <div>收藏</div>
-          </a>
-          <span>{{this.shopProductInfo.header.collect}}万人收藏</span>
-        </div>
-      </div>
-      <!-- shopNav -->
-      <div class="shopNav">
-        <div class="shopNavInput">
-          <van-search placeholder="搜商品"/>
-        </div>
-        <div class="shopNavList">
-          <div>精选</div>
-          <div>商品</div>
-        </div>
-      </div>
+      <ShopHeader :shopProductInfo="shopProductInfo" v-if="shopProductInfo"></ShopHeader>
       <!-- shopSwipter -->
       <div class="shopSwipter">
         <van-swipe :autoplay="3000" indicator-color="orange">
@@ -48,15 +17,18 @@
           <img v-if="item" :src="item" alt>
         </a>
       </div>
-      <div class="productModel" v-for="aa in shopProductInfo.productModel">
-        <img :src='aa.img' alt>
+      <div class="productModel" v-for="(item,index) in shopProductInfo.productModel">
+        <img :src='item' alt>
         <div class="productModelLink" >
           <div class="productModelFirst">
             <a herf="javascript:;"
-               @click="detailsClickHandle(1)"
+               @click="detailsClickHandle(0)"
                href="#"></a>
           </div>
           <div class="productModelChild">
+            <a herf="javascript:;"
+               @click="detailsClickHandle(1)"
+               href="#"></a>
             <a herf="javascript:;"
                @click="detailsClickHandle(2)"
                href="#"></a>
@@ -66,16 +38,13 @@
             <a herf="javascript:;"
                @click="detailsClickHandle(4)"
                href="#"></a>
-            <a herf="javascript:;"
-               @click="detailsClickHandle(5)"
-               href="#"></a>
           </div>
         </div>
       </div>
 
       <!-- shopList -->
       <div class="shopList">
-        <ShopProductV v-if="flag" :shopProductInfoHandle="shopProductInfo.roductList"></ShopProductV>
+        <ShopProductV v-if="flag" :shopProductInfo="shopProductInfo.roductList"></ShopProductV>
       </div>
     </div>
     <Loading v-if="!shopProductInfo"></Loading>
@@ -84,6 +53,7 @@
 <script>
   import {Search} from "vant";
   import {Swipe, SwipeItem, Lazyload} from "vant";
+  import ShopHeader from './../../components/shop/shopHeader';
   import ShopProductV from './../../components/shop/shopProductV';
   import Loading from './../../components/common/loading'
 
@@ -95,7 +65,8 @@
       "van-swipe-item": SwipeItem,
       Lazyload,
       ShopProductV,
-      Loading
+      Loading,
+      ShopHeader
     },
     data() {
       return {
@@ -114,13 +85,23 @@
 
       },
     },
-    created() {
-      this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/shopProductInfo").then((data) => {
+    props:{
+      shopId:{
+        type:String,
+        required:true
+      }
+    },
+    // "https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/shopProductInfo"
+    created(){
+      // let shopId=this.$route.params.shopId;
+      this.axios.get("http://10.35.162.113:9005/shop/shopIndex/"+this.shopId).then((data) => {
         this.shopProductInfo = data.data;
+        console.log(this.shopProductInfo)
       }).catch((err) => {
         console.log(err)
-      });
+      })
     },
+
   }
 
 </script>

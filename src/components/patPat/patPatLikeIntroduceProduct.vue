@@ -1,12 +1,12 @@
 <template>
   <div class="likeIntroduceLists">
-    <div class="likeIntroduceProduct" v-for="(item,index) in patPatLikeIntroduceProductHandle.likeintroduce " :key="index">
+    <div class="likeIntroduceProduct" v-for="(item,index) in patPatLikeIntroduceProductHandle.likeintroduce " :key="index" @click="toDetailsHandle(item.productID)">
       <a href="#">
         <div class="likeIntroduceProductImg">
           <img :src="item.img" alt="猜你喜欢的商品">
         </div>
         <div class="likeProductDescribe">
-          <p>{{item.describe}}</p>
+          <p>{{item.describes}}</p>
           <i>￥</i>
           <span>{{item.price}}</span>
         </div>
@@ -22,7 +22,15 @@ export default {
       type:Object,
       required:true
     }
-  }
+  },
+  methods: {
+    toDetailsHandle(id) {
+      this.$router.push({
+        path: '/details',
+        query: {productID: id}
+      })
+    }
+  },
 };
 </script>
 <style scoped>

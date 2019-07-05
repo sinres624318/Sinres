@@ -26,7 +26,7 @@
       Loding
     },
     created() {
-          this.axios.post("http://10.35.162.3:9005/mine/collect/",
+          this.axios.post("http://10.35.161.35:9005/mine/collect/",
              {
                 "token":"123456",
            })

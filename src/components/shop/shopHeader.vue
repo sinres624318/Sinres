@@ -1,6 +1,5 @@
 <template>
   <div v-if="shopProductInfo">
-
     <!-- shop-header -->
     <!-- 背景蒙版 -->
     <div class="bgimg">
@@ -15,7 +14,7 @@
       </div>
       <div class="shopHeaderName">
         <h3>{{this.shopProductInfo.header.tit}}</h3>
-        <p>信瑞自营</p>
+        <p>信瑞购物</p>
       </div>
       <div class="shopHeaderCollect">
         <div>收藏</div>
@@ -38,21 +37,12 @@ export default {
     'van-search':Search,
     Loading
   },
-  data(){
-    return{
-      shopProductInfo:''
+  props:{
+    shopProductInfo:{
+      type:Object,
+      required:true
     }
   },
-  methods:{
-
-  },
-  created() {
-    this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/product").then((data)=>{
-      this.shopProductInfo=data.data;
-    }).catch((err)=>{
-      console.log('err')
-    })
-  }
 };
 </script>
 <style src='./../../../static/css/reset.css'></style>
