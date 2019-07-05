@@ -15,7 +15,7 @@
       </div>
       <div class="shopHeaderName">
         <h3>{{this.shopProductInfo.header.tit}}</h3>
-        <p>信瑞自营</p>
+        <p>信瑞购物</p>
       </div>
       <div class="shopHeaderCollect">
         <div>收藏</div>
@@ -38,21 +38,26 @@ export default {
     'van-search':Search,
     Loading
   },
-  data(){
-    return{
-      shopProductInfo:''
+  // data(){
+  //   return{
+  //     shopProductInfo:''
+  //   }
+  // },
+  props:{
+    shopProductInfo:{
+      type:Object,
+      required:true
     }
   },
-  methods:{
 
-  },
-  created() {
-    this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/product").then((data)=>{
-      this.shopProductInfo=data.data;
-    }).catch((err)=>{
-      console.log('err')
-    })
-  }
+  // created() {
+  //   this.axios.get("http://10.35.162.113:9005/shop/shopIndex/104/").then((data)=>{
+  //     this.shopProductInfo=data.data;
+  //     console.log(this.shopProductInfo)
+  //   }).catch((err)=>{
+  //     console.log('err')
+  //   })
+  // }
 };
 </script>
 <style src='./../../../static/css/reset.css'></style>

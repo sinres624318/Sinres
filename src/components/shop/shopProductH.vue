@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(item,index) in shopProductInfoHandle.productList" :key="index" class="allProductItem">
+    <div v-for="(item,index) in shopProductInfo" :key="index" class="allProductItem">
       <a href="#">
         <div class="productTtemPic">
           <img v-if="item.img" :src="item.img" alt>
@@ -26,7 +26,7 @@
 export default {
   name: "shopProductH",
   props:{
-    shopProductInfoHandle:{
+    shopProductInfo:{
       type:Object,
       required:true
     }

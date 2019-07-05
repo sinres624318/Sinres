@@ -13,12 +13,12 @@
               <span>{{item.price}}</span>.00
             </div>
             <div class="woolProOldPic">
-              <del>{{item.oldPrice}}</del>
+              <del>￥{{item.oldPrice}}</del>
             </div>
           </div>
           <div class="woolProductEvaluate">
-            <span>{{item.evaluate}}</span>
-            <span>{{item.evaluateRate}}</span>
+            <span>{{item.evaluate}}条评价</span>
+            <span>{{item.evaluateRate}}好评</span>
           </div>
           <div class="toCardImg">
             <a href="#">

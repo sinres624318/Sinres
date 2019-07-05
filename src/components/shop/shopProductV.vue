@@ -1,6 +1,6 @@
 <template>
   <div class="shopList">
-    <div class="shopListItem" v-for="(item,index) in shopProductInfoHandle" :key="index">
+    <div class="shopListItem" v-for="(item,index) in shopProductInfo" :key="index">
       <a href="#" >
         <img v-if="item.img" :src="item.img" alt="商品">
         <div class="shopListItemBottom">
@@ -29,7 +29,7 @@
 export default {
   name: "shopProductV",
   props:{
-    shopProductInfoHandle:{
+    shopProductInfo:{
       type:Array,
       required:true
     }
@@ -44,6 +44,7 @@ export default {
     width: 100%;
     height: 100%;
     margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 .shopListItem {
   width: 50%;

@@ -1,6 +1,6 @@
 <template>
   <div class="promotion" v-if="shopProductInfo">
-    <ShopHeader></ShopHeader>
+    <ShopHeader :shopProductInfo="shopProductInfo"></ShopHeader>
     <div class="promotionList">
       <p>以下商品参加限时秒杀，欢迎选购</p>
       <div class="promotionLists">
@@ -25,9 +25,16 @@
         shopProductInfo: '',
       }
     },
+    props:{
+      shopId:{
+        type:String,
+        required:true
+      }
+    },
     created() {
-      this.axios.get("https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/productPromotion").then((data) => {
+      this.axios.get("http://10.35.162.113:9005/shop/"+this.shopId+"/pomotion").then((data) => {
         this.shopProductInfo = data.data;
+        console.log(this.shopProductInfo)
       }).catch((err) => {
         // console.log('err')
       })

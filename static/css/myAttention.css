@@ -141,11 +141,6 @@
 }
 /*MyAttentionContent*/
 
-/*myAttentionBottom*/
-.myAttention-bottom{
-  background: rgb(247,247,247);
-  width: 100%;
-}
 .myAttention-bottom-title{
   text-align: center;
   height: 100px;
@@ -153,46 +148,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #efefef;
 }
 .strip{
   width: 150px;
   height: 2px;
   background:#cccccc;
 }
-.myAttention-bottom-particulars{
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.myAttention-bottom-particulars-unit{
-  width: 335px;
-  background: white;
-  margin-bottom: 40px;
-}
-.myAttention-bottom-particulars-unit:nth-child(2n+1){
-  margin-right: 40px;
-}
-.myAttention-bottom-particulars-unit img{
-  width: 335px;
-  height: 350px;
-}
-.myAttention-bottom-particulars-unit p{
-  margin-top: 10px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  width: 335px;
-  padding: 0 10px ;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-}
-.myAttention-bottom-particulars-unit span{
-  color: red;
-  font-size: 40px;
-  margin-bottom: 60px;
-}
-/*myAttentionBottom*/
 /*myAttention*/

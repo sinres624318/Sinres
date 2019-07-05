@@ -34,7 +34,9 @@
   z-index: 99;
   font-size: 66px;
 }
-
+.patPatBanner{
+  height: 221px;
+}
 .right {
   position: absolute;
   right: 0;

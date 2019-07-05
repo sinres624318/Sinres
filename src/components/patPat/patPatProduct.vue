@@ -6,7 +6,7 @@
           <img :src="item.img" alt="商品">
         </div>
         <div class="woolProductBottom">
-          <p>{{item.describe}}</p>
+          <p>{{item.describes}}</p>
           <div class="woolProductPrice">
             <div class="woolProNewPic">
               ￥
@@ -45,11 +45,8 @@
 
   .woolProduct {
     width: 48%;
-    margin-right: 10px;
-    margin-left: 10px;
     background: #fff;
     position: relative;
-    margin-bottom: 10px;
     margin: 0 auto 18px;
     padding-bottom: 20px;
   }

@@ -1,9 +1,12 @@
 <template>
   <div class="shop">
-    <router-view></router-view>
+
+    <!--    <transition>-->
+      <router-view :shopId="shopId"></router-view>
+<!--    </transition>-->
     <div class="shopTabbar">
       <div class="tools-bar-ShopIndex">
-        <router-link tag="div" :to="{name:'ShopIndex'}">
+        <router-link tag="div" :to="{name:'ShopIndex'}" :shopHeader="shopHeader">
           <i class="van-icon van-icon-home-o"></i>
           <p>首页</p>
         </router-link>
@@ -30,17 +33,34 @@
   </div>
 </template>
 <script>
+import shopIndex from "./shop/shopIndex";
 export default {
   name: "shop",
   components: {
   },
   data() {
-    return {};
+    return {
+      shopId:'',
+    };
+  },
+  created() {
+    this.shopId='101'
+      // this.$route.params.shopId;
   }
 };
 </script>
 <style src='./../../static/css/reset.css'></style>
 <style>
+
+  /*.v-enter,*/
+  /*.v-leave-to{*/
+  /*  opacity:0 ;*/
+  /*  transform: translate(80px);*/
+  /*}*/
+  /*.v-enter-active,*/
+  /*.v-leave-active{*/
+  /*  transition: all 0.3s ease;*/
+  /*}*/
 .shop {
   overflow-y: auto;
   height: 100%;

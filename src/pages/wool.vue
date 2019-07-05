@@ -85,8 +85,9 @@
         this.flag = !this.flag;
       },
     },
+    // https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/woolProduct
     created() {
-      this.axios.get('https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/woolProduct').then((response) => {
+      this.axios.get('http://10.35.162.113:9005/index/wool').then((response) => {
         this.woolProductInfo = response.data;
         console.log(this.woolProductInfo)
       }).catch((error) => {

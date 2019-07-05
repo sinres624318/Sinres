@@ -2,7 +2,7 @@
   <div class="recharge">
     <rechargeHeader/>
     <rechargeItem/>
-    <rechargeContent/>
+    <rechargeContent />
   </div>
 </template>
 
@@ -11,8 +11,8 @@
   import rechargeItem from '../components/recharge/recharItem'
   import rechargeContent from '../components/recharge/rechargeContent'
     export default {
-        name: "recharge",
-      components:{
+      name: "recharge",
+      components: {
         rechargeHeader,
         rechargeItem,
         rechargeContent,
