@@ -1,6 +1,8 @@
 <template>
   <div class="cart-product-edit-bar">
-    <div class="cart-product-edit-bar-check-all">
+    <div
+      @click="allCheckHandle"
+      class="cart-product-edit-bar-check-all">
       <span>全选</span>
       <i :class="['icon_select', allCheck ? 'selected':'']"></i>
     </div>
@@ -29,11 +31,14 @@
             }
           })
         });
-        console.log(productIDList);
         this.$store.dispatch('deleteProduct', {
           "productID": productIDList,
-          "token": getCookie('token')
+          "token": getCookie('token'),
+          "vue":this
         });
+      },
+      allCheckHandle() {
+        this.$store.commit('allCheckHandle')
       }
     }
   }

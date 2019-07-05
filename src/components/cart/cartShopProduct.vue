@@ -63,21 +63,24 @@
         console.log(this.product.productID);
         this.$store.dispatch('deleteProduct', {
           "productID": [this.product.productID],
-          "token": getCookie('token')
+          "token": getCookie('token'),
+          "vue":this
         });
       },
       addClickHandle() {
         this.$store.dispatch('addProduct', {
           "sID": this.sID,
           "pID": this.pID,
-          "token": getCookie('token')
+          "token": getCookie('token'),
+          "vue":this
         });
       },
       minusClickHandle() {
         this.$store.dispatch('minusProduct', {
           "sID": this.sID,
           "pID": this.pID,
-          "token": getCookie('token')
+          "token": getCookie('token'),
+          "vue":this
         });
       },
       checkProductHandle() {

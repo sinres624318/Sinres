@@ -5,19 +5,20 @@
         <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
       </template>
       <template v-slot:title>
-        <div class="title">我的京东</div>
+        <div class="title">我的信锐</div>
       </template>
       <template v-slot:right>
         <div class="right iconfont" @click="moreMenuClickHandle">&#xe670;</div>
       </template>
     </NavBar>
     <MineUserInfo v-if="userInfo.accountInfo" :accountInfo="userInfo.accountInfo"></MineUserInfo>
-    <MineOrderCell></MineOrderCell>
+    <MineOrderCell v-if="userInfo.accountInfo"></MineOrderCell>
     <MineAssetCell v-if="userInfo.assetInfo" :assetInfo="userInfo.assetInfo"></MineAssetCell>
     <MineAssetsCell v-if="userInfo.browseInfo" :browseInfo="userInfo.browseInfo"></MineAssetsCell>
-    <MineActivity></MineActivity>
+    <MineActivity v-if="userInfo.accountInfo"></MineActivity>
     <MineRecommend v-if="userInfo.productList" :recommendedProduct="userInfo.productList"></MineRecommend>
     <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
+    <Loading v-if="!userInfo.accountInfo"></Loading>
   </div>
 </template>
 
@@ -30,6 +31,7 @@
   import MineActivity from '../components/mine/mineActivity'
   import MineRecommend from '../components/mine/mineRecommend'
   import MoreMenu from '../components/common/moreMenu'
+  import Loading from '../components/common/loading'
   import {
     goBack,
     getCookie
@@ -51,6 +53,7 @@
       MineActivity,
       MineRecommend,
       MoreMenu,
+      Loading
     },
     methods: {
       backClickHandle() {

@@ -31,7 +31,7 @@
     },
     created() {
       let goodslist = this.$route.params.goodslist
-      console.log(goodslist[0]);
+      console.log(goodslist);
       this.productlist.push(this.$route.params.goodslist)
       this.axios.post("http://10.35.162.104:9005/cart/paycart/", {
         "token": getCookie('token'),
