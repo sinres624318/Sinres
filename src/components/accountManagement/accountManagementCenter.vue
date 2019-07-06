@@ -21,7 +21,7 @@
         <span>定期修改更安全<i class="iconfont">&#xe624;</i></span>
       </div>
       <div class="accountManage-Center-Bottom-Classfiy" @click="modifyPayPasswordHandle">
-        <span>京东支付密码</span>
+        <span>修改支付密码</span>
         <span>已设置<i class="iconfont">&#xe624;</i></span>
       </div>
       <div class="accountManage-Center-Bottom-Classfiy">
@@ -33,18 +33,32 @@
       position="bottom"
       v-model="modalShow">
       <van-password-input
-        :value="value"
-        info="密码为 6 位数字"
-        @focus="showKeyboard = true"
+        :value="oldValue"
+        info="请输入 6 位旧数字"
+        @focus="showOldKeyboard = true;showNewKeyboard = false"
+      />
+      <van-password-input
+        :value="newValue"
+        info="请输入 6 位新数字"
+        @focus="showNewKeyboard = true;showOldKeyboard = false"
       />
       <van-number-keyboard
-        :show="showKeyboard"
+        :show="showOldKeyboard"
         extra-key="."
         theme="custom"
         close-button-text="完成"
-        @close="change"
-        @input="onInput"
-        @delete="onDelete"
+        @close="oldClose"
+        @input="onInputOld"
+        @delete="onDeleteOld"
+      />
+      <van-number-keyboard
+        :show="showNewKeyboard"
+        extra-key="."
+        theme="custom"
+        close-button-text="完成"
+        @close="newClose"
+        @input="onInputNew"
+        @delete="onDeleteNew"
       />
     </van-popup>
   </div>
@@ -66,25 +80,37 @@
     },
     data() {
       return {
-        oldValue:'',
-        value: '',
-        showKeyboard: true,
+        oldValue: '',
+        newValue: '',
+        showNewKeyboard: false,
+        showOldKeyboard: true,
         modalShow: false,
         modifyPayPasswordFlag: true
       }
     },
     methods: {
-      change(){
+      newClose() {
+        this.modalShow = false;
+        if(this.newValue.length>6){
           console.log(this.value);
+        }
+      },
+      oldClose(){
       },
       modifyPayPasswordHandle() {
         this.modalShow = true;
       },
-      onInput(key) {
-        this.value = (this.value + key).slice(0, 6);
+      onInputNew(key) {
+        this.newValue = (this.newValue + key).slice(0, 6);
       },
-      onDelete() {
-        this.value = this.value.slice(0, this.value.length - 1);
+      onInputOld(key) {
+        this.oldValue = (this.oldValue + key).slice(0, 6);
+      },
+      onDeleteNew() {
+        this.newValue = this.newValue.slice(0, this.newValue.length - 1);
+      },
+      onDeleteOld() {
+        this.oldValue = this.oldValue.slice(0, this.oldValue.length - 1);
       }
     }
   }
@@ -94,20 +120,25 @@
   .van-password-input {
     top: 50px;
   }
+
   .van-password-input__security {
     height: 70px;
   }
+
   .van-popup {
     padding: 0 70px;
-    height:600px;
+    height: 700px;
   }
+
   /deep/ .van-key {
     height: 90px !important;
     line-height: 90px !important;
   }
+
   /deep/ .van-number-keyboard__sidebar {
-    height: 100%!important;
+    height: 100% !important;
   }
+
   /deep/ .van-key--delete,
   /deep/ .van-key--close {
     height: 180px !important;

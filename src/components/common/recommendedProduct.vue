@@ -46,7 +46,6 @@
   .recommend-item {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     justify-content: space-between;
     padding: 4px 20px 20px 20px;
   }
