@@ -71,7 +71,7 @@
 		created() {
 			let a=this.$route.query.productID;
 
-			this.axios.get("detail"+"?productID=1005&",{"token":''})
+			this.axios.get(detail+"?productID=1005&",{"token":''})
 			.then((response) => {
 				this.detailsInfo = response.data;
 				console.log(response.data)

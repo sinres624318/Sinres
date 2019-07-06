@@ -58,7 +58,7 @@
     <div class="patPatNavigation"></div>
     <!-- 拍拍专享 -->
     <div class="patPatExclusive">
-      <a href="#" v-for="(item,index) in this.patPatInfo.exclusive">
+      <a href="#" v-for="(item,index) in this.patPatInfo.exclusive" :key="index">
         <img :src="item" alt>
       </a>
     </div>

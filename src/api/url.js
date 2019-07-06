@@ -12,6 +12,14 @@ export const detailsIntroduce = 'http://10.35.161.65:9005/mine/collect/product/d
 
 export const detail = 'http://10.35.161.65:9005/detail/';
 
+export const defineOrder = 'http://10.35.161.65:9005/cart/paycart/';
+export const vouchers = 'http://10.35.161.65:9005/index/vouchers';
+export const payPassword = 'http://10.35.161.65:9005/cart/payord/';
+export const defineOrderSubmit = 'http://10.35.161.65:9005/cart/crtord/';
+export const applianceurl = 'http://10.35.161.65:9005/index/appliance';
+export const auctionurl = 'http://10.35.162.113:9005/index/auction';
+
+
 export const myAttention = 'http://10.35.161.65:9005/mine/collect/';
 export const rechargeContentPhoen = 'http://10.35.161.65:9005/index/paycost/phone/';
 export const rechargeContentTraffic = 'http://10.35.161.65:9005/index/paycost/traffic/';

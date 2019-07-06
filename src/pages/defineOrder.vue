@@ -14,6 +14,9 @@
   import DefineOrderInfo from './../components/defineOrder/defineOrderInfo'
   import Loading from './../components/common/loading'
   import {getCookie} from './../assets/js/common'
+  import {defineOrder} from "./../api/url";
+
+
 
   export default {
     name: "defineOrder",
@@ -30,14 +33,15 @@
       }
     },
     created() {
-      let goodslist = this.$route.params.goodslist
+      let goodslist = this.$route.params.goodslist;
       console.log(goodslist);
-      this.productlist.push(this.$route.params.goodslist)
-      this.axios.post("http://10.35.162.104:9005/cart/paycart/", {
+      this.productlist.push(this.$route.params.goodslist);
+      this.axios.post(defineOrder, {
         "token": getCookie('token'),
         "goodsList": goodslist
       })
         .then((data) => {
+          console.log(data);
           this.defineOrderInfo = data.data.data;
         })
         .catch((err) => {

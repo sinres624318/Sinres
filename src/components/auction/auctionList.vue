@@ -1,6 +1,6 @@
 <template>
     <div class="auction-list">
-      <div class="auction-item" v-for="(item,index) in sendType">
+      <div class="auction-item" v-for="(item,index) in sendType" :key="index">
         <div class="auction-item-img">
           <img :src="item.img">
         </div>

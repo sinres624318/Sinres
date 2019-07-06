@@ -27,7 +27,9 @@
   import Loading from './../components/common/loading'
   import SuccessOfGet from './../components/vouchers/successOfGet'
   import MoreMenu from './../components/common/moreMenu'
-    export default {
+  import {vouchers} from "./../api/url";
+
+  export default {
         name: "vouchers",
         components:{
           NavBar,
@@ -49,7 +51,7 @@
           this.SuccessOfGetShow = false
         },
         handleChangeMore(){
-          this.flag = !this.flag
+          this.flag = !this.flag;
           console.log(this.flag)
         },
         maskClickHandle(val) {
@@ -57,8 +59,8 @@
         }
       },
       created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
-          //   this.axios.get("http://10.35.162.104:9005/index/vouchers")
+          // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
+            this.axios.get(vouchers)
             .then((data)=>{
               console.log(data)
               this.vouchersInfo = data.data

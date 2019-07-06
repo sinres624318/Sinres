@@ -1,6 +1,6 @@
 <template>
     <div class="define-order-info-shop-list">
-      <div class="define-order-info-shop-list-item" v-for="(item,index) in sendDefineOrders.goodslist">
+      <div class="define-order-info-shop-list-item" v-for="(item,index) in sendDefineOrders.goodslist" :key="index">
         <div class="define-order-info-shop-name">
 
           <span>{{item.shopname}}</span>

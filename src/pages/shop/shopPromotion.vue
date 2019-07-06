@@ -32,7 +32,7 @@
       }
     },
     created() {
-      this.axios.get("shop"+this.shopId+"/pomotion").then((data) => {
+      this.axios.get(shop+this.shopId+"/pomotion").then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

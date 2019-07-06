@@ -1,6 +1,6 @@
 <template>
     <ul class="define-order-info-shop-product">
-      <li v-for="(item,index) in sendDefineOrderShopProduct">
+      <li v-for="(item,index) in sendDefineOrderShopProduct" :key="index">
         <div class="define-order-info-shop-product-img">
           <img :src="item.productpic">
         </div>

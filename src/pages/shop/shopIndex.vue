@@ -93,7 +93,7 @@
     },
     created(){
       // let shopId=this.$route.params.shopId;
-      this.axios.get("shop"+"shopIndex/"+this.shopId).then((data) => {
+      this.axios.get(shop+"shopIndex/"+this.shopId).then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

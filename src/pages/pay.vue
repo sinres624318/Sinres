@@ -29,6 +29,7 @@
   import PaySubmit from './../components/pay/paySubmit'
   import PayShadow from './../components/pay/payShadow'
   import {goBack} from './../assets/js/common.js'
+  import {defineOrderSubmit} from "./../api/url";
   import PayPassword from './../components/pay/payPassword'
 
   export default {
@@ -45,13 +46,16 @@
     data() {
       return {
         show: false,
-        pwdShow:false,
-        money:""
+        pwdShow: false,
+        money: "",
+        productList: [],
+        address: '',
+        TEL:''
       }
     },
     methods: {
       letShadowShow(val) {
-        console.log(val)
+        console.log(val);
         this.pwdShow = val
       },
       funHide(val) {
@@ -60,12 +64,28 @@
       backClickHandle() {
         this.show = true
       },
-      handleReceivePwd(val){
+      handleReceivePwd(val) {
         this.pwdShow = val
       }
     },
-    mounted() {
-      this.money = this.$route.params.totalPrice
+    created() {
+      this.money = this.$route.params.totalPrice;
+      this.productList = this.$route.params.productList;
+      this.address = this.$route.params.address;
+      // this.TEL = this.$route.params.TEL;
+
+      this.axios.post(defineOrderSubmit, {
+        "token": getCookie('token'),
+        "goodsList": this.productList,
+        "addr": this.address,
+        // "tel":this.TEL
+      }).then((data) => {
+        this.submitInfo = data.data.data
+
+      }).catch((err) => {
+        console.log(err)
+      });
+      console.log(sendDefineOrders);
     }
   }
 </script>

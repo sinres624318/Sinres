@@ -25,7 +25,7 @@ export default {
   //请求数据
   created() {
     this.axios
-      .get("detail" + "comment/?productID=1005")
+      .get(detail + "comment/?productID=1005")
       .then(response => {
         this.detailsItemInfo = response.data;
         console.log(this.detailsItemInfo);

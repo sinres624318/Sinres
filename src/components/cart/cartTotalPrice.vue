@@ -45,7 +45,7 @@
         productList.forEach((shop, shopIndex) => {
           shop.productList.forEach((product, productIndex) => {
             if (product.checked) {
-              let productKey = '"'+product.productID+'"';
+              let productKey = product.productID;
               goodslist.push({[productKey]:product.productNum})
             }
           })

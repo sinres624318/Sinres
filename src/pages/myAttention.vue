@@ -27,7 +27,7 @@
       Loding
     },
     created() {
-          this.axios.post("myAttention",
+          this.axios.post(myAttention,
              {
                 "token":"123456",
            })

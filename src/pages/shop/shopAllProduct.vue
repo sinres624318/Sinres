@@ -72,7 +72,7 @@
       }
     },
     created() {
-      this.axios.get("shop" + this.shopId + "/all").then((data) => {
+      this.axios.get(shop + this.shopId + "/all").then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

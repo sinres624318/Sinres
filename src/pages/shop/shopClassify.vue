@@ -49,7 +49,7 @@
       }
     },
     created() {
-      this.axios.get("shop" + this.shopId + "/classify").then((data) => {
+      this.axios.get(shop + this.shopId + "/classify").then((data) => {
         this.shopClassIfyInfo = data.data;
         console.log(this.shopClassIfyInfo)
       }).catch((err) => {
