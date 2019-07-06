@@ -51,7 +51,7 @@
     },
     methods: {
       letShadowShow(val) {
-        console.log(val)
+        console.log(val);
         this.pwdShow = val
       },
       funHide(val) {

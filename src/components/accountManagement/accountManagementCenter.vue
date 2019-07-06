@@ -29,7 +29,6 @@
         <span>7400****@qq.com<i class="iconfont">&#xe624;</i></span>
       </div>
     </div>
-
     <van-popup
       position="bottom"
       v-model="modalShow">
@@ -43,7 +42,7 @@
         extra-key="."
         theme="custom"
         close-button-text="完成"
-        @hide="change"
+        @close="change"
         @input="onInput"
         @delete="onDelete"
       />
@@ -67,6 +66,7 @@
     },
     data() {
       return {
+        oldValue:'',
         value: '',
         showKeyboard: true,
         modalShow: false,
@@ -91,7 +91,26 @@
 </script>
 
 <style scoped>
-  .van-number-keyboard {
-    position: relative;
+  .van-password-input {
+    top: 50px;
+  }
+  .van-password-input__security {
+    height: 70px;
+  }
+  .van-popup {
+    padding: 0 70px;
+    height:600px;
+  }
+  /deep/ .van-key {
+    height: 90px !important;
+    line-height: 90px !important;
+  }
+  /deep/ .van-number-keyboard__sidebar {
+    height: 100%!important;
+  }
+  /deep/ .van-key--delete,
+  /deep/ .van-key--close {
+    height: 180px !important;
+    line-height: 180px !important;
   }
 </style>

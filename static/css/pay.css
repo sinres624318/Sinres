@@ -245,24 +245,24 @@ NavBar {
   display: flex;
   flex-direction: column;
 }
-.van-number-keyboard .van-number-keyboard__body i{
-  height: 100px!important;
-  line-height: 100px!important;
-  font-size: 36px;
-  color: #000;
-}
-/*.van-number-keyboard{*/
-/*  padding-bottom: 500px;*/
+/*.van-number-keyboard .van-number-keyboard__body i{*/
+/*  height: 100px!important;*/
+/*  line-height: 100px!important;*/
+/*  font-size: 36px;*/
+/*  color: #000;*/
 /*}*/
+/*!*.van-number-keyboard{*!*/
+/*!*  padding-bottom: 500px;*!*/
+/*!*}*!*/
 
-.van-number-keyboard {
-  position: fixed;
-  bottom: 300px;
-}
-.van-password-input{
-  margin-top: 540px;
-}
-.van-password-input>ul>li{
-  height: 80px;
-  font-size: 48px;
-}
+/*.van-number-keyboard {*/
+/*  position: fixed;*/
+/*  bottom: 300px;*/
+/*}*/
+/*.van-password-input{*/
+/*  margin-top: 540px;*/
+/*}*/
+/*.van-password-input>ul>li{*/
+/*  height: 80px;*/
+/*  font-size: 48px;*/
+/*}*/
