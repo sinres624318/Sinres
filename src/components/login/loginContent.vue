@@ -75,7 +75,7 @@
     saveCookie
   } from './.././../assets/js/common.js'
   import {Notify} from 'vant'
-
+  import {loginContent} from "./../../api/url"
   export default {
     name: "content",
     data() {
@@ -107,7 +107,7 @@
           "account": this.account,
           "password": this.password
         };
-        this.axios.post('http://10.35.162.133:9005/login/', info)
+        this.axios.post('loginContent', info)
           .then((response) => {
             console.log(response);
             let data = response.data;
@@ -145,7 +145,7 @@
             this.countDown--
           }, 1000);
           this.verifyCodeFlag = false;
-          this.axios.post('http://10.35.162.133:9005/login/', {
+          this.axios.post('loginContent', {
             "tel": this.TEL
           })
             .then((data) => {

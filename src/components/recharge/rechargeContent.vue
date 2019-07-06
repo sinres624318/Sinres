@@ -6,7 +6,7 @@
 
         <div class="recharge-content-first-ul">
       <ul>
-        <li v-for="(item,index) in list"  :class="{heightColor:num==index}" @click="numHandel(index,item.text)">
+        <li v-for="(item,index) in list"  :class="{heightColor:num==index}" @click="numHandel(index,item.text)" :key="index">
           {{item.price}}
           <i v-show="find"><span >售价:</span>{{item.text}}</i>
        </li>
@@ -26,7 +26,7 @@
 
         <div class="recharge-content-first-ul">
         <ul>
-          <li v-for="(item,index) in lists" :class="{heightColor:figure==index}" @click="numHandel(index,item.text)">
+          <li v-for="(item,index) in lists" :class="{heightColor:figure==index}" @click="numHandel(index,item.text)" :key="index">
             {{item.price}}
             <i v-show="finds"><span >售价:</span>{{item.text}}</i>
           </li>
@@ -49,7 +49,7 @@
 
 <script>
     import indexHender from "../index/indexHender";
-
+    import {rechargeContentPhoen,rechargeContentTraffic} from "./../../api/url"
     export default {
         name: "rechargeContent",
       data(){
@@ -93,7 +93,7 @@
         },
         rechargeRouter(){
             let a=this.$refs.i.innerHTML;
-          this.axios.post("http://10.35.162.3:9005/index/paycost/phone/",{
+          this.axios.post("rechargeContentPhoen",{
             "token":"123456",
             "tel":"this.telephoneNum",
             "payasset":a
@@ -107,7 +107,7 @@
                 };
               if (phone.code===200&&this.telephoneNum!=='' && this.$refs.i.innerHTML!==0){
                 this.$router.push({
-                  path:'/pay',
+                  name:'Pay',
                   params:{xinxi:phone}
                 })
               };
@@ -119,7 +119,7 @@
         },
         rechargesRouter(){
             let b=this.$refs.i.innerHTML;
-          this.axios.post("http://10.35.162.3:9005/index/paycost/traffic/",{
+          this.axios.post("rechargeContentTraffic",{
             "token":"1234-56",
             "tel":"this.telephoneNum2",
             "payasset":b

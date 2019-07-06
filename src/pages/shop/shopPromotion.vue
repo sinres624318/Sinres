@@ -13,7 +13,7 @@
 <script>
   import ShopHeader from "./../../components/shop/shopHeader";
   import ShopProductPromotion from "./../../components/shop/shopProductPromotion";
-
+  import {shop} from './../../api/url';
   export default {
     name: "shopPromotion",
     components: {
@@ -32,7 +32,7 @@
       }
     },
     created() {
-      this.axios.get("http://10.35.162.104:9005/shop/"+this.shopId+"/pomotion").then((data) => {
+      this.axios.get("shop"+this.shopId+"/pomotion").then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

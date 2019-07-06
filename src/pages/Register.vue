@@ -24,6 +24,7 @@
   import RegisterMask from "../components/Register/RegisterMask"
   import RegisterMaskTwo from '../components/Register/RegisterMaskTwo'
   import {Notify} from 'vant';
+  import {register} from "./../api/url"
   import {
     verifyTEL,
     saveCookie
@@ -73,7 +74,7 @@
           });
           return;
         }
-        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL, "idtf": code})
+        this.axios.post('register', {"tel": TEL, "idtf": code})
           .then((response) => {
             let data = response.data;
             if (data.code == 200) {
@@ -115,7 +116,7 @@
           this.countDown--
         }, 1000);
         console.log(TEL);
-        this.axios.post('http://121.199.63.71:9005/regist/', {"tel": TEL})
+        this.axios.post('register', {"tel": TEL})
           .then((data) => {
             if (data.data.code == 200) {
               console.log("验证码发送成功！");

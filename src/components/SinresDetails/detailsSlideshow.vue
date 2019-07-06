@@ -1,45 +1,34 @@
 <template>
-  <div class="details_slideshow">
-    <van-swipe :autoplay="3000" indicator-color="white">
-      <van-swipe-item
-        v-for="(item,index) in banner"
-        :key="index">
-        <img :src="item" alt="">
-      </van-swipe-item>
-    </van-swipe>
-  </div>
+	<div class="details_slideshow">
+		<van-swipe :autoplay="3000" indicator-color="white">
+			<van-swipe-item v-for="(item,index) in detailsSlideshowHandle.banner" :key="index"><img :src="item" alt=""></van-swipe-item>
+		</van-swipe>
+	</div>
 </template>
 
 <script>
-  // 引入
-  import {Swipe, SwipeItem} from 'vant';
+	// 引入
+	import {
+		Swipe,
+		SwipeItem
+	} from 'vant';
+	export default {
 
-  export default {
+		name: 'DetailsSlideshow',
+		components: {
+			'van-swipe': Swipe,
+			'van-swipe-item': SwipeItem
 
-    name: 'DetailsSlideshow',
-    components: {
-      'van-swipe': Swipe,
-      'van-swipe-item': SwipeItem
+		},
+		// 接收
+		props: {
+			detailsSlideshowHandle: {
+				type: Object,
+				required: true
+			}
 
-    },
-    data() {
-
-
-      return {
-        banner: [
-          "../../../static/img/Details/details_banner.jpg",
-          "../../../static/img/Details/details_banner.jpg",
-          "../../../static/img/Details/details_banner.jpg",
-          "../../../static/img/Details/details_banner.jpg"
-        ]
-
-      }
-
-
-    },
-
-
-  }
+		}
+	}
 </script>
 
 <style scoped>
