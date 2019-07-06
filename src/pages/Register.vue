@@ -79,9 +79,11 @@
             let data = response.data;
             if (data.code == 200) {
               console.log("注册成功！");
+              console.log(data);
               saveCookie('userID', data.data.user_id, 7);
               saveCookie('userName', data.data.user_name, 7);
               saveCookie('token', data.data.token, 7);
+              this.$router.replace({name:'Index'})
             }
           })
           .catch((err) => {

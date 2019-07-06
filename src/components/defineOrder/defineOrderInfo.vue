@@ -1,11 +1,11 @@
 <template>
     <div class="define-order-info">
-      <DefineOrderInfoShopList :sendDefineOrder="sendDefineOrder"/>
+      <DefineOrderInfoShopList :sendDefineOrders="sendDefineOrder"/>
       <DefineOrderDistributionServer/>
       <DefineOrderBeans/>
-      <DefineOrderPrice :sendDefineOrder="sendDefineOrder"/>
-      <DefineOrderTotalPrice :sendDefineOrder="sendDefineOrder"/>
-      <DefineOrderSubmit/>
+      <DefineOrderPrice :sendDefineOrders="sendDefineOrder"/>
+      <DefineOrderTotalPrice :sendDefineOrders="sendDefineOrder"/>
+      <DefineOrderSubmit :sendDefineOrders="sendDefineOrder" :sendproductlist="sendproductlist"/>
     </div>
 </template>
 
@@ -30,7 +30,13 @@
         sendDefineOrder:{
           type:Object,
           required:true
+        },
+        sendproductlist:{
+          type: Array,
+          required: true
         }
+      },
+      mounted() {
       }
     }
 </script>

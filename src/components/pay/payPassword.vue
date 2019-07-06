@@ -17,7 +17,7 @@
 
 <script>
   import { PasswordInput, NumberKeyboard } from 'vant';
-
+  import {getCookie} from "./../../assets/js/common"
   export default {
     name: "payPassword",
     components:{
@@ -34,12 +34,29 @@
     methods: {
       onInput(key) {
         this.value = (this.value + key).slice(0, 6);
+        if(this.value.length==6){
+          this.axios.post("http://10.35.162.104:9005/cart/payord/",{
+            "token":getCookie('token'),
+            "order_list":[
+              "1907053726996130",
+              "1907052673666131"
+            ],
+            "total":sendMoney,
+            "paypassword":this.value
+          })
+        }
       },
       onDelete() {
         this.value = this.value.slice(0, this.value.length - 1);
       },
       hiddenAll(){
         this.$emit("sendfalse",false)
+      }
+    },
+    props:{
+      sendMoney:{
+        type:Number,
+        required:true
       }
     }
   }

@@ -8,9 +8,10 @@
         <div class="title">我的信锐券</div>
       </template>
       <template v-slot:right>
-        <div class="right iconfont">&#xe670;</div>
+        <div class="right iconfont" @click="changeHandleFlag">&#xe670;</div>
       </template>
     </NavBar>
+    <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"/>
     <ul class="my-vouchers-use">
       <li :class="{'myVouchersFocus':currentIndex == 1}" @click="myVouchersHandleLeft">待使用</li>
       <li :class="{'myVouchersFocus':currentIndex == 2}" @click="myVouchersHandleMiddle">已使用</li>
@@ -26,13 +27,15 @@
   import MyVouchersType from './../components/myVouchers/myVouchersType'
   import MyVouchersMain from './../components/myVouchers/myVouchersMain'
   import {goBack} from './../assets/js/common'
+  import MoreMenu from './../components/common/moreMenu'
 
   export default {
     name: "myVouchers",
     components: {
       NavBar,
       MyVouchersType,
-      MyVouchersMain
+      MyVouchersMain,
+      MoreMenu
     },
     methods: {
       backClickHandle() {
@@ -46,11 +49,18 @@
       },
       myVouchersHandleRight(){
         this.currentIndex = 3
+      },
+      changeHandleFlag(){
+        this.flag = !this.flag
+      },
+      maskClickHandle(val) {
+        this.flag = val;
       }
     },
     data(){
       return{
-        currentIndex:1
+        currentIndex:1,
+        flag:false
       }
     }
   }

@@ -1,12 +1,11 @@
 <template>
   <div class="order-content">
-    <OrderProductInfo></OrderProductInfo>
-    <OrderProductInfo></OrderProductInfo>
+    <OrderProductInfo v-for="(item,index) in orderContent.orderProductList" :product="item" :key="index"></OrderProductInfo>
     <div class="order-pay-price-wrap">
       <div class="order-pay-num">共1件商品</div>
       <div class="order-pay-price">
         <span class="order-pay-price-text">实付金额：</span>
-        <span class="order-pay-price-count">&yen4499.00</span>
+        <span class="order-pay-price-count">&yen;{{orderContent.orderasset}}</span>
       </div>
     </div>
   </div>
@@ -18,6 +17,12 @@
     name: "orderContent",
     components:{
       OrderProductInfo
+    },
+    props:{
+      orderContent:{
+        type:Object,
+        required: true
+      }
     }
   }
 </script>

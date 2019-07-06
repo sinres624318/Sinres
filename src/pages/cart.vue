@@ -27,11 +27,15 @@
       :key="index"
       :sID="index"
       :shop="shop"></CartShop>
+    <recommendedProduct :recommendedProduct="{product_list:cartInfo.ProuductList}"></recommendedProduct>
     <CartTotalPrice
       :totalPrice="totalPrice"
+      :productNum="productNum"
       :allCheck="cartInfo.checked"
       v-if="flag &&cartInfo.cartShopList"></CartTotalPrice>
-    <CartProductEditBar v-if="!flag"></CartProductEditBar>
+    <CartProductEditBar
+      :allCheck="cartInfo.checked"
+      v-if="!flag"></CartProductEditBar>
   </div>
 </template>
 
@@ -41,6 +45,7 @@
   import CartTotalPrice from './../components/cart/cartTotalPrice'
   import CartProductEdit from './../components/cart/cartProductEdit'
   import CartProductEditBar from './../components/cart/cartProductEditBar'
+  import recommendedProduct from './../components/common/recommendedProduct'
   import Loading from '../components/common/loading'
   import {
     goBack,
@@ -55,6 +60,7 @@
       CartTotalPrice,
       CartProductEdit,
       CartProductEditBar,
+      recommendedProduct,
       Loading
     },
     data() {
@@ -72,7 +78,7 @@
       }
     },
     created() {
-      this.$store.dispatch('getCartInfo', {token:getCookie('token'),vue:this});
+      this.$store.dispatch('getCartInfo', {token: getCookie('token'), vue: this});
     },
     computed: {
       cartInfo() {
@@ -80,6 +86,9 @@
       },
       totalPrice() {
         return this.$store.state.cartTotalPrice
+      },
+      productNum() {
+        return this.$store.state.cartProductNum
       }
     },
     beforeUpdate() {

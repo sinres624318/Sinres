@@ -19,7 +19,7 @@
       </div>
       <div class="productModel" v-for="(item,index) in shopProductInfo.productModel" :key="index">
         <img :src='item' alt>
-        <div class="productModelLink" >
+        <div class="productModelLink">
           <div class="productModelFirst">
             <a herf="javascript:;"
                @click="detailsClickHandle(0)"
@@ -85,10 +85,10 @@
 
       },
     },
-    props:{
-      shopId:{
-        type:String,
-        required:true
+    props: {
+      shopId: {
+        type: String,
+        required: true
       }
     },
     created(){
@@ -100,7 +100,6 @@
         console.log(err)
       })
     },
-
   }
 
 </script>

@@ -7,7 +7,7 @@ export const wool = 'http://10.35.162.104:9005/index/wool';
 export const patPat = 'http://10.35.162.104:9005/index/patPat';
 export const shop = 'http://10.35.162.104:9005/shop/';
 
-  export const detailsIntroduce = 'http://10.35.162.104:9005/mine/collect/product/delete/';
+export const detailsIntroduce = 'http://10.35.162.104:9005/mine/collect/product/delete/';
 
 export const detail = 'http://10.35.162.104:9005/detail/';
 

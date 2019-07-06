@@ -5,19 +5,20 @@
         <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
       </template>
       <template v-slot:title>
-        <div class="title">我的京东</div>
+        <div class="title">我的信锐</div>
       </template>
       <template v-slot:right>
         <div class="right iconfont" @click="moreMenuClickHandle">&#xe670;</div>
       </template>
     </NavBar>
-    <MineUserInfo></MineUserInfo>
-    <MineOrderCell></MineOrderCell>
-    <MineAssetCell></MineAssetCell>
-    <MineAssetsCell></MineAssetsCell>
-    <MineActivity></MineActivity>
-    <MineRecommend></MineRecommend>
+    <MineUserInfo v-if="userInfo.accountInfo" :accountInfo="userInfo.accountInfo"></MineUserInfo>
+    <MineOrderCell v-if="userInfo.accountInfo"></MineOrderCell>
+    <MineAssetCell v-if="userInfo.assetInfo" :assetInfo="userInfo.assetInfo"></MineAssetCell>
+    <MineAssetsCell v-if="userInfo.browseInfo" :browseInfo="userInfo.browseInfo"></MineAssetsCell>
+    <MineActivity v-if="userInfo.accountInfo"></MineActivity>
+    <MineRecommend v-if="userInfo.productList" :recommendedProduct="userInfo.productList"></MineRecommend>
     <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
+    <Loading v-if="!userInfo.accountInfo"></Loading>
   </div>
 </template>
 
@@ -30,7 +31,11 @@
   import MineActivity from '../components/mine/mineActivity'
   import MineRecommend from '../components/mine/mineRecommend'
   import MoreMenu from '../components/common/moreMenu'
-  import {goBack} from './../assets/js/common'
+  import Loading from '../components/common/loading'
+  import {
+    goBack,
+    getCookie
+  } from './../assets/js/common'
 
   export default {
     name: "mine",
@@ -48,6 +53,7 @@
       MineActivity,
       MineRecommend,
       MoreMenu,
+      Loading
     },
     methods: {
       backClickHandle() {
@@ -59,6 +65,14 @@
       },
       maskClickHandle(val) {
         this.flag = val;
+      }
+    },
+    created() {
+      this.$store.dispatch('getUserInfo', {token: getCookie('token'), vue: this})
+    },
+    computed: {
+      userInfo() {
+        return this.$store.state.userInfo
       }
     }
   }

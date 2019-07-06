@@ -12,7 +12,7 @@
       </template>
     </NavBar>
     <OrderType></OrderType>
-    <OrderItem></OrderItem>
+    <OrderItem v-if="orderData.length>0" v-for="(item,index) in orderData" :order="item" :key="index"></OrderItem>
   </div>
 </template>
 
@@ -24,6 +24,11 @@
 
   export default {
     name: "mineAllOrder",
+    data() {
+      return {
+        orderData: []
+      }
+    },
     components: {
       NavBar,
       OrderItem,
@@ -38,18 +43,19 @@
       }
     },
     created() {
-      this.axios.post("http://10.35.162.3:9005/mine/order/", {
+      this.axios.post("http://10.35.162.104:9005/mine/order/", {
         "token": 123456
       })
-        .then((data) => {
-          console.log(data);
+        .then((response) => {
+          let data = response.data;
+          if (data.code === 200) {
+            console.log(data);
+            this.orderData = data.order_list;
+          }
         })
         .catch((error) => {
           console.log(error);
         })
-    },
-    mounted() {
-      console.log(this.$router);
     },
   }
 </script>

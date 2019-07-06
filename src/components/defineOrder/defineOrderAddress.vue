@@ -1,11 +1,11 @@
 <template>
     <div class="define-order-address">
-      <ul class="define-order-userName" v-for="(item,index) in sendAddress.address">
+      <ul class="define-order-userName">
         <li>
-          {{item.userName}}
-          {{item.userTel}}
+          小明
+          {{sendAddress.tel}}
         </li>
-        <li>{{item.userAddress}}</li>
+        <li>{{sendAddress.address}}</li>
       </ul>
     </div>
 </template>
@@ -23,6 +23,8 @@
           type:Object,
           required:true
         }
+      },
+      mounted() {
       }
     }
 </script>

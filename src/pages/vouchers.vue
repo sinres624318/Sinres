@@ -8,11 +8,12 @@
           <div class="title">领券中心</div>
         </template>
         <template v-slot:right>
-          <div class="right iconfont">&#xe670;</div>
+          <div class="right iconfont" @click="handleChangeMore">&#xe670;</div>
         </template>
       </NavBar>
       <VouchersMain :vouchersInfo="vouchersInfo" v-if="vouchersInfo.ledList" @sendVouchers="handleSendVouchers"/>
       <SuccessOfGet v-if="SuccessOfGetShow"/>
+      <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"/>
       <VouchersBar/>
       <Loading v-if="!vouchersInfo.ledList"/>
     </div>
@@ -25,6 +26,7 @@
   import {goBack} from './../assets/js/common'
   import Loading from './../components/common/loading'
   import SuccessOfGet from './../components/vouchers/successOfGet'
+  import MoreMenu from './../components/common/moreMenu'
     export default {
         name: "vouchers",
         components:{
@@ -32,6 +34,7 @@
           VouchersBar,
           VouchersMain,
           SuccessOfGet,
+          MoreMenu,
           Loading
         },
       methods:{
@@ -44,11 +47,18 @@
         },
         handleHiddenShow(){
           this.SuccessOfGetShow = false
+        },
+        handleChangeMore(){
+          this.flag = !this.flag
+          console.log(this.flag)
+        },
+        maskClickHandle(val) {
+          this.flag = val;
         }
       },
       created() {
-          // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
-            this.axios.get("http://10.35.162.113:9005/index/vouchers")
+          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
+          //   this.axios.get("http://10.35.162.104:9005/index/vouchers")
             .then((data)=>{
               console.log(data)
               this.vouchersInfo = data.data
@@ -57,7 +67,8 @@
       data(){
           return{
             vouchersInfo:{},
-            SuccessOfGetShow:false
+            SuccessOfGetShow:false,
+            flag:false
           }
       }
     }

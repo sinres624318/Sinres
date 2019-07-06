@@ -17,7 +17,7 @@
       </template>
     </NavBar>
     <SortBlock></SortBlock>
-    <ProductListProduct></ProductListProduct>
+    <ProductListProduct :productList="productList"></ProductListProduct>
   </div>
 </template>
 
@@ -33,6 +33,11 @@
       ProductListProduct,
       SortBlock
     },
+    data() {
+      return {
+        productList: []
+      }
+    },
     methods: {
       backClickHandle() {
         this.$router.go(-1);
@@ -41,8 +46,20 @@
         this.flag = !this.flag;
       }
     },
-    mounted() {
-      console.log(this.$route.params.productType)
+    created() {
+      console.log(this.$route.params.productType);
+      let productType = this.$route.params.productType;
+      this.axios.get("http://10.35.161.33:9005/classify/list/?productTypeID=" + 1005)
+        .then((response) => {
+          let data = response.data;
+          if (data.code === 200) {
+            this.productList = data.productList;
+            console.log(this.productList);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        })
     }
   }
 </script>
