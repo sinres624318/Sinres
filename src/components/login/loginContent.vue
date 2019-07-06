@@ -76,6 +76,7 @@
   } from './.././../assets/js/common.js'
   import {Notify} from 'vant'
   import {loginContent} from "./../../api/url"
+
   export default {
     name: "content",
     data() {
@@ -107,15 +108,24 @@
           "account": this.account,
           "password": this.password
         };
-        this.axios.post('loginContent', info)
+        this.axios.post(loginContent, info)
           .then((response) => {
-            console.log(response);
             let data = response.data;
-            if (response.data.code === 200) {
+            console.log(data);
+            if (data.code === 200) {
               console.log('登录成功');
               saveCookie('userID', data.data.user_id, 7);
               saveCookie('userName', data.data.user_name, 7);
-              saveCookie('token', data.data.token, 7);
+              saveCookie('token', data.token, 7);
+              saveCookie('payPassword', data.bool_pay_pwd, 7);
+              this.$router.replace({name:'Index'})
+            }else if(data.code === 404){
+              Notify({
+                message: '验证码过期！',
+                duration: 1000,
+                background: 'red',
+                className: 'error-info'
+              });
             }
           })
           .catch(function (error) {
@@ -145,7 +155,7 @@
             this.countDown--
           }, 1000);
           this.verifyCodeFlag = false;
-          this.axios.post('loginContent', {
+          this.axios.post(loginContent, {
             "tel": this.TEL
           })
             .then((data) => {

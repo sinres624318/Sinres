@@ -22,6 +22,7 @@
   import groupBuyFooter from '../../components/groupBuy/groupBuyFooter'
   import groupBuyClass from '../../components/groupBuy/groupBuyClass'
   import Loading from "./../../components/common/loading";
+  import {groupBuy} from './../../api/url'
 
   export default {
     name: "groupBuy",
@@ -42,9 +43,10 @@
     },
     created() {
       // this.axios.get("https://www.easy-mock.com/mock/5d184b100c3e0f555a5ba35c/example/groupBuy")
-      this.axios.get("groupBuy")
+      this.axios.get(groupBuy)
         .then((data)=>{
           this.groupBuyInfo=data.data
+          console.log(data);
         })
         .catch((err)=>{
           console.log(err)

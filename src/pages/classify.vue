@@ -27,7 +27,7 @@
       },
       //http://10.35.161.13:9005/classify/
       created() {
-          this.axios.get("classify")
+          this.axios.get(classify)
             .then((data)=>{
               console.log(data.data);
               this.classifyInfo=data.data;
