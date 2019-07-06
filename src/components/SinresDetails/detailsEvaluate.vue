@@ -22,8 +22,8 @@
 			</div>
 			<!-- 三 -->
 			<div>
-				<img src="../../../static/img/Details/enter_store.gif" alt="">
-				<img src="../../../static/img/Details/focus_store.gif" alt="">
+				<img src="../../../static/img/Details/enter_store.gif" alt="" @click="goShop">
+				<img src="../../../static/img/Details/focus_store.gif" alt="" @click="">
 			</div>
 		</div>
 		<!-- 主要内容 -->
@@ -35,7 +35,7 @@
 			<div class="details_evaluate_main_content">
 				<!-- 循环的内容 -->
 				<div v-for="(item,index) in shopInfo.shopRecommend" :key='index' class="details_evaluate_main_content_item">
-					<div v-for="each_item in item">
+					<div v-for="(each_item,index) in item" :key="index">
 						<img :src="each_item.img" alt="">
 						<h2>{{each_item.title}}</h2>
 						<p>{{each_item.describe}}</p>
@@ -62,7 +62,7 @@
 					shopRecommend: [ //二维数组，每个数组5组
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
+							img: "../../../static/img/Details/banner03.jpg",
 							title: "苹果",
 							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
 							price: "11388"
@@ -70,51 +70,58 @@
 						// 二
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
+							img: "../../../static/img/Details/banner04.jpg",
 							title: "苹果",
 							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
-							price: "11388"
+							price: "3500"
 						}],
 						// 三
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
-							title: "苹果",
-							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
-							price: "11388"
+							img: "../../../static/img/Details/dell.jpg",
+							title: "戴尔",
+							describe: "戴尔（DELL）Precision7730 17.3英寸移动图形工作站 性能级高端笔记本 E-2186M 64",
+							price: "9988"
 						}],
 						
 						// 四
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
-							title: "苹果",
-							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
-							price: "11388"
+							img: "../../../static/img/Details/huawei.png",
+							title: "华为",
+							describe: "华为2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
+							price: "12300"
 						}],
 						
 						// 五
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
-							title: "苹果",
-							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
-							price: "11388"
+							img: "../../../static/img/Details/lenvo.jpg",
+							title: "联想",
+							describe: "联想ThinkPad E480 英特尔酷睿i5 14英寸轻薄商务办公笔记本电脑银色i5-8250U 8G内存 1T硬盘 FHD 4SCD",
+							price: "6600"
 						}],
 						
 						// 六
 						[{ //6组
 							productID: "int",
-							img: "../../../static/img/Details/details_evaluate_main_content.jpg",
-							title: "苹果",
-							describe: "苹果Apple  MacBook Pro13.3英寸2019新款/2018款/2017苹果笔记本电脑 18款银色/256G/带bar/MR9U2CH/A",
-							price: "11388"
+							img: "../../../static/img/Details/dd.png",
+							title: "得峰",
+							describe: "得峰（Deffad）大核WIN7 微边框键盘镜面全面屏 超轻簿本游戏本 办公笔记本电脑 新品叱兔新款 红色(金属) 4G内存+SSD128G",
+							price: "1600"
 						}]
 					]
 				}
 			}
 		},
-		//方法
+    methods:{
+      goShop(){
+        this.$router.push({
+          path:'/shop',
+          query:{xinxi:phone}
+        })
+      }
+    }
 	}
 </script>
 
