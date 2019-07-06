@@ -5,7 +5,7 @@ import {
   minusProduct,
   deleteProduct,
   userInfo
-} from "../api/url";
+} from "./../api/url";
 
 export default {
   getCartInfo(context, {token, vue}) {

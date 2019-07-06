@@ -15,7 +15,7 @@
           </div>
         </template>
       </NavBar>
-      <MoreMenu v-if="flag"></MoreMenu>
+      <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
     </div>
     <!-- ---------headerEnd-------------- -->
     <div class="woolBanner">
@@ -63,7 +63,7 @@
   import WoolProduct from './../components/wool/woolProduct'
   import NavBar from "./../components/common/navBar";
   import MoreMenu from "../components/common/moreMenu";
-
+  import {wool} from './../api/url';
   export default {
     name: "wool",
     components: {
@@ -82,12 +82,16 @@
         this.$router.go(-1);
       },
       moreMenuClickHandle() {
-        this.flag = !this.flag;
+        console.log(1);
+        this.flag = true;
       },
+      maskClickHandle(val) {
+        this.flag = val;
+      }
     },
     // https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/woolProduct
     created() {
-      this.axios.get('http://10.35.162.113:9005/index/wool').then((response) => {
+      this.axios.get('wool').then((response) => {
         this.woolProductInfo = response.data;
         console.log(this.woolProductInfo)
       }).catch((error) => {

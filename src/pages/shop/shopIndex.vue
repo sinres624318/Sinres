@@ -17,7 +17,7 @@
           <img v-if="item" :src="item" alt>
         </a>
       </div>
-      <div class="productModel" v-for="(item,index) in shopProductInfo.productModel">
+      <div class="productModel" v-for="(item,index) in shopProductInfo.productModel" :key="index">
         <img :src='item' alt>
         <div class="productModelLink">
           <div class="productModelFirst">
@@ -56,7 +56,7 @@
   import ShopHeader from './../../components/shop/shopHeader';
   import ShopProductV from './../../components/shop/shopProductV';
   import Loading from './../../components/common/loading'
-
+  import {shop} from './../../api/url';
   export default {
     name: "shopIndex",
     components: {
@@ -91,10 +91,9 @@
         required: true
       }
     },
-    // "https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/shopProductInfo"
-    created() {
+    created(){
       // let shopId=this.$route.params.shopId;
-      this.axios.get("http://10.35.162.104:9005/shop/shopIndex/" + this.shopId).then((data) => {
+      this.axios.get(shop+"shopIndex/"+this.shopId).then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

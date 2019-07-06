@@ -15,7 +15,7 @@
           </div>
         </template>
       </NavBar>
-      <MoreMenu v-show="show"></MoreMenu>
+      <MoreMenu v-if="flag" @maskClickHandle="maskClickHandle"></MoreMenu>
     </div>
     <!-- ---------headerEnd-------------- -->
     <div class="patPatBanner">
@@ -58,7 +58,7 @@
     <div class="patPatNavigation"></div>
     <!-- 拍拍专享 -->
     <div class="patPatExclusive">
-      <a href="#" v-for="(item,index) in this.patPatInfo.exclusive">
+      <a href="#" v-for="(item,index) in this.patPatInfo.exclusive" :key="index">
         <img :src="item" alt>
       </a>
     </div>
@@ -82,7 +82,7 @@
   import NavBar from "./../components/common/navBar";
   import MoreMenu from "../components/common/moreMenu";
   import Loading from "../components/common/loading";
-
+  import {patPat} from './../api/url';
   export default {
     name: "patPat",
     components: {
@@ -97,14 +97,14 @@
     },
     data(){
       return {
-        show: false,
+        flag: false,
         patPatInfo:{},
 
       }
     },
     // https://www.easy-mock.com/mock/5d031a44641c58517626f2b5/example/patPatInfo
     created(){
-      this.axios.get("http://10.35.162.113:9005/index/patPat").then((response)=>{
+      this.axios.get("patPat").then((response)=>{
         this.patPatInfo=response.data;
         console.log(this.patPatInfo)
       }).catch((error)=>{
@@ -115,8 +115,15 @@
       backClickHandle() {
         this.$router.go(-1);
       },
+      // moreMenuClickHandle() {
+      //   this.show = !this.show
+      // },
       moreMenuClickHandle() {
-        this.show = !this.show
+        console.log(1);
+        this.flag = true;
+      },
+      maskClickHandle(val) {
+        this.flag = val;
       }
     }
   };

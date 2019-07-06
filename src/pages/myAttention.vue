@@ -8,10 +8,11 @@
 </template>
 
 <script>
-  import MyAttentionHeader from "../components/myAttention/myAttentionHeader"
-  import MyAttentionContent from "../components/myAttention/myAttentionContent"
-  import MyAttentionBottom from '../components/myAttention/muAttentionBottom'
-  import Loding from './../components/common/loading'
+  import MyAttentionHeader from "../components/myAttention/myAttentionHeader";
+  import MyAttentionContent from "../components/myAttention/myAttentionContent";
+  import MyAttentionBottom from '../components/myAttention/muAttentionBottom';
+  import Loding from './../components/common/loading';
+  import {myAttention} from './../api/url'
   export default {
         name: "myAttention",
     data(){
@@ -26,7 +27,7 @@
       Loding
     },
     created() {
-          this.axios.post("http://10.35.161.35:9005/mine/collect/",
+          this.axios.post(myAttention,
              {
                 "token":"123456",
            })

@@ -51,7 +51,7 @@
           this.SuccessOfGetShow = false
         },
         handleChangeMore(){
-          this.flag = !this.flag
+          this.flag = !this.flag;
           console.log(this.flag)
         },
         maskClickHandle(val) {
@@ -59,8 +59,8 @@
         }
       },
       created() {
-          this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
-          //   this.axios.get(vouchers)
+          // this.axios.get("https://www.easy-mock.com/mock/5d16dfa8b3e080603f1d5da4/example/vouchers")
+            this.axios.get(vouchers)
             .then((data)=>{
               console.log(data)
               this.vouchersInfo = data.data

@@ -16,7 +16,7 @@
   import Loading from './../../components/common/loading'
   import ShopHeader from './../../components/shop/shopHeader'
   import {TreeSelect} from "vant";
-
+  import {shop} from './../../api/url';
   export default {
     name: "shopClassify",
     components: {
@@ -49,7 +49,7 @@
       }
     },
     created() {
-      this.axios.get("http://10.35.162.104:9005/shop/" + this.shopId + "/classify").then((data) => {
+      this.axios.get(shop + this.shopId + "/classify").then((data) => {
         this.shopClassIfyInfo = data.data;
         console.log(this.shopClassIfyInfo)
       }).catch((err) => {

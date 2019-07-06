@@ -1,11 +1,15 @@
 <template>
   <div class="recommend-content">
     <div class="recommend-item">
-      <a class="recommend-items" @click="shopHandel(item.productID)"
-         v-for="(item,index) in recommendedProduct.product_list" :key="index">
+      <a
+        class="recommend-items"
+        @click="shopHandel(item.productID)"
+        v-for="(item,index) in recommendedProduct.product_list"
+        :key="index"
+      >
         <div class="similar-product">
           <div class="similar-posre">
-            <img :src="item.img" alt="">
+            <img :src="item.img" alt/>
           </div>
           <div class="similar-product-text">{{item.title}}</div>
           <div class="similar-product-info">
@@ -34,15 +38,14 @@
     methods: {
       shopHandel(productID) {
         console.log(productID);
-        this.$router.push({name: 'Details', params: {productID: productID}});
+        this.$router.push({path: '/details', query: {productID: productID}});
       }
     }
   }
+
 </script>
 
 <style scoped>
-
-  /*为你推荐*/
   .recommend-item {
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +84,6 @@
     padding: 0 8px;
   }
 
-
   .similar-product-info {
     height: 44px;
   }
@@ -100,7 +102,6 @@
     font-size: 32px;
   }
 
-
   .similar-product-price > p {
     display: inline-block;
     width: 95px;
@@ -112,5 +113,4 @@
     line-height: 46px;
     border-radius: 5px;
   }
-
 </style>

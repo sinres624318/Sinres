@@ -37,7 +37,7 @@
     },
     methods:{
       shopHandel(productID){
-        this.$router.push({name:'Details', params:{productID:productID}})
+        this.$router.push({path:'/details', query:{productID:productID}})
       }
     }
   }

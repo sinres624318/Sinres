@@ -1,9 +1,17 @@
 <template>
 	<div>
 		<div class="details_ItemHeader">
-			<a href="#" @click="backHandel()" class="back_img"><img src="../../../static/img/Details_item/back.png" alt=""></a>
-			<h1>商品评价</h1>
-			<a href="" class="clickMore_img"><img src="../../../static/img/Details_item/menu.png" alt=""></a>
+      <NavBar>
+        <template v-slot:left>
+          <div class="left iconfont" @click="backClickHandle">&#xe61c;</div>
+        </template>
+        <template v-slot:title>
+          <div class="title">商品评价</div>
+        </template>
+        <template v-slot:right>
+          <div class="right iconfont" >&#xe670;</div>
+        </template>
+      </NavBar>
 		</div>
 		<!--  -->
 		<div class="details_ItemTitle">
@@ -18,15 +26,19 @@
 </template>
 
 <script>
+  import NavBar from '../../components/common/navBar'
 	export default{
 		name:'DetailsItemHeader',
+    components:{
+      NavBar
+    },
 		data(){
 			return{
 				
 			}
 		},
 		methods:{
-			backHandel(){
+      backClickHandle(){
 				this.$router.back();
 			}
 		}

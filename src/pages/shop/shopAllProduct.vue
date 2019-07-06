@@ -43,7 +43,7 @@
   import ShopProductH from './../../components/shop/shopProductH'
   import ShopProductV from './../../components/shop/shopProductV'
   import {Tab, Tabs} from "vant";
-
+  import {shop} from './../../api/url'
   export default {
     name: "shopAllProduct",
     components: {
@@ -72,7 +72,7 @@
       }
     },
     created() {
-      this.axios.get("http://10.35.162.104:9005/shop/" + this.shopId + "/all").then((data) => {
+      this.axios.get(shop + this.shopId + "/all").then((data) => {
         this.shopProductInfo = data.data;
         console.log(this.shopProductInfo)
       }).catch((err) => {

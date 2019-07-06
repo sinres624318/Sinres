@@ -10,7 +10,7 @@
 <script>
   import ClassifyHeader from '../components/classify/classifyHeader'
   import ClassifyContent from '../components/classify/classifyContent'
-  // import MoreMenu from '../components/common/moreMenu'
+  import {classify} from "./../api/url"
 
   import Loading from "../components/common/loading";
     export default {
@@ -27,7 +27,7 @@
       },
       //http://10.35.161.13:9005/classify/
       created() {
-          this.axios.get("http://10.35.162.104:9005/classify/")
+          this.axios.get(classify)
             .then((data)=>{
               console.log(data.data);
               this.classifyInfo=data.data;
