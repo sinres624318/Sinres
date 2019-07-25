@@ -93,7 +93,7 @@
         },
         rechargeRouter(){
             let a=this.$refs.i.innerHTML;
-          this.axios.post("rechargeContentPhoen",{
+          this.axios.post(rechargeContentPhoen,{
             "token":"123456",
             "tel":"this.telephoneNum",
             "payasset":a
@@ -119,7 +119,7 @@
         },
         rechargesRouter(){
             let b=this.$refs.i.innerHTML;
-          this.axios.post("rechargeContentTraffic",{
+          this.axios.post(rechargeContentTraffic,{
             "token":"1234-56",
             "tel":"this.telephoneNum2",
             "payasset":b

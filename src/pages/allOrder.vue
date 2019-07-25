@@ -43,7 +43,7 @@
       }
     },
     created() {
-      this.axios.post("http://10.35.162.104:9005/mine/order/", {
+      this.axios.post("http://10.35.161.65:9005/mine/order/", {
         "token": 123456
       })
         .then((response) => {

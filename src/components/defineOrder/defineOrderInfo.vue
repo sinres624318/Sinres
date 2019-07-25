@@ -5,7 +5,7 @@
       <DefineOrderBeans/>
       <DefineOrderPrice :sendDefineOrders="sendDefineOrder"/>
       <DefineOrderTotalPrice :sendDefineOrders="sendDefineOrder"/>
-      <DefineOrderSubmit :sendDefineOrders="sendDefineOrder" :sendproductlist="sendproductlist"/>
+      <DefineOrderSubmit :sendTel="sendTel" :sendDefineOrders="sendDefineOrder" :sendproductlist="sendproductlist"/>
     </div>
 </template>
 
@@ -34,9 +34,14 @@
         sendproductlist:{
           type: Array,
           required: true
+        },
+        sendTel:{
+          type:String,
+          required:true
         }
       },
       mounted() {
+          console.log(this.sendDefineOrder);
       }
     }
 </script>

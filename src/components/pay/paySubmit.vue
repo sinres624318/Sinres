@@ -10,16 +10,16 @@
         name: "paySubmit",
       methods:{
         letShow(){
-          this.$emit("receive",true)
+          this.$emit("receive")
         }
+      },
+      mounted() {
       },
       props:{
         totalMoney:{
           type:Number,
           required:true
         }
-      },
-      mounted() {
       }
     }
 </script>

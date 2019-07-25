@@ -69,7 +69,7 @@
         shopHandel(id){
           this.$router.push({
             path:'/shop',
-            query:{shopId:id}
+            query:{shopId:"104"}
           });
         }
       }

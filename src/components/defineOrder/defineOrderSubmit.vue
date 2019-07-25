@@ -15,12 +15,13 @@
       }
     },
     methods: {
-      reqHandleInfo(sendDefineOrders) {
+      reqHandleInfo() {
+        console.log(this.sendproductlist);
         this.$router.push({
           name: 'Pay', params: {
-            totalPrice: this.sendDefineOrders.total,
             productList: this.sendproductlist,
             address: this.sendDefineOrders.address,
+            tel:this.sendTel
           }
         })
       }
@@ -33,10 +34,16 @@
       sendproductlist: {
         type: Array,
         required: true
+      },
+      sendTel:{
+        type:String,
+        required:true
       }
     },
     mounted() {
-      console.log(this.sendproductlist)
+      console.log(this.sendDefineOrders);
+      console.log(this.sendproductlist);
+      console.log(this.sendTel);
     },
   }
 </script>

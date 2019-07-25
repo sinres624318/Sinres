@@ -49,7 +49,7 @@
     created() {
       console.log(this.$route.params.productType);
       let productType = this.$route.params.productType;
-      this.axios.get("http://10.35.161.33:9005/classify/list/?productTypeID=" + 1005)
+      this.axios.get("http://10.35.161.65:9005/classify/list/?productTypeID=" + 1005)
         .then((response) => {
           let data = response.data;
           if (data.code === 200) {

@@ -59,12 +59,12 @@
       }
     },
     methods: {
-      deleteProductHandle(){
+      deleteProductHandle() {
         console.log(this.product.productID);
         this.$store.dispatch('deleteProduct', {
           "productID": [this.product.productID],
           "token": getCookie('token'),
-          "vue":this
+          "vue": this
         });
       },
       addClickHandle() {
@@ -72,7 +72,7 @@
           "sID": this.sID,
           "pID": this.pID,
           "token": getCookie('token'),
-          "vue":this
+          "vue": this
         });
       },
       minusClickHandle() {
@@ -80,7 +80,7 @@
           "sID": this.sID,
           "pID": this.pID,
           "token": getCookie('token'),
-          "vue":this
+          "vue": this
         });
       },
       checkProductHandle() {

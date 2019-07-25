@@ -3,6 +3,7 @@
     <DefineOrderHeader/>
     <DefineOrderAddress v-if="defineOrderInfo.address" :sendAddress="defineOrderInfo"/>
     <DefineOrderInfo v-if="defineOrderInfo.goodslist" :sendDefineOrder="defineOrderInfo"
+                     :sendTel="tel"
                      :sendproductlist="productlist"/>
     <Loading v-if="!defineOrderInfo.goodslist"/>
   </div>
@@ -29,7 +30,8 @@
     data() {
       return {
         defineOrderInfo: {},
-        productlist: []
+        productlist: [],
+        tel:""
       }
     },
     created() {
@@ -43,6 +45,7 @@
         .then((data) => {
           console.log(data);
           this.defineOrderInfo = data.data.data;
+          this.tel = this.defineOrderInfo.tel
         })
         .catch((err) => {
           console.log(err)

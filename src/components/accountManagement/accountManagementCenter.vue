@@ -33,6 +33,7 @@
       position="bottom"
       v-model="modalShow">
       <van-password-input
+        v-if="payPassword"
         :value="oldValue"
         info="请输入 6 位旧数字"
         @focus="showOldKeyboard = true;showNewKeyboard = false"
@@ -44,6 +45,7 @@
       />
       <van-number-keyboard
         :show="showOldKeyboard"
+        v-if="payPassword"
         extra-key="."
         theme="custom"
         close-button-text="完成"
@@ -70,6 +72,11 @@
     NumberKeyboard,
     Popup
   } from 'vant';
+  import {
+    getCookie,
+    saveCookie
+  } from './../../assets/js/common'
+  import {setPaypwd} from './../../api/url'
 
   export default {
     name: "accountManagementCenter",
@@ -82,20 +89,61 @@
       return {
         oldValue: '',
         newValue: '',
+        payPassword: false,
         showNewKeyboard: false,
         showOldKeyboard: true,
         modalShow: false,
         modifyPayPasswordFlag: true
       }
     },
+    created() {
+      this.payPassword = getCookie('payPassword') == 'true' ? true : false;
+      console.log(this.payPassword);
+    },
     methods: {
       newClose() {
-        this.modalShow = false;
-        if(this.newValue.length>6){
-          console.log(this.value);
+        console.log(this.payPassword);
+        if (!this.payPassword) {
+          console.log(this.newValue);
+          console.log(this.newValue);
+          this.modalShow = false;
+          console.log(getCookie('token'));
+          this.axios.post(setPaypwd, {
+            "token": getCookie('token'),
+            // "new_pwd": this.newValue,
+            "old_pwd": this.newValue
+          })
+            .then((response) => {
+              let data = response.data;
+              console.log(data);
+              if (data.code === 200) {
+                saveCookie('payPassword', true)
+                this.payPassword = true;
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            })
+        } else {
+          this.axios.post(setPaypwd, {
+            "token": getCookie('token'),
+            "new_pwd": this.newValue,
+            "old_pwd": this.newValue
+          })
+            .then((response) => {
+              let data = response.data;
+              console.log(data);
+              if (data.code === 200) {
+                saveCookie('payPassword', true)
+                this.payPassword = true;
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            })
         }
       },
-      oldClose(){
+      oldClose() {
       },
       modifyPayPasswordHandle() {
         this.modalShow = true;

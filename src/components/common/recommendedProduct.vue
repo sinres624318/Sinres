@@ -1,6 +1,6 @@
 <template>
   <div class="recommend-content">
-    <div class="recommend-item">
+    <div class="recommend-item-content">
       <a
         class="recommend-items"
         @click="shopHandel(item.productID)"
@@ -46,7 +46,7 @@
 </script>
 
 <style scoped>
-  .recommend-item {
+  .recommend-item-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
